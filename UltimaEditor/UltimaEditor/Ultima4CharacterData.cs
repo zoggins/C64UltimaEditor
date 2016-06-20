@@ -66,6 +66,23 @@ namespace UltimaEditor
 
     class Ultima4CharacterData
     {
+        public Ultima4CharacterData()
+        {
+            Name = "";
+            Sex = U4Sex.Female;
+            Class = U4Class.Mage;
+            Health = U4Health.Good;
+            HitPoints = 0;
+            MaxHitPoints = 0;
+            Experience = 0;
+            Strength = 0;
+            Dexterity = 0;
+            Intelligence = 0;
+            MagicPoints = 0;
+            Weapon = U4EquipedWeapon.Hands;
+            Armor = U4EquipedArmor.Skin;
+        }
+
         public string Name;
         public U4Sex Sex;
         public U4Class Class;

@@ -20,21 +20,68 @@ namespace UltimaEditor
 
     class U4Location
     {
-        public char Lat1 = 'A';
-        public char Lat2 = 'A';
-        public char Long1 = 'A';
-        public char Long2 = 'A';
+        public U4Location()
+        {
+            Lat1 = 'A';
+            Lat2 = 'A';
+            Long1 = 'A';
+            Long2 = 'A';
+        }
+
+        public char Lat1;
+        public char Lat2;
+        public char Long1;
+        public char Long2;
     }
 
     class Ultima4Data
     {
-        public Ultima4CharacterData[] Characters = new Ultima4CharacterData[8];
+        public Ultima4Data()
+        {
+            Characters = new Ultima4CharacterData[8];
+            NumberOfCharactersInParty = 0;
+
+            Spells = new int[26];
+            Reagents = new int[8];
+            Armor = new int[8];
+            Weapons = new int[16];
+
+            Food = 0;
+            Gold = 0;
+            Torches = 0;
+            Gems = 0;
+            Keys = 0;
+            Sextants = 0;
+
+            Skull = false;
+            Horn = false;
+            Wheel = false;
+
+            Candle = false;
+            Book = false;
+            Bell = false;
+
+            KeyOfLove = false;
+            KeyOfTruth = false;
+            KeyOfCourage = false;
+
+            Moves = 0;
+            Location = new U4Location();
+
+            Stones = new bool[8];
+            Runes = new bool[8];
+            Virtues = new int[8];
+
+            RawFile = null;
+        }
+
+        public Ultima4CharacterData[] Characters;
         public int NumberOfCharactersInParty;
 
-        public int[] Spells = new int[26];
-        public int[] Reagents = new int[8];
-        public int[] Armor = new int[8];
-        public int[] Weapons = new int[16];
+        public int[] Spells;
+        public int[] Reagents;
+        public int[] Armor;
+        public int[] Weapons;
 
         public int Food;
         public int Gold;
@@ -58,9 +105,9 @@ namespace UltimaEditor
         public int Moves;
         public U4Location Location;
 
-        public bool[] Stones = new bool[8];
-        public bool[] Runes = new bool[8];
-        public int[] Virtues = new int[8];
+        public bool[] Stones;
+        public bool[] Runes;
+        public int[] Virtues;
 
         private byte[] RawFile;
 

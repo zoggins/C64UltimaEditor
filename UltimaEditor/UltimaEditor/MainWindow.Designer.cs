@@ -993,6 +993,7 @@
             this.U4MagicTextBox.Size = new System.Drawing.Size(49, 26);
             this.U4MagicTextBox.TabIndex = 24;
             this.U4MagicTextBox.Text = "0";
+            this.U4MagicTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MagicTextBox_Validating);
             // 
             // U4IntelligenceTextBox
             // 

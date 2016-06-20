@@ -174,5 +174,12 @@ namespace UltimaEditor
         {
             ValidateLocation(U4LocLong2, e);
         }
+
+        private void U4MagicTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            ValidateInteger(U4MagicTextBox, 0, 99, e);
+            
+            // TODO: Should probably validate this value, but that is a complicated check.
+        }
     }
 }
