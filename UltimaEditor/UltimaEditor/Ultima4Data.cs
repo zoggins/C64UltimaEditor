@@ -39,6 +39,8 @@ namespace UltimaEditor
         public Ultima4Data()
         {
             Characters = new Ultima4CharacterData[8];
+            for (int i = 0; i < 8; ++i)
+                Characters[i] = new Ultima4CharacterData();
             NumberOfCharactersInParty = 0;
 
             Spells = new int[26];

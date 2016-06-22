@@ -73,7 +73,7 @@ namespace UltimaEditor
             Class = U4Class.Mage;
             Health = U4Health.Good;
             HitPoints = 0;
-            MaxHitPoints = 0;
+            MaxHitPoints = 100;
             Experience = 0;
             Strength = 0;
             Dexterity = 0;

@@ -239,6 +239,7 @@
             this.U4LocLong2.Size = new System.Drawing.Size(26, 26);
             this.U4LocLong2.TabIndex = 55;
             this.U4LocLong2.Text = "A";
+            this.U4LocLong2.TextChanged += new System.EventHandler(this.U4LocLong2_TextChanged);
             this.U4LocLong2.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLong2_Validating);
             // 
             // U4LocLong1
@@ -249,6 +250,7 @@
             this.U4LocLong1.TabIndex = 54;
             this.U4LocLong1.Text = "A";
             this.U4LocLong1.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLong1_Validating);
+            this.U4LocLong1.Validated += new System.EventHandler(this.U4LocLong1_Validated);
             // 
             // U4LocLat2
             // 
@@ -258,6 +260,7 @@
             this.U4LocLat2.TabIndex = 27;
             this.U4LocLat2.Text = "A";
             this.U4LocLat2.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLat2_Validating);
+            this.U4LocLat2.Validated += new System.EventHandler(this.U4LocLat2_Validated);
             // 
             // U4MovesTextBox
             // 
@@ -267,6 +270,7 @@
             this.U4MovesTextBox.TabIndex = 52;
             this.U4MovesTextBox.Text = "0";
             this.U4MovesTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MovesTextBox_Validating);
+            this.U4MovesTextBox.Validated += new System.EventHandler(this.U4MovesTextBox_Validated);
             // 
             // U4LocLat1
             // 
@@ -276,6 +280,7 @@
             this.U4LocLat1.TabIndex = 26;
             this.U4LocLat1.Text = "A";
             this.U4LocLat1.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLat1_Validating);
+            this.U4LocLat1.Validated += new System.EventHandler(this.U4LocLat1_Validated);
             // 
             // label30
             // 
@@ -340,6 +345,7 @@
             this.U4SextantsTextBox.TabIndex = 50;
             this.U4SextantsTextBox.Text = "0";
             this.U4SextantsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4SextantsTextBox_Validating);
+            this.U4SextantsTextBox.Validated += new System.EventHandler(this.U4SextantsTextBox_Validated);
             // 
             // label27
             // 
@@ -358,6 +364,7 @@
             this.U4GemsTextBox.TabIndex = 48;
             this.U4GemsTextBox.Text = "0";
             this.U4GemsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4GemsTextBox_Validating);
+            this.U4GemsTextBox.Validated += new System.EventHandler(this.U4GemsTextBox_Validated);
             // 
             // label28
             // 
@@ -376,6 +383,7 @@
             this.U4GoldTextBox.TabIndex = 46;
             this.U4GoldTextBox.Text = "0";
             this.U4GoldTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4GoldTextBox_Validating);
+            this.U4GoldTextBox.Validated += new System.EventHandler(this.U4GoldTextBox_Validated);
             // 
             // label29
             // 
@@ -394,6 +402,7 @@
             this.U4KeysTextBox.TabIndex = 44;
             this.U4KeysTextBox.Text = "0";
             this.U4KeysTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4KeysTextBox_Validating);
+            this.U4KeysTextBox.Validated += new System.EventHandler(this.U4KeysTextBox_Validated);
             // 
             // label26
             // 
@@ -412,6 +421,7 @@
             this.U4TorchesTextBox.TabIndex = 42;
             this.U4TorchesTextBox.Text = "0";
             this.U4TorchesTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4TorchesTextBox_Validating);
+            this.U4TorchesTextBox.Validated += new System.EventHandler(this.U4TorchesTextBox_Validated);
             // 
             // label25
             // 
@@ -430,6 +440,7 @@
             this.U4FoodTextBox.TabIndex = 40;
             this.U4FoodTextBox.Text = "0";
             this.U4FoodTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4FoodTextBox_Validating);
+            this.U4FoodTextBox.Validated += new System.EventHandler(this.U4FoodTextBox_Validated);
             // 
             // label24
             // 
@@ -448,6 +459,7 @@
             this.U4PartyWeaponsTextBox.TabIndex = 38;
             this.U4PartyWeaponsTextBox.Text = "0";
             this.U4PartyWeaponsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4PartyWeaponsTextBox_Validating);
+            this.U4PartyWeaponsTextBox.Validated += new System.EventHandler(this.U4PartyWeaponsTextBox_Validated);
             // 
             // label23
             // 
@@ -466,6 +478,7 @@
             this.U4PartyArmorTextBox.TabIndex = 36;
             this.U4PartyArmorTextBox.Text = "0";
             this.U4PartyArmorTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4PartyArmorTextBox_Validating);
+            this.U4PartyArmorTextBox.Validated += new System.EventHandler(this.U4PartyArmorTextBox_Validated);
             // 
             // label22
             // 
@@ -484,6 +497,7 @@
             this.U4ReagentsTextBox.TabIndex = 34;
             this.U4ReagentsTextBox.Text = "0";
             this.U4ReagentsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4ReagentsTextBox_Validating);
+            this.U4ReagentsTextBox.Validated += new System.EventHandler(this.U4ReagentsTextBox_Validated);
             // 
             // label21
             // 
@@ -521,6 +535,7 @@
             this.U4PartyWeaponsDropDown.Name = "U4PartyWeaponsDropDown";
             this.U4PartyWeaponsDropDown.Size = new System.Drawing.Size(175, 28);
             this.U4PartyWeaponsDropDown.TabIndex = 33;
+            this.U4PartyWeaponsDropDown.SelectedIndexChanged += new System.EventHandler(this.U4PartyWeaponsDropDown_SelectedIndexChanged);
             // 
             // label20
             // 
@@ -550,6 +565,7 @@
             this.U4PartyArmorDropDown.Name = "U4PartyArmorDropDown";
             this.U4PartyArmorDropDown.Size = new System.Drawing.Size(175, 28);
             this.U4PartyArmorDropDown.TabIndex = 31;
+            this.U4PartyArmorDropDown.SelectedIndexChanged += new System.EventHandler(this.U4PartyArmorDropDown_SelectedIndexChanged);
             // 
             // label19
             // 
@@ -579,6 +595,7 @@
             this.U4ReagentsDropDown.Name = "U4ReagentsDropDown";
             this.U4ReagentsDropDown.Size = new System.Drawing.Size(175, 28);
             this.U4ReagentsDropDown.TabIndex = 29;
+            this.U4ReagentsDropDown.SelectedIndexChanged += new System.EventHandler(this.U4ReagentsDropDown_SelectedIndexChanged);
             // 
             // label18
             // 
@@ -597,6 +614,7 @@
             this.U4SpellsTextBox.TabIndex = 25;
             this.U4SpellsTextBox.Text = "0";
             this.U4SpellsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4SpellsTextBox_Validating);
+            this.U4SpellsTextBox.Validated += new System.EventHandler(this.U4SpellsTextBox_Validated);
             // 
             // label17
             // 
@@ -644,6 +662,7 @@
             this.U4SpellsDropDown.Name = "U4SpellsDropDown";
             this.U4SpellsDropDown.Size = new System.Drawing.Size(175, 28);
             this.U4SpellsDropDown.TabIndex = 26;
+            this.U4SpellsDropDown.SelectedIndexChanged += new System.EventHandler(this.U4SpellsDropDown_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -682,6 +701,7 @@
             this.U4CourageCheckBox.TabIndex = 35;
             this.U4CourageCheckBox.Text = "Key of Courage";
             this.U4CourageCheckBox.UseVisualStyleBackColor = true;
+            this.U4CourageCheckBox.CheckedChanged += new System.EventHandler(this.U4CourageCheckBox_CheckedChanged);
             // 
             // U4BellCheckBox
             // 
@@ -692,6 +712,7 @@
             this.U4BellCheckBox.TabIndex = 34;
             this.U4BellCheckBox.Text = "Bell of Courage";
             this.U4BellCheckBox.UseVisualStyleBackColor = true;
+            this.U4BellCheckBox.CheckedChanged += new System.EventHandler(this.U4BellCheckBox_CheckedChanged);
             // 
             // U4TruthCheckBox
             // 
@@ -702,6 +723,7 @@
             this.U4TruthCheckBox.TabIndex = 33;
             this.U4TruthCheckBox.Text = "Key of Truth";
             this.U4TruthCheckBox.UseVisualStyleBackColor = true;
+            this.U4TruthCheckBox.CheckedChanged += new System.EventHandler(this.U4TruthCheckBox_CheckedChanged);
             // 
             // U4BookCheckBox
             // 
@@ -712,6 +734,7 @@
             this.U4BookCheckBox.TabIndex = 32;
             this.U4BookCheckBox.Text = "Book of Truth";
             this.U4BookCheckBox.UseVisualStyleBackColor = true;
+            this.U4BookCheckBox.CheckedChanged += new System.EventHandler(this.U4BookCheckBox_CheckedChanged);
             // 
             // U4CandleCheckBox
             // 
@@ -722,16 +745,18 @@
             this.U4CandleCheckBox.TabIndex = 31;
             this.U4CandleCheckBox.Text = "Candle of Love";
             this.U4CandleCheckBox.UseVisualStyleBackColor = true;
+            this.U4CandleCheckBox.CheckedChanged += new System.EventHandler(this.U4CandleCheckBox_CheckedChanged);
             // 
             // U4WheelCheckBox
             // 
             this.U4WheelCheckBox.AutoSize = true;
-            this.U4WheelCheckBox.Location = new System.Drawing.Point(335, 34);
+            this.U4WheelCheckBox.Location = new System.Drawing.Point(335, 37);
             this.U4WheelCheckBox.Name = "U4WheelCheckBox";
             this.U4WheelCheckBox.Size = new System.Drawing.Size(80, 24);
             this.U4WheelCheckBox.TabIndex = 30;
             this.U4WheelCheckBox.Text = "Wheel";
             this.U4WheelCheckBox.UseVisualStyleBackColor = true;
+            this.U4WheelCheckBox.CheckedChanged += new System.EventHandler(this.U4WheelCheckBox_CheckedChanged);
             // 
             // U4HornCheckBox
             // 
@@ -742,6 +767,7 @@
             this.U4HornCheckBox.TabIndex = 29;
             this.U4HornCheckBox.Text = "Silver Horn";
             this.U4HornCheckBox.UseVisualStyleBackColor = true;
+            this.U4HornCheckBox.CheckedChanged += new System.EventHandler(this.U4HornCheckBox_CheckedChanged);
             // 
             // U4LoveCheckBox
             // 
@@ -752,6 +778,7 @@
             this.U4LoveCheckBox.TabIndex = 28;
             this.U4LoveCheckBox.Text = "Key of Love";
             this.U4LoveCheckBox.UseVisualStyleBackColor = true;
+            this.U4LoveCheckBox.CheckedChanged += new System.EventHandler(this.U4LoveCheckBox_CheckedChanged);
             // 
             // U4SkullCheckBox
             // 
@@ -762,6 +789,7 @@
             this.U4SkullCheckBox.TabIndex = 27;
             this.U4SkullCheckBox.Text = "Mondain\'s Skull";
             this.U4SkullCheckBox.UseVisualStyleBackColor = true;
+            this.U4SkullCheckBox.CheckedChanged += new System.EventHandler(this.U4SkullCheckBox_CheckedChanged);
             // 
             // label16
             // 
@@ -804,6 +832,7 @@
             this.U4BlackCheckBox.TabIndex = 34;
             this.U4BlackCheckBox.Text = "Black";
             this.U4BlackCheckBox.UseVisualStyleBackColor = true;
+            this.U4BlackCheckBox.CheckedChanged += new System.EventHandler(this.U4BlackCheckBox_CheckedChanged);
             // 
             // U4WhiteCheckBox
             // 
@@ -814,6 +843,7 @@
             this.U4WhiteCheckBox.TabIndex = 33;
             this.U4WhiteCheckBox.Text = "White";
             this.U4WhiteCheckBox.UseVisualStyleBackColor = true;
+            this.U4WhiteCheckBox.CheckedChanged += new System.EventHandler(this.U4WhiteCheckBox_CheckedChanged);
             // 
             // U4PurpleCheckBox
             // 
@@ -824,6 +854,7 @@
             this.U4PurpleCheckBox.TabIndex = 32;
             this.U4PurpleCheckBox.Text = "Purple";
             this.U4PurpleCheckBox.UseVisualStyleBackColor = true;
+            this.U4PurpleCheckBox.CheckedChanged += new System.EventHandler(this.U4PurpleCheckBox_CheckedChanged);
             // 
             // U4OrangeCheckBox
             // 
@@ -834,6 +865,7 @@
             this.U4OrangeCheckBox.TabIndex = 31;
             this.U4OrangeCheckBox.Text = "Orange";
             this.U4OrangeCheckBox.UseVisualStyleBackColor = true;
+            this.U4OrangeCheckBox.CheckedChanged += new System.EventHandler(this.U4OrangeCheckBox_CheckedChanged);
             // 
             // U4GreenCheckBox
             // 
@@ -844,6 +876,7 @@
             this.U4GreenCheckBox.TabIndex = 30;
             this.U4GreenCheckBox.Text = "Green";
             this.U4GreenCheckBox.UseVisualStyleBackColor = true;
+            this.U4GreenCheckBox.CheckedChanged += new System.EventHandler(this.U4GreenCheckBox_CheckedChanged);
             // 
             // U4RedCheckBox
             // 
@@ -854,6 +887,7 @@
             this.U4RedCheckBox.TabIndex = 29;
             this.U4RedCheckBox.Text = "Red";
             this.U4RedCheckBox.UseVisualStyleBackColor = true;
+            this.U4RedCheckBox.CheckedChanged += new System.EventHandler(this.U4RedCheckBox_CheckedChanged);
             // 
             // U4YellowCheckBox
             // 
@@ -864,6 +898,7 @@
             this.U4YellowCheckBox.TabIndex = 28;
             this.U4YellowCheckBox.Text = "Yellow";
             this.U4YellowCheckBox.UseVisualStyleBackColor = true;
+            this.U4YellowCheckBox.CheckedChanged += new System.EventHandler(this.U4YellowCheckBox_CheckedChanged);
             // 
             // U4BlueStoneCheckBox
             // 
@@ -874,6 +909,7 @@
             this.U4BlueStoneCheckBox.TabIndex = 27;
             this.U4BlueStoneCheckBox.Text = "Blue";
             this.U4BlueStoneCheckBox.UseVisualStyleBackColor = true;
+            this.U4BlueStoneCheckBox.CheckedChanged += new System.EventHandler(this.U4BlueStoneCheckBox_CheckedChanged);
             // 
             // label14
             // 
@@ -892,6 +928,7 @@
             this.U4VirtueTextBox.TabIndex = 25;
             this.U4VirtueTextBox.Text = "0";
             this.U4VirtueTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4VirtueTextBox_Validating);
+            this.U4VirtueTextBox.Validated += new System.EventHandler(this.U4VirtueTextBox_Validated);
             // 
             // label13
             // 
@@ -911,6 +948,7 @@
             this.U4RuneCheckBox.TabIndex = 15;
             this.U4RuneCheckBox.Text = "Rune of";
             this.U4RuneCheckBox.UseVisualStyleBackColor = true;
+            this.U4RuneCheckBox.CheckedChanged += new System.EventHandler(this.U4RuneCheckBox_CheckedChanged);
             // 
             // U4VirtueDropDown
             // 
@@ -931,6 +969,7 @@
             this.U4VirtueDropDown.Name = "U4VirtueDropDown";
             this.U4VirtueDropDown.Size = new System.Drawing.Size(134, 28);
             this.U4VirtueDropDown.TabIndex = 14;
+            this.U4VirtueDropDown.SelectedIndexChanged += new System.EventHandler(this.U4VirtueDropDown_SelectedIndexChanged);
             // 
             // U4RuneDropDown
             // 
@@ -951,6 +990,7 @@
             this.U4RuneDropDown.Name = "U4RuneDropDown";
             this.U4RuneDropDown.Size = new System.Drawing.Size(134, 28);
             this.U4RuneDropDown.TabIndex = 13;
+            this.U4RuneDropDown.SelectedIndexChanged += new System.EventHandler(this.U4RuneDropDown_SelectedIndexChanged);
             // 
             // U4PlayerStats
             // 
@@ -994,6 +1034,7 @@
             this.U4MagicTextBox.TabIndex = 24;
             this.U4MagicTextBox.Text = "0";
             this.U4MagicTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MagicTextBox_Validating);
+            this.U4MagicTextBox.Validated += new System.EventHandler(this.U4MagicTextBox_Validated);
             // 
             // U4IntelligenceTextBox
             // 
@@ -1003,6 +1044,7 @@
             this.U4IntelligenceTextBox.TabIndex = 23;
             this.U4IntelligenceTextBox.Text = "0";
             this.U4IntelligenceTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4IntelligenceTextBox_Validating);
+            this.U4IntelligenceTextBox.Validated += new System.EventHandler(this.U4IntelligenceTextBox_Validated);
             // 
             // U4DexterityTextBox
             // 
@@ -1012,6 +1054,7 @@
             this.U4DexterityTextBox.TabIndex = 22;
             this.U4DexterityTextBox.Text = "0";
             this.U4DexterityTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4DexterityTextBox_Validating);
+            this.U4DexterityTextBox.Validated += new System.EventHandler(this.U4DexterityTextBox_Validated);
             // 
             // U4StrengthTextBox
             // 
@@ -1021,6 +1064,7 @@
             this.U4StrengthTextBox.TabIndex = 21;
             this.U4StrengthTextBox.Text = "0";
             this.U4StrengthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4StrengthTextBox_Validating);
+            this.U4StrengthTextBox.Validated += new System.EventHandler(this.U4StrengthTextBox_Validated);
             // 
             // U4ExperienceTextBox
             // 
@@ -1030,6 +1074,7 @@
             this.U4ExperienceTextBox.TabIndex = 20;
             this.U4ExperienceTextBox.Text = "0";
             this.U4ExperienceTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4ExperienceTextBox_Validating);
+            this.U4ExperienceTextBox.Validated += new System.EventHandler(this.U4ExperienceTextBox_Validated);
             // 
             // U4MaxHitTextBox
             // 
@@ -1037,8 +1082,9 @@
             this.U4MaxHitTextBox.Name = "U4MaxHitTextBox";
             this.U4MaxHitTextBox.Size = new System.Drawing.Size(49, 26);
             this.U4MaxHitTextBox.TabIndex = 19;
-            this.U4MaxHitTextBox.Text = "0";
+            this.U4MaxHitTextBox.Text = "100";
             this.U4MaxHitTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MaxHitTextBox_Validating);
+            this.U4MaxHitTextBox.Validated += new System.EventHandler(this.U4MaxHitTextBox_Validated);
             // 
             // U4HitTextBox
             // 
@@ -1048,6 +1094,7 @@
             this.U4HitTextBox.TabIndex = 18;
             this.U4HitTextBox.Text = "0";
             this.U4HitTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4HitTextBox_Validating);
+            this.U4HitTextBox.Validated += new System.EventHandler(this.U4HitTextBox_Validated);
             // 
             // U4ArmorDropDown
             // 
@@ -1068,6 +1115,7 @@
             this.U4ArmorDropDown.Name = "U4ArmorDropDown";
             this.U4ArmorDropDown.Size = new System.Drawing.Size(134, 28);
             this.U4ArmorDropDown.TabIndex = 17;
+            this.U4ArmorDropDown.SelectedIndexChanged += new System.EventHandler(this.U4ArmorDropDown_SelectedIndexChanged);
             // 
             // U4WeaponDropDown
             // 
@@ -1096,6 +1144,7 @@
             this.U4WeaponDropDown.Name = "U4WeaponDropDown";
             this.U4WeaponDropDown.Size = new System.Drawing.Size(134, 28);
             this.U4WeaponDropDown.TabIndex = 16;
+            this.U4WeaponDropDown.SelectedIndexChanged += new System.EventHandler(this.U4WeaponDropDown_SelectedIndexChanged);
             // 
             // U4HealthDropDown
             // 
@@ -1112,6 +1161,7 @@
             this.U4HealthDropDown.Name = "U4HealthDropDown";
             this.U4HealthDropDown.Size = new System.Drawing.Size(134, 28);
             this.U4HealthDropDown.TabIndex = 15;
+            this.U4HealthDropDown.SelectedIndexChanged += new System.EventHandler(this.U4HealthDropDown_SelectedIndexChanged);
             // 
             // U4ClassDropDown
             // 
@@ -1132,6 +1182,7 @@
             this.U4ClassDropDown.Name = "U4ClassDropDown";
             this.U4ClassDropDown.Size = new System.Drawing.Size(134, 28);
             this.U4ClassDropDown.TabIndex = 14;
+            this.U4ClassDropDown.SelectedIndexChanged += new System.EventHandler(this.U4ClassDropDown_SelectedIndexChanged);
             // 
             // U4SexDropDown
             // 
@@ -1146,6 +1197,7 @@
             this.U4SexDropDown.Name = "U4SexDropDown";
             this.U4SexDropDown.Size = new System.Drawing.Size(134, 28);
             this.U4SexDropDown.TabIndex = 13;
+            this.U4SexDropDown.SelectedIndexChanged += new System.EventHandler(this.U4SexDropDown_SelectedIndexChanged);
             // 
             // U4NameDropDown
             // 
@@ -1157,6 +1209,7 @@
             this.U4NameDropDown.Name = "U4NameDropDown";
             this.U4NameDropDown.Size = new System.Drawing.Size(134, 28);
             this.U4NameDropDown.TabIndex = 12;
+            this.U4NameDropDown.SelectedIndexChanged += new System.EventHandler(this.U4NameDropDown_SelectedIndexChanged);
             // 
             // label12
             // 
