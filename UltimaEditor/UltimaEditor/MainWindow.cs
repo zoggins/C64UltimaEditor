@@ -21,6 +21,8 @@ namespace UltimaEditor
             PopulateU4Data();
 
             U4GoToDropDownBox.SelectedIndex = 0;
+
+            // TODO: Populate Goto Drop Down Box
         }
 
         private void ValidateInteger(TextBox textBox, int low, int high, CancelEventArgs e)
@@ -70,8 +72,8 @@ namespace UltimaEditor
             U4DexterityTextBox.Text = character.Dexterity.ToString();
             U4IntelligenceTextBox.Text = character.Intelligence.ToString();
             U4MagicTextBox.Text = character.MagicPoints.ToString();
-            U4WeaponDropDown.SelectedItem = Enum.GetName(typeof(U4EquipedWeapon), character.Weapon);
-            U4ArmorDropDown.SelectedItem = Enum.GetName(typeof(U4EquipedArmor), character.Armor);
+            U4WeaponDropDown.SelectedIndex = (int)character.Weapon;
+            U4ArmorDropDown.SelectedIndex = (int)character.Armor;
         }
 
         private void PopulateLocation()
@@ -79,12 +81,13 @@ namespace UltimaEditor
             U4LocLat1.Text = m_u4Data.Location.Lat1.ToString();
             U4LocLat2.Text = m_u4Data.Location.Lat2.ToString();
             U4LocLong1.Text = m_u4Data.Location.Long1.ToString();
-            U4LocLong1.Text = m_u4Data.Location.Long1.ToString();
+            U4LocLong2.Text = m_u4Data.Location.Long2.ToString();
 
         }
 
         private void PopulateU4Data()
         {
+            U4NameDropDown.Items.Clear();
             for(int i = 0; i < m_u4Data.NumberOfCharactersInParty; ++i)
             {
                 U4NameDropDown.Items.Add(m_u4Data.Characters[i].Name);
@@ -344,14 +347,14 @@ namespace UltimaEditor
         {
             var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
 
-            m_u4Data.Characters[characterIndex].Weapon = (U4EquipedWeapon)Enum.Parse(typeof(U4EquipedWeapon), U4WeaponDropDown.SelectedItem.ToString());
+            m_u4Data.Characters[characterIndex].Weapon = (U4EquipedWeapon)U4WeaponDropDown.SelectedIndex;
         }
 
         private void U4ArmorDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
             var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
 
-            m_u4Data.Characters[characterIndex].Armor = (U4EquipedArmor)Enum.Parse(typeof(U4EquipedArmor), U4ArmorDropDown.SelectedItem.ToString());
+            m_u4Data.Characters[characterIndex].Armor = (U4EquipedArmor)U4ArmorDropDown.SelectedIndex;
         }
 
         private void U4BlueStoneCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -516,7 +519,7 @@ namespace UltimaEditor
 
         private void U4PartyWeaponsDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            U4PartyArmorTextBox.Text = m_u4Data.Weapons[U4PartyWeaponsDropDown.SelectedIndex].ToString();
+            U4PartyWeaponsTextBox.Text = m_u4Data.Weapons[U4PartyWeaponsDropDown.SelectedIndex].ToString();
         }
 
         private void U4PartyWeaponsTextBox_Validated(object sender, EventArgs e)
@@ -552,6 +555,30 @@ namespace UltimaEditor
         private void U4SextantsTextBox_Validated(object sender, EventArgs e)
         {
             m_u4Data.Sextants = Int32.Parse(U4SextantsTextBox.Text);
+        }
+
+        private void U4LoadButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = U4OpenDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                m_u4Data = new Ultima4Data();
+                if (!m_u4Data.Load(U4OpenDialog.FileName))
+                {
+                    MessageBox.Show("An error occured while trying to load the selected file");
+                    U4SaveButton.Enabled = false;
+                }
+                else
+                {
+                    U4SaveButton.Enabled = true;
+                }
+                PopulateU4Data();
+            }
+        }
+
+        private void U4SaveButton_Click(object sender, EventArgs e)
+        {
+            // TODO
         }
     }
 }

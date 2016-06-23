@@ -125,6 +125,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.U5Tab = new System.Windows.Forms.TabPage();
+            this.U4SaveButton = new System.Windows.Forms.Button();
+            this.U4LoadButton = new System.Windows.Forms.Button();
+            this.U4OpenDialog = new System.Windows.Forms.OpenFileDialog();
             this.MainTabControl.SuspendLayout();
             this.U4Tab.SuspendLayout();
             this.U4General.SuspendLayout();
@@ -180,6 +183,8 @@
             // U4Tab
             // 
             this.U4Tab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.U4Tab.Controls.Add(this.U4LoadButton);
+            this.U4Tab.Controls.Add(this.U4SaveButton);
             this.U4Tab.Controls.Add(this.U4General);
             this.U4Tab.Controls.Add(this.U4PartyEquipment);
             this.U4Tab.Controls.Add(this.U4QuestItems);
@@ -695,6 +700,7 @@
             // U4CourageCheckBox
             // 
             this.U4CourageCheckBox.AutoSize = true;
+            this.U4CourageCheckBox.Enabled = false;
             this.U4CourageCheckBox.Location = new System.Drawing.Point(335, 97);
             this.U4CourageCheckBox.Name = "U4CourageCheckBox";
             this.U4CourageCheckBox.Size = new System.Drawing.Size(144, 24);
@@ -717,6 +723,7 @@
             // U4TruthCheckBox
             // 
             this.U4TruthCheckBox.AutoSize = true;
+            this.U4TruthCheckBox.Enabled = false;
             this.U4TruthCheckBox.Location = new System.Drawing.Point(184, 98);
             this.U4TruthCheckBox.Name = "U4TruthCheckBox";
             this.U4TruthCheckBox.Size = new System.Drawing.Size(120, 24);
@@ -750,6 +757,7 @@
             // U4WheelCheckBox
             // 
             this.U4WheelCheckBox.AutoSize = true;
+            this.U4WheelCheckBox.Enabled = false;
             this.U4WheelCheckBox.Location = new System.Drawing.Point(335, 37);
             this.U4WheelCheckBox.Name = "U4WheelCheckBox";
             this.U4WheelCheckBox.Size = new System.Drawing.Size(80, 24);
@@ -772,6 +780,7 @@
             // U4LoveCheckBox
             // 
             this.U4LoveCheckBox.AutoSize = true;
+            this.U4LoveCheckBox.Enabled = false;
             this.U4LoveCheckBox.Location = new System.Drawing.Point(18, 98);
             this.U4LoveCheckBox.Name = "U4LoveCheckBox";
             this.U4LoveCheckBox.Size = new System.Drawing.Size(117, 24);
@@ -783,6 +792,7 @@
             // U4SkullCheckBox
             // 
             this.U4SkullCheckBox.AutoSize = true;
+            this.U4SkullCheckBox.Enabled = false;
             this.U4SkullCheckBox.Location = new System.Drawing.Point(18, 37);
             this.U4SkullCheckBox.Name = "U4SkullCheckBox";
             this.U4SkullCheckBox.Size = new System.Drawing.Size(145, 24);
@@ -1329,6 +1339,31 @@
             this.U5Tab.TabIndex = 4;
             this.U5Tab.Text = "Ultima V";
             // 
+            // U4SaveButton
+            // 
+            this.U4SaveButton.Enabled = false;
+            this.U4SaveButton.Location = new System.Drawing.Point(940, 562);
+            this.U4SaveButton.Name = "U4SaveButton";
+            this.U4SaveButton.Size = new System.Drawing.Size(110, 60);
+            this.U4SaveButton.TabIndex = 38;
+            this.U4SaveButton.Text = "Save";
+            this.U4SaveButton.UseVisualStyleBackColor = true;
+            this.U4SaveButton.Click += new System.EventHandler(this.U4SaveButton_Click);
+            // 
+            // U4LoadButton
+            // 
+            this.U4LoadButton.Location = new System.Drawing.Point(801, 562);
+            this.U4LoadButton.Name = "U4LoadButton";
+            this.U4LoadButton.Size = new System.Drawing.Size(110, 60);
+            this.U4LoadButton.TabIndex = 39;
+            this.U4LoadButton.Text = "Load";
+            this.U4LoadButton.UseVisualStyleBackColor = true;
+            this.U4LoadButton.Click += new System.EventHandler(this.U4LoadButton_Click);
+            // 
+            // U4OpenDialog
+            // 
+            this.U4OpenDialog.Filter = "C64 Disk Images|*.d64";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1455,6 +1490,9 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox U4LocLong2;
         private System.Windows.Forms.TextBox U4LocLong1;
+        private System.Windows.Forms.Button U4LoadButton;
+        private System.Windows.Forms.Button U4SaveButton;
+        private System.Windows.Forms.OpenFileDialog U4OpenDialog;
     }
 }
 

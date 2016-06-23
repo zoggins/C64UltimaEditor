@@ -115,13 +115,150 @@ namespace UltimaEditor
 
         public bool Load(string file)
         {
-            return false;
+            try
+            {
+                RawFile = System.IO.File.ReadAllBytes(file);
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+
+            if (!IsU4BritDisk())
+                return false;
+
+            NumberOfCharactersInParty = RawFile[NumInPartyOffset];
+            for(int i = 0; i < NumberOfCharactersInParty; ++i)
+            {
+                LoadCharacter(i);
+            }
+            
+            Torches = ConvertOneByteNumberToInt(RawFile[TorchesOffset]);
+            Gems = ConvertOneByteNumberToInt(RawFile[GemsOffset]);
+            Keys = ConvertOneByteNumberToInt(RawFile[KeysOffset]);
+            Sextants = ConvertOneByteNumberToInt(RawFile[SextantsOffset]);
+
+            for (int i = 0; i < 26; ++i)
+            {
+                if (i < 8)
+                {
+                    Virtues[i] = RawFile[VirtuesOffset + i];
+                    Stones[i] = (RawFile[StonesOffset] & (0x01 << i)) != 0;
+                    Runes[i] = (RawFile[RunesOffset] & (0x01 << i)) != 0;
+                    Armor[i] = ConvertOneByteNumberToInt(RawFile[ArmorOffset + i]);
+                    Reagents[i] = ConvertOneByteNumberToInt(RawFile[ReagentsOffset + i]);
+                }
+
+                if (i < 16)
+                    Weapons[i] = ConvertOneByteNumberToInt(RawFile[WeaponOffset + i]);
+
+                Spells[i] = ConvertOneByteNumberToInt(RawFile[SpellsOffset + i]);
+
+            }
+
+            Candle = (RawFile[BellBookCandleOffset] & 0x01) != 0;
+            Book = (RawFile[BellBookCandleOffset] & 0x02) != 0;
+            Bell = (RawFile[BellBookCandleOffset] & 0x04) != 0;
+
+            // TODO: Not sure how the 3 part key is encoded, appears they are also in the BellBookCandle byte
+
+            Food = ConvertOneByteNumberToInt(RawFile[FoodOffset]) * 100 + ConvertOneByteNumberToInt(RawFile[FoodOffset + 1]);
+            Gold = ConvertOneByteNumberToInt(RawFile[GoldOffset]) * 100 + ConvertOneByteNumberToInt(RawFile[GoldOffset + 1]);
+
+            Horn = (RawFile[HornOffset] & 0x01) != 0;
+
+            // TODO: Skull and Wheel.  Need to verify
+
+            Moves = ConvertOneByteNumberToInt(RawFile[MovesOffset]) * 1000000
+                        + ConvertOneByteNumberToInt(RawFile[MovesOffset + 1]) * 10000
+                        + ConvertOneByteNumberToInt(RawFile[MovesOffset + 2]) * 100
+                        + ConvertOneByteNumberToInt(RawFile[MovesOffset + 3]);
+
+            Location = ConvertToLocation(RawFile[LocationOffset + 1], RawFile[LocationOffset]);
+
+            return true;
         }
 
         public void Save(string file)
         {
-
+            // TODO
         }
+
+        private bool IsU4BritDisk()
+        {
+            if (RawFile.Length != 174848)
+                return false;
+
+            for(int i = 0; i < DiskDescriptorText.Length; ++i)
+            {
+                if ((byte)RawFile[DiskDescriptorOffset + i] != DiskDescriptorText[i])
+                    return false;
+            }
+
+            return true;
+            
+        }
+
+        private void LoadCharacter(int index)
+        {
+            int offset = SaveFileStartOffset + (index * CharacterRecordSize);
+
+            Characters[index].Name = ProcessName(offset);
+            Characters[index].Sex = (U4Sex)RawFile[offset + 0x10];
+            Characters[index].Class = (U4Class)RawFile[offset + 0x11];
+            Characters[index].Health = (U4Health)RawFile[offset + 0x12];
+
+            Characters[index].Strength = ConvertOneByteNumberToInt(RawFile[offset + 0x13]);
+            Characters[index].Dexterity = ConvertOneByteNumberToInt(RawFile[offset + 0x14]);
+            Characters[index].Intelligence = ConvertOneByteNumberToInt(RawFile[offset + 0x15]);
+
+            Characters[index].MagicPoints = ConvertOneByteNumberToInt(RawFile[offset + 0x16]);
+
+            Characters[index].HitPoints = ConvertOneByteNumberToInt(RawFile[offset + 0x18]) * 100 + ConvertOneByteNumberToInt(RawFile[offset + 0x19]);
+            Characters[index].MaxHitPoints = ConvertOneByteNumberToInt(RawFile[offset + 0x1a]) * 100 + ConvertOneByteNumberToInt(RawFile[offset + 0x1b]);
+
+            Characters[index].Experience = ConvertOneByteNumberToInt(RawFile[offset + 0x1c]) * 100 + ConvertOneByteNumberToInt(RawFile[offset + 0x1d]);
+
+            Characters[index].Weapon = (U4EquipedWeapon)RawFile[offset + 0x1e];
+            Characters[index].Armor = (U4EquipedArmor)RawFile[offset + 0x1f];
+        }
+
+        private string ProcessName(int offset)
+        {
+            StringBuilder name = new StringBuilder();
+
+            int i = 0;
+            while(i < 16 && RawFile[offset+i] != 0)
+            {
+                if (i == 0)
+                    name.Append((char)((RawFile[offset + i] - 0xc1) + (byte)'A'));
+                else
+                    name.Append((char)((RawFile[offset + i] - 0xc1) + (byte)'a'));
+                ++i;
+            }
+
+            return name.ToString();
+        }
+
+        private int ConvertOneByteNumberToInt(byte numberToConvert)
+        {
+            return (((numberToConvert & 0xf0) >> 0x04) * 10) + (numberToConvert & 0x0f);
+        }
+
+        private U4Location ConvertToLocation(byte lat, byte lon)
+        {
+            U4Location retVal = new U4Location();
+
+            retVal.Lat1 = (char)((lat / 16) + 'A');
+            retVal.Lat2 = (char)((lat % 16) + 'A');
+            retVal.Long1 = (char)((lon / 16) + 'A');
+            retVal.Long2 = (char)((lon % 16) + 'A');
+
+            return retVal;
+        }
+
+        private const int DiskDescriptorOffset = 0x16590;
+        private const string DiskDescriptorText = "U4 DISK C";
 
         private const int SaveFileStartOffset = 0x11100;  // 8 records
         private const int CharacterRecordSize = 0x20;
