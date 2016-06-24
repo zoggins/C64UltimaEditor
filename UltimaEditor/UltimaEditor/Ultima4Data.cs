@@ -18,6 +18,18 @@ namespace UltimaEditor
         Humility = 7
     }
 
+    enum U4Transportation
+    {
+        ShipWest = 0x10,
+        ShipNorth = 0x11,
+        ShipEast = 0x12,
+        ShipSouth = 0x13,
+        HorseWest = 0x14,
+        HorseEast = 0x15,
+        Balloon = 0x18,
+        Foot = 0x1f
+    }
+
     class U4Location
     {
         public U4Location()
@@ -26,6 +38,14 @@ namespace UltimaEditor
             Lat2 = 'A';
             Long1 = 'A';
             Long2 = 'A';
+        }
+
+        public U4Location(char Lat1, char Lat2, char Long1, char Long2)
+        {
+            this.Lat1 = Lat1;
+            this.Lat2 = Lat2;
+            this.Long1 = Long1;
+            this.Long2 = Long2;
         }
 
         public char Lat1;
@@ -74,6 +94,8 @@ namespace UltimaEditor
             Runes = new bool[8];
             Virtues = new int[8];
 
+            CurrentTransportation = U4Transportation.Foot;
+
             RawFile = null;
         }
 
@@ -111,6 +133,8 @@ namespace UltimaEditor
         public bool[] Runes;
         public int[] Virtues;
 
+        public U4Transportation CurrentTransportation;
+
         private byte[] RawFile;
 
         public bool Load(string file)
@@ -119,7 +143,7 @@ namespace UltimaEditor
             {
                 RawFile = System.IO.File.ReadAllBytes(file);
             }
-            catch(Exception e)
+            catch(Exception /*e*/)
             {
                 return false;
             }
@@ -127,7 +151,7 @@ namespace UltimaEditor
             if (!IsU4BritDisk())
                 return false;
 
-            NumberOfCharactersInParty = RawFile[NumInPartyOffset];
+            NumberOfCharactersInParty = ConvertOneByteNumberToInt(RawFile[NumInPartyOffset]);
             for(int i = 0; i < NumberOfCharactersInParty; ++i)
             {
                 LoadCharacter(i);
@@ -142,7 +166,7 @@ namespace UltimaEditor
             {
                 if (i < 8)
                 {
-                    Virtues[i] = RawFile[VirtuesOffset + i];
+                    Virtues[i] = ConvertOneByteNumberToInt(RawFile[VirtuesOffset + i]);
                     Stones[i] = (RawFile[StonesOffset] & (0x01 << i)) != 0;
                     Runes[i] = (RawFile[RunesOffset] & (0x01 << i)) != 0;
                     Armor[i] = ConvertOneByteNumberToInt(RawFile[ArmorOffset + i]);
@@ -160,14 +184,18 @@ namespace UltimaEditor
             Book = (RawFile[BellBookCandleOffset] & 0x02) != 0;
             Bell = (RawFile[BellBookCandleOffset] & 0x04) != 0;
 
-            // TODO: Not sure how the 3 part key is encoded, appears they are also in the BellBookCandle byte
+            KeyOfTruth = (RawFile[ThreePartKeyOffset] & 0x01) != 0;
+            KeyOfLove = (RawFile[ThreePartKeyOffset] & 0x02) != 0;
+            KeyOfCourage = (RawFile[ThreePartKeyOffset] & 0x04) != 0;
 
             Food = ConvertOneByteNumberToInt(RawFile[FoodOffset]) * 100 + ConvertOneByteNumberToInt(RawFile[FoodOffset + 1]);
             Gold = ConvertOneByteNumberToInt(RawFile[GoldOffset]) * 100 + ConvertOneByteNumberToInt(RawFile[GoldOffset + 1]);
 
             Horn = (RawFile[HornOffset] & 0x01) != 0;
 
-            // TODO: Skull and Wheel.  Need to verify
+            Skull = (RawFile[SkullOffset] & 0x01) != 0;
+
+            Wheel = (RawFile[WheelOffset] & 0x01) != 0;
 
             Moves = ConvertOneByteNumberToInt(RawFile[MovesOffset]) * 1000000
                         + ConvertOneByteNumberToInt(RawFile[MovesOffset + 1]) * 10000
@@ -176,12 +204,86 @@ namespace UltimaEditor
 
             Location = ConvertToLocation(RawFile[LocationOffset + 1], RawFile[LocationOffset]);
 
+            CurrentTransportation = (U4Transportation)RawFile[TransportationOffset];
+
             return true;
         }
 
-        public void Save(string file)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
+        public bool Save(string file)
         {
-            // TODO
+            RawFile[NumInPartyOffset] = ConvertIntToOneByteNumber(NumberOfCharactersInParty);
+            for (int i = 0; i < NumberOfCharactersInParty; ++i)
+            {
+                SaveCharacter(i);
+            }
+
+            RawFile[TorchesOffset] = ConvertIntToOneByteNumber(Torches);
+            RawFile[GemsOffset] = ConvertIntToOneByteNumber(Gems);
+            RawFile[KeysOffset] = ConvertIntToOneByteNumber(Keys);
+            RawFile[SextantsOffset] = ConvertIntToOneByteNumber(Sextants);
+
+            for (int i = 0; i < 26; ++i)
+            {
+                if (i < 8)
+                {
+                    RawFile[VirtuesOffset + i] = ConvertIntToOneByteNumber(Virtues[i]);
+                    RawFile[StonesOffset] = Stones[i] ? (byte)(RawFile[StonesOffset] | (0x01 << i)) : (byte)(RawFile[StonesOffset] & ~(0x01 << i));
+                    RawFile[RunesOffset] = Runes[i] ? (byte)(RawFile[RunesOffset] | (0x01 << i)) : (byte)(RawFile[RunesOffset] & ~(0x01 << i));
+                    RawFile[ArmorOffset + i] = ConvertIntToOneByteNumber(Armor[i]);
+                    RawFile[ReagentsOffset + i] = ConvertIntToOneByteNumber(Reagents[i]);
+                }
+
+                if (i < 16)
+                    RawFile[WeaponOffset + i] = ConvertIntToOneByteNumber(Weapons[i]);
+
+                RawFile[SpellsOffset + i] = ConvertIntToOneByteNumber(Spells[i]);
+
+            }
+
+            RawFile[BellBookCandleOffset] = Candle ? (byte)(RawFile[BellBookCandleOffset] | 0x01) : (byte)(RawFile[BellBookCandleOffset] & ~0x01);
+            RawFile[BellBookCandleOffset] = Book ? (byte)(RawFile[BellBookCandleOffset] | 0x02) : (byte)(RawFile[BellBookCandleOffset] & ~0x02);
+            RawFile[BellBookCandleOffset] = Bell ? (byte)(RawFile[BellBookCandleOffset] | 0x04) : (byte)(RawFile[BellBookCandleOffset] & ~0x04);
+
+            RawFile[ThreePartKeyOffset] = KeyOfTruth ? (byte)(RawFile[ThreePartKeyOffset] | 0x01) : (byte)(RawFile[ThreePartKeyOffset] & ~0x01);
+            RawFile[ThreePartKeyOffset] = KeyOfLove ? (byte)(RawFile[ThreePartKeyOffset] | 0x02) : (byte)(RawFile[ThreePartKeyOffset] & ~0x02);
+            RawFile[ThreePartKeyOffset] = KeyOfCourage ? (byte)(RawFile[ThreePartKeyOffset] | 0x04) : (byte)(RawFile[ThreePartKeyOffset] & ~0x04);
+
+            RawFile[FoodOffset] = ConvertIntToOneByteNumber(Food / 100);
+            RawFile[FoodOffset + 1] = ConvertIntToOneByteNumber(Food % 100);
+
+            RawFile[GoldOffset] = ConvertIntToOneByteNumber(Gold / 100);
+            RawFile[GoldOffset + 1] = ConvertIntToOneByteNumber(Gold % 100);
+
+            RawFile[HornOffset] = Horn ? (byte)(RawFile[HornOffset] | 0x01) : (byte)(RawFile[HornOffset] & ~0x01);
+
+            RawFile[SkullOffset] = Skull ? (byte)(RawFile[SkullOffset] | 0x01) : (byte)(RawFile[SkullOffset] & ~0x01);
+            RawFile[WheelOffset] = Wheel ? (byte)(RawFile[WheelOffset] | 0x01) : (byte)(RawFile[WheelOffset] & ~0x01);
+
+            RawFile[MovesOffset] = ConvertIntToOneByteNumber(Moves / 1000000);
+            RawFile[MovesOffset + 1] = ConvertIntToOneByteNumber(Moves % 1000000 / 10000);
+            RawFile[MovesOffset + 2] = ConvertIntToOneByteNumber(Moves % 10000 / 100);
+            RawFile[MovesOffset + 3] = ConvertIntToOneByteNumber(Moves % 100);
+
+            RawFile[LocationOffset + 1] = ConvertFromLocation(Location.Lat1, Location.Lat2);
+            RawFile[LocationOffset] = ConvertFromLocation(Location.Long1, Location.Long2);
+
+            RawFile[TransportationOffset] = (byte)CurrentTransportation;
+
+            try
+            {
+                System.IO.File.WriteAllBytes(file, RawFile);
+            }
+            catch (Exception /*e*/)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         private bool IsU4BritDisk()
@@ -223,6 +325,33 @@ namespace UltimaEditor
             Characters[index].Armor = (U4EquipedArmor)RawFile[offset + 0x1f];
         }
 
+        private void SaveCharacter(int index)
+        {
+            int offset = SaveFileStartOffset + (index * CharacterRecordSize);
+
+            RawFile[offset + 0x10] = (byte)Characters[index].Sex;
+            RawFile[offset + 0x11] = (byte)Characters[index].Class;
+            RawFile[offset + 0x12] = (byte)Characters[index].Health;
+
+            RawFile[offset + 0x13] = ConvertIntToOneByteNumber(Characters[index].Strength);
+            RawFile[offset + 0x14] = ConvertIntToOneByteNumber(Characters[index].Dexterity);
+            RawFile[offset + 0x15] = ConvertIntToOneByteNumber(Characters[index].Intelligence);
+
+            RawFile[offset + 0x16] = ConvertIntToOneByteNumber(Characters[index].MagicPoints);
+
+            RawFile[offset + 0x18] = ConvertIntToOneByteNumber(Characters[index].HitPoints / 100);
+            RawFile[offset + 0x19] = ConvertIntToOneByteNumber(Characters[index].HitPoints % 100);
+
+            RawFile[offset + 0x1a] = ConvertIntToOneByteNumber(Characters[index].MaxHitPoints / 100);
+            RawFile[offset + 0x1b] = ConvertIntToOneByteNumber(Characters[index].MaxHitPoints % 100);
+
+            RawFile[offset + 0x1c] = ConvertIntToOneByteNumber(Characters[index].Experience / 100);
+            RawFile[offset + 0x1d] = ConvertIntToOneByteNumber(Characters[index].Experience % 100);
+
+            RawFile[offset + 0x1e] = (byte)Characters[index].Weapon;
+            RawFile[offset + 0x1f] = (byte)Characters[index].Armor;
+        }
+
         private string ProcessName(int offset)
         {
             StringBuilder name = new StringBuilder();
@@ -245,6 +374,11 @@ namespace UltimaEditor
             return (((numberToConvert & 0xf0) >> 0x04) * 10) + (numberToConvert & 0x0f);
         }
 
+        private byte ConvertIntToOneByteNumber(int numberToConvert)
+        {
+            return (byte)(((numberToConvert / 10) << 0x04) | (numberToConvert % 10));
+        }
+
         private U4Location ConvertToLocation(byte lat, byte lon)
         {
             U4Location retVal = new U4Location();
@@ -253,6 +387,16 @@ namespace UltimaEditor
             retVal.Lat2 = (char)((lat % 16) + 'A');
             retVal.Long1 = (char)((lon / 16) + 'A');
             retVal.Long2 = (char)((lon % 16) + 'A');
+
+            return retVal;
+        }
+
+        private byte ConvertFromLocation(char one, char two)
+        {
+            byte retVal = 0x0;
+
+            retVal = (byte)((one - 'A') * 16);
+            retVal += (byte)(two - 'A');
 
             return retVal;
         }
@@ -288,6 +432,7 @@ namespace UltimaEditor
         private const int SpellsOffset = 0x11240; // 26 bytes
 
         private const int LocationOffset = 0x11300; // 2 bytes
+        private const int TransportationOffset = 0x1130E;
         private const int NumInPartyOffset = 0x1130F;
         private const int MovesOffset = 0x1131C;  // 4 bytes
     }

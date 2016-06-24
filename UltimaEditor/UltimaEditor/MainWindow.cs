@@ -18,9 +18,9 @@ namespace UltimaEditor
 
             m_u4Data = new Ultima4Data();
 
-            PopulateU4Data();
+            PopulateU4GoToLocations();
 
-            U4GoToDropDownBox.SelectedIndex = 0;
+            PopulateU4Data();
 
             // TODO: Populate Goto Drop Down Box
         }
@@ -76,12 +76,12 @@ namespace UltimaEditor
             U4ArmorDropDown.SelectedIndex = (int)character.Armor;
         }
 
-        private void PopulateLocation()
+        private void PopulateLocation(char lat1, char lat2, char long1, char long2)
         {
-            U4LocLat1.Text = m_u4Data.Location.Lat1.ToString();
-            U4LocLat2.Text = m_u4Data.Location.Lat2.ToString();
-            U4LocLong1.Text = m_u4Data.Location.Long1.ToString();
-            U4LocLong2.Text = m_u4Data.Location.Long2.ToString();
+            U4LocLat1.Text = lat1.ToString();
+            U4LocLat2.Text = lat2.ToString();
+            U4LocLong1.Text = long1.ToString();
+            U4LocLong2.Text = long2.ToString();
 
         }
 
@@ -143,9 +143,88 @@ namespace UltimaEditor
             U4SextantsTextBox.Text = m_u4Data.Sextants.ToString();
 
             U4MovesTextBox.Text = m_u4Data.Moves.ToString();
-            PopulateLocation();
+            PopulateLocation(m_u4Data.Location.Lat1, m_u4Data.Location.Lat2, m_u4Data.Location.Long1, m_u4Data.Location.Long2);
+
+            U4GoToDropDownBox.SelectedIndex = 0;
+        }
+
+        private void PopulateU4GoToLocations()
+        {
+            m_u4GoToLocations = new List<U4GoToLocation>();
+
+            m_u4GoToLocations.Add(new U4GoToLocation("Not Specified", new U4Location(), false, false));
+            m_u4GoToLocations.Add(new U4GoToLocation("", new U4Location(), false, false));
+
+            m_u4GoToLocations.Add(new U4GoToLocation("---- TOWNES ----", new U4Location(), false, false));
+            m_u4GoToLocations.Add(new U4GoToLocation("Britain", new U4Location('G', 'K', 'F', 'C'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Buccaneers Den", new U4Location('J', 'O', 'I', 'I'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Cove", new U4Location('F', 'K', 'I', 'I'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Empath Abbey", new U4Location('D', 'C', 'B', 'M'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Jhelom", new U4Location('N', 'O', 'C', 'E'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("LB's Castle", new U4Location('G', 'L', 'F', 'G'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Magincia", new U4Location('K', 'J', 'L', 'L'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Minoc", new U4Location('B', 'E', 'J', 'P'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Moonglow", new U4Location('I', 'H', 'O', 'I'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Paws", new U4Location('J', 'B', 'G', 'C'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Serpent's Hold", new U4Location('P', 'B', 'J', 'C'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Skara Brae", new U4Location('I', 'A', 'B', 'G'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("The Lycaeum", new U4Location('G', 'L', 'N', 'K'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Trinsic", new U4Location('L', 'I', 'G', 'K'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Vesper", new U4Location('D', 'L', 'M', 'J'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Yew", new U4Location('C', 'L', 'D', 'K'), false, true));
+
+            m_u4GoToLocations.Add(new U4GoToLocation("", new U4Location(), false, false));
+
+            m_u4GoToLocations.Add(new U4GoToLocation("---- DUNGEONS ----", new U4Location(), false, false));
+            m_u4GoToLocations.Add(new U4GoToLocation("Deceit", new U4Location('E', 'J', 'P', 'A'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Despise", new U4Location('E', 'D', 'F', 'L'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Destard", new U4Location('K', 'I', 'E', 'I'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Wrong", new U4Location('B', 'E', 'H', 'O'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Covetous", new U4Location('B', 'L', 'J', 'M'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Shame", new U4Location('G', 'G', 'D', 'K'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Hythloth", new U4Location('P', 'A', 'O', 'P'), false, true));
+
+            m_u4GoToLocations.Add(new U4GoToLocation("", new U4Location(), false, false));
+
+            m_u4GoToLocations.Add(new U4GoToLocation("---- SHRINES ----", new U4Location(), false, false));
+            m_u4GoToLocations.Add(new U4GoToLocation("Compassion", new U4Location('F', 'M', 'I', 'A'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Honesty", new U4Location('E', 'C', 'O', 'J'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Honor", new U4Location('M', 'P', 'F', 'B'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Humility", new U4Location('N', 'I', 'O', 'H'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Justice", new U4Location('A', 'L', 'E', 'J'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Sacrifice", new U4Location('C', 'N', 'M', 'N'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Spirituality", new U4Location('B', 'D', 'K', 'G'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Valor", new U4Location('O', 'F', 'C', 'E'), false, true));
+
+            m_u4GoToLocations.Add(new U4GoToLocation("", new U4Location(), false, false));
+
+            m_u4GoToLocations.Add(new U4GoToLocation("---- SPOILERS ----", new U4Location(), false, false));
+            m_u4GoToLocations.Add(new U4GoToLocation("Bell of Courage", new U4Location('N', 'A', 'L', 'A'), true, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Book of Truth", new U4Location('G', 'L', 'N', 'K'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Candle of Love", new U4Location('F', 'K', 'I', 'I'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Mondain's Skull", new U4Location('P', 'F', 'M', 'F'), true, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Balloon", new U4Location('P', 'C', 'O', 'J'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Wheel", new U4Location('N', 'H', 'G', 'A'), true, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Silver Horn", new U4Location('K', 'N', 'C', 'N'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Black Stone", new U4Location('I', 'F', 'O', 'A'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("White Stone", new U4Location('F', 'A', 'E', 'A'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Mystic Armour", new U4Location('D', 'C', 'B', 'M'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Mystic Weapons", new U4Location('P', 'B', 'J', 'C'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Nightshade", new U4Location('J', 'F', 'C', 'O'), false, true));
+            m_u4GoToLocations.Add(new U4GoToLocation("Mandrake Root", new U4Location('D', 'G', 'L', 'G'), false, true));
+
+            U4GoToDropDownBox.Items.Clear();
+
+            foreach(var location in m_u4GoToLocations)
+            {
+                U4GoToDropDownBox.Items.Add(location.Name);
+            }
+
+            U4GoToDropDownBox.SelectedIndex = 0;
 
         }
+
+        private List<U4GoToLocation> m_u4GoToLocations;
 
         private Ultima4Data m_u4Data;
 
@@ -481,8 +560,7 @@ namespace UltimaEditor
         {
             m_u4Data.Location.Long1 = U4LocLong1.Text[0];
         }
-
-        private void U4LocLong2_TextChanged(object sender, EventArgs e)
+        private void U4LocLong2_Validated(object sender, EventArgs e)
         {
             m_u4Data.Location.Long2 = U4LocLong2.Text[0];
         }
@@ -578,7 +656,75 @@ namespace UltimaEditor
 
         private void U4SaveButton_Click(object sender, EventArgs e)
         {
-            // TODO
+            DialogResult result = U4SaveDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                if (!m_u4Data.Save(U4SaveDialog.FileName))
+                {
+                    MessageBox.Show("An error occured while trying to save the selected file");
+                }
+            }
+        }
+
+        private void U4GoToDropDownBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var location = m_u4GoToLocations[U4GoToDropDownBox.SelectedIndex];
+            if (location.IsActive)
+            {
+                PopulateLocation(location.Coordinates.Lat1, location.Coordinates.Lat2, location.Coordinates.Long1, location.Coordinates.Long2);
+
+                bool OnABoat = m_u4Data.CurrentTransportation == U4Transportation.ShipEast
+                        || m_u4Data.CurrentTransportation == U4Transportation.ShipWest
+                        || m_u4Data.CurrentTransportation == U4Transportation.ShipNorth
+                        || m_u4Data.CurrentTransportation == U4Transportation.ShipSouth;
+
+                if (OnABoat && !location.AtSea)
+                {
+                    m_u4Data.CurrentTransportation = U4Transportation.Foot;
+                }
+                else if (!OnABoat && location.AtSea)
+                {
+                    m_u4Data.CurrentTransportation = U4Transportation.ShipWest;
+                }
+
+            }
+        }
+
+        private void U4LocLat1_TextChanged(object sender, EventArgs e)
+        {
+            U4LocLat1_Validated(sender, e);
+        }
+
+        private void U4LocLat2_TextChanged(object sender, EventArgs e)
+        {
+            U4LocLat2_Validated(sender, e);
+        }
+
+        private void U4LocLong1_TextChanged(object sender, EventArgs e)
+        {
+            U4LocLong1_Validated(sender, e);
+        }
+
+        private void U4LocLong2_TextChanged(object sender, EventArgs e)
+        {
+            U4LocLong2_Validated(sender, e);
         }
     }
+
+    class U4GoToLocation
+    {
+        public U4GoToLocation(string Name, U4Location Coordinates, bool AtSea, bool IsActive)
+        {
+            this.Name = Name;
+            this.Coordinates = Coordinates;
+            this.AtSea = AtSea;
+            this.IsActive = IsActive;
+        }
+
+        public string Name;
+        public U4Location Coordinates;
+        public bool AtSea;
+        public bool IsActive;
+    }
+
 }

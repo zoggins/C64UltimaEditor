@@ -33,6 +33,8 @@
             this.U2Tab = new System.Windows.Forms.TabPage();
             this.U3Tab = new System.Windows.Forms.TabPage();
             this.U4Tab = new System.Windows.Forms.TabPage();
+            this.U4LoadButton = new System.Windows.Forms.Button();
+            this.U4SaveButton = new System.Windows.Forms.Button();
             this.U4General = new System.Windows.Forms.GroupBox();
             this.U4GoToDropDownBox = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -125,9 +127,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.U5Tab = new System.Windows.Forms.TabPage();
-            this.U4SaveButton = new System.Windows.Forms.Button();
-            this.U4LoadButton = new System.Windows.Forms.Button();
             this.U4OpenDialog = new System.Windows.Forms.OpenFileDialog();
+            this.U4SaveDialog = new System.Windows.Forms.SaveFileDialog();
             this.MainTabControl.SuspendLayout();
             this.U4Tab.SuspendLayout();
             this.U4General.SuspendLayout();
@@ -197,6 +198,27 @@
             this.U4Tab.TabIndex = 3;
             this.U4Tab.Text = "Ultima IV";
             // 
+            // U4LoadButton
+            // 
+            this.U4LoadButton.Location = new System.Drawing.Point(801, 562);
+            this.U4LoadButton.Name = "U4LoadButton";
+            this.U4LoadButton.Size = new System.Drawing.Size(110, 60);
+            this.U4LoadButton.TabIndex = 39;
+            this.U4LoadButton.Text = "Load";
+            this.U4LoadButton.UseVisualStyleBackColor = true;
+            this.U4LoadButton.Click += new System.EventHandler(this.U4LoadButton_Click);
+            // 
+            // U4SaveButton
+            // 
+            this.U4SaveButton.Enabled = false;
+            this.U4SaveButton.Location = new System.Drawing.Point(940, 562);
+            this.U4SaveButton.Name = "U4SaveButton";
+            this.U4SaveButton.Size = new System.Drawing.Size(110, 60);
+            this.U4SaveButton.TabIndex = 38;
+            this.U4SaveButton.Text = "Save";
+            this.U4SaveButton.UseVisualStyleBackColor = true;
+            this.U4SaveButton.Click += new System.EventHandler(this.U4SaveButton_Click);
+            // 
             // U4General
             // 
             this.U4General.Controls.Add(this.U4GoToDropDownBox);
@@ -227,6 +249,7 @@
             this.U4GoToDropDownBox.Name = "U4GoToDropDownBox";
             this.U4GoToDropDownBox.Size = new System.Drawing.Size(146, 28);
             this.U4GoToDropDownBox.TabIndex = 26;
+            this.U4GoToDropDownBox.SelectedIndexChanged += new System.EventHandler(this.U4GoToDropDownBox_SelectedIndexChanged);
             // 
             // label32
             // 
@@ -246,6 +269,7 @@
             this.U4LocLong2.Text = "A";
             this.U4LocLong2.TextChanged += new System.EventHandler(this.U4LocLong2_TextChanged);
             this.U4LocLong2.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLong2_Validating);
+            this.U4LocLong2.Validated += new System.EventHandler(this.U4LocLong2_Validated);
             // 
             // U4LocLong1
             // 
@@ -254,6 +278,7 @@
             this.U4LocLong1.Size = new System.Drawing.Size(28, 26);
             this.U4LocLong1.TabIndex = 54;
             this.U4LocLong1.Text = "A";
+            this.U4LocLong1.TextChanged += new System.EventHandler(this.U4LocLong1_TextChanged);
             this.U4LocLong1.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLong1_Validating);
             this.U4LocLong1.Validated += new System.EventHandler(this.U4LocLong1_Validated);
             // 
@@ -264,6 +289,7 @@
             this.U4LocLat2.Size = new System.Drawing.Size(26, 26);
             this.U4LocLat2.TabIndex = 27;
             this.U4LocLat2.Text = "A";
+            this.U4LocLat2.TextChanged += new System.EventHandler(this.U4LocLat2_TextChanged);
             this.U4LocLat2.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLat2_Validating);
             this.U4LocLat2.Validated += new System.EventHandler(this.U4LocLat2_Validated);
             // 
@@ -284,6 +310,7 @@
             this.U4LocLat1.Size = new System.Drawing.Size(28, 26);
             this.U4LocLat1.TabIndex = 26;
             this.U4LocLat1.Text = "A";
+            this.U4LocLat1.TextChanged += new System.EventHandler(this.U4LocLat1_TextChanged);
             this.U4LocLat1.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLat1_Validating);
             this.U4LocLat1.Validated += new System.EventHandler(this.U4LocLat1_Validated);
             // 
@@ -700,7 +727,6 @@
             // U4CourageCheckBox
             // 
             this.U4CourageCheckBox.AutoSize = true;
-            this.U4CourageCheckBox.Enabled = false;
             this.U4CourageCheckBox.Location = new System.Drawing.Point(335, 97);
             this.U4CourageCheckBox.Name = "U4CourageCheckBox";
             this.U4CourageCheckBox.Size = new System.Drawing.Size(144, 24);
@@ -723,7 +749,6 @@
             // U4TruthCheckBox
             // 
             this.U4TruthCheckBox.AutoSize = true;
-            this.U4TruthCheckBox.Enabled = false;
             this.U4TruthCheckBox.Location = new System.Drawing.Point(184, 98);
             this.U4TruthCheckBox.Name = "U4TruthCheckBox";
             this.U4TruthCheckBox.Size = new System.Drawing.Size(120, 24);
@@ -757,7 +782,6 @@
             // U4WheelCheckBox
             // 
             this.U4WheelCheckBox.AutoSize = true;
-            this.U4WheelCheckBox.Enabled = false;
             this.U4WheelCheckBox.Location = new System.Drawing.Point(335, 37);
             this.U4WheelCheckBox.Name = "U4WheelCheckBox";
             this.U4WheelCheckBox.Size = new System.Drawing.Size(80, 24);
@@ -780,7 +804,6 @@
             // U4LoveCheckBox
             // 
             this.U4LoveCheckBox.AutoSize = true;
-            this.U4LoveCheckBox.Enabled = false;
             this.U4LoveCheckBox.Location = new System.Drawing.Point(18, 98);
             this.U4LoveCheckBox.Name = "U4LoveCheckBox";
             this.U4LoveCheckBox.Size = new System.Drawing.Size(117, 24);
@@ -792,7 +815,6 @@
             // U4SkullCheckBox
             // 
             this.U4SkullCheckBox.AutoSize = true;
-            this.U4SkullCheckBox.Enabled = false;
             this.U4SkullCheckBox.Location = new System.Drawing.Point(18, 37);
             this.U4SkullCheckBox.Name = "U4SkullCheckBox";
             this.U4SkullCheckBox.Size = new System.Drawing.Size(145, 24);
@@ -1339,30 +1361,13 @@
             this.U5Tab.TabIndex = 4;
             this.U5Tab.Text = "Ultima V";
             // 
-            // U4SaveButton
-            // 
-            this.U4SaveButton.Enabled = false;
-            this.U4SaveButton.Location = new System.Drawing.Point(940, 562);
-            this.U4SaveButton.Name = "U4SaveButton";
-            this.U4SaveButton.Size = new System.Drawing.Size(110, 60);
-            this.U4SaveButton.TabIndex = 38;
-            this.U4SaveButton.Text = "Save";
-            this.U4SaveButton.UseVisualStyleBackColor = true;
-            this.U4SaveButton.Click += new System.EventHandler(this.U4SaveButton_Click);
-            // 
-            // U4LoadButton
-            // 
-            this.U4LoadButton.Location = new System.Drawing.Point(801, 562);
-            this.U4LoadButton.Name = "U4LoadButton";
-            this.U4LoadButton.Size = new System.Drawing.Size(110, 60);
-            this.U4LoadButton.TabIndex = 39;
-            this.U4LoadButton.Text = "Load";
-            this.U4LoadButton.UseVisualStyleBackColor = true;
-            this.U4LoadButton.Click += new System.EventHandler(this.U4LoadButton_Click);
-            // 
             // U4OpenDialog
             // 
             this.U4OpenDialog.Filter = "C64 Disk Images|*.d64";
+            // 
+            // U4SaveDialog
+            // 
+            this.U4SaveDialog.Filter = "C64 Disk Images|*.d64";
             // 
             // MainWindow
             // 
@@ -1374,7 +1379,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainWindow";
-            this.Text = "Ultima Savegame Editor for C64";
+            this.Text = "Ultima Savegame Editor for C64 (Version 0.2.0) ";
             this.MainTabControl.ResumeLayout(false);
             this.U4Tab.ResumeLayout(false);
             this.U4General.ResumeLayout(false);
@@ -1493,6 +1498,7 @@
         private System.Windows.Forms.Button U4LoadButton;
         private System.Windows.Forms.Button U4SaveButton;
         private System.Windows.Forms.OpenFileDialog U4OpenDialog;
+        private System.Windows.Forms.SaveFileDialog U4SaveDialog;
     }
 }
 
