@@ -7,8 +7,8 @@
     <ProjectGuid>{60775972-8CE2-4F9D-8FC8-D18BC4FA66FF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UltimaEditor</RootNamespace>
-    <AssemblyName>UltimaEditor</AssemblyName>
+    <RootNamespace>C64UltimaEditor</RootNamespace>
+    <AssemblyName>C64UltimaEditor</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
