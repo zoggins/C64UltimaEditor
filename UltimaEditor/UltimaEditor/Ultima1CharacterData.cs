@@ -26,6 +26,8 @@ namespace UltimaEditor
             Buffer.BlockCopy(buffer, 0, RawData, 0, len);
             image.Close();
 
+
+            RosterId = rosterNumber;
             Name = ProcessName();
 
 
