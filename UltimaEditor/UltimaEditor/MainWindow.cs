@@ -16,13 +16,16 @@ namespace UltimaEditor
         {
             InitializeComponent();
 
-            m_u4Data = new Ultima4Data();
+            // Ultima 1
+            m_u1Data = new Ultima1Data();
+            m_u1Data.Load("C:\\users\\Chris\\Desktop\\Ultima I - The First Age of Darkness (U).d64");
 
+            
+
+            // Ultima 4
             PopulateU4GoToLocations();
-
+            m_u4Data = new Ultima4Data();
             PopulateU4Data();
-
-            // TODO: Populate Goto Drop Down Box
         }
 
         private void ValidateInteger(TextBox textBox, int low, int high, CancelEventArgs e)
@@ -224,8 +227,11 @@ namespace UltimaEditor
 
         }
 
-        private List<U4GoToLocation> m_u4GoToLocations;
+        // Ultima 1
+        private Ultima1Data m_u1Data;
 
+        // Ultima 4
+        private List<U4GoToLocation> m_u4GoToLocations;
         private Ultima4Data m_u4Data;
 
         private void U4StrengthTextBox_Validating(object sender, CancelEventArgs e)
