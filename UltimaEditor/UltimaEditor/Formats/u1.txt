@@ -1,0 +1,53 @@
+008 & 009 Location
+
+00a - 00d Gems
+
+00e  ??
+00f  ??
+010  ??
+011  Current Transportation 00 is walking 01 is horse...06 is shuttle
+012  ??
+
+013 - 017 armor
+
+018 ????
+
+019-027 Weapons
+
+028 ????
+
+029-032 Spells
+
+033 ???
+
+034-039 Transportation?  Up to Shuttle.
+
+03a-03c ????
+
+03d  Time machine (i think, not 100% sure of this one)
+
+03e-04a ?????
+
+04b Enemy Ships
+
+04d Name 13 bytes;
+05B Hits Low Byte
+05C Hits High Byte
+05d Strength
+05f Agility
+061 Stamina
+063 Charima
+065 Wisdom
+067 Intelligence
+069 Gold Lw byte
+06a Gold High byte
+
+06b Race 01 is human, 02 is elf, 03 is dwarf, 04 is bobbit
+06d Class  04 is thief, 03 is wizard, 02 is cleric, 01 is fighter
+
+07a Food low byte
+07b Food high byte
+
+07c Exp Low byte
+07d Exp High byte
+

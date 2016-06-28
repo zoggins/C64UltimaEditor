@@ -1,0 +1,58 @@
+Starts at 1 1110?
+1100: 16 bytes of name offset is C1 is A 00 for blank characters
+1110: Gender 5c male 7b female
+1111: Class 00 is mage, 07 is shepherd
+1112: G/H Status (not sure of values C7 appears to be G)
+1113: Strength of Player 1
+1114: Dex of Player 1
+1115: Int of Player 1
+1116: MP of player 1?
+1117: ??
+1118: HP High byte
+1119: HP Low Byte
+111A: Max HP high Byte
+111B: max HP low Byte
+111C: Experience High byte
+111D: Experience Low Byte
+111E: Weapon
+1111F: Armor
+
+x8 for each character
+
+11200 Virtues 1 byte each
+
+1208 Torches, Gems, Keys, Sextant
+9
+A
+B
+
+120C 00 Stones
+120D FF  Runes
+120E Bell, Book, Candle
+120F 3 part key 01,02,04
+
+1210: Food High 
+1211: Food low
+1212: ?
+1213: Gold High
+1214 Gold Low
+1215: horn
+1216: wheel
+1217: skull		
+
+1218-121F Armor
+
+1220-122F: Weapons
+
+1230-1207 ???
+1238-123F: Regs
+
+1240-1259 Spells
+
+11130E Transportation (0x10-ship facing west, 0x11-ship facing north, 0x12-ship facing east, 0x13-ship facing south, 0x14-horse facing west, 0x15-horse facing east, 0x18-balloon, 0x1f-on foot) 
+11130F num party members
+
+
+11300 and 11301 are location (not sure how encoded yet)
+
+1131C-F Moves
