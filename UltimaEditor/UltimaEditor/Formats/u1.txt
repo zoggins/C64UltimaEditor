@@ -30,6 +30,8 @@
 
 04b Enemy Ships
 
+04c Male(0)/Female(1)
+
 04d Name 13 bytes;
 05B Hits Low Byte
 05C Hits High Byte
