@@ -741,10 +741,11 @@ DiskImage *di_load_image(char *name) {
     return NULL;
   }
 
-  size_t filenameLen = strlen(name) + 1;;
+  size_t filenameLen = strlen(name) + 1;
   if ((di->filename = malloc(filenameLen)) == NULL) {
     free(di->image);
     free(di);
+	return NULL;
   }
   strcpy_s(di->filename, filenameLen, name);
   di->openfiles = 0;
@@ -817,6 +818,7 @@ DiskImage *di_create_image(char *name, int size) {
   if ((di->filename = malloc(filenameLen)) == NULL) {
     free(di->image);
     free(di);
+	return NULL;
   }
   strcpy_s(di->filename, filenameLen, name);
   di->openfiles = 0;
@@ -833,7 +835,7 @@ void di_sync(DiskImage *di) {
   size_t l, left;
   unsigned char *image;
 
-  if (fopen_s(&file, di->filename, "wb") == 0) {
+  if (fopen_s(&file, di->filename, "wb") == 0 && file != NULL) {
     image = di->image;
     left = di->size;
     l = 0;

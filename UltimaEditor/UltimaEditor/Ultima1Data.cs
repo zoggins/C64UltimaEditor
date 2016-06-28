@@ -22,7 +22,7 @@ namespace UltimaEditor
 
         public bool Load(string file)
         {
-            m_diskImage = DiskImageDotNet.C64DiskImage.LoadImage(file);
+            m_diskImage = C64DiskImage.LoadImage(file);
             if (m_diskImage == null)
                 return false;
 
