@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using DiskImageDotNet;
 
-namespace UltimaEditor
+namespace UltimaData
 {
 
     public class Ultima1Data

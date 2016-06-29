@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UltimaData;
 
-namespace UltimaEditor
+namespace C64UltimaEditor
 {
     public partial class MainWindow : Form
     {

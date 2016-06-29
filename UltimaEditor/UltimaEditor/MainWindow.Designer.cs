@@ -1,4 +1,4 @@
-﻿namespace UltimaEditor
+﻿namespace C64UltimaEditor
 {
     partial class MainWindow
     {

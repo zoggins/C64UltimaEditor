@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UltimaEditor
+namespace UltimaData
 {
     public enum U4Sex
     {
