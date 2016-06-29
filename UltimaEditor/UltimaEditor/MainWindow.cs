@@ -16,11 +16,13 @@ namespace UltimaEditor
         {
             InitializeComponent();
 
+            this.Text = "Ultima Savegame Editor for C64 (Version " + Application.ProductVersion + ") ";
+
             // Ultima 1
             //m_u1Data = new Ultima1Data();
             //m_u1Data.Load("C:\\users\\Chris\\Desktop\\Ultima I - The First Age of Darkness (U).d64");
 
-            
+
 
             // Ultima 4
             PopulateU4GoToLocations();

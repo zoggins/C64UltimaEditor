@@ -1379,7 +1379,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainWindow";
-            this.Text = "Ultima Savegame Editor for C64 (Version 0.2.0) ";
             this.MainTabControl.ResumeLayout(false);
             this.U4Tab.ResumeLayout(false);
             this.U4General.ResumeLayout(false);
