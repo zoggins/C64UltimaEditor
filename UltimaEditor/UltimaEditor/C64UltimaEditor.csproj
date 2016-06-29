@@ -96,10 +96,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ultima1CharacterData.cs" />
-    <Compile Include="Ultima1Data.cs" />
-    <Compile Include="Ultima4CharacterData.cs" />
-    <Compile Include="Ultima4Data.cs" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,14 +137,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DiskImageDotNet\DiskImageDotNet.vcxproj">
-      <Project>{e1dca6a6-997c-437d-b074-2cd530802a39}</Project>
-      <Name>DiskImageDotNet</Name>
+    <ProjectReference Include="..\UltimaData\UltimaData.csproj">
+      <Project>{f5599b10-0ce4-43b8-8bbf-254e96f4fbdb}</Project>
+      <Name>UltimaData</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Formats\u1.txt" />
-    <Content Include="Formats\u4.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

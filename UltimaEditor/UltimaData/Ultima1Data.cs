@@ -9,7 +9,7 @@ using DiskImageDotNet;
 namespace UltimaEditor
 {
 
-    class Ultima1Data
+    public class Ultima1Data
     {
         public Ultima1Data()
         {

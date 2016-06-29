@@ -18,7 +18,7 @@ namespace UltimaEditor
         Humility = 7
     }
 
-    enum U4Transportation
+    public enum U4Transportation
     {
         ShipWest = 0x10,
         ShipNorth = 0x11,
@@ -30,7 +30,7 @@ namespace UltimaEditor
         Foot = 0x1f
     }
 
-    class U4Location
+    public class U4Location
     {
         public U4Location()
         {
@@ -54,7 +54,7 @@ namespace UltimaEditor
         public char Long2;
     }
 
-    class Ultima4Data
+    public class Ultima4Data
     {
         public Ultima4Data()
         {

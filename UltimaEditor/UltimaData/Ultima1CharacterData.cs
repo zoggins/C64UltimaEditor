@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UltimaEditor
 {
-    class Ultima1CharacterData
+    public class Ultima1CharacterData
     {
         public Ultima1CharacterData()
         {

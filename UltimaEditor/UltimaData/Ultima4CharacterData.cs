@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace UltimaEditor
 {
-    enum U4Sex
+    public enum U4Sex
     {
         Female = 0x7b,
         Male = 0x5c
     }
 
-    enum U4Class
+    public enum U4Class
     {
         Mage = 0x00,
         Bard = 0x01,
@@ -24,7 +24,7 @@ namespace UltimaEditor
         Shepherd = 0x07
     }
 
-    enum U4Health
+    public enum U4Health
     {
         Good = 0xc7,
         Dead = 0xc4,
@@ -32,7 +32,7 @@ namespace UltimaEditor
         Asleep = 0xd3
     }
 
-    enum U4EquipedWeapon
+    public enum U4EquipedWeapon
     {
         Hands = 0x00,
         Staff = 0x01,
@@ -52,7 +52,7 @@ namespace UltimaEditor
         MysticSword = 0x15
     }
 
-    enum U4EquipedArmor
+    public enum U4EquipedArmor
     {
         Skin = 0x00,
         Cloth = 0x01,
@@ -64,7 +64,7 @@ namespace UltimaEditor
         MysticRobe = 0x07
     }
 
-    class Ultima4CharacterData
+    public class Ultima4CharacterData
     {
         public Ultima4CharacterData()
         {
