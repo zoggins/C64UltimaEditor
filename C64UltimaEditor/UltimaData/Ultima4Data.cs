@@ -56,7 +56,7 @@ namespace UltimaData
 
     public class Ultima4Data
     {
-        public Ultima4Data()
+        public Ultima4Data(IFile file = null)
         {
             Characters = new Ultima4CharacterData[8];
             for (int i = 0; i < 8; ++i)
@@ -97,6 +97,11 @@ namespace UltimaData
             CurrentTransportation = U4Transportation.Foot;
 
             RawFile = null;
+
+            if (file == null)
+                File = new File();
+            else
+                File = file;
         }
 
         public Ultima4CharacterData[] Characters;
@@ -137,11 +142,13 @@ namespace UltimaData
 
         private byte[] RawFile;
 
+        private IFile File;
+
         public bool Load(string file)
         {
             try
             {
-                RawFile = System.IO.File.ReadAllBytes(file);
+                RawFile = File.ReadAllBytes(file);
             }
             catch(Exception /*e*/)
             {
@@ -276,7 +283,7 @@ namespace UltimaData
 
             try
             {
-                System.IO.File.WriteAllBytes(file, RawFile);
+                File.WriteAllBytes(file, RawFile);
             }
             catch (Exception /*e*/)
             {
