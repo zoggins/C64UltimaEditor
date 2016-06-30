@@ -72,8 +72,15 @@ namespace UltimaData.UnitTest
         }
 
         [TestMethod]
-        public void Load()
+        public void LoadSimpleSaveFromDisk()
         {
+            MockFile file = new MockFile();
+            file.Files["u4data.dat"] = System.IO.File.ReadAllBytes("data\\u4data.dat");
+
+            Ultima4Data data = new Ultima4Data(file);
+
+            Assert.AreEqual(true, data.Load("u4data.dat"));
+
 
         }
     }
