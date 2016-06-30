@@ -40,7 +40,11 @@ C64DiskImage::~C64DiskImage()
 
 void C64DiskImage::Free()
 {
-	di_free_image(m_di);
+	if (m_di)
+	{
+		di_free_image(m_di);
+		m_di = nullptr;
+	}
 }
 
 void C64DiskImage::Sync()
@@ -165,7 +169,11 @@ C64ImageFile::~C64ImageFile()
 
 void C64ImageFile::Close()
 {
-	di_close(m_imgFile);
+	if (m_imgFile)
+	{
+		di_close(m_imgFile);
+		m_imgFile = nullptr;
+	}
 }
 
 int C64ImageFile::Read(array<unsigned char>^ buffer, int len)

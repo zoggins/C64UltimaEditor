@@ -20,7 +20,7 @@ namespace C64UltimaEditor
             this.Text = "Ultima Savegame Editor for C64 (Version " + Application.ProductVersion + ") ";
 
             // Ultima 1
-            //m_u1Data = new Ultima1Data();
+            m_u1Data = new Ultima1Data();
             //m_u1Data.Load("C:\\users\\Chris\\Desktop\\Ultima I - The First Age of Darkness (U).d64");
 
 
@@ -717,6 +717,11 @@ namespace C64UltimaEditor
         private void U4LocLong2_TextChanged(object sender, EventArgs e)
         {
             U4LocLong2_Validated(sender, e);
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            m_u1Data.Dispose();
         }
     }
 

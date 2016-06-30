@@ -14,11 +14,11 @@ namespace UltimaData
             Name = "";
         }
 
-        public bool Load(C64DiskImage di, int rosterNumber)
+        public bool Load(IDiskImage di, int rosterNumber)
         {
             byte[] buffer = new byte[200000]; // they seem to be 460 bytes, but screw it better safe than sorry.
 
-            C64ImageFile image = di.Open("P" + rosterNumber, C64FileType.PRG, "rb");
+            IImageFile image = di.Open("P" + rosterNumber, C64FileType.PRG, "rb");
             if (image == null)
                 return false;
             int len = image.Read(buffer, buffer.Length);

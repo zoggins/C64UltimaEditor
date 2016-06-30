@@ -9,21 +9,30 @@ using DiskImageDotNet;
 namespace UltimaData
 {
 
-    public class Ultima1Data
+    public class Ultima1Data : IDisposable
     {
-        public Ultima1Data()
+        public Ultima1Data(IDiskImage image = null)
         {
-            m_diskImage = null;
+            if (image == null)
+                m_diskImage = new DiskImage();
+            else
+                m_diskImage = image;
+
             NumberOfCharacters = 0;
             Characters = new Ultima1CharacterData[4];
             for (int i = 0; i < 4; ++i)
                 Characters[i] = new Ultima1CharacterData();
         }
 
+        ~Ultima1Data()
+        {
+            Dispose(false);
+        }
+
         public bool Load(string file)
         {
-            m_diskImage = C64DiskImage.LoadImage(file);
-            if (m_diskImage == null)
+           
+            if (!m_diskImage.LoadImage(file))
                 return false;
 
             for(int i = 0; i < 4; ++i)
@@ -40,7 +49,22 @@ namespace UltimaData
             return false;
         }
 
-        private C64DiskImage m_diskImage;
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        private void Dispose(bool cleanUpNative)
+        {
+            if (m_diskImage != null)
+            {
+                m_diskImage.Dispose();
+                m_diskImage = null;
+            }
+        }
+
+        private IDiskImage m_diskImage;
 
         public int NumberOfCharacters;
         public Ultima1CharacterData[] Characters;
