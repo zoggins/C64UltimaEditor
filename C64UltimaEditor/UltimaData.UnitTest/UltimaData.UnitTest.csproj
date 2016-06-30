@@ -53,6 +53,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="FileTestFixture.cs" />
+    <Compile Include="MockDiskImage.cs" />
     <Compile Include="MockFile.cs" />
     <Compile Include="Ultima4CharacterDataTestFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
