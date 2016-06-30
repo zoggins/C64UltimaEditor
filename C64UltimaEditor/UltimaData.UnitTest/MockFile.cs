@@ -12,6 +12,7 @@ namespace UltimaData.UnitTest
         public MockFile()
         {
             Files = new Dictionary<string, byte[]>();
+            WriteAllBytesException = null;
         }
 
         public byte[] ReadAllBytes(string path)
@@ -24,9 +25,13 @@ namespace UltimaData.UnitTest
 
         public void WriteAllBytes(string path, byte[] bytes)
         {
+            if (WriteAllBytesException != null)
+                throw WriteAllBytesException;
+
             Files[path] = bytes;
         }
 
         public Dictionary<string, byte[]> Files;
+        public Exception WriteAllBytesException;
     }
 }
