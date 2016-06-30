@@ -606,10 +606,13 @@ namespace UltimaData.UnitTest
         }
 
         [TestMethod]
-        public void InstantiateRealIFile()
+        public void InstantiateAndLoadRealFile()
         {
-            // This is an awful test, but coverage, blah blah
             Ultima4Data data = new Ultima4Data();
+
+            Assert.AreEqual(true, data.Load("data\\u4data.dat"));
+
+            Assert.AreEqual("Ike", data.Characters[0].Name);
         }
 
         [TestMethod]
