@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace UltimaData.UnitTest
 {
-    public class MockImageFile : IImageFile
+    public class MockImageFile : IImageFile, IDisposable
     {
         MockImageFile(byte[] data)
         {
@@ -39,6 +39,11 @@ namespace UltimaData.UnitTest
             Data = new byte[len];
             Array.Copy(buffer, Data, len);
             return len;
+        }
+
+        public void Dispose()
+        {
+
         }
 
         public byte[] Data;

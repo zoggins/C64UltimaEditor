@@ -33,9 +33,14 @@ C64DiskImage^ C64DiskImage::CreateImage(String^ filename, C64ImageType type)
 	return di ? gcnew C64DiskImage(di) : nullptr;
 }
 
-C64DiskImage::~C64DiskImage()
+C64DiskImage::!C64DiskImage()
 {
 	Free();
+}
+
+C64DiskImage::~C64DiskImage()
+{
+	this->!C64DiskImage();
 }
 
 void C64DiskImage::Free()
@@ -163,6 +168,11 @@ C64ImageFile::C64ImageFile(ImageFile* file)
 }
 
 C64ImageFile::~C64ImageFile()
+{
+	this->!C64ImageFile();
+}
+
+C64ImageFile::!C64ImageFile()
 {
 	Close();
 }

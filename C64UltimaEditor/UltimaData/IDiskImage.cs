@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UltimaData
 {
-    public interface IImageFile
+    public interface IImageFile : IDisposable
     {
         int Read(byte[] buffer, int len);
 

@@ -7,7 +7,7 @@ using DiskImageDotNet;
 
 namespace UltimaData
 {
-    public class ImageFile : IImageFile
+    public class ImageFile : IImageFile, IDisposable
     {
         protected ImageFile(C64ImageFile imageFile)
         {
@@ -29,6 +29,21 @@ namespace UltimaData
         public void Close()
         {
             m_file.Close();
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        private void Dispose(bool cleanUpNative)
+        {
+            if (m_file != null)
+            {
+                m_file.Dispose();
+                m_file = null;
+            }
         }
     }
 
@@ -89,7 +104,7 @@ namespace UltimaData
         {
             if (m_image != null)
             {
-                m_image.Free();
+                m_image.Dispose();
                 m_image = null;
             }
         }

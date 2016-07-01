@@ -36,6 +36,7 @@ namespace DiskImageDotNet {
 	{
 	public:
 		virtual ~C64ImageFile();
+		!C64ImageFile();
 
 		void Close();
 
@@ -65,6 +66,7 @@ namespace DiskImageDotNet {
 		static C64DiskImage^ LoadImage(String^ filename);
 		static C64DiskImage^ CreateImage(String^ filename, C64ImageType type);
 		virtual ~C64DiskImage();
+		!C64DiskImage();
 		void Free();
 		void Sync();
 
