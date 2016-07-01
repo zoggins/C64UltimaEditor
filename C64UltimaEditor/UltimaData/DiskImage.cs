@@ -58,6 +58,18 @@ namespace UltimaData
             return m_image != null;
         }
 
+        public bool CreateImage(string filename)
+        {
+            m_image = C64DiskImage.CreateImage(filename, C64ImageType.D64);
+
+            return m_image != null;
+        }
+
+        public int Format(string name, string ID)
+        {
+            return m_image.Format(name, ID);
+        }
+
         public IImageFile Open(string name, C64FileType type, string mode)
         {
             C64ImageFile file = m_image.Open(name, type, mode);

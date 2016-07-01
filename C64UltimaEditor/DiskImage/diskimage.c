@@ -1022,10 +1022,11 @@ ImageFile *di_open(DiskImage *di, unsigned char *rawname, FileType type, char *m
       imgfile->nextts.track = p[0];
       imgfile->nextts.sector = p[1];
 
-      if (! di_ts_is_valid(di->type,imgfile->nextts)) {
-        set_status(di,66,imgfile->nextts.track,imgfile->nextts.sector);
-        return NULL;
-      }
+	  // CJM: Track is expected to be 0 if its the last track of the file.
+      //if (! di_ts_is_valid(di->type,imgfile->nextts)) {
+      //  set_status(di,66,imgfile->nextts.track,imgfile->nextts.sector);
+      //  return NULL;
+      //}
 
       if (imgfile->nextts.track == 0) {
         imgfile->buflen = imgfile->nextts.sector - 1;
@@ -1222,7 +1223,7 @@ void di_close(ImageFile *imgfile) {
         imgfile->ts = imgfile->nextts;
         p = di_get_ts_addr(imgfile->diskimage, imgfile->ts);
         p[0] = 0;
-        p[1] = 0xff;
+		p[1] = (unsigned char)imgfile->bufptr + 1; // CJM: Was 0xff, but this is supposed to be the amount of data in the track.
         memcpy(p + 2, imgfile->buffer, 254);
         imgfile->bufptr = 0;
         if (++(imgfile->rawdirentry->sizelo) == 0) {
