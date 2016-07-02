@@ -19,6 +19,10 @@ namespace UltimaData.UnitTest
             m_data = new Ultima1CharacterData();
 
             Assert.AreEqual(true, m_data.Load(m_disk, 0));
+
+            // I admit this is for coverage, but can't hurt to see if nothing crashes.
+            m_disk.Files["P0"].Dispose();
+            m_disk.Dispose();
         }
 
         [TestMethod]
