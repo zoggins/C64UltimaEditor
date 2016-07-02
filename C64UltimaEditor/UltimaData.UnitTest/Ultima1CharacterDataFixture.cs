@@ -20,15 +20,16 @@ namespace UltimaData.UnitTest
 
             Assert.AreEqual(true, m_data.Load(m_disk, 0));
 
-            // I admit this is for coverage, but can't hurt to see if nothing crashes.
-            m_disk.Files["P0"].Dispose();
-            m_disk.Dispose();
         }
 
         [TestMethod]
         public void CharacterIsMissing()
         {
             Assert.AreEqual(false, m_data.Load(m_disk, 2));
+
+            // I admit this is for coverage, but can't hurt to see if nothing crashes.
+            m_disk.Files["P0"].Dispose();
+            m_disk.Dispose();
         }
 
         [TestMethod]
