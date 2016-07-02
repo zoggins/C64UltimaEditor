@@ -10,7 +10,7 @@ namespace UltimaData.UnitTest
 {
     public class MockImageFile : IImageFile, IDisposable
     {
-        MockImageFile(byte[] data)
+        public MockImageFile(byte[] data)
         {
             Data = data;
         }
@@ -43,6 +43,11 @@ namespace UltimaData.UnitTest
 
         public void Dispose()
         {
+            Dispose(true);
+        }
+
+        private void Dispose(bool disposeNative)
+        {
 
         }
 
@@ -51,7 +56,7 @@ namespace UltimaData.UnitTest
 
     public class MockDiskImage : IDiskImage
     {
-        MockDiskImage()
+        public MockDiskImage()
         {
             Files = new Dictionary<string, MockImageFile>();
         }
@@ -64,14 +69,19 @@ namespace UltimaData.UnitTest
         public IImageFile Open(string name, C64FileType type, string mode)
         {
             if (!Files.ContainsKey(name))
-                throw new FileNotFoundException();
+                return null;
 
             return Files[name];
         }
 
         public void Dispose()
         {
-            
+            Dispose(true);   
+        }
+
+        private void Dispose(bool disposeNative)
+        {
+
         }
 
         public Dictionary<string, MockImageFile> Files;

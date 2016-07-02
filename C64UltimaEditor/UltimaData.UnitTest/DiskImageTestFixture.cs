@@ -78,17 +78,12 @@ namespace UltimaData.UnitTest
         {
             string filename = System.IO.Path.GetTempFileName();
 
-            using (DiskImage disk = new DiskImage())
-            {
-                Assert.AreEqual(true, disk.CreateImage(filename));
-                disk.Format("Name", "1");
-                disk.Dispose();
+            DiskImage disk = new DiskImage();
+            Assert.AreEqual(true, disk.CreateImage(filename));
+            disk.Format("Name", "1");
 
-                DiskImage disk1 = new DiskImage();
-                Assert.AreEqual(true, disk1.LoadImage(filename));
-                IImageFile file1 = disk1.Open("TEST", C64FileType.PRG, "rb");
-                Assert.IsNull(file1);
-            }
+            IImageFile file = disk.Open("TEST", C64FileType.PRG, "rb");
+            Assert.IsNull(file);
 
             System.IO.File.Delete(filename);
 

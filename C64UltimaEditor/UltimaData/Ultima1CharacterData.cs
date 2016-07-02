@@ -7,6 +7,20 @@ using System.Threading.Tasks;
 
 namespace UltimaData
 {
+    public enum U1Sex
+    {
+        Male = 0x0,
+        Female = 0x01
+    }
+
+    public enum U1Class
+    {
+        Fighter = 0x01,
+        Cleric = 0x02,
+        Wizard = 0x03,
+        Thief = 0x04
+    }
+
     public class Ultima1CharacterData
     {
         public Ultima1CharacterData()
@@ -29,7 +43,8 @@ namespace UltimaData
 
             RosterId = rosterNumber;
             Name = ProcessName();
-
+            Sex = (U1Sex)RawData[SexOffset];
+            Class = (U1Class)RawData[ClassOffset];
 
             return true;
         }
@@ -49,10 +64,16 @@ namespace UltimaData
         }
 
         public string Name;
+        public U1Sex Sex;
+        public U1Class Class;
 
         private int RosterId;
         private byte[] RawData;
 
         private const int NameOffset = 0x04d;
+        private const int SexOffset = 0x04c;
+        private const int ClassOffset = 0x06d;
+
     }
 }
+    
