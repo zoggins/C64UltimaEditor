@@ -21,11 +21,43 @@ namespace UltimaData
         Thief = 0x04
     }
 
+    public enum U1Race
+    {
+        Human = 0x01,
+        Elf = 0x02,
+        Dwarf = 0x03,
+        Bobbit = 0x04
+    }
+
+    public class U1Location
+    {
+        public U1Location()
+        {
+            X = 0;
+            Y = 0;
+        }
+
+        public U1Location(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        public int X;
+        public int Y;
+    }
+
     public class Ultima1CharacterData
     {
         public Ultima1CharacterData()
         {
             Name = "";
+            Spells = new int[10];
+            Armor = new int[5];
+            Weapons = new int[15];
+            Gems = new int[4];
+            Transportation = new int[7];
+            Location = new U1Location();
         }
 
         public bool Load(IDiskImage di, int rosterNumber)
@@ -39,12 +71,45 @@ namespace UltimaData
             RawData = new byte[len];
             Buffer.BlockCopy(buffer, 0, RawData, 0, len);
             image.Close();
-
+                
 
             RosterId = rosterNumber;
             Name = ProcessName();
             Sex = (U1Sex)RawData[SexOffset];
             Class = (U1Class)RawData[ClassOffset];
+            Race = (U1Race)RawData[RaceOffset];
+            HitPoints = RawData[HitPointsOffset] | (RawData[HitPointsOffset + 1] << 8);
+            Experience = RawData[ExperienceOffset] | (RawData[ExperienceOffset + 1] << 8);
+
+            Strength = RawData[StrengthOffset];
+            Agility = RawData[AgilityOffset];
+            Stamina = RawData[StaminaOffset];
+            Charisma = RawData[CharismaOffset];
+            Wisdom = RawData[WisdomOffset];
+            Intelligence = RawData[IntelligenceOffset];
+
+            for (int i = 0; i < 10; ++i)
+                Spells[i] = RawData[SpellsOffset + i];
+
+            for (int i = 0; i < 5; ++i)
+                Armor[i] = RawData[ArmorOffset + i];
+
+            for (int i = 0; i < 15; ++i)
+                Weapons[i] = RawData[WeaponsOffset + i];
+
+            Food = RawData[FoodOffset] | (RawData[FoodOffset + 1] << 8);
+            Coins = RawData[CoinsOffset] | (RawData[CoinsOffset + 1] << 8);
+
+            for (int i = 0; i < 4; ++i)
+                Gems[i] = RawData[GemsOffset + i];
+
+            for (int i = 0; i < 6; ++i)
+                Transportation[i] = RawData[TransportationOffset + i];
+            Transportation[6] = RawData[TimeMachineOffset];
+
+            EnemyShips = RawData[EnemyShipsOffset];
+
+            Location = new U1Location(RawData[LocationOffset], RawData[LocationOffset + 1]);
 
             return true;
         }
@@ -66,6 +131,30 @@ namespace UltimaData
         public string Name;
         public U1Sex Sex;
         public U1Class Class;
+        public U1Race Race;
+        public int HitPoints;
+        public int Experience;
+
+        public int Strength;
+        public int Agility;
+        public int Stamina;
+        public int Charisma;
+        public int Wisdom;
+        public int Intelligence;
+
+        public int[] Spells;
+        public int[] Armor;
+        public int[] Weapons;
+
+        public int Food;
+        public int Coins;
+        public int[] Gems;
+
+        public int[] Transportation;
+
+        public int EnemyShips;
+
+        public U1Location Location;
 
         private int RosterId;
         private byte[] RawData;
@@ -73,6 +162,25 @@ namespace UltimaData
         private const int NameOffset = 0x04d;
         private const int SexOffset = 0x04c;
         private const int ClassOffset = 0x06d;
+        private const int RaceOffset = 0x06b;
+        private const int HitPointsOffset = 0x05b;
+        private const int ExperienceOffset = 0x07c;
+        private const int StrengthOffset = 0x05d;
+        private const int AgilityOffset = 0x05f;
+        private const int StaminaOffset = 0x061;
+        private const int CharismaOffset = 0x063;
+        private const int WisdomOffset = 0x065;
+        private const int IntelligenceOffset = 0x067;
+        private const int SpellsOffset = 0x029;
+        private const int ArmorOffset = 0x013;
+        private const int WeaponsOffset = 0x19;
+        private const int FoodOffset = 0x07a;
+        private const int CoinsOffset = 0x069;
+        private const int GemsOffset = 0x00a;
+        private const int TransportationOffset = 0x034;
+        private const int TimeMachineOffset = 0x03d;
+        private const int EnemyShipsOffset = 0x04b;
+        private const int LocationOffset = 0x008;
 
     }
 }

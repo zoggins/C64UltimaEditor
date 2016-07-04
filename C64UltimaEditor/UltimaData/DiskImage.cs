@@ -37,9 +37,9 @@ namespace UltimaData
             GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool cleanUpNative)
+        private void Dispose(bool disposing)
         {
-            if (m_file != null)
+            if (disposing && m_file != null)
             {
                 m_file.Dispose();
                 m_file = null;
@@ -100,9 +100,9 @@ namespace UltimaData
             GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool cleanUpNative)
+        private void Dispose(bool disposing)
         {
-            if (m_image != null)
+            if (disposing && m_image != null)
             {
                 m_image.Dispose();
                 m_image = null;

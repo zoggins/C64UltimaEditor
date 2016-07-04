@@ -55,9 +55,9 @@ namespace UltimaData
             GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool cleanUpNative)
+        private void Dispose(bool disposing)
         {
-            if (m_diskImage != null)
+            if (disposing && m_diskImage != null)
             {
                 m_diskImage.Dispose();
                 m_diskImage = null;

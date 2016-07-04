@@ -44,9 +44,10 @@ namespace UltimaData.UnitTest
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool disposeNative)
+        private void Dispose(bool disposing)
         {
 
         }
@@ -76,12 +77,13 @@ namespace UltimaData.UnitTest
 
         public void Dispose()
         {
-            Dispose(true);   
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool disposeNative)
+        private void Dispose(bool disposing)
         {
-
+       
         }
 
         public Dictionary<string, MockImageFile> Files;
