@@ -52,11 +52,29 @@ namespace UltimaData
         public Ultima1CharacterData()
         {
             Name = "";
-            Spells = new int[10];
-            Armor = new int[5];
-            Weapons = new int[15];
-            Gems = new int[4];
-            Transportation = new int[7];
+
+            m_hitPoints = new BoundedInt(0, 9999);
+            m_experience = new BoundedInt(0, 9999);
+
+            m_strength = new BoundedInt(0, 99);
+            m_agility = new BoundedInt(0, 99);
+            m_stamina = new BoundedInt(0, 99);
+            m_charisma = new BoundedInt(0, 99);
+            m_wisdom = new BoundedInt(0, 99);
+            m_intelligence = new BoundedInt(0, 99);
+
+            Spells = new BoundedIntArray(10, 0, 99);
+            Armor = new BoundedIntArray(5, 0, 99);
+            Weapons = new BoundedIntArray(15, 0, 99);
+
+            m_food = new BoundedInt(0, 9999);
+            m_coins = new BoundedInt(0, 9999);
+
+            Gems = new BoundedIntArray(4, 0, 99);
+            Transportation = new BoundedIntArray(7, 0, 99);
+
+            m_enemyShips = new BoundedInt(0, 99);
+
             Location = new U1Location();
         }
 
@@ -132,27 +150,91 @@ namespace UltimaData
         public U1Sex Sex;
         public U1Class Class;
         public U1Race Race;
-        public int HitPoints;
-        public int Experience;
 
-        public int Strength;
-        public int Agility;
-        public int Stamina;
-        public int Charisma;
-        public int Wisdom;
-        public int Intelligence;
+        public int HitPoints
+        {
+            get { return m_hitPoints; }
+            set { m_hitPoints.Value = value; }
+        }
+        private BoundedInt m_hitPoints;
 
-        public int[] Spells;
-        public int[] Armor;
-        public int[] Weapons;
+        public int Experience
+        {
+            get { return m_experience; }
+            set { m_experience.Value = value; }
+        }
+        private BoundedInt m_experience;
 
-        public int Food;
-        public int Coins;
-        public int[] Gems;
+        public int Strength
+        {
+            get { return m_strength; }
+            set { m_strength.Value = value; }
+        }
+        private BoundedInt m_strength;
 
-        public int[] Transportation;
+        public int Agility
+        {
+            get { return m_agility; }
+            set { m_agility.Value = value; }
+        }
+        private BoundedInt m_agility;
 
-        public int EnemyShips;
+        public int Stamina
+        {
+            get { return m_stamina; }
+            set { m_stamina.Value = value; }
+        }
+        private BoundedInt m_stamina;
+
+        public int Charisma
+        {
+            get { return m_charisma; }
+            set { m_charisma.Value = value; }
+        }
+        private BoundedInt m_charisma;
+
+        public int Wisdom
+        {
+            get { return m_wisdom; }
+            set { m_wisdom.Value = value; }
+        }
+        private BoundedInt m_wisdom;
+
+        public int Intelligence
+        {
+            get { return m_intelligence; }
+            set { m_intelligence.Value = value; }
+        }
+        private BoundedInt m_intelligence;
+
+        public BoundedIntArray Spells;
+        public BoundedIntArray Armor;
+        public BoundedIntArray Weapons;
+
+        public int Food
+        {
+            get { return m_food; }
+            set { m_food.Value = value; }
+        }
+        private BoundedInt m_food;
+
+        public int Coins
+        {
+            get { return m_coins; }
+            set { m_coins.Value = value; }
+        }
+        private BoundedInt m_coins;
+
+        public BoundedIntArray Gems;
+
+        public BoundedIntArray Transportation;
+
+        public int EnemyShips
+        {
+            get { return m_enemyShips; }
+            set { m_enemyShips.Value = value; }
+        }
+        private BoundedInt m_enemyShips;
 
         public U1Location Location;
 
