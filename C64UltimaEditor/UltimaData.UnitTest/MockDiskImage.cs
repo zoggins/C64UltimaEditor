@@ -22,16 +22,16 @@ namespace UltimaData.UnitTest
 
         public int Read(byte[] buffer, int len)
         {
-            if (len < Data.Length)
-            {
-                Array.Copy(Data, buffer, len);
-                return len;
-            }
-            else
-            {
+            //if (len < Data.Length)
+            //{
+            //    Array.Copy(Data, buffer, len);
+            //    return len;
+            //}
+            //else
+            //{
                 Array.Copy(Data, buffer, Data.Length);
                 return Data.Length;
-            }
+            //}
         }
 
         public int Write(byte[] buffer, int len)

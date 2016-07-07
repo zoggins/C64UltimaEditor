@@ -89,8 +89,8 @@ namespace UltimaData.UnitTest
             SaveFile.Characters[0].Sex = U4Sex.Male;
             SaveFile.Characters[0].Health = U4Health.Good;
             SaveFile.Characters[0].Class = U4Class.Shepherd;
-            SaveFile.Characters[0].HitPoints = 300;
             SaveFile.Characters[0].MaxHitPoints = 300;
+            SaveFile.Characters[0].HitPoints = 300;
             SaveFile.Characters[0].Strength = 19;
             SaveFile.Characters[0].Dexterity = 19;
             SaveFile.Characters[0].Intelligence = 19;
@@ -257,8 +257,8 @@ namespace UltimaData.UnitTest
             SaveFile.Characters[1].Sex = U4Sex.Female;
             SaveFile.Characters[1].Health = U4Health.Asleep;
             SaveFile.Characters[1].Class = U4Class.Bard;
-            SaveFile.Characters[1].HitPoints = 250;
             SaveFile.Characters[1].MaxHitPoints = 301;
+            SaveFile.Characters[1].HitPoints = 250;
             SaveFile.Characters[1].Strength = 17;
             SaveFile.Characters[1].Dexterity = 12;
             SaveFile.Characters[1].Intelligence = 25;

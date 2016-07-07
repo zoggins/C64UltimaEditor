@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Diagnostics.CodeAnalysis;
 
 namespace UltimaData.UnitTest
 {
@@ -24,6 +25,16 @@ namespace UltimaData.UnitTest
             Assert.AreEqual(0, character.MagicPoints);
             Assert.AreEqual(U4EquipedWeapon.Hands, character.Weapon);
             Assert.AreEqual(U4EquipedArmor.Skin, character.Armor);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FormatException))]
+        [ExcludeFromCodeCoverage]
+        public void HitPointsCappedByMaxHitPoints()
+        {
+            Ultima4CharacterData character = new Ultima4CharacterData();
+
+            character.HitPoints = 200;
         }
     }
 }

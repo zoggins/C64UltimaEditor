@@ -63,17 +63,17 @@ namespace UltimaData
                 Characters[i] = new Ultima4CharacterData();
             NumberOfCharactersInParty = 0;
 
-            Spells = new int[26];
-            Reagents = new int[8];
-            Armor = new int[8];
-            Weapons = new int[16];
+            Spells = new BoundedIntArray(26, 0, 99);
+            Reagents = new BoundedIntArray(8, 0, 99);
+            Armor = new BoundedIntArray(8, 0, 99);
+            Weapons = new BoundedIntArray(16, 0, 99);
 
-            Food = 0;
-            Gold = 0;
-            Torches = 0;
-            Gems = 0;
-            Keys = 0;
-            Sextants = 0;
+            m_food = new BoundedInt(0, 9999);
+            m_gold = new BoundedInt(0, 9999);
+            m_torches = new BoundedInt(0, 99);
+            m_gems = new BoundedInt(0, 99);
+            m_keys = new BoundedInt(0, 99);
+            m_sextants = new BoundedInt(0, 99);
 
             Skull = false;
             Horn = false;
@@ -92,7 +92,7 @@ namespace UltimaData
 
             Stones = new bool[8];
             Runes = new bool[8];
-            Virtues = new int[8];
+            Virtues = new BoundedIntArray(8, 0, 99);
 
             CurrentTransportation = U4Transportation.Foot;
 
@@ -107,17 +107,52 @@ namespace UltimaData
         public Ultima4CharacterData[] Characters;
         public int NumberOfCharactersInParty;
 
-        public int[] Spells;
-        public int[] Reagents;
-        public int[] Armor;
-        public int[] Weapons;
+        public BoundedIntArray Spells;
+        public BoundedIntArray Reagents;
+        public BoundedIntArray Armor;
+        public BoundedIntArray Weapons;
 
-        public int Food;
-        public int Gold;
-        public int Torches;
-        public int Gems;
-        public int Keys;
-        public int Sextants;
+        public int Food
+        {
+            get { return m_food; }
+            set { m_food.Value = value; }
+        }
+        private BoundedInt m_food;
+
+        public int Gold
+        {
+            get { return m_gold; }
+            set { m_gold.Value = value; }
+        }
+        private BoundedInt m_gold;
+
+        public int Torches
+        {
+            get { return m_torches; }
+            set { m_torches.Value = value; }
+        }
+        private BoundedInt m_torches;
+
+        public int Gems
+        {
+            get { return m_gems; }
+            set { m_gems.Value = value; }
+        }
+        private BoundedInt m_gems;
+
+        public int Keys
+        {
+            get { return m_keys; }
+            set { m_keys.Value = value; }
+        }
+        private BoundedInt m_keys;
+
+        public int Sextants
+        {
+            get { return m_sextants; }
+            set { m_sextants.Value = value; }
+        }
+        private BoundedInt m_sextants;
 
         public bool Skull;
         public bool Horn;
@@ -136,7 +171,7 @@ namespace UltimaData
 
         public bool[] Stones;
         public bool[] Runes;
-        public int[] Virtues;
+        public BoundedIntArray Virtues;
 
         public U4Transportation CurrentTransportation;
 
@@ -158,32 +193,32 @@ namespace UltimaData
             if (!IsU4BritDisk())
                 return false;
 
-            NumberOfCharactersInParty = ConvertOneByteNumberToInt(RawFile[NumInPartyOffset]);
+            NumberOfCharactersInParty = ConvertBCDToInt(RawFile[NumInPartyOffset]);
             for(int i = 0; i < NumberOfCharactersInParty; ++i)
             {
                 LoadCharacter(i);
             }
             
-            Torches = ConvertOneByteNumberToInt(RawFile[TorchesOffset]);
-            Gems = ConvertOneByteNumberToInt(RawFile[GemsOffset]);
-            Keys = ConvertOneByteNumberToInt(RawFile[KeysOffset]);
-            Sextants = ConvertOneByteNumberToInt(RawFile[SextantsOffset]);
+            Torches = ConvertBCDToInt(RawFile[TorchesOffset]);
+            Gems = ConvertBCDToInt(RawFile[GemsOffset]);
+            Keys = ConvertBCDToInt(RawFile[KeysOffset]);
+            Sextants = ConvertBCDToInt(RawFile[SextantsOffset]);
 
             for (int i = 0; i < 26; ++i)
             {
                 if (i < 8)
                 {
-                    Virtues[i] = ConvertOneByteNumberToInt(RawFile[VirtuesOffset + i]);
+                    Virtues[i] = ConvertBCDToInt(RawFile[VirtuesOffset + i]);
                     Stones[i] = (RawFile[StonesOffset] & (0x01 << i)) != 0;
                     Runes[i] = (RawFile[RunesOffset] & (0x01 << i)) != 0;
-                    Armor[i] = ConvertOneByteNumberToInt(RawFile[ArmorOffset + i]);
-                    Reagents[i] = ConvertOneByteNumberToInt(RawFile[ReagentsOffset + i]);
+                    Armor[i] = ConvertBCDToInt(RawFile[ArmorOffset + i]);
+                    Reagents[i] = ConvertBCDToInt(RawFile[ReagentsOffset + i]);
                 }
 
                 if (i < 16)
-                    Weapons[i] = ConvertOneByteNumberToInt(RawFile[WeaponOffset + i]);
+                    Weapons[i] = ConvertBCDToInt(RawFile[WeaponOffset + i]);
 
-                Spells[i] = ConvertOneByteNumberToInt(RawFile[SpellsOffset + i]);
+                Spells[i] = ConvertBCDToInt(RawFile[SpellsOffset + i]);
 
             }
 
@@ -195,8 +230,8 @@ namespace UltimaData
             KeyOfLove = (RawFile[ThreePartKeyOffset] & 0x02) != 0;
             KeyOfCourage = (RawFile[ThreePartKeyOffset] & 0x04) != 0;
 
-            Food = ConvertOneByteNumberToInt(RawFile[FoodOffset]) * 100 + ConvertOneByteNumberToInt(RawFile[FoodOffset + 1]);
-            Gold = ConvertOneByteNumberToInt(RawFile[GoldOffset]) * 100 + ConvertOneByteNumberToInt(RawFile[GoldOffset + 1]);
+            Food = ConvertBCDToInt(RawFile[FoodOffset]) * 100 + ConvertBCDToInt(RawFile[FoodOffset + 1]);
+            Gold = ConvertBCDToInt(RawFile[GoldOffset]) * 100 + ConvertBCDToInt(RawFile[GoldOffset + 1]);
 
             Horn = (RawFile[HornOffset] & 0x01) != 0;
 
@@ -204,10 +239,10 @@ namespace UltimaData
 
             Wheel = (RawFile[WheelOffset] & 0x01) != 0;
 
-            Moves = ConvertOneByteNumberToInt(RawFile[MovesOffset]) * 1000000
-                        + ConvertOneByteNumberToInt(RawFile[MovesOffset + 1]) * 10000
-                        + ConvertOneByteNumberToInt(RawFile[MovesOffset + 2]) * 100
-                        + ConvertOneByteNumberToInt(RawFile[MovesOffset + 3]);
+            Moves = ConvertBCDToInt(RawFile[MovesOffset]) * 1000000
+                        + ConvertBCDToInt(RawFile[MovesOffset + 1]) * 10000
+                        + ConvertBCDToInt(RawFile[MovesOffset + 2]) * 100
+                        + ConvertBCDToInt(RawFile[MovesOffset + 3]);
 
             Location = ConvertToLocation(RawFile[LocationOffset + 1], RawFile[LocationOffset]);
 
@@ -223,32 +258,32 @@ namespace UltimaData
         /// <returns></returns>
         public bool Save(string file)
         {
-            RawFile[NumInPartyOffset] = ConvertIntToOneByteNumber(NumberOfCharactersInParty);
+            RawFile[NumInPartyOffset] = ConvertIntToBCD(NumberOfCharactersInParty);
             for (int i = 0; i < NumberOfCharactersInParty; ++i)
             {
                 SaveCharacter(i);
             }
 
-            RawFile[TorchesOffset] = ConvertIntToOneByteNumber(Torches);
-            RawFile[GemsOffset] = ConvertIntToOneByteNumber(Gems);
-            RawFile[KeysOffset] = ConvertIntToOneByteNumber(Keys);
-            RawFile[SextantsOffset] = ConvertIntToOneByteNumber(Sextants);
+            RawFile[TorchesOffset] = ConvertIntToBCD(Torches);
+            RawFile[GemsOffset] = ConvertIntToBCD(Gems);
+            RawFile[KeysOffset] = ConvertIntToBCD(Keys);
+            RawFile[SextantsOffset] = ConvertIntToBCD(Sextants);
 
             for (int i = 0; i < 26; ++i)
             {
                 if (i < 8)
                 {
-                    RawFile[VirtuesOffset + i] = ConvertIntToOneByteNumber(Virtues[i]);
+                    RawFile[VirtuesOffset + i] = ConvertIntToBCD(Virtues[i]);
                     RawFile[StonesOffset] = Stones[i] ? (byte)(RawFile[StonesOffset] | (0x01 << i)) : (byte)(RawFile[StonesOffset] & ~(0x01 << i));
                     RawFile[RunesOffset] = Runes[i] ? (byte)(RawFile[RunesOffset] | (0x01 << i)) : (byte)(RawFile[RunesOffset] & ~(0x01 << i));
-                    RawFile[ArmorOffset + i] = ConvertIntToOneByteNumber(Armor[i]);
-                    RawFile[ReagentsOffset + i] = ConvertIntToOneByteNumber(Reagents[i]);
+                    RawFile[ArmorOffset + i] = ConvertIntToBCD(Armor[i]);
+                    RawFile[ReagentsOffset + i] = ConvertIntToBCD(Reagents[i]);
                 }
 
                 if (i < 16)
-                    RawFile[WeaponOffset + i] = ConvertIntToOneByteNumber(Weapons[i]);
+                    RawFile[WeaponOffset + i] = ConvertIntToBCD(Weapons[i]);
 
-                RawFile[SpellsOffset + i] = ConvertIntToOneByteNumber(Spells[i]);
+                RawFile[SpellsOffset + i] = ConvertIntToBCD(Spells[i]);
 
             }
 
@@ -260,21 +295,21 @@ namespace UltimaData
             RawFile[ThreePartKeyOffset] = KeyOfLove ? (byte)(RawFile[ThreePartKeyOffset] | 0x02) : (byte)(RawFile[ThreePartKeyOffset] & ~0x02);
             RawFile[ThreePartKeyOffset] = KeyOfCourage ? (byte)(RawFile[ThreePartKeyOffset] | 0x04) : (byte)(RawFile[ThreePartKeyOffset] & ~0x04);
 
-            RawFile[FoodOffset] = ConvertIntToOneByteNumber(Food / 100);
-            RawFile[FoodOffset + 1] = ConvertIntToOneByteNumber(Food % 100);
+            RawFile[FoodOffset] = ConvertIntToBCD(Food / 100);
+            RawFile[FoodOffset + 1] = ConvertIntToBCD(Food % 100);
 
-            RawFile[GoldOffset] = ConvertIntToOneByteNumber(Gold / 100);
-            RawFile[GoldOffset + 1] = ConvertIntToOneByteNumber(Gold % 100);
+            RawFile[GoldOffset] = ConvertIntToBCD(Gold / 100);
+            RawFile[GoldOffset + 1] = ConvertIntToBCD(Gold % 100);
 
             RawFile[HornOffset] = Horn ? (byte)(RawFile[HornOffset] | 0x01) : (byte)(RawFile[HornOffset] & ~0x01);
 
             RawFile[SkullOffset] = Skull ? (byte)(RawFile[SkullOffset] | 0x01) : (byte)(RawFile[SkullOffset] & ~0x01);
             RawFile[WheelOffset] = Wheel ? (byte)(RawFile[WheelOffset] | 0x01) : (byte)(RawFile[WheelOffset] & ~0x01);
 
-            RawFile[MovesOffset] = ConvertIntToOneByteNumber(Moves / 1000000);
-            RawFile[MovesOffset + 1] = ConvertIntToOneByteNumber(Moves % 1000000 / 10000);
-            RawFile[MovesOffset + 2] = ConvertIntToOneByteNumber(Moves % 10000 / 100);
-            RawFile[MovesOffset + 3] = ConvertIntToOneByteNumber(Moves % 100);
+            RawFile[MovesOffset] = ConvertIntToBCD(Moves / 1000000);
+            RawFile[MovesOffset + 1] = ConvertIntToBCD(Moves % 1000000 / 10000);
+            RawFile[MovesOffset + 2] = ConvertIntToBCD(Moves % 10000 / 100);
+            RawFile[MovesOffset + 3] = ConvertIntToBCD(Moves % 100);
 
             RawFile[LocationOffset + 1] = ConvertFromLocation(Location.Lat1, Location.Lat2);
             RawFile[LocationOffset] = ConvertFromLocation(Location.Long1, Location.Long2);
@@ -317,16 +352,16 @@ namespace UltimaData
             Characters[index].Class = (U4Class)RawFile[offset + 0x11];
             Characters[index].Health = (U4Health)RawFile[offset + 0x12];
 
-            Characters[index].Strength = ConvertOneByteNumberToInt(RawFile[offset + 0x13]);
-            Characters[index].Dexterity = ConvertOneByteNumberToInt(RawFile[offset + 0x14]);
-            Characters[index].Intelligence = ConvertOneByteNumberToInt(RawFile[offset + 0x15]);
+            Characters[index].Strength = ConvertBCDToInt(RawFile[offset + 0x13]);
+            Characters[index].Dexterity = ConvertBCDToInt(RawFile[offset + 0x14]);
+            Characters[index].Intelligence = ConvertBCDToInt(RawFile[offset + 0x15]);
 
-            Characters[index].MagicPoints = ConvertOneByteNumberToInt(RawFile[offset + 0x16]);
+            Characters[index].MagicPoints = ConvertBCDToInt(RawFile[offset + 0x16]);
 
-            Characters[index].HitPoints = ConvertOneByteNumberToInt(RawFile[offset + 0x18]) * 100 + ConvertOneByteNumberToInt(RawFile[offset + 0x19]);
-            Characters[index].MaxHitPoints = ConvertOneByteNumberToInt(RawFile[offset + 0x1a]) * 100 + ConvertOneByteNumberToInt(RawFile[offset + 0x1b]);
+            Characters[index].MaxHitPoints = ConvertBCDToInt(RawFile[offset + 0x1a]) * 100 + ConvertBCDToInt(RawFile[offset + 0x1b]);
+            Characters[index].HitPoints = ConvertBCDToInt(RawFile[offset + 0x18]) * 100 + ConvertBCDToInt(RawFile[offset + 0x19]);
 
-            Characters[index].Experience = ConvertOneByteNumberToInt(RawFile[offset + 0x1c]) * 100 + ConvertOneByteNumberToInt(RawFile[offset + 0x1d]);
+            Characters[index].Experience = ConvertBCDToInt(RawFile[offset + 0x1c]) * 100 + ConvertBCDToInt(RawFile[offset + 0x1d]);
 
             Characters[index].Weapon = (U4EquipedWeapon)RawFile[offset + 0x1e];
             Characters[index].Armor = (U4EquipedArmor)RawFile[offset + 0x1f];
@@ -340,20 +375,20 @@ namespace UltimaData
             RawFile[offset + 0x11] = (byte)Characters[index].Class;
             RawFile[offset + 0x12] = (byte)Characters[index].Health;
 
-            RawFile[offset + 0x13] = ConvertIntToOneByteNumber(Characters[index].Strength);
-            RawFile[offset + 0x14] = ConvertIntToOneByteNumber(Characters[index].Dexterity);
-            RawFile[offset + 0x15] = ConvertIntToOneByteNumber(Characters[index].Intelligence);
+            RawFile[offset + 0x13] = ConvertIntToBCD(Characters[index].Strength);
+            RawFile[offset + 0x14] = ConvertIntToBCD(Characters[index].Dexterity);
+            RawFile[offset + 0x15] = ConvertIntToBCD(Characters[index].Intelligence);
 
-            RawFile[offset + 0x16] = ConvertIntToOneByteNumber(Characters[index].MagicPoints);
+            RawFile[offset + 0x16] = ConvertIntToBCD(Characters[index].MagicPoints);
 
-            RawFile[offset + 0x18] = ConvertIntToOneByteNumber(Characters[index].HitPoints / 100);
-            RawFile[offset + 0x19] = ConvertIntToOneByteNumber(Characters[index].HitPoints % 100);
+            RawFile[offset + 0x18] = ConvertIntToBCD(Characters[index].HitPoints / 100);
+            RawFile[offset + 0x19] = ConvertIntToBCD(Characters[index].HitPoints % 100);
 
-            RawFile[offset + 0x1a] = ConvertIntToOneByteNumber(Characters[index].MaxHitPoints / 100);
-            RawFile[offset + 0x1b] = ConvertIntToOneByteNumber(Characters[index].MaxHitPoints % 100);
+            RawFile[offset + 0x1a] = ConvertIntToBCD(Characters[index].MaxHitPoints / 100);
+            RawFile[offset + 0x1b] = ConvertIntToBCD(Characters[index].MaxHitPoints % 100);
 
-            RawFile[offset + 0x1c] = ConvertIntToOneByteNumber(Characters[index].Experience / 100);
-            RawFile[offset + 0x1d] = ConvertIntToOneByteNumber(Characters[index].Experience % 100);
+            RawFile[offset + 0x1c] = ConvertIntToBCD(Characters[index].Experience / 100);
+            RawFile[offset + 0x1d] = ConvertIntToBCD(Characters[index].Experience % 100);
 
             RawFile[offset + 0x1e] = (byte)Characters[index].Weapon;
             RawFile[offset + 0x1f] = (byte)Characters[index].Armor;
@@ -376,12 +411,12 @@ namespace UltimaData
             return name.ToString();
         }
 
-        private int ConvertOneByteNumberToInt(byte numberToConvert)
+        private int ConvertBCDToInt(byte numberToConvert)
         {
             return (((numberToConvert & 0xf0) >> 0x04) * 10) + (numberToConvert & 0x0f);
         }
 
-        private byte ConvertIntToOneByteNumber(int numberToConvert)
+        private byte ConvertIntToBCD(int numberToConvert)
         {
             return (byte)(((numberToConvert / 10) << 0x04) | (numberToConvert % 10));
         }

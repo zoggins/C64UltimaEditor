@@ -27,7 +27,7 @@ namespace UltimaData.UnitTest
         {
             Assert.AreEqual(false, m_data.Load(m_disk, 2));
 
-            // I admit this is for coverage, but can't hurt to see if nothing crashes.
+            // I admit this is for coverage, as the Dispose() method on the mocks does nothing.
             m_disk.Files["P0"].Dispose();
             m_disk.Dispose();
         }
@@ -274,6 +274,13 @@ namespace UltimaData.UnitTest
         {
             Assert.AreEqual(7, m_data.Location.X);
             Assert.AreEqual(4, m_data.Location.Y);
+        }
+
+        [TestMethod]
+        public void DisposeFalseDoesNothing()
+        {
+            Dispose(false);
+            Assert.IsNotNull(m_disk);
         }
 
         public void Dispose()

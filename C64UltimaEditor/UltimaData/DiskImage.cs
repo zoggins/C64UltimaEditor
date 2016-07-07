@@ -39,7 +39,7 @@ namespace UltimaData
 
         private void Dispose(bool disposing)
         {
-            if (disposing && m_file != null)
+            if (disposing)
             {
                 m_file.Dispose();
                 m_file = null;

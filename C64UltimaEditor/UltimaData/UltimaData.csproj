@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoundedInt.cs" />
+    <Compile Include="BoundedIntArray.cs" />
     <Compile Include="DiskImage.cs" />
     <Compile Include="File.cs" />
     <Compile Include="IDiskImage.cs" />
