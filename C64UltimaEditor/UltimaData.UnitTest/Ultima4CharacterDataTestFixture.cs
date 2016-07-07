@@ -36,5 +36,16 @@ namespace UltimaData.UnitTest
 
             character.HitPoints = 200;
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(FormatException))]
+        [ExcludeFromCodeCoverage]
+        public void MaxHitPointsFlooredByHitPoints()
+        {
+            Ultima4CharacterData character = new Ultima4CharacterData();
+
+            character.HitPoints = 100;
+            character.MaxHitPoints = 50;
+        }
     }
 }

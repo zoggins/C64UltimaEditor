@@ -280,9 +280,7 @@
             this.U4LocLong2.Size = new System.Drawing.Size(19, 20);
             this.U4LocLong2.TabIndex = 55;
             this.U4LocLong2.Text = "A";
-            this.U4LocLong2.TextChanged += new System.EventHandler(this.U4LocLong2_TextChanged);
             this.U4LocLong2.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLong2_Validating);
-            this.U4LocLong2.Validated += new System.EventHandler(this.U4LocLong2_Validated);
             // 
             // U4LocLong1
             // 
@@ -292,9 +290,7 @@
             this.U4LocLong1.Size = new System.Drawing.Size(20, 20);
             this.U4LocLong1.TabIndex = 54;
             this.U4LocLong1.Text = "A";
-            this.U4LocLong1.TextChanged += new System.EventHandler(this.U4LocLong1_TextChanged);
             this.U4LocLong1.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLong1_Validating);
-            this.U4LocLong1.Validated += new System.EventHandler(this.U4LocLong1_Validated);
             // 
             // U4LocLat2
             // 
@@ -304,9 +300,7 @@
             this.U4LocLat2.Size = new System.Drawing.Size(19, 20);
             this.U4LocLat2.TabIndex = 27;
             this.U4LocLat2.Text = "A";
-            this.U4LocLat2.TextChanged += new System.EventHandler(this.U4LocLat2_TextChanged);
             this.U4LocLat2.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLat2_Validating);
-            this.U4LocLat2.Validated += new System.EventHandler(this.U4LocLat2_Validated);
             // 
             // U4MovesTextBox
             // 
@@ -317,7 +311,6 @@
             this.U4MovesTextBox.TabIndex = 52;
             this.U4MovesTextBox.Text = "0";
             this.U4MovesTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MovesTextBox_Validating);
-            this.U4MovesTextBox.Validated += new System.EventHandler(this.U4MovesTextBox_Validated);
             // 
             // U4LocLat1
             // 
@@ -327,9 +320,7 @@
             this.U4LocLat1.Size = new System.Drawing.Size(20, 20);
             this.U4LocLat1.TabIndex = 26;
             this.U4LocLat1.Text = "A";
-            this.U4LocLat1.TextChanged += new System.EventHandler(this.U4LocLat1_TextChanged);
             this.U4LocLat1.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLat1_Validating);
-            this.U4LocLat1.Validated += new System.EventHandler(this.U4LocLat1_Validated);
             // 
             // label30
             // 
@@ -399,7 +390,6 @@
             this.U4SextantsTextBox.TabIndex = 50;
             this.U4SextantsTextBox.Text = "0";
             this.U4SextantsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4SextantsTextBox_Validating);
-            this.U4SextantsTextBox.Validated += new System.EventHandler(this.U4SextantsTextBox_Validated);
             // 
             // label27
             // 
@@ -420,7 +410,6 @@
             this.U4GemsTextBox.TabIndex = 48;
             this.U4GemsTextBox.Text = "0";
             this.U4GemsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4GemsTextBox_Validating);
-            this.U4GemsTextBox.Validated += new System.EventHandler(this.U4GemsTextBox_Validated);
             // 
             // label28
             // 
@@ -441,7 +430,6 @@
             this.U4GoldTextBox.TabIndex = 46;
             this.U4GoldTextBox.Text = "0";
             this.U4GoldTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4GoldTextBox_Validating);
-            this.U4GoldTextBox.Validated += new System.EventHandler(this.U4GoldTextBox_Validated);
             // 
             // label29
             // 
@@ -462,7 +450,6 @@
             this.U4KeysTextBox.TabIndex = 44;
             this.U4KeysTextBox.Text = "0";
             this.U4KeysTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4KeysTextBox_Validating);
-            this.U4KeysTextBox.Validated += new System.EventHandler(this.U4KeysTextBox_Validated);
             // 
             // label26
             // 
@@ -483,7 +470,6 @@
             this.U4TorchesTextBox.TabIndex = 42;
             this.U4TorchesTextBox.Text = "0";
             this.U4TorchesTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4TorchesTextBox_Validating);
-            this.U4TorchesTextBox.Validated += new System.EventHandler(this.U4TorchesTextBox_Validated);
             // 
             // label25
             // 
@@ -504,7 +490,6 @@
             this.U4FoodTextBox.TabIndex = 40;
             this.U4FoodTextBox.Text = "0";
             this.U4FoodTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4FoodTextBox_Validating);
-            this.U4FoodTextBox.Validated += new System.EventHandler(this.U4FoodTextBox_Validated);
             // 
             // label24
             // 
@@ -525,7 +510,6 @@
             this.U4PartyWeaponsTextBox.TabIndex = 38;
             this.U4PartyWeaponsTextBox.Text = "0";
             this.U4PartyWeaponsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4PartyWeaponsTextBox_Validating);
-            this.U4PartyWeaponsTextBox.Validated += new System.EventHandler(this.U4PartyWeaponsTextBox_Validated);
             // 
             // label23
             // 
@@ -546,7 +530,6 @@
             this.U4PartyArmorTextBox.TabIndex = 36;
             this.U4PartyArmorTextBox.Text = "0";
             this.U4PartyArmorTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4PartyArmorTextBox_Validating);
-            this.U4PartyArmorTextBox.Validated += new System.EventHandler(this.U4PartyArmorTextBox_Validated);
             // 
             // label22
             // 
@@ -567,7 +550,6 @@
             this.U4ReagentsTextBox.TabIndex = 34;
             this.U4ReagentsTextBox.Text = "0";
             this.U4ReagentsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4ReagentsTextBox_Validating);
-            this.U4ReagentsTextBox.Validated += new System.EventHandler(this.U4ReagentsTextBox_Validated);
             // 
             // label21
             // 
@@ -692,7 +674,6 @@
             this.U4SpellsTextBox.TabIndex = 25;
             this.U4SpellsTextBox.Text = "0";
             this.U4SpellsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4SpellsTextBox_Validating);
-            this.U4SpellsTextBox.Validated += new System.EventHandler(this.U4SpellsTextBox_Validated);
             // 
             // label17
             // 
@@ -1033,7 +1014,6 @@
             this.U4VirtueTextBox.TabIndex = 25;
             this.U4VirtueTextBox.Text = "0";
             this.U4VirtueTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4VirtueTextBox_Validating);
-            this.U4VirtueTextBox.Validated += new System.EventHandler(this.U4VirtueTextBox_Validated);
             // 
             // label13
             // 
@@ -1146,7 +1126,6 @@
             this.U4MagicTextBox.TabIndex = 24;
             this.U4MagicTextBox.Text = "0";
             this.U4MagicTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MagicTextBox_Validating);
-            this.U4MagicTextBox.Validated += new System.EventHandler(this.U4MagicTextBox_Validated);
             // 
             // U4IntelligenceTextBox
             // 
@@ -1157,7 +1136,6 @@
             this.U4IntelligenceTextBox.TabIndex = 23;
             this.U4IntelligenceTextBox.Text = "0";
             this.U4IntelligenceTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4IntelligenceTextBox_Validating);
-            this.U4IntelligenceTextBox.Validated += new System.EventHandler(this.U4IntelligenceTextBox_Validated);
             // 
             // U4DexterityTextBox
             // 
@@ -1168,7 +1146,6 @@
             this.U4DexterityTextBox.TabIndex = 22;
             this.U4DexterityTextBox.Text = "0";
             this.U4DexterityTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4DexterityTextBox_Validating);
-            this.U4DexterityTextBox.Validated += new System.EventHandler(this.U4DexterityTextBox_Validated);
             // 
             // U4StrengthTextBox
             // 
@@ -1179,7 +1156,6 @@
             this.U4StrengthTextBox.TabIndex = 21;
             this.U4StrengthTextBox.Text = "0";
             this.U4StrengthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4StrengthTextBox_Validating);
-            this.U4StrengthTextBox.Validated += new System.EventHandler(this.U4StrengthTextBox_Validated);
             // 
             // U4ExperienceTextBox
             // 
@@ -1190,7 +1166,6 @@
             this.U4ExperienceTextBox.TabIndex = 20;
             this.U4ExperienceTextBox.Text = "0";
             this.U4ExperienceTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4ExperienceTextBox_Validating);
-            this.U4ExperienceTextBox.Validated += new System.EventHandler(this.U4ExperienceTextBox_Validated);
             // 
             // U4MaxHitTextBox
             // 
@@ -1201,7 +1176,6 @@
             this.U4MaxHitTextBox.TabIndex = 19;
             this.U4MaxHitTextBox.Text = "100";
             this.U4MaxHitTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MaxHitTextBox_Validating);
-            this.U4MaxHitTextBox.Validated += new System.EventHandler(this.U4MaxHitTextBox_Validated);
             // 
             // U4HitTextBox
             // 
@@ -1212,7 +1186,6 @@
             this.U4HitTextBox.TabIndex = 18;
             this.U4HitTextBox.Text = "0";
             this.U4HitTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4HitTextBox_Validating);
-            this.U4HitTextBox.Validated += new System.EventHandler(this.U4HitTextBox_Validated);
             // 
             // U4ArmorDropDown
             // 

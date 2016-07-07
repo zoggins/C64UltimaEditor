@@ -31,39 +31,6 @@ namespace C64UltimaEditor
             PopulateU4Data();
         }
 
-        private void ValidateInteger(TextBox textBox, int low, int high, CancelEventArgs e)
-        {
-            bool succeeded = true;
-            try
-            {
-                int strength = Int32.Parse(textBox.Text);
-                if (strength < low || strength > high)
-                {
-                    succeeded = false;
-                }
-            }
-            catch (Exception)
-            {
-                succeeded = false;
-            }
-
-            if (!succeeded)
-            {
-                MessageBox.Show("Enter an integer between " + low + " and " + high);
-                e.Cancel = true;
-            }
-        }
-
-        private void ValidateLocation(TextBox textBox, CancelEventArgs e)
-        {
-            if (textBox.Text.Length != 1 || textBox.Text[0] < 'A' || textBox.Text[0] > 'P')
-            {
-                MessageBox.Show("Enter an letter between 'A' and 'P'");
-                e.Cancel = true;
-            }
-
-        }
-
         private void PopulateU4Character(int index)
         {
             var character = m_u4Data.Characters[index];
@@ -239,121 +206,329 @@ namespace C64UltimaEditor
 
         private void U4StrengthTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4StrengthTextBox, 0, 50, e);
+            try
+            {
+                m_u4Data.Characters[U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex].Strength = Int32.Parse(U4StrengthTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4MaxHitTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4MaxHitTextBox, 100, 800, e);
+            try
+            {
+                m_u4Data.Characters[U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex].MaxHitPoints = Int32.Parse(U4MaxHitTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4HitTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4HitTextBox, 0, 800, e);
-
-            // TODO: Should probably check that this isn't bigger than Max Hits
+            try
+            {
+                m_u4Data.Characters[U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex].HitPoints = Int32.Parse(U4HitTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4ExperienceTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4ExperienceTextBox, 0, 9999, e);
+            try
+            {
+                m_u4Data.Characters[U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex].Experience = Int32.Parse(U4ExperienceTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4DexterityTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4DexterityTextBox, 0, 50, e);
+            try
+            {
+                m_u4Data.Characters[U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex].Dexterity = Int32.Parse(U4DexterityTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4IntelligenceTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4IntelligenceTextBox, 0, 50, e);
+            try
+            {
+                m_u4Data.Characters[U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex].Intelligence = Int32.Parse(U4IntelligenceTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4FoodTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4FoodTextBox, 0, 9999, e);
+            try
+            {
+                m_u4Data.Food = Int32.Parse(U4FoodTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4TorchesTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4TorchesTextBox, 0, 99, e);
+            try
+            {
+                m_u4Data.Torches = Int32.Parse(U4TorchesTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4KeysTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4KeysTextBox, 0, 99, e);
+            try
+            {
+                m_u4Data.Keys = Int32.Parse(U4KeysTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4GoldTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4GoldTextBox, 0, 9999, e);
+            try
+            {
+                m_u4Data.Gold = Int32.Parse(U4GoldTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4GemsTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4GemsTextBox, 0, 99, e);
+            try
+            {
+                m_u4Data.Gems = Int32.Parse(U4GemsTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4SextantsTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4SextantsTextBox, 0, 99, e);
+            try
+            {
+                m_u4Data.Sextants = Int32.Parse(U4SextantsTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4SpellsTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4SpellsTextBox, 0, 99, e);
+            try
+            {
+                m_u4Data.Spells[U4SpellsDropDown.SelectedIndex] = Int32.Parse(U4SpellsTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4ReagentsTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4ReagentsTextBox, 0, 99, e);
+            try
+            {
+                m_u4Data.Reagents[U4ReagentsDropDown.SelectedIndex] = Int32.Parse(U4ReagentsTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4PartyArmorTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4PartyArmorTextBox, 0, 99, e);
+            try
+            {
+                m_u4Data.Armor[U4PartyArmorDropDown.SelectedIndex] = Int32.Parse(U4PartyArmorTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4PartyWeaponsTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4PartyWeaponsTextBox, 0, 99, e);
+            try
+            {
+                m_u4Data.Weapons[U4PartyWeaponsDropDown.SelectedIndex] = Int32.Parse(U4PartyWeaponsTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4MovesTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4MovesTextBox, 0, 99999999, e);
+            try
+            {
+                m_u4Data.Moves = Int32.Parse(U4MovesTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4VirtueTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4VirtueTextBox, 0, 99, e);
+
+            try
+            {
+                m_u4Data.Virtues[U4VirtueDropDown.SelectedIndex] = Int32.Parse(U4VirtueTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4LocLat1_Validating(object sender, CancelEventArgs e)
         {
-            ValidateLocation(U4LocLat1, e);
+            if (U4LocLat1.Text.Length != 1)
+            {
+                MessageBox.Show("Enter an letter between 'A' and 'P'.");
+                e.Cancel = true;
+                return;
+            }
+
+            try
+            {
+                m_u4Data.Location.Lat1 = U4LocLat1.Text[0];
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4LocLat2_Validating(object sender, CancelEventArgs e)
         {
-            ValidateLocation(U4LocLat2, e);
+            if (U4LocLat2.Text.Length != 1)
+            {
+                MessageBox.Show("Enter an letter between 'A' and 'P'.");
+                e.Cancel = true;
+                return;
+            }
+
+            try
+            {
+                m_u4Data.Location.Lat2 = U4LocLat2.Text[0];
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4LocLong1_Validating(object sender, CancelEventArgs e)
         {
-            ValidateLocation(U4LocLong1, e);
+            if (U4LocLong1.Text.Length != 1)
+            {
+                MessageBox.Show("Enter an letter between 'A' and 'P'.");
+                e.Cancel = true;
+                return;
+            }
+            try
+            {
+                m_u4Data.Location.Long1 = U4LocLong1.Text[0];
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4LocLong2_Validating(object sender, CancelEventArgs e)
         {
-            ValidateLocation(U4LocLong2, e);
+            if (U4LocLong2.Text.Length != 1)
+            {
+                MessageBox.Show("Enter an letter between 'A' and 'P'.");
+                e.Cancel = true;
+                return;
+            }
+
+            try
+            {
+                m_u4Data.Location.Long2 = U4LocLong2.Text[0];
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4MagicTextBox_Validating(object sender, CancelEventArgs e)
         {
-            ValidateInteger(U4MagicTextBox, 0, 99, e);
-            
-            // TODO: Should probably validate this value, but that is a complicated check.
+            try
+            {
+                m_u4Data.Characters[U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex].MagicPoints = Int32.Parse(U4MagicTextBox.Text);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message);
+                e.Cancel = true;
+            }
         }
 
         private void U4NameDropDown_SelectedIndexChanged(object sender, EventArgs e)
@@ -380,55 +555,6 @@ namespace C64UltimaEditor
             var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
 
             m_u4Data.Characters[characterIndex].Health = (U4Health)Enum.Parse(typeof(U4Health), U4HealthDropDown.SelectedItem.ToString());
-        }
-
-        private void U4HitTextBox_Validated(object sender, EventArgs e)
-        {
-            var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
-
-            m_u4Data.Characters[characterIndex].HitPoints = Int32.Parse(U4HitTextBox.Text);
-        }
-
-        private void U4MaxHitTextBox_Validated(object sender, EventArgs e)
-        {
-            var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
-
-            m_u4Data.Characters[characterIndex].MaxHitPoints = Int32.Parse(U4MaxHitTextBox.Text);
-        }
-
-        private void U4ExperienceTextBox_Validated(object sender, EventArgs e)
-        {
-            var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
-
-            m_u4Data.Characters[characterIndex].Experience = Int32.Parse(U4ExperienceTextBox.Text);
-        }
-
-        private void U4StrengthTextBox_Validated(object sender, EventArgs e)
-        {
-            var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
-
-            m_u4Data.Characters[characterIndex].Strength = Int32.Parse(U4StrengthTextBox.Text);
-        }
-
-        private void U4DexterityTextBox_Validated(object sender, EventArgs e)
-        {
-            var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
-
-            m_u4Data.Characters[characterIndex].Dexterity = Int32.Parse(U4DexterityTextBox.Text);
-        }
-
-        private void U4IntelligenceTextBox_Validated(object sender, EventArgs e)
-        {
-            var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
-
-            m_u4Data.Characters[characterIndex].Intelligence = Int32.Parse(U4IntelligenceTextBox.Text);
-        }
-
-        private void U4MagicTextBox_Validated(object sender, EventArgs e)
-        {
-            var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
-
-            m_u4Data.Characters[characterIndex].MagicPoints = Int32.Parse(U4MagicTextBox.Text);
         }
 
         private void U4WeaponDropDown_SelectedIndexChanged(object sender, EventArgs e)
@@ -495,11 +621,6 @@ namespace C64UltimaEditor
             U4RuneCheckBox.Checked = m_u4Data.Runes[U4RuneDropDown.SelectedIndex];
         }
 
-        private void U4VirtueTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Virtues[U4VirtueDropDown.SelectedIndex] = Int32.Parse(U4VirtueTextBox.Text);
-        }
-
         private void U4VirtueDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
             U4VirtueTextBox.Text = m_u4Data.Virtues[U4VirtueDropDown.SelectedIndex].ToString();
@@ -550,98 +671,27 @@ namespace C64UltimaEditor
             m_u4Data.KeyOfCourage = U4CourageCheckBox.Checked;
         }
 
-        private void U4MovesTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Moves = Int32.Parse(U4MovesTextBox.Text);
-        }
-
-        private void U4LocLat1_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Location.Lat1 = U4LocLat1.Text[0];
-        }
-
-        private void U4LocLat2_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Location.Lat2 = U4LocLat2.Text[0];
-        }
-
-        private void U4LocLong1_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Location.Long1 = U4LocLong1.Text[0];
-        }
-        private void U4LocLong2_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Location.Long2 = U4LocLong2.Text[0];
-        }
-
         private void U4SpellsDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
             U4SpellsTextBox.Text = m_u4Data.Spells[U4SpellsDropDown.SelectedIndex].ToString();
         }
 
-        private void U4SpellsTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Spells[U4SpellsDropDown.SelectedIndex] = Int32.Parse(U4SpellsTextBox.Text);
-        }
 
         private void U4ReagentsDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
             U4ReagentsTextBox.Text = m_u4Data.Reagents[U4ReagentsDropDown.SelectedIndex].ToString();
         }
 
-        private void U4ReagentsTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Reagents[U4ReagentsDropDown.SelectedIndex] = Int32.Parse(U4ReagentsTextBox.Text);
-        }
 
         private void U4PartyArmorDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
             U4PartyArmorTextBox.Text = m_u4Data.Armor[U4PartyArmorDropDown.SelectedIndex].ToString();
         }
 
-        private void U4PartyArmorTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Armor[U4PartyArmorDropDown.SelectedIndex] = Int32.Parse(U4PartyArmorTextBox.Text);
-        }
 
         private void U4PartyWeaponsDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
             U4PartyWeaponsTextBox.Text = m_u4Data.Weapons[U4PartyWeaponsDropDown.SelectedIndex].ToString();
-        }
-
-        private void U4PartyWeaponsTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Weapons[U4PartyWeaponsDropDown.SelectedIndex] = Int32.Parse(U4PartyWeaponsTextBox.Text);
-        }
-
-        private void U4FoodTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Food = Int32.Parse(U4FoodTextBox.Text);
-        }
-
-        private void U4GoldTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Gold = Int32.Parse(U4GoldTextBox.Text);
-        }
-
-        private void U4TorchesTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Torches = Int32.Parse(U4TorchesTextBox.Text);
-        }
-
-        private void U4GemsTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Gems = Int32.Parse(U4GemsTextBox.Text);
-        }
-
-        private void U4KeysTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Keys = Int32.Parse(U4KeysTextBox.Text);
-        }
-
-        private void U4SextantsTextBox_Validated(object sender, EventArgs e)
-        {
-            m_u4Data.Sextants = Int32.Parse(U4SextantsTextBox.Text);
         }
 
         private void U4LoadButton_Click(object sender, EventArgs e)
@@ -680,6 +730,8 @@ namespace C64UltimaEditor
             var location = m_u4GoToLocations[U4GoToDropDownBox.SelectedIndex];
             if (location.IsActive)
             {
+                m_u4Data.Location = new U4Location(location.Coordinates.Lat1, location.Coordinates.Lat2, location.Coordinates.Long1, location.Coordinates.Long2);
+
                 PopulateLocation(location.Coordinates.Lat1, location.Coordinates.Lat2, location.Coordinates.Long1, location.Coordinates.Long2);
 
                 bool OnABoat = m_u4Data.CurrentTransportation == U4Transportation.ShipEast
@@ -697,26 +749,6 @@ namespace C64UltimaEditor
                 }
 
             }
-        }
-
-        private void U4LocLat1_TextChanged(object sender, EventArgs e)
-        {
-            U4LocLat1_Validated(sender, e);
-        }
-
-        private void U4LocLat2_TextChanged(object sender, EventArgs e)
-        {
-            U4LocLat2_Validated(sender, e);
-        }
-
-        private void U4LocLong1_TextChanged(object sender, EventArgs e)
-        {
-            U4LocLong1_Validated(sender, e);
-        }
-
-        private void U4LocLong2_TextChanged(object sender, EventArgs e)
-        {
-            U4LocLong2_Validated(sender, e);
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)

@@ -94,7 +94,7 @@ namespace UltimaData
             {
                 if (value > MaxHitPoints)
                 {
-                    throw new FormatException("Assigned value must be less than MaxHitPoints.");
+                    throw new FormatException("Hit points must be less than or equal to Maximum hit points.");
                 }
                 else
                 {
@@ -107,7 +107,17 @@ namespace UltimaData
         public int MaxHitPoints
         {
             get { return m_maxHitPoints; }
-            set { m_maxHitPoints.Value = value; }
+            set
+            {
+                if (value < HitPoints)
+                {
+                    throw new FormatException("Maximum hit points must be greater than or equal to hit points.");
+                }
+                else
+                {
+                    m_maxHitPoints.Value = value;
+                }
+            }
         }
         private BoundedInt m_maxHitPoints;
 

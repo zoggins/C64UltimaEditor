@@ -40,7 +40,7 @@ namespace UltimaData
             {
                 if (value < m_lowerBound || value > m_upperBound)
                 {
-                    throw new FormatException("Assigned value must be between " + m_lowerBound + " and " + m_upperBound + ".");
+                    throw new FormatException("Enter an integer between " + m_lowerBound + " and " + m_upperBound + ".");
                 }
                 else
                 {

@@ -30,28 +30,87 @@ namespace UltimaData
         Foot = 0x1f
     }
 
+    public class U4LocationCoordinate
+    {
+        public U4LocationCoordinate()
+        {
+            m_value = 'A';
+        }
+
+        public U4LocationCoordinate(char coordinate)
+        {
+            Value = coordinate;
+        }
+
+        public char Value
+        {
+            get { return m_value; }
+            set
+            {
+                if (value < 'A' || value > 'P')
+                {
+                    throw new FormatException("Enter an letter between 'A' and 'P'.");
+                }
+                else
+                {
+                    m_value = value;
+                }
+            }
+        }
+
+        public static implicit operator char(U4LocationCoordinate value)
+        {
+            return value.Value;
+        }
+
+        private char m_value;
+    };
+
     public class U4Location
     {
         public U4Location()
         {
-            Lat1 = 'A';
-            Lat2 = 'A';
-            Long1 = 'A';
-            Long2 = 'A';
+            m_lat1 = new U4LocationCoordinate();
+            m_lat2 = new U4LocationCoordinate();
+            m_long1 = new U4LocationCoordinate();
+            m_long2 = new U4LocationCoordinate();
         }
 
-        public U4Location(char Lat1, char Lat2, char Long1, char Long2)
+        public U4Location(char lat1, char lat2, char long1, char long2)
         {
-            this.Lat1 = Lat1;
-            this.Lat2 = Lat2;
-            this.Long1 = Long1;
-            this.Long2 = Long2;
+            m_lat1 = new U4LocationCoordinate(lat1);
+            m_lat2 = new U4LocationCoordinate(lat2);
+            m_long1 = new U4LocationCoordinate(long1);
+            m_long2 = new U4LocationCoordinate(long2);
         }
 
-        public char Lat1;
-        public char Lat2;
-        public char Long1;
-        public char Long2;
+        public char Lat1
+        {
+            get { return m_lat1; }
+            set { m_lat1.Value = value; }
+        }
+        private U4LocationCoordinate m_lat1;
+
+        public char Lat2
+        {
+            get { return m_lat2; }
+            set { m_lat2.Value = value; }
+        }
+        private U4LocationCoordinate m_lat2;
+
+        public char Long1
+        {
+            get { return m_long1; }
+            set { m_long1.Value = value; }
+        }
+        private U4LocationCoordinate m_long1;
+
+        public char Long2
+        {
+            get { return m_long2; }
+            set { m_long2.Value = value; }
+        }
+        private U4LocationCoordinate m_long2;
     }
 
     public class Ultima4Data
@@ -87,7 +146,7 @@ namespace UltimaData
             KeyOfTruth = false;
             KeyOfCourage = false;
 
-            Moves = 0;
+            m_moves = new BoundedInt(0, 99999999);
             Location = new U4Location();
 
             Stones = new bool[8];
@@ -166,7 +225,13 @@ namespace UltimaData
         public bool KeyOfTruth;
         public bool KeyOfCourage;
 
-        public int Moves;
+        public int Moves
+        {
+            get { return m_moves; }
+            set { m_moves.Value = value; }
+        }
+        private BoundedInt m_moves;
+
         public U4Location Location;
 
         public bool[] Stones;

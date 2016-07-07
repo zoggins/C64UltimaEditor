@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -479,6 +480,26 @@ namespace UltimaData.UnitTest
             Assert.AreEqual('E', location.Lat2);
             Assert.AreEqual('A', location.Long1);
             Assert.AreEqual('K', location.Long2);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FormatException))]
+        [ExcludeFromCodeCoverage]
+        public void LocationBadCoordinateTooHigh()
+        {
+            U4Location location = new U4Location('D', 'E', 'A', 'K');
+
+            location.Lat1 = 'Z';
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FormatException))]
+        [ExcludeFromCodeCoverage]
+        public void LocationBadCoordinateTooLow()
+        {
+            U4Location location = new U4Location('D', 'E', 'A', 'K');
+
+            location.Lat1 = '1';
         }
 
         [TestMethod]
