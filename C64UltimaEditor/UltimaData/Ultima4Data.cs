@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -244,19 +245,14 @@ namespace UltimaData
 
         private IFile File;
 
-        public bool Load(string file)
+        public void Load(string file)
         {
-            try
-            {
-                RawFile = File.ReadAllBytes(file);
-            }
-            catch(Exception /*e*/)
-            {
-                return false;
-            }
+            RawFile = File.ReadAllBytes(file);
 
             if (!IsU4BritDisk())
-                return false;
+            {
+                throw new FileNotFoundException("This does not appear to be an Ultima 4 Britannia disk image.");
+            }
 
             NumberOfCharactersInParty = ConvertBCDToInt(RawFile[NumInPartyOffset]);
             for(int i = 0; i < NumberOfCharactersInParty; ++i)
@@ -312,8 +308,6 @@ namespace UltimaData
             Location = ConvertToLocation(RawFile[LocationOffset + 1], RawFile[LocationOffset]);
 
             CurrentTransportation = (U4Transportation)RawFile[TransportationOffset];
-
-            return true;
         }
 
         /// <summary>
@@ -321,8 +315,11 @@ namespace UltimaData
         /// </summary>
         /// <param name="file"></param>
         /// <returns></returns>
-        public bool Save(string file)
+        public void Save(string file)
         {
+            if (RawFile == null)
+                throw new InvalidOperationException("Cannot save a file without loading one first.");
+
             RawFile[NumInPartyOffset] = ConvertIntToBCD(NumberOfCharactersInParty);
             for (int i = 0; i < NumberOfCharactersInParty; ++i)
             {
@@ -381,16 +378,8 @@ namespace UltimaData
 
             RawFile[TransportationOffset] = (byte)CurrentTransportation;
 
-            try
-            {
-                File.WriteAllBytes(file, RawFile);
-            }
-            catch (Exception /*e*/)
-            {
-                return false;
-            }
-
-            return true;
+            File.WriteAllBytes(file, RawFile);
+            
         }
 
         private bool IsU4BritDisk()

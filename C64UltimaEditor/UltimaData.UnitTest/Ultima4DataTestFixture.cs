@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,7 +82,7 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void LoadSimpleSaveFromDisk()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             Assert.AreEqual(1, SaveFile.NumberOfCharactersInParty);
             Assert.AreEqual(8, SaveFile.Characters.Length);
@@ -163,13 +164,13 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SimpleSaveAndReload()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
-            Assert.AreEqual(true, SaveFile.Save("SimpleSave.d64"));
+            SaveFile.Save("SimpleSave.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("SimpleSave.d64"));
+            newSave.Load("SimpleSave.d64");
 
             Assert.AreEqual(1, newSave.NumberOfCharactersInParty);
             Assert.AreEqual(8, newSave.Characters.Length);
@@ -251,7 +252,7 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveLoadMultipleCharacters()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             SaveFile.NumberOfCharactersInParty = 2;
 
@@ -266,11 +267,11 @@ namespace UltimaData.UnitTest
             SaveFile.Characters[1].Weapon = U4EquipedWeapon.Crossbow;
             SaveFile.Characters[1].Armor = U4EquipedArmor.MagicPlate;
 
-            Assert.AreEqual(true, SaveFile.Save("MultipleCharacters.d64"));
+            SaveFile.Save("MultipleCharacters.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("MultipleCharacters.d64"));
+            newSave.Load("MultipleCharacters.d64");
 
             Assert.AreEqual(2, newSave.NumberOfCharactersInParty);
 
@@ -303,16 +304,16 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadSpells()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             for (int i = 0; i < 26; ++i)
                 SaveFile.Spells[i] = i * 2;
 
-            Assert.AreEqual(true, SaveFile.Save("Spells.d64"));
+            SaveFile.Save("Spells.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Spells.d64"));
+            newSave.Load("Spells.d64");
 
             for (int i = 0; i < 26; ++i)
                 Assert.AreEqual(i * 2, newSave.Spells[i]);
@@ -321,16 +322,16 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadReagents()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             for (int i = 0; i < 8; ++i)
                 SaveFile.Reagents[i] = i * 4;
 
-            Assert.AreEqual(true, SaveFile.Save("Reagents.d64"));
+            SaveFile.Save("Reagents.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Reagents.d64"));
+            newSave.Load("Reagents.d64");
 
             for (int i = 0; i < 8; ++i)
                 Assert.AreEqual(i * 4, newSave.Reagents[i]);
@@ -339,16 +340,16 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadArmor()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             for (int i = 0; i < 8; ++i)
                 SaveFile.Armor[i] = i * 4;
 
-            Assert.AreEqual(true, SaveFile.Save("Armor.d64"));
+            SaveFile.Save("Armor.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Armor.d64"));
+            newSave.Load("Armor.d64");
 
             for (int i = 0; i < 8; ++i)
                 Assert.AreEqual(i * 4, newSave.Armor[i]);
@@ -357,16 +358,16 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadWeapons()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             for (int i = 0; i < 16; ++i)
                 SaveFile.Weapons[i] = i * 4;
 
-            Assert.AreEqual(true, SaveFile.Save("Weapons.d64"));
+            SaveFile.Save("Weapons.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Weapons.d64"));
+            newSave.Load("Weapons.d64");
 
             for (int i = 0; i < 16; ++i)
                 Assert.AreEqual(i * 4, newSave.Weapons[i]);
@@ -375,7 +376,7 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadPartyInventory()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             SaveFile.Food = 8192;
             SaveFile.Gold = 6709;
@@ -384,11 +385,11 @@ namespace UltimaData.UnitTest
             SaveFile.Keys = 78;
             SaveFile.Sextants = 3;
 
-            Assert.AreEqual(true, SaveFile.Save("Inventory.d64"));
+            SaveFile.Save("Inventory.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Inventory.d64"));
+            newSave.Load("Inventory.d64");
 
             Assert.AreEqual(8192, newSave.Food);
             Assert.AreEqual(6709, newSave.Gold);
@@ -401,7 +402,7 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadBookBellCandleSkullWheelHorn()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             SaveFile.Skull = true;
             SaveFile.Bell = true;
@@ -410,11 +411,11 @@ namespace UltimaData.UnitTest
             SaveFile.Wheel = true;
             SaveFile.Horn = true;
 
-            Assert.AreEqual(true, SaveFile.Save("Items.d64"));
+            SaveFile.Save("Items.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Items.d64"));
+            newSave.Load("Items.d64");
 
             Assert.AreEqual(true, newSave.Skull);
             Assert.AreEqual(true, newSave.Bell);
@@ -427,17 +428,17 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadThreePartKey()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             SaveFile.KeyOfTruth = true;
             SaveFile.KeyOfLove = true;
             SaveFile.KeyOfCourage = true;
 
-            Assert.AreEqual(true, SaveFile.Save("ThreePartKey.d64"));
+            SaveFile.Save("ThreePartKey.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("ThreePartKey.d64"));
+            newSave.Load("ThreePartKey.d64");
 
             Assert.AreEqual(true, newSave.KeyOfTruth);
             Assert.AreEqual(true, newSave.KeyOfLove);
@@ -447,15 +448,15 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadMoves()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             SaveFile.Moves = 87654321;
 
-            Assert.AreEqual(true, SaveFile.Save("Moves.d64"));
+            SaveFile.Save("Moves.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Moves.d64"));
+            newSave.Load("Moves.d64");
 
             Assert.AreEqual(87654321, newSave.Moves);
         }
@@ -505,18 +506,18 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadLocation()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             SaveFile.Location.Lat1 = 'B';
             SaveFile.Location.Lat2 = 'G';
             SaveFile.Location.Long1 = 'D';
             SaveFile.Location.Long2 = 'H';
 
-            Assert.AreEqual(true, SaveFile.Save("Location.d64"));
+            SaveFile.Save("Location.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Location.d64"));
+            newSave.Load("Location.d64");
 
             Assert.AreEqual('B', newSave.Location.Lat1);
             Assert.AreEqual('G', newSave.Location.Lat2);
@@ -527,15 +528,15 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadCurrentTransportation()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             SaveFile.CurrentTransportation = U4Transportation.HorseEast;
 
-            Assert.AreEqual(true, SaveFile.Save("Transportation.d64"));
+            SaveFile.Save("Transportation.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Transportation.d64"));
+            newSave.Load("Transportation.d64");
 
             Assert.AreEqual(U4Transportation.HorseEast, newSave.CurrentTransportation);
         }
@@ -543,16 +544,16 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadRunes()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             for(int i = 0; i < 8; ++i)
                 SaveFile.Runes[i] = i % 2 == 0;
 
-            Assert.AreEqual(true, SaveFile.Save("Runes.d64"));
+            SaveFile.Save("Runes.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Runes.d64"));
+            newSave.Load("Runes.d64");
 
             for (int i = 0; i < 8; ++i)
                 Assert.AreEqual(i % 2 == 0, newSave.Runes[i]);
@@ -561,16 +562,16 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadStones()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             for (int i = 0; i < 8; ++i)
                 SaveFile.Stones[i] = i % 2 != 0;
 
-            Assert.AreEqual(true, SaveFile.Save("Stones.d64"));
+            SaveFile.Save("Stones.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Stones.d64"));
+            newSave.Load("Stones.d64");
 
             for (int i = 0; i < 8; ++i)
                 Assert.AreEqual(i % 2 != 0, newSave.Stones[i]);
@@ -579,51 +580,59 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveAndLoadVirtues()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             for (int i = 0; i < 8; ++i)
                 SaveFile.Virtues[i] = i * 4;
 
-            Assert.AreEqual(true, SaveFile.Save("Virtues.d64"));
+            SaveFile.Save("Virtues.d64");
 
             Ultima4Data newSave = new Ultima4Data(File);
 
-            Assert.AreEqual(true, newSave.Load("Virtues.d64"));
+            newSave.Load("Virtues.d64");
 
             for (int i = 0; i < 8; ++i)
                 Assert.AreEqual(i * 4, newSave.Virtues[i]);
         }
 
         [TestMethod]
+        [ExpectedException(typeof(FileNotFoundException))]
+        [ExcludeFromCodeCoverage]
         public void DiskImageIsTooSmall()
         {
             File.Files["u4Data.dat"] = new byte[256];
 
-            Assert.AreEqual(false, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
         }
 
         [TestMethod]
+        [ExpectedException(typeof(FileNotFoundException))]
+        [ExcludeFromCodeCoverage]
         public void DiskImageWrongDiskLabel()
         {
             File.Files["u4Data.dat"][0x16590] = (byte)'X';
 
-            Assert.AreEqual(false, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
         }
 
         [TestMethod]
+        [ExpectedException(typeof(FileNotFoundException))]
+        [ExcludeFromCodeCoverage]
         public void FileNotFoundOnLoad()
         {
-            Assert.AreEqual(false, SaveFile.Load("NotThere.dat"));
+            SaveFile.Load("NotThere.dat");
         }
 
         [TestMethod]
+        [ExpectedException(typeof(FileNotFoundException))]
+        [ExcludeFromCodeCoverage]
         public void SaveFails()
         {
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             File.WriteAllBytesException = new System.IO.FileNotFoundException("File Not Found!");
 
-            Assert.AreEqual(false, SaveFile.Save("u4NewData.dat"));
+            SaveFile.Save("u4NewData.dat");
         }
 
         [TestMethod]
@@ -631,7 +640,7 @@ namespace UltimaData.UnitTest
         {
             Ultima4Data data = new Ultima4Data();
 
-            Assert.AreEqual(true, data.Load("data\\u4data.dat"));
+            data.Load("data\\u4data.dat");
 
             Assert.AreEqual("Ike", data.Characters[0].Name);
         }
@@ -642,9 +651,18 @@ namespace UltimaData.UnitTest
             for (int i = 0; i < 16; ++i)
                 File.Files["u4Data.dat"][0x11100+i] = 0xC1;
 
-            Assert.AreEqual(true, SaveFile.Load("u4Data.dat"));
+            SaveFile.Load("u4Data.dat");
 
             Assert.AreEqual("Aaaaaaaaaaaaaaaa", SaveFile.Characters[0].Name);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        [ExcludeFromCodeCoverage]
+        public void CannotSaveWithoutLoad()
+        {
+            Ultima4Data u4 = new Ultima4Data();
+            u4.Save("ThisIsNotGoingToWork");
         }
 
         private MockFile File;
