@@ -83,7 +83,33 @@ namespace UltimaData
             Armor = U4EquipedArmor.Skin;
         }
 
-        public string Name;
+        public Ultima4CharacterData(string name, U4Sex sex, U4Class job, U4Health health, int hitPoints, int maxHitPoints,
+                                        int experience, int strength, int dexterity, int intelligence, int magicPoints, U4EquipedWeapon weapon,
+                                        U4EquipedArmor armor)
+        {
+            Name = name;
+            Sex = sex;
+            m_magicPoints = new BoundedInt(0, 99);
+            Class = job;
+            Health = health;
+            m_maxHitPoints = new BoundedInt(100, 800);
+            m_hitPoints = new BoundedInt(0, 800);
+            MaxHitPoints = maxHitPoints;
+            HitPoints = hitPoints;
+            m_experience = new BoundedInt(0, 9999);
+            Experience = experience;
+            m_strength = new BoundedInt(0, 50);
+            Strength = strength;
+            m_dexterity = new BoundedInt(0, 50);
+            Dexterity = dexterity;
+            m_intelligence = new BoundedInt(0, 50);
+            Intelligence = intelligence;
+            MagicPoints = magicPoints;
+            Weapon = weapon;
+            Armor = armor;
+        }
+
+        public readonly string Name;
         public U4Sex Sex;
         public U4Class Class;
         public U4Health Health;

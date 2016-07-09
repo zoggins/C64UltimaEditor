@@ -80,24 +80,24 @@ namespace UltimaData.UnitTest
         }
 
         [TestMethod]
-        public void LoadSimpleSaveFromDisk()
+        public void LoadSimpleLoadFromDisk()
         {
             SaveFile.Load("u4Data.dat");
 
             Assert.AreEqual(1, SaveFile.NumberOfCharactersInParty);
             Assert.AreEqual(8, SaveFile.Characters.Length);
 
-            SaveFile.Characters[0].Name = "Ike";
-            SaveFile.Characters[0].Sex = U4Sex.Male;
-            SaveFile.Characters[0].Health = U4Health.Good;
-            SaveFile.Characters[0].Class = U4Class.Shepherd;
-            SaveFile.Characters[0].MaxHitPoints = 300;
-            SaveFile.Characters[0].HitPoints = 300;
-            SaveFile.Characters[0].Strength = 19;
-            SaveFile.Characters[0].Dexterity = 19;
-            SaveFile.Characters[0].Intelligence = 19;
-            SaveFile.Characters[0].Weapon = U4EquipedWeapon.Staff;
-            SaveFile.Characters[0].Armor = U4EquipedArmor.Cloth;
+            Assert.AreEqual("Ike", SaveFile.Characters[0].Name);
+            Assert.AreEqual(U4Sex.Male, SaveFile.Characters[0].Sex);
+            Assert.AreEqual(U4Health.Good, SaveFile.Characters[0].Health);
+            Assert.AreEqual(U4Class.Shepherd, SaveFile.Characters[0].Class);
+            Assert.AreEqual(100, SaveFile.Characters[0].HitPoints);
+            Assert.AreEqual(100, SaveFile.Characters[0].MaxHitPoints);
+            Assert.AreEqual(16, SaveFile.Characters[0].Strength);
+            Assert.AreEqual(22, SaveFile.Characters[0].Dexterity);
+            Assert.AreEqual(19, SaveFile.Characters[0].Intelligence);
+            Assert.AreEqual(U4EquipedWeapon.Staff, SaveFile.Characters[0].Weapon);
+            Assert.AreEqual(U4EquipedArmor.Cloth, SaveFile.Characters[0].Armor);
 
             Assert.AreEqual(26, SaveFile.Spells.Length);
             foreach (var spell in SaveFile.Spells)
@@ -252,9 +252,9 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void SaveLoadMultipleCharacters()
         {
-            SaveFile.Load("u4Data.dat");
+            File.Files["u4Data.dat"][0x1130F] = 2;
 
-            SaveFile.NumberOfCharactersInParty = 2;
+            SaveFile.Load("u4Data.dat");
 
             SaveFile.Characters[1].Sex = U4Sex.Female;
             SaveFile.Characters[1].Health = U4Health.Asleep;

@@ -119,9 +119,9 @@ namespace UltimaData
         public Ultima4Data(IFile file = null)
         {
             Characters = new Ultima4CharacterData[8];
-            for (int i = 0; i < 8; ++i)
-                Characters[i] = new Ultima4CharacterData();
-            NumberOfCharactersInParty = 0;
+            //for (int i = 0; i < 8; ++i)
+            Characters[0] = new Ultima4CharacterData();
+            m_numberOfCharactersInParty = 0;
 
             Spells = new BoundedIntArray(26, 0, 99);
             Reagents = new BoundedIntArray(8, 0, 99);
@@ -164,13 +164,17 @@ namespace UltimaData
                 File = file;
         }
 
-        public Ultima4CharacterData[] Characters;
-        public int NumberOfCharactersInParty;
+        public readonly Ultima4CharacterData[] Characters;
+        public int NumberOfCharactersInParty
+        {
+            get { return m_numberOfCharactersInParty; }
+        }
+        private int m_numberOfCharactersInParty;
 
-        public BoundedIntArray Spells;
-        public BoundedIntArray Reagents;
-        public BoundedIntArray Armor;
-        public BoundedIntArray Weapons;
+        public readonly BoundedIntArray Spells;
+        public readonly BoundedIntArray Reagents;
+        public readonly BoundedIntArray Armor;
+        public readonly BoundedIntArray Weapons;
 
         public int Food
         {
@@ -235,9 +239,9 @@ namespace UltimaData
 
         public U4Location Location;
 
-        public bool[] Stones;
-        public bool[] Runes;
-        public BoundedIntArray Virtues;
+        public readonly bool[] Stones;
+        public readonly bool[] Runes;
+        public readonly BoundedIntArray Virtues;
 
         public U4Transportation CurrentTransportation;
 
@@ -254,7 +258,7 @@ namespace UltimaData
                 throw new FileNotFoundException("This does not appear to be an Ultima 4 Britannia disk image.");
             }
 
-            NumberOfCharactersInParty = ConvertBCDToInt(RawFile[NumInPartyOffset]);
+            m_numberOfCharactersInParty = ConvertBCDToInt(RawFile[NumInPartyOffset]);
             for(int i = 0; i < NumberOfCharactersInParty; ++i)
             {
                 LoadCharacter(i);
@@ -401,24 +405,26 @@ namespace UltimaData
         {
             int offset = SaveFileStartOffset + (index * CharacterRecordSize);
 
-            Characters[index].Name = ProcessName(offset);
-            Characters[index].Sex = (U4Sex)RawFile[offset + 0x10];
-            Characters[index].Class = (U4Class)RawFile[offset + 0x11];
-            Characters[index].Health = (U4Health)RawFile[offset + 0x12];
+            string name  = ProcessName(offset);
+            U4Sex sex = (U4Sex)RawFile[offset + 0x10];
+            U4Class job = (U4Class)RawFile[offset + 0x11];
+            U4Health health = (U4Health)RawFile[offset + 0x12];
 
-            Characters[index].Strength = ConvertBCDToInt(RawFile[offset + 0x13]);
-            Characters[index].Dexterity = ConvertBCDToInt(RawFile[offset + 0x14]);
-            Characters[index].Intelligence = ConvertBCDToInt(RawFile[offset + 0x15]);
+            int strength = ConvertBCDToInt(RawFile[offset + 0x13]);
+            int dexterity = ConvertBCDToInt(RawFile[offset + 0x14]);
+            int intelligence = ConvertBCDToInt(RawFile[offset + 0x15]);
 
-            Characters[index].MagicPoints = ConvertBCDToInt(RawFile[offset + 0x16]);
+            int magicPoints = ConvertBCDToInt(RawFile[offset + 0x16]);
 
-            Characters[index].MaxHitPoints = ConvertBCDToInt(RawFile[offset + 0x1a]) * 100 + ConvertBCDToInt(RawFile[offset + 0x1b]);
-            Characters[index].HitPoints = ConvertBCDToInt(RawFile[offset + 0x18]) * 100 + ConvertBCDToInt(RawFile[offset + 0x19]);
+            int maxHitPoints = ConvertBCDToInt(RawFile[offset + 0x1a]) * 100 + ConvertBCDToInt(RawFile[offset + 0x1b]);
+            int hitPoints = ConvertBCDToInt(RawFile[offset + 0x18]) * 100 + ConvertBCDToInt(RawFile[offset + 0x19]);
 
-            Characters[index].Experience = ConvertBCDToInt(RawFile[offset + 0x1c]) * 100 + ConvertBCDToInt(RawFile[offset + 0x1d]);
+            int experience = ConvertBCDToInt(RawFile[offset + 0x1c]) * 100 + ConvertBCDToInt(RawFile[offset + 0x1d]);
 
-            Characters[index].Weapon = (U4EquipedWeapon)RawFile[offset + 0x1e];
-            Characters[index].Armor = (U4EquipedArmor)RawFile[offset + 0x1f];
+            U4EquipedWeapon weapon = (U4EquipedWeapon)RawFile[offset + 0x1e];
+            U4EquipedArmor armor = (U4EquipedArmor)RawFile[offset + 0x1f];
+
+            Characters[index] = new Ultima4CharacterData(name, sex, job, health, hitPoints, maxHitPoints, experience, strength, dexterity, intelligence, magicPoints, weapon, armor);
         }
 
         private void SaveCharacter(int index)
