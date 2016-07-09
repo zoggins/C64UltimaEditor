@@ -51,7 +51,7 @@ namespace UltimaData
     {
         public Ultima1CharacterData()
         {
-            Name = "";
+            m_name = "";
 
             m_hitPoints = new BoundedInt(0, 9999);
             m_experience = new BoundedInt(0, 9999);
@@ -71,7 +71,7 @@ namespace UltimaData
             m_coins = new BoundedInt(0, 9999);
 
             Gems = new BoundedIntArray(4, 0, 99);
-            Transportation = new BoundedIntArray(7, 0, 99);
+            m_transportation = new int[7];
 
             m_enemyShips = new BoundedInt(0, 99);
 
@@ -92,7 +92,7 @@ namespace UltimaData
                 
 
             RosterId = rosterNumber;
-            Name = ProcessName();
+            m_name = ProcessName();
             Sex = (U1Sex)RawData[SexOffset];
             Class = (U1Class)RawData[ClassOffset];
             Race = (U1Race)RawData[RaceOffset];
@@ -122,8 +122,8 @@ namespace UltimaData
                 Gems[i] = RawData[GemsOffset + i];
 
             for (int i = 0; i < 6; ++i)
-                Transportation[i] = RawData[TransportationOffset + i];
-            Transportation[6] = RawData[TimeMachineOffset];
+                m_transportation[i] = RawData[TransportationOffset + i];
+            m_transportation[6] = RawData[TimeMachineOffset];
 
             EnemyShips = RawData[EnemyShipsOffset];
 
@@ -146,7 +146,12 @@ namespace UltimaData
             return name.ToString();
         }
 
-        public string Name;
+        public string Name
+        {
+            get { return m_name; }
+        }
+        private string m_name;
+
         public U1Sex Sex;
         public U1Class Class;
         public U1Race Race;
@@ -207,9 +212,9 @@ namespace UltimaData
         }
         private BoundedInt m_intelligence;
 
-        public BoundedIntArray Spells;
-        public BoundedIntArray Armor;
-        public BoundedIntArray Weapons;
+        public readonly BoundedIntArray Spells;
+        public readonly BoundedIntArray Armor;
+        public readonly BoundedIntArray Weapons;
 
         public int Food
         {
@@ -225,9 +230,16 @@ namespace UltimaData
         }
         private BoundedInt m_coins;
 
-        public BoundedIntArray Gems;
+        public readonly BoundedIntArray Gems;
 
-        public BoundedIntArray Transportation;
+        public IReadOnlyList<int> Transportation
+        {
+            get
+            {
+                return m_transportation;
+            }
+        }
+        private readonly int[] m_transportation;
 
         public int EnemyShips
         {
