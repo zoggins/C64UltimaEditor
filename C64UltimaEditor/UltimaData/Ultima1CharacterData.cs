@@ -84,7 +84,7 @@ namespace UltimaData
 
             IImageFile image = di.Open("P" + rosterNumber, C64FileType.PRG, "rb");
             if (image == null)
-                return false;
+                throw new System.IO.FileLoadException("Cannot open save file 'P" + RosterId + ".PRG' for read.");
             int len = image.Read(buffer, buffer.Length);
             RawData = new byte[len];
             Buffer.BlockCopy(buffer, 0, RawData, 0, len);
@@ -132,6 +132,59 @@ namespace UltimaData
             return true;
         }
 
+        public void Save(IDiskImage di)
+        {
+
+            RawData[SexOffset] = (byte)Sex;
+            RawData[ClassOffset] = (byte)Class;
+            RawData[RaceOffset] = (byte)Race;
+            RawData[HitPointsOffset] = (byte)(HitPoints & 0x00ff);
+            RawData[HitPointsOffset+1] = (byte)(HitPoints >> 8);
+            RawData[ExperienceOffset] = (byte)(Experience & 0x00ff);
+            RawData[ExperienceOffset + 1] = (byte)(Experience >> 8);
+
+            RawData[StrengthOffset] = (byte)Strength;
+            RawData[AgilityOffset] = (byte)Agility;
+            RawData[StaminaOffset] = (byte)Stamina;
+            RawData[CharismaOffset] = (byte)Charisma;
+            RawData[WisdomOffset] = (byte)Wisdom;
+            RawData[IntelligenceOffset] = (byte)Intelligence;
+
+            for (int i = 0; i < 10; ++i)
+                RawData[SpellsOffset + i] = (byte)Spells[i];
+
+            for (int i = 0; i < 5; ++i)
+                RawData[ArmorOffset + i] = (byte)Armor[i];
+
+            for (int i = 0; i < 15; ++i)
+                RawData[WeaponsOffset + i] = (byte)Weapons[i];
+
+            RawData[FoodOffset] = (byte)(Food & 0x00ff);
+            RawData[FoodOffset + 1] = (byte)(Food >> 8);
+
+            RawData[CoinsOffset] = (byte)(Coins & 0x00ff);
+            RawData[CoinsOffset + 1] = (byte)(Coins >> 8);
+
+            for (int i = 0; i < 4; ++i)
+                RawData[GemsOffset + i] = (byte)Gems[i];
+
+            RawData[EnemyShipsOffset] = (byte)EnemyShips;
+
+            RawData[LocationOffset] = (byte)Location.X;
+            RawData[LocationOffset + 1] = (byte)Location.Y;
+
+            IImageFile image = di.Open("P" + RosterId, C64FileType.PRG, "wb");
+            if (image == null)
+                throw new System.IO.FileLoadException("Cannot open save file 'P" + RosterId + ".PRG' for write.");
+
+            int len = image.Write(RawData, RawData.Length);
+
+            if (len != RawData.Length)
+                throw new System.IO.IOException("There was an error writing file 'P" + RosterId + ".PRG'.");
+
+            image.Close();
+        }
+
         private string ProcessName()
         {
             StringBuilder name = new StringBuilder();
@@ -153,7 +206,7 @@ namespace UltimaData
         private string m_name;
 
         public U1Sex Sex;
-        public U1Class Class;
+        public U1Class Class; 
         public U1Race Race;
 
         public int HitPoints

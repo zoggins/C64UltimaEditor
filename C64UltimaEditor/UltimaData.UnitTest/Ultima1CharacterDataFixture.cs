@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,19 +25,30 @@ namespace UltimaData.UnitTest
         }
 
         [TestMethod]
+        [ExpectedException(typeof(FileLoadException))]
+        [ExcludeFromCodeCoverage]
         public void CharacterIsMissing()
         {
-            Assert.AreEqual(false, m_data.Load(m_disk, 2));
+            m_data.Load(m_disk, 2);
+        }
 
-            // I admit this is for coverage, as the Dispose() method on the mocks does nothing.
-            m_disk.Files["P0"].Dispose();
-            m_disk.Dispose();
+        [TestMethod]
+        [ExpectedException(typeof(IOException))]
+        [ExcludeFromCodeCoverage]
+        public void ErrorWhileReadingInCharacter()
+        {
+            m_disk.ReadException = new IOException();
+            m_data.Load(m_disk, 0);
         }
 
         [TestMethod]
         public void LoadName()
         {
             Assert.AreEqual("Wolfgang", m_data.Name);
+
+            // I admit this is for coverage, as the Dispose() method on the mocks does nothing.
+            m_disk.Files["P0"].Dispose();
+            m_disk.Dispose();
         }
 
         [TestMethod]
@@ -283,10 +296,105 @@ namespace UltimaData.UnitTest
             Assert.IsNotNull(m_disk);
         }
 
+
+
+        [TestMethod]
+
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        [TestMethod]
+        public void SaveModified()
+        {
+            m_data.Sex = U1Sex.Female;
+            m_data.Race = U1Race.Elf;
+            m_data.Class = U1Class.Wizard;
+            m_data.HitPoints = 1337;
+            m_data.Experience = 2056;
+            m_data.Strength = 13;
+            m_data.Agility = 14;
+            m_data.Stamina = 15;
+            m_data.Charisma = 16;
+            m_data.Wisdom = 17;
+            m_data.Intelligence = 18;
+
+            for (int i = 0; i < m_data.Spells.Length; ++i)
+                m_data.Spells[i] = i * 8;
+
+            for (int i = 0; i < m_data.Armor.Length; ++i)
+                m_data.Armor[i] = i * 19;
+
+            for (int i = 0; i < m_data.Weapons.Length; ++i)
+                m_data.Weapons[i] = i * 6;
+
+            m_data.Food = 3878;
+            m_data.Coins = 4789;
+            m_data.EnemyShips = 78;
+            m_data.Location = new U1Location(57, 68);
+
+            m_data.Save(m_disk);
+
+            Ultima1CharacterData savedFile = new Ultima1CharacterData();
+            savedFile.Load(m_disk, 0);
+
+            Assert.AreEqual("Wolfgang", savedFile.Name);
+            Assert.AreEqual(U1Sex.Female, savedFile.Sex);
+            Assert.AreEqual(U1Race.Elf, savedFile.Race);
+            Assert.AreEqual(U1Class.Wizard, savedFile.Class);
+            Assert.AreEqual(1337, savedFile.HitPoints);
+            Assert.AreEqual(2056, savedFile.Experience);
+            Assert.AreEqual(13, savedFile.Strength);
+            Assert.AreEqual(14, savedFile.Agility);
+            Assert.AreEqual(15, savedFile.Stamina);
+            Assert.AreEqual(16, savedFile.Charisma);
+            Assert.AreEqual(17, savedFile.Wisdom);
+            Assert.AreEqual(18, savedFile.Intelligence);
+
+            for (int i = 0; i < savedFile.Spells.Length; ++i)
+                Assert.AreEqual(i * 8, savedFile.Spells[i]);
+
+            for (int i = 0; i < savedFile.Armor.Length; ++i)
+                Assert.AreEqual(i * 19, savedFile.Armor[i]);
+
+            for (int i = 0; i < savedFile.Weapons.Length; ++i)
+                Assert.AreEqual(i * 6, savedFile.Weapons[i]);
+
+            Assert.AreEqual(3, savedFile.Transportation[0]);
+            Assert.AreEqual(1, savedFile.Transportation[1]);
+            Assert.AreEqual(0, savedFile.Transportation[2]);
+            Assert.AreEqual(1, savedFile.Transportation[3]);
+            Assert.AreEqual(1, savedFile.Transportation[4]);
+            Assert.AreEqual(1, savedFile.Transportation[5]);
+            Assert.AreEqual(1, savedFile.Transportation[6]);
+
+            Assert.AreEqual(3878, m_data.Food);
+            Assert.AreEqual(4789, m_data.Coins);
+            Assert.AreEqual(78, m_data.EnemyShips);
+            Assert.AreEqual(57, m_data.Location.X);
+            Assert.AreEqual(68, m_data.Location.Y);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FileLoadException))]
+        [ExcludeFromCodeCoverage]
+        public void CannotOpenCharacterFileForWrite()
+        {
+            m_disk.Files.Clear();
+
+            m_data.Save(m_disk);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(IOException))]
+        [ExcludeFromCodeCoverage]
+        public void WriteFailsDuringSave()
+        {
+            m_disk.WriteException = new IOException();
+
+            m_data.Save(m_disk);
         }
 
         private void Dispose(bool disposing)

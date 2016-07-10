@@ -29,6 +29,9 @@ namespace UltimaData.UnitTest
             //}
             //else
             //{
+            if (ReadException != null)
+                throw ReadException;
+
                 Array.Copy(Data, buffer, Data.Length);
                 return Data.Length;
             //}
@@ -36,6 +39,9 @@ namespace UltimaData.UnitTest
 
         public int Write(byte[] buffer, int len)
         {
+            if (WriteException != null)
+                throw WriteException;
+
             Data = new byte[len];
             Array.Copy(buffer, Data, len);
             return len;
@@ -53,6 +59,8 @@ namespace UltimaData.UnitTest
         }
 
         public byte[] Data;
+        public Exception WriteException;
+        public Exception ReadException;
     }
 
     public class MockDiskImage : IDiskImage
@@ -72,6 +80,9 @@ namespace UltimaData.UnitTest
             if (!Files.ContainsKey(name))
                 return null;
 
+            Files[name].ReadException = ReadException;
+            Files[name].WriteException = WriteException;
+
             return Files[name];
         }
 
@@ -87,5 +98,7 @@ namespace UltimaData.UnitTest
         }
 
         public Dictionary<string, MockImageFile> Files;
+        public Exception WriteException;
+        internal Exception ReadException;
     }
 }
