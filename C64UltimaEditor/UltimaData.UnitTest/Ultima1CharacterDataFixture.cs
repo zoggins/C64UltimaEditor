@@ -397,6 +397,17 @@ namespace UltimaData.UnitTest
             m_data.Save(m_disk);
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        [ExcludeFromCodeCoverage]
+        public void CannotSaveWithoutLoad()
+        {
+
+            Ultima1CharacterData data = new Ultima1CharacterData();
+           
+            data.Save(m_disk);
+        }
+
         private void Dispose(bool disposing)
         {
             if (disposing && m_disk != null)

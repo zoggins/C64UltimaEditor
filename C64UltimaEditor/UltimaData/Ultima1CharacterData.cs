@@ -135,6 +135,9 @@ namespace UltimaData
         public void Save(IDiskImage di)
         {
 
+            if (RawData == null)
+                throw new InvalidOperationException("Cannot save a file without loading one first.");
+
             RawData[SexOffset] = (byte)Sex;
             RawData[ClassOffset] = (byte)Class;
             RawData[RaceOffset] = (byte)Race;
