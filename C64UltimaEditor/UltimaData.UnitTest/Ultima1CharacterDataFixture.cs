@@ -20,7 +20,7 @@ namespace UltimaData.UnitTest
 
             m_data = new Ultima1CharacterData();
 
-            Assert.AreEqual(true, m_data.Load(m_disk, 0));
+            m_data.Load(m_disk, 0);
 
         }
 
@@ -57,7 +57,7 @@ namespace UltimaData.UnitTest
             for(int i = 0; i < 13; ++i)
                 m_disk.Files["P0"].Data[0x04d + i] = (byte)('A' + i);
 
-            Assert.AreEqual(true, m_data.Load(m_disk, 0));
+            m_data.Load(m_disk, 0);
 
             Assert.AreEqual("ABCDEFGHIJKLM", m_data.Name);
         }
@@ -73,7 +73,7 @@ namespace UltimaData.UnitTest
         {
             m_disk.Files["P0"].Data[0x04c] = 0x01;
 
-            Assert.AreEqual(true, m_data.Load(m_disk, 0));
+            m_data.Load(m_disk, 0);
 
             Assert.AreEqual(U1Sex.Female, m_data.Sex);
         }
@@ -89,7 +89,7 @@ namespace UltimaData.UnitTest
         {
             m_disk.Files["P0"].Data[0x06d] = 0x02;
 
-            Assert.AreEqual(true, m_data.Load(m_disk, 0));
+            m_data.Load(m_disk, 0);
 
             Assert.AreEqual(U1Class.Cleric, m_data.Class);
         }
@@ -99,7 +99,7 @@ namespace UltimaData.UnitTest
         {
             m_disk.Files["P0"].Data[0x06d] = 0x03;
 
-            Assert.AreEqual(true, m_data.Load(m_disk, 0));
+            m_data.Load(m_disk, 0);
 
             Assert.AreEqual(U1Class.Wizard, m_data.Class);
         }
@@ -109,7 +109,7 @@ namespace UltimaData.UnitTest
         {
             m_disk.Files["P0"].Data[0x06d] = 0x04;
 
-            Assert.AreEqual(true, m_data.Load(m_disk, 0));
+            m_data.Load(m_disk, 0);
 
             Assert.AreEqual(U1Class.Thief, m_data.Class);
         }
@@ -125,7 +125,7 @@ namespace UltimaData.UnitTest
         {
             m_disk.Files["P0"].Data[0x06b] = 0x01;
 
-            Assert.AreEqual(true, m_data.Load(m_disk, 0));
+            m_data.Load(m_disk, 0);
 
             Assert.AreEqual(U1Race.Human, m_data.Race);
         }
@@ -135,7 +135,7 @@ namespace UltimaData.UnitTest
         {
             m_disk.Files["P0"].Data[0x06b] = 0x02;
 
-            Assert.AreEqual(true, m_data.Load(m_disk, 0));
+            m_data.Load(m_disk, 0);
 
             Assert.AreEqual(U1Race.Elf, m_data.Race);
         }
@@ -145,7 +145,7 @@ namespace UltimaData.UnitTest
         {
             m_disk.Files["P0"].Data[0x06b] = 0x04;
 
-            Assert.AreEqual(true, m_data.Load(m_disk, 0));
+            m_data.Load(m_disk, 0);
 
             Assert.AreEqual(U1Race.Bobbit, m_data.Race);
         }

@@ -67,12 +67,13 @@ namespace UltimaData.UnitTest
     {
         public MockDiskImage()
         {
+            LoadReturnValue = true;
             Files = new Dictionary<string, MockImageFile>();
         }
 
         public bool LoadImage(string filename)
         {
-            return true;
+            return LoadReturnValue;
         }
 
         public IImageFile Open(string name, C64FileType type, string mode)
@@ -97,8 +98,14 @@ namespace UltimaData.UnitTest
        
         }
 
+        public void Sync()
+        {
+
+        }
+
         public Dictionary<string, MockImageFile> Files;
         public Exception WriteException;
-        internal Exception ReadException;
+        public bool LoadReturnValue;
+        public Exception ReadException;
     }
 }

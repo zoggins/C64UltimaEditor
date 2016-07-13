@@ -21,5 +21,7 @@ namespace UltimaData
         bool LoadImage(string filename);
 
         IImageFile Open(string name, C64FileType type, string mode);
+
+        void Sync();
     }
 }

@@ -21,7 +21,7 @@ namespace C64UltimaEditor
 
             // Ultima 1
             m_u1Data = new Ultima1Data();
-            //m_u1Data.Load("C:\\users\\Chris\\Desktop\\Ultima I - The First Age of Darkness (U).d64");
+            PopulateU1Data();
 
 
 
@@ -29,6 +29,71 @@ namespace C64UltimaEditor
             PopulateU4GoToLocations();
             m_u4Data = new Ultima4Data();
             PopulateU4Data();
+        }
+
+        private void PopulateU1Data()
+        {
+            U1NameDropDown.Items.Clear();
+            for (int i = 0; i < m_u1Data.NumberOfCharacters; ++i)
+            {
+                U1NameDropDown.Items.Add(m_u1Data.Characters[i].Name);
+            }
+
+            if (m_u1Data.NumberOfCharacters != 0)
+            {
+                U1NameDropDown.SelectedIndex = 0;
+            }
+
+            PopulateU1Character(0);
+
+            U1GoToDropDownBox.SelectedIndex = 0;
+        }
+
+        private void PopulateU1Character(int index)
+        {
+
+            var character = m_u1Data.Characters[index];
+
+            U1SexDropDown.SelectedItem = Enum.GetName(typeof(U1Sex), character.Sex);
+            U1ClassDropDown.SelectedItem = Enum.GetName(typeof(U1Class), character.Class);
+            U1RaceDropDown.SelectedItem = Enum.GetName(typeof(U1Race), character.Race);
+            U1HitPointsTextBox.Text = character.HitPoints.ToString();
+            U1ExperienceTextBox.Text = character.Experience.ToString();
+            U1StrengthTextBox.Text = character.Strength.ToString();
+            U1AgilityTextBox.Text = character.Agility.ToString();
+            U1StaminaTextBox.Text = character.Stamina.ToString();
+            U1CharismaTextBox.Text = character.Charisma.ToString();
+            U1WisdomTextBox.Text = character.Wisdom.ToString();
+            U1IntelligenceTextBox.Text = character.Intelligence.ToString();
+
+            U1SpellsDropDown.SelectedIndex = 0;
+            U1SpellsTextBox.Text = character.Spells[0].ToString();
+            U1ArmorDropDown.SelectedIndex = 0;
+            U1ArmorTextBox.Text = character.Armor[0].ToString();
+            U1WeaponsDropDown.SelectedIndex = 0;
+            U1WeaponsTextBox.Text = character.Weapons[0].ToString();
+
+            U1FoodTextBox.Text = character.Food.ToString();
+            U1CoinsTextBox.Text = character.Coins.ToString();
+            U1RedGemsTextBox.Text = character.Gems[0].ToString();
+            U1GreenGemsTextBox.Text = character.Gems[1].ToString();
+            U1BlueGemsTextBox.Text = character.Gems[2].ToString();
+            U1WhiteGemsTextBox.Text = character.Gems[3].ToString();
+
+            U1HorsesTextBox.Text = character.Transportation[0].ToString();
+            U1CartsTextBox.Text = character.Transportation[1].ToString();
+            U1RaftsTextBox.Text = character.Transportation[2].ToString();
+            U1FrigatesTextBox.Text = character.Transportation[3].ToString();
+            U1AircarsTextBox.Text = character.Transportation[4].ToString();
+            U1ShuttlesTextBox.Text = character.Transportation[5].ToString();
+            U1TimeMachinesTextBox.Text = character.Transportation[6].ToString();
+
+            U1EnemyShipsTextBox.Text = character.EnemyShips.ToString();
+
+            U1LocX.Text = character.Location.X.ToString();
+            U1LocY.Text = character.Location.Y.ToString();
+
+
         }
 
         private void PopulateU4Character(int index)
@@ -517,14 +582,14 @@ namespace C64UltimaEditor
 
         private void U4LoadButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = U4OpenDialog.ShowDialog();
+            DialogResult result = D64OpenDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
                 bool loaded = false;
                 m_u4Data = new Ultima4Data();
                 try
                 {
-                    m_u4Data.Load(U4OpenDialog.FileName);
+                    m_u4Data.Load(D64OpenDialog.FileName);
                     loaded = true;
                 }
                 catch (Exception ex)
@@ -592,6 +657,190 @@ namespace C64UltimaEditor
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             m_u1Data.Dispose();
+        }
+
+        private void U1Load_Click(object sender, EventArgs e)
+        {
+            DialogResult result = D64OpenDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                bool loaded = false;
+                m_u1Data = new Ultima1Data();
+                try
+                {
+                    m_u1Data.Load(D64OpenDialog.FileName);
+                    loaded = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ultima Savegame Editor for C64");
+                }
+
+                if (loaded)
+                {
+                    U1SaveButton.Enabled = true;
+                }
+                else
+                {
+                    U1SaveButton.Enabled = false;
+                    m_u1Data = new Ultima1Data();
+                }
+
+                PopulateU1Data();
+            }
+        }
+
+        private void U1NameDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PopulateU1Character(U1NameDropDown.SelectedIndex);
+        }
+
+        private void U1SpellsDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int nameDropDownIndex = U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex;
+            U1SpellsTextBox.Text = m_u1Data.Characters[nameDropDownIndex].Spells[U1SpellsDropDown.SelectedIndex].ToString();
+        }
+
+        private void U1ArmorDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int nameDropDownIndex = U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex;
+            U1ArmorTextBox.Text = m_u1Data.Characters[nameDropDownIndex].Armor[U1ArmorDropDown.SelectedIndex].ToString();
+        }
+
+        private void U1WeaponsDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int nameDropDownIndex = U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex;
+            U1WeaponsTextBox.Text = m_u1Data.Characters[nameDropDownIndex].Weapons[U1WeaponsDropDown.SelectedIndex].ToString();
+        }
+
+        private void U1SexDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var characterIndex = U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex;
+            m_u1Data.Characters[characterIndex].Sex = (U1Sex)Enum.Parse(typeof(U1Sex), U1SexDropDown.SelectedItem.ToString());
+        }
+
+        private void U1ClassDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var characterIndex = U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex;
+            m_u1Data.Characters[characterIndex].Class = (U1Class)Enum.Parse(typeof(U1Class), U1ClassDropDown.SelectedItem.ToString());
+        }
+
+        private void U1RaceDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var characterIndex = U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex;
+            m_u1Data.Characters[characterIndex].Race = (U1Race)Enum.Parse(typeof(U1Race), U1RaceDropDown.SelectedItem.ToString());
+        }
+
+        private void U1HitPointsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].HitPoints = i, U1HitPointsTextBox, e);
+        }
+
+        private void U1ExperienceTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Experience = i, U1ExperienceTextBox, e);
+        }
+
+        private void U1StrengthTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Strength = i, U1StrengthTextBox, e);
+        }
+
+        private void U1AgilityTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Agility = i, U1AgilityTextBox, e);
+        }
+
+        private void U1StaminaTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Stamina = i, U1StaminaTextBox, e);
+        }
+
+        private void U1CharismaTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Charisma = i, U1CharismaTextBox, e);
+        }
+
+        private void U1WisdomTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Wisdom = i, U1WisdomTextBox, e);
+        }
+
+        private void U1IntelligenceTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Intelligence = i, U1IntelligenceTextBox, e);
+        }
+
+        private void U1FoodTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Food = i, U1FoodTextBox, e);
+        }
+
+        private void U1CoinsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Coins = i, U1CoinsTextBox, e);
+        }
+
+        private void U1RedGemsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[0] = i, U1RedGemsTextBox, e);
+        }
+
+        private void U1GreenGemsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[1] = i, U1GreenGemsTextBox, e);
+        }
+
+        private void U1BlueGemsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[2] = i, U1BlueGemsTextBox, e);
+        }
+
+        private void U1WhiteGemsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[3] = i, U1WhiteGemsTextBox, e);
+        }
+
+        private void U1EnemyShipsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].EnemyShips = i, U1EnemyShipsTextBox, e);
+        }
+
+        private void U1LocX_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Location.X = i, U1LocX, e);
+        }
+
+        private void U1LocY_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Location.Y = i, U1LocY, e);
+        }
+
+        private void U1SaveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                m_u1Data.Save();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ultima Savegame Editor for C64");
+            }
+        }
+
+        private void U1SpellsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Spells[U1SpellsDropDown.SelectedIndex] = i, U1SpellsTextBox, e);
+        }
+
+        private void U1ArmorTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Armor[U1ArmorDropDown.SelectedIndex] = i, U1ArmorTextBox, e);
+        }
+
+        private void U1WeaponsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Weapons[U1WeaponsDropDown.SelectedIndex] = i, U1WeaponsTextBox, e);
         }
     }
 

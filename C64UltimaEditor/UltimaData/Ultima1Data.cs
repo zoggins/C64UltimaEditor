@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using DiskImageDotNet;
+using System.IO;
 
 namespace UltimaData
 {
@@ -29,24 +30,40 @@ namespace UltimaData
             Dispose(false);
         }
 
-        public bool Load(string file)
+        public void Load(string file)
         {
-           
-            if (!m_diskImage.LoadImage(file))
-                return false;
 
-            for(int i = 0; i < 4; ++i)
+            if (!m_diskImage.LoadImage(file))
+                throw new IOException("Could not open disk image '" + file + "'.");
+
+            for (int i = 0; i < 4; ++i)
             {
-                if (Characters[NumberOfCharacters].Load(m_diskImage, i))
-                    ++NumberOfCharacters;
+                bool incNumCharacter = true;
+                try
+                {
+                    Characters[NumberOfCharacters].Load(m_diskImage, i);
+                }
+                catch (Exception /*ex*/)
+                {
+                    incNumCharacter = false;
+                }
+
+                if (incNumCharacter)    
+                   ++NumberOfCharacters;
             }
 
-            return true;
+            m_imageLoaded = true;
         }
 
-        public bool Save(string file)
+        public void Save()
         {
-            return false;
+            if (!m_imageLoaded)
+                throw new InvalidOperationException("Cannot save a disk image without loading one first.");
+
+            for (int i = 0; i < NumberOfCharacters; ++i)
+                Characters[i].Save(m_diskImage);
+
+            m_diskImage.Sync();
         }
 
         public void Dispose()
@@ -64,6 +81,7 @@ namespace UltimaData
             }
         }
 
+        private bool m_imageLoaded;
         private IDiskImage m_diskImage;
 
         public int NumberOfCharacters;

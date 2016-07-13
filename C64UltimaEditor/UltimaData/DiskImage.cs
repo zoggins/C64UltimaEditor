@@ -87,6 +87,9 @@ namespace UltimaData
 
         public IImageFile Open(string name, C64FileType type, string mode)
         {
+            if (mode == "wb")
+                m_image.Delete(name, type);
+
             C64ImageFile file = m_image.Open(name, type, mode);
             if (file == null)
                 return null;
@@ -107,6 +110,11 @@ namespace UltimaData
                 m_image.Dispose();
                 m_image = null;
             }
+        }
+
+        public void Sync()
+        {
+            m_image.Sync();
         }
 
         private C64DiskImage m_image;

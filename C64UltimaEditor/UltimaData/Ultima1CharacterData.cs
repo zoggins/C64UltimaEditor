@@ -33,18 +33,32 @@ namespace UltimaData
     {
         public U1Location()
         {
-            X = 0;
-            Y = 0;
+            m_X = new BoundedInt(0, 255);
+            m_Y = new BoundedInt(0, 255); 
         }
 
         public U1Location(int x, int y)
         {
+            m_X = new BoundedInt(0, 255);
+            m_Y = new BoundedInt(0, 255);
+
             X = x;
             Y = y;
         }
 
-        public int X;
-        public int Y;
+        public int X
+        {
+            get { return m_X; }
+            set { m_X.Value = value; }
+        }
+        private readonly BoundedInt m_X;
+
+        public int Y
+        {
+            get { return m_Y; }
+            set { m_Y.Value = value; }
+        }
+        private readonly BoundedInt m_Y;
     }
 
     public class Ultima1CharacterData
@@ -52,6 +66,9 @@ namespace UltimaData
         public Ultima1CharacterData()
         {
             m_name = "";
+
+            Class = U1Class.Fighter;
+            Race = U1Race.Human;
 
             m_hitPoints = new BoundedInt(0, 9999);
             m_experience = new BoundedInt(0, 9999);
@@ -78,7 +95,7 @@ namespace UltimaData
             Location = new U1Location();
         }
 
-        public bool Load(IDiskImage di, int rosterNumber)
+        public void Load(IDiskImage di, int rosterNumber)
         {
             byte[] buffer = new byte[200000]; // they seem to be 460 bytes, but screw it better safe than sorry.
 
@@ -129,7 +146,6 @@ namespace UltimaData
 
             Location = new U1Location(RawData[LocationOffset], RawData[LocationOffset + 1]);
 
-            return true;
         }
 
         public void Save(IDiskImage di)
@@ -176,6 +192,7 @@ namespace UltimaData
             RawData[LocationOffset] = (byte)Location.X;
             RawData[LocationOffset + 1] = (byte)Location.Y;
 
+            
             IImageFile image = di.Open("P" + RosterId, C64FileType.PRG, "wb");
             if (image == null)
                 throw new System.IO.FileLoadException("Cannot open save file 'P" + RosterId + ".PRG' for write.");
