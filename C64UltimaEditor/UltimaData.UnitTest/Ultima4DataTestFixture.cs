@@ -96,8 +96,8 @@ namespace UltimaData.UnitTest
             Assert.AreEqual(16, SaveFile.Characters[0].Strength);
             Assert.AreEqual(22, SaveFile.Characters[0].Dexterity);
             Assert.AreEqual(19, SaveFile.Characters[0].Intelligence);
-            Assert.AreEqual(U4EquipedWeapon.Staff, SaveFile.Characters[0].Weapon);
-            Assert.AreEqual(U4EquipedArmor.Cloth, SaveFile.Characters[0].Armor);
+            Assert.AreEqual(U4Weapons.Staff, SaveFile.Characters[0].Weapon);
+            Assert.AreEqual(U4Armor.Cloth, SaveFile.Characters[0].Armor);
 
             Assert.AreEqual(26, SaveFile.Spells.Length);
             foreach (var spell in SaveFile.Spells)
@@ -184,8 +184,8 @@ namespace UltimaData.UnitTest
             Assert.AreEqual(16, newSave.Characters[0].Strength);
             Assert.AreEqual(22, newSave.Characters[0].Dexterity);
             Assert.AreEqual(19, newSave.Characters[0].Intelligence);
-            Assert.AreEqual(U4EquipedWeapon.Staff, newSave.Characters[0].Weapon);
-            Assert.AreEqual(U4EquipedArmor.Cloth, newSave.Characters[0].Armor);
+            Assert.AreEqual(U4Weapons.Staff, newSave.Characters[0].Weapon);
+            Assert.AreEqual(U4Armor.Cloth, newSave.Characters[0].Armor);
 
             Assert.AreEqual(26, newSave.Spells.Length);
             foreach (var spell in newSave.Spells)
@@ -264,8 +264,8 @@ namespace UltimaData.UnitTest
             SaveFile.Characters[1].Strength = 17;
             SaveFile.Characters[1].Dexterity = 12;
             SaveFile.Characters[1].Intelligence = 25;
-            SaveFile.Characters[1].Weapon = U4EquipedWeapon.Crossbow;
-            SaveFile.Characters[1].Armor = U4EquipedArmor.MagicPlate;
+            SaveFile.Characters[1].Weapon = U4Weapons.Crossbow;
+            SaveFile.Characters[1].Armor = U4Armor.MagicPlate;
 
             SaveFile.Save("MultipleCharacters.d64");
 
@@ -284,8 +284,8 @@ namespace UltimaData.UnitTest
             Assert.AreEqual(16, newSave.Characters[0].Strength);
             Assert.AreEqual(22, newSave.Characters[0].Dexterity);
             Assert.AreEqual(19, newSave.Characters[0].Intelligence);
-            Assert.AreEqual(U4EquipedWeapon.Staff, newSave.Characters[0].Weapon);
-            Assert.AreEqual(U4EquipedArmor.Cloth, newSave.Characters[0].Armor);
+            Assert.AreEqual(U4Weapons.Staff, newSave.Characters[0].Weapon);
+            Assert.AreEqual(U4Armor.Cloth, newSave.Characters[0].Armor);
 
             Assert.AreEqual("Iolo", newSave.Characters[1].Name);
             Assert.AreEqual(U4Sex.Female, newSave.Characters[1].Sex);
@@ -296,8 +296,8 @@ namespace UltimaData.UnitTest
             Assert.AreEqual(17, newSave.Characters[1].Strength);
             Assert.AreEqual(12, newSave.Characters[1].Dexterity);
             Assert.AreEqual(25, newSave.Characters[1].Intelligence);
-            Assert.AreEqual(U4EquipedWeapon.Crossbow, newSave.Characters[1].Weapon);
-            Assert.AreEqual(U4EquipedArmor.MagicPlate, newSave.Characters[1].Armor);
+            Assert.AreEqual(U4Weapons.Crossbow, newSave.Characters[1].Weapon);
+            Assert.AreEqual(U4Armor.MagicPlate, newSave.Characters[1].Armor);
 
         }
 
