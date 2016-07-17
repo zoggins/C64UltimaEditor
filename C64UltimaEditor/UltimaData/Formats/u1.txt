@@ -35,7 +35,7 @@
 04d Name 13 bytes;
 05B Hits Low Byte
 05C Hits High Byte
-05d Strength
+05d Strength  (Racial and Class Adjustments are baked into the values at character creation time)
 05f Agility
 061 Stamina
 063 Charima

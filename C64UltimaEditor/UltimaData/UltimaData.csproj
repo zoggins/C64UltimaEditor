@@ -51,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ultima1CharacterData.cs" />
     <Compile Include="Ultima1Data.cs" />
+    <Compile Include="Ultima2Data.cs" />
     <Compile Include="Ultima4CharacterData.cs" />
     <Compile Include="Ultima4Data.cs" />
   </ItemGroup>
@@ -62,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Formats\u1.txt" />
+    <Content Include="Formats\u2.txt" />
     <Content Include="Formats\u4.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

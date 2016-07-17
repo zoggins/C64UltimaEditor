@@ -60,6 +60,7 @@
     <Compile Include="MockFile.cs" />
     <Compile Include="Ultima1CharacterDataFixture.cs" />
     <Compile Include="Ultima1DataTestFixture.cs" />
+    <Compile Include="Ultima2DataTestFixture.cs" />
     <Compile Include="Ultima4CharacterDataTestFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ultima4DataTestFixture.cs" />
@@ -78,6 +79,9 @@
   <ItemGroup>
     <None Include="Data\p3.prg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\u2data.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Data\u4data.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

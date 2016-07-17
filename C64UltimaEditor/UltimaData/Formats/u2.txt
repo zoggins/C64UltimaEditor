@@ -1,0 +1,60 @@
+﻿2AA00 - 2AA0A: Name (Letters start at 0xC1)
+
+1AA10 Male (CD) / Female (C6)
+1AA11 Class (00 Fighter, 01 Cleric, 02 Wizard, 03 Thief )
+1AA12 Race (00 Human, 01 Elf, 02 Dwarf, 03 Hobbit)
+
+1AA13 Current Map (00 is Time of Legends...04 is Aftermath)
+
+2AA15 Strength      (Racial and Class Adjustments are baked into the values at character creation time and they are all in BCD)
+2AA16 Agility
+2AA17 Stamina
+2AA18 Charisma
+2AA19 Wisdom
+2AA1A Intelligence
+
+2AA1B Hit Points High Byte (in BCD)
+2AA1C Hit Points Low Byte (in BCD)
+
+2AA1D Food High Byte (in BCD)
+2AA1E Food Low Byte
+
+2AA20 Experience High Byte
+2AA21 Experience Low Byte
+2AA22 Coins High Byte (in BCD)
+2AA23 Coins High Byte (in BCD)
+2AA24 Seems to be X
+2AA25 Seems to be Y
+
+2AA3E Torches
+2AA2F Keys
+2AA30 Tools
+
+2AA41 Dagger
+...
+2AA49 Quicksword
+
+2AA61 Cloth
+...
+2AA66 Power
+
+2AA81 Light
+...
+2AA89 Kill
+
+2AAA0 Rings
+2AAA1 Wands
+2AAA2 Staffs
+2AAA3 Boots
+2AAA4 Cloaks
+2AAA5 Helms
+2AAA6 Gems
+2AAA7 Ankhs
+2AAA8 Red Gems
+2AAA9 Skull Keys
+2AAAA Green Gems
+2AAAB Brass Buttons
+2AAAC Blue Tassles
+2AAAD Strange Coins
+2AAAE Green Idols
+2AAAF Try-Lithiums
