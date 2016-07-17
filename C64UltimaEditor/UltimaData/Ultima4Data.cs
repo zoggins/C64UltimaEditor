@@ -319,7 +319,7 @@ namespace UltimaData
         }
         private BoundedInt m_moves;
 
-        public U4Location Location;
+        public readonly U4Location Location;
 
         public readonly bool[] Stones;
         public readonly bool[] Runes;
@@ -391,7 +391,7 @@ namespace UltimaData
                         + ConvertBCDToInt(RawFile[MovesOffset + 2]) * 100
                         + ConvertBCDToInt(RawFile[MovesOffset + 3]);
 
-            Location = ConvertToLocation(RawFile[LocationOffset + 1], RawFile[LocationOffset]);
+            ConvertToLocation(Location, RawFile[LocationOffset + 1], RawFile[LocationOffset]);
 
             CurrentTransportation = (U4Transportation)RawFile[TransportationOffset];
         }
@@ -563,16 +563,12 @@ namespace UltimaData
             return (byte)(((numberToConvert / 10) << 0x04) | (numberToConvert % 10));
         }
 
-        private U4Location ConvertToLocation(byte lat, byte lon)
+        private void ConvertToLocation(U4Location location, byte lat, byte lon)
         {
-            U4Location retVal = new U4Location();
-
-            retVal.Lat1 = (char)((lat / 16) + 'A');
-            retVal.Lat2 = (char)((lat % 16) + 'A');
-            retVal.Long1 = (char)((lon / 16) + 'A');
-            retVal.Long2 = (char)((lon % 16) + 'A');
-
-            return retVal;
+            location.Lat1 = (char)((lat / 16) + 'A');
+            location.Lat2 = (char)((lat % 16) + 'A');
+            location.Long1 = (char)((lon / 16) + 'A');
+            location.Long2 = (char)((lon % 16) + 'A');
         }
 
         private byte ConvertFromLocation(char one, char two)

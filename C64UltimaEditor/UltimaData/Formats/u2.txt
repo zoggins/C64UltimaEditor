@@ -26,7 +26,7 @@
 2AA24 Seems to be X
 2AA25 Seems to be Y
 
-2AA3E Torches
+2AA2E Torches
 2AA2F Keys
 2AA30 Tools
 

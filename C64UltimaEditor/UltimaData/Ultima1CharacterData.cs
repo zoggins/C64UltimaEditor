@@ -79,6 +79,17 @@ namespace UltimaData
         White
     }
 
+    public enum U1Transportation
+    {
+        Horse,
+        Cart,
+        Raft,
+        Frigate,
+        Aircar,
+        Shuttle,
+        TimeMachine
+    }
+
     public class U1Location
     {
         public U1Location()
@@ -194,8 +205,8 @@ namespace UltimaData
 
             EnemyShips = RawData[EnemyShipsOffset];
 
-            Location = new U1Location(RawData[LocationOffset], RawData[LocationOffset + 1]);
-
+            Location.X = RawData[LocationOffset];
+            Location.Y = RawData[LocationOffset + 1];
         }
 
         public void Save(IDiskImage di)
@@ -371,7 +382,7 @@ namespace UltimaData
         }
         private BoundedInt m_enemyShips;
 
-        public U1Location Location;
+        public readonly U1Location Location;
 
         private int RosterId;
         private byte[] RawData;

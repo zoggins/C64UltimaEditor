@@ -366,6 +366,131 @@ namespace UltimaData.UnitTest
             Assert.AreEqual(9, SaveFile.Weapons[8]);
         }
 
+        [TestMethod]
+        public void LoadFood()
+        {
+            SaveFile.Load("u2Data.dat");
+
+            Assert.AreEqual(220, SaveFile.Food);
+        }
+
+        [TestMethod]
+        public void DefaultFood()
+        {
+            Assert.AreEqual(0, SaveFile.Food);
+        }
+
+        [TestMethod]
+        public void LoadGold()
+        {
+            SaveFile.Load("u2Data.dat");
+
+            Assert.AreEqual(375, SaveFile.Gold);
+        }
+
+        [TestMethod]
+        public void DefaultGold()
+        {
+            Assert.AreEqual(0, SaveFile.Gold);
+        }
+
+        [TestMethod]
+        public void LoadTorches()
+        {
+            File.Files["u2Data.dat"][0x2AA2E] = 0x33; 
+            SaveFile.Load("u2Data.dat");
+
+            Assert.AreEqual(33, SaveFile.Torches);
+        }
+
+        [TestMethod]
+        public void DefaultTorches()
+        {
+            Assert.AreEqual(0, SaveFile.Torches);
+        }
+
+        [TestMethod]
+        public void LoadKeys()
+        {
+            File.Files["u2Data.dat"][0x2AA2F] = 0x44;
+            SaveFile.Load("u2Data.dat");
+
+            Assert.AreEqual(44, SaveFile.Keys);
+        }
+
+        [TestMethod]
+        public void DefaultKeys()
+        {
+            Assert.AreEqual(0, SaveFile.Keys);
+        }
+
+        [TestMethod]
+        public void LoadTools()
+        {
+            File.Files["u2Data.dat"][0x2AA30] = 0x55;
+            SaveFile.Load("u2Data.dat");
+
+            Assert.AreEqual(55, SaveFile.Tools);
+        }
+
+        [TestMethod]
+        public void DefaultTools()
+        {
+            Assert.AreEqual(0, SaveFile.Tools);
+        }
+
+        [TestMethod]
+        public void DefaultItems()
+        {
+            for (int i = 0; i < 16; ++i)
+                Assert.AreEqual(0, SaveFile.Items[i]);
+        }
+
+        [TestMethod]
+        public void LoadItems()
+        {
+            SaveFile.Load("u2Data.dat");
+
+            Assert.AreEqual(12, SaveFile.Items[0]);
+            Assert.AreEqual(13, SaveFile.Items[1]);
+            Assert.AreEqual(1, SaveFile.Items[2]);
+            Assert.AreEqual(7, SaveFile.Items[3]);
+            Assert.AreEqual(8, SaveFile.Items[4]);
+            Assert.AreEqual(9, SaveFile.Items[5]);
+            Assert.AreEqual(10, SaveFile.Items[6]);
+            Assert.AreEqual(11, SaveFile.Items[7]);
+            Assert.AreEqual(14, SaveFile.Items[8]);
+            Assert.AreEqual(15, SaveFile.Items[9]);
+            Assert.AreEqual(16, SaveFile.Items[10]);
+            Assert.AreEqual(17, SaveFile.Items[11]);
+            Assert.AreEqual(18, SaveFile.Items[12]);
+            Assert.AreEqual(19, SaveFile.Items[13]);
+            Assert.AreEqual(20, SaveFile.Items[14]);
+            Assert.AreEqual(21, SaveFile.Items[15]);
+        }
+
+        [TestMethod]
+        public void LoadLocation()
+        {
+            File.Files["u2Data.dat"][0x1AA13] = 0x02;
+            File.Files["u2Data.dat"][0x2AA24] = 0x29;
+            File.Files["u2Data.dat"][0x2AA25] = 0xc4;
+
+            SaveFile.Load("u2Data.dat");
+
+            Assert.AreEqual(U2Map.Medieval, SaveFile.Location.Map);
+            Assert.AreEqual(41, SaveFile.Location.X);
+            Assert.AreEqual(196, SaveFile.Location.Y);
+        }
+
+        [TestMethod]
+        public void DefaultLocation()
+        {
+            Assert.AreEqual(U2Map.TimeOfLegends, SaveFile.Location.Map);
+            Assert.AreEqual(0, SaveFile.Location.X);
+            Assert.AreEqual(0, SaveFile.Location.Y);
+        }
+
         private MockFile File;
         private Ultima2Data SaveFile;
     }

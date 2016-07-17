@@ -333,7 +333,8 @@ namespace UltimaData.UnitTest
             m_data.Food = 3878;
             m_data.Coins = 4789;
             m_data.EnemyShips = 78;
-            m_data.Location = new U1Location(57, 68);
+            m_data.Location.X = 57;
+            m_data.Location.Y = 68;
 
             m_data.Save(m_disk);
 

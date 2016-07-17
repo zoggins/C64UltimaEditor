@@ -28,6 +28,98 @@ namespace UltimaData
         Hobbit = 0x03
     }
 
+    public enum U2Weapons
+    {
+        Dagger,
+        Mace,
+        Axe,
+        Bow,
+        Sword,
+        GreatSword,
+        LightSword,
+        Phaser,
+        QuickBlade
+    }
+
+    public enum U2Armor
+    {
+        Cloth,
+        Leather,
+        Chain,
+        Plate,
+        Reflect,
+        Power
+    }
+
+    public enum U2Spells
+    {
+        Light,
+        LadderDown,
+        LadderUp,
+        Passwall,
+        Surface,
+        Prayer,
+        MagicMissle,
+        Blink,
+        Kill
+    }
+
+    public enum U2Items
+    {
+        Rings,
+        Wands,
+        Staffs,
+        Boots,
+        Cloaks,
+        Helms,
+        Gems,
+        Ankhs,
+        RedGems,
+        SkullKeys,
+        GreenGems,
+        BrassButtons,
+        BlueTassles,
+        StrangeCoins,
+        GreenIdols,
+        TryLithiums
+    }
+
+    public enum U2Map
+    {
+        TimeOfLegends,
+        Pangea,
+        Medieval,
+        Modern,
+        Aftermath
+    }
+
+    public class U2Location
+    {
+        public U2Location()
+        {
+            Map = U2Map.TimeOfLegends;
+            m_X = new BoundedInt(0, 255);
+            X = 0;
+            m_Y = new BoundedInt(0, 255);
+            Y = 0;
+        }
+        public U2Map Map;
+
+        public int X
+        {
+            get { return m_X; }
+            set { m_X.Value = value; }
+        }
+        private BoundedInt m_X;
+
+        public int Y
+        {
+            get { return m_Y; }
+            set { m_Y.Value = value; }
+        }
+        private BoundedInt m_Y;
+    }
+
     public class Ultima2Data
     {
         public Ultima2Data(IFile file = null)
@@ -60,6 +152,22 @@ namespace UltimaData
             Spells = new BoundedIntArray(9, 0, 99);
             Armor = new BoundedIntArray(6, 0, 99);
             Weapons = new BoundedIntArray(9, 0, 99);
+
+            m_food = new BoundedInt(0, 9999);
+            Food = 0;
+            m_gold = new BoundedInt(0, 9999);
+            Gold = 0;
+
+            m_torches = new BoundedInt(0, 99);
+            Torches = 0;
+            m_keys = new BoundedInt(0, 99);
+            Keys = 0;
+            m_tools = new BoundedInt(0, 99);
+            Tools = 0;
+
+            Items = new BoundedIntArray(16, 0, 99);
+
+            Location = new U2Location();
 
             RawFile = null;
 
@@ -97,6 +205,20 @@ namespace UltimaData
 
             for (int i = 0; i < 9; ++i)
                 Weapons[i] = ConvertBCDToInt(RawFile[WeaponsOffset + i]);
+
+            Food = ConvertBCDToInt(RawFile[FoodOffset]) * 100 + ConvertBCDToInt(RawFile[FoodOffset + 1]);
+            Gold = ConvertBCDToInt(RawFile[GoldOffset]) * 100 + ConvertBCDToInt(RawFile[GoldOffset + 1]);
+
+            Torches = ConvertBCDToInt(RawFile[TorchesOffset]);
+            Keys = ConvertBCDToInt(RawFile[KeysOffset]);
+            Tools = ConvertBCDToInt(RawFile[ToolsOffset]);
+
+            for (int i = 0; i < 16; ++i)
+                Items[i] = ConvertBCDToInt(RawFile[ItemsOffset + i]);
+
+            Location.Map = (U2Map)RawFile[MapOffset];
+            Location.X = RawFile[LocationXOffset];
+            Location.Y = RawFile[LocationYOffset];
 
         }
 
@@ -184,6 +306,45 @@ namespace UltimaData
         public readonly BoundedIntArray Armor;
         public readonly BoundedIntArray Weapons;
 
+        public int Food
+        {
+            get { return m_food; }
+            set { m_food.Value = value; }
+        }
+        private BoundedInt m_food;
+
+        public int Gold
+        {
+            get { return m_gold; }
+            set { m_gold.Value = value; }
+        }
+        private BoundedInt m_gold;
+
+        public int Torches
+        {
+            get { return m_torches; }
+            set { m_torches.Value = value; }
+        }
+        private BoundedInt m_torches;
+
+        public int Keys
+        {
+            get { return m_keys; }
+            set { m_keys.Value = value; }
+        }
+        private BoundedInt m_keys;
+
+        public int Tools
+        {
+            get { return m_tools; }
+            set { m_tools.Value = value; }
+        }
+        private BoundedInt m_tools;
+
+        public BoundedIntArray Items;
+
+        public readonly U2Location Location;
+
         private string ProcessName()
         {
             StringBuilder name = new StringBuilder();
@@ -225,6 +386,14 @@ namespace UltimaData
         private int SpellsOffset = 0x2AA81;
         private int ArmorOffset = 0x2AA61;
         private int WeaponsOffset = 0x2AA41;
-
+        private int GoldOffset = 0x2AA22;
+        private int FoodOffset = 0x2AA1D;
+        private int TorchesOffset = 0x2AA2E;
+        private int KeysOffset = 0x2AA2F;
+        private int ToolsOffset = 0x2AA30;
+        private int ItemsOffset = 0x2AAA0;
+        private int MapOffset = 0x1AA13;
+        private int LocationXOffset = 0x2AA24;
+        private int LocationYOffset = 0x2AA25;
     }
 }

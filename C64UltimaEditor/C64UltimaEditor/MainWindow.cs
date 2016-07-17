@@ -633,7 +633,10 @@ namespace C64UltimaEditor
             var location = m_u4GoToLocations[U4GoToDropDownBox.SelectedIndex];
             if (location.IsActive)
             {
-                m_u4Data.Location = new U4Location(location.Coordinates.Lat1, location.Coordinates.Lat2, location.Coordinates.Long1, location.Coordinates.Long2);
+                m_u4Data.Location.Lat1 = location.Coordinates.Lat1;
+                m_u4Data.Location.Lat2 = location.Coordinates.Lat2;
+                m_u4Data.Location.Long1 = location.Coordinates.Long1;
+                m_u4Data.Location.Long2 = location.Coordinates.Long2;
 
                 PopulateLocation(location.Coordinates.Lat1, location.Coordinates.Lat2, location.Coordinates.Long1, location.Coordinates.Long2);
 
