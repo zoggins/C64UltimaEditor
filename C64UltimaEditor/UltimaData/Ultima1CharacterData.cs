@@ -98,15 +98,6 @@ namespace UltimaData
             m_Y = new BoundedInt(0, 255); 
         }
 
-        public U1Location(int x, int y)
-        {
-            m_X = new BoundedInt(0, 255);
-            m_Y = new BoundedInt(0, 255);
-
-            X = x;
-            Y = y;
-        }
-
         public int X
         {
             get { return m_X; }

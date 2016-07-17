@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,27 @@ namespace UltimaData.UnitTest
             SaveFile.Load("u2Data.dat");
 
             Assert.AreEqual("AAA", SaveFile.Name);
+        }
+
+        [TestMethod]
+        public void LoadLongName()
+        {
+            File.Files["u2Data.dat"][0x2AA00] = 0xC1 + 'A' - 'A';
+            File.Files["u2Data.dat"][0x2AA01] = 0xC1 + 'B' - 'A';
+            File.Files["u2Data.dat"][0x2AA02] = 0xC1 + 'C' - 'A';
+            File.Files["u2Data.dat"][0x2AA03] = 0xC1 + 'D' - 'A';
+            File.Files["u2Data.dat"][0x2AA04] = 0xC1 + 'E' - 'A';
+            File.Files["u2Data.dat"][0x2AA05] = 0xC1 + 'F' - 'A';
+            File.Files["u2Data.dat"][0x2AA06] = 0xC1 + 'G' - 'A';
+            File.Files["u2Data.dat"][0x2AA07] = 0xC1 + 'H' - 'A';
+            File.Files["u2Data.dat"][0x2AA08] = 0xC1 + 'I' - 'A';
+            File.Files["u2Data.dat"][0x2AA09] = 0xC1 + 'J' - 'A';
+            File.Files["u2Data.dat"][0x2AA0A] = 0xC1 + 'K' - 'A';
+            File.Files["u2Data.dat"][0x2AA0B] = 0xC1 + 'L' - 'A';
+
+            SaveFile.Load("u2Data.dat");
+
+            Assert.AreEqual("ABCDEFGHIJK", SaveFile.Name);
         }
 
         [TestMethod]
@@ -489,6 +511,24 @@ namespace UltimaData.UnitTest
             Assert.AreEqual(U2Map.TimeOfLegends, SaveFile.Location.Map);
             Assert.AreEqual(0, SaveFile.Location.X);
             Assert.AreEqual(0, SaveFile.Location.Y);
+        }
+
+        [TestMethod]
+        [ExcludeFromCodeCoverage]
+        [ExpectedException(typeof(FileNotFoundException))]
+        public void LoadNonExistentFile()
+        {
+            SaveFile.Load("blah");
+        }
+
+        [TestMethod]
+        [ExcludeFromCodeCoverage]
+        [ExpectedException(typeof(FileNotFoundException))]
+        public void LoadNonExistentFileFoReal()
+        {
+            SaveFile = new Ultima2Data();
+
+            SaveFile.Load("blah");
         }
 
         private MockFile File;

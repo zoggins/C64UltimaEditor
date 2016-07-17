@@ -37,6 +37,7 @@ namespace UltimaData.UnitTest
             Array.Copy(data1, trucatedData, 25);
             Assert.AreEqual("This is some sample data!", Encoding.ASCII.GetString(trucatedData));
             file1.Close();
+            disk1.Sync();    // Unnecessary, but coverage
             disk1.Dispose();
 
             System.IO.File.Delete(filename);
