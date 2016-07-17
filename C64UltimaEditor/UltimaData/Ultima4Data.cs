@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace UltimaData
 {
-    enum U4Virtues
+    public enum U4Virtues
     {
         Honesty = 0,
         Compassion = 1,
@@ -17,6 +14,92 @@ namespace UltimaData
         Honor = 5,
         Spirituality = 6,
         Humility = 7
+    }
+
+    public enum U4Stones
+    {
+        Blue = 0,
+        Yellow = 1,
+        Red = 2,
+        Green = 3,
+        Orange = 4,
+        Purple = 5,
+        White = 6,
+        Black = 7
+    }
+
+    public enum U4Weapons
+    {
+        Hands = 0,
+        Staff = 1,
+        Dagger = 2,
+        Sling = 3,
+        Mace = 4,
+        Axe = 5,
+        Sword = 6,
+        Bow = 7,
+        Crossbow = 8,
+        FlamingOil = 9,
+        Halberd = 10,
+        MagicAxe = 11,
+        MagicSword = 12,
+        MagicBow = 13,
+        MagicWand = 14,
+        MysticSword = 15,
+    }
+
+    public enum U4Armor
+    {
+        Skin = 0, 
+        Cloth = 1,
+        Leather = 2,
+        ChainMail = 3,
+        PlateMail = 4,
+        MagicChain = 5,
+        MagicPlate = 6,
+        MysticRobe = 7
+    }
+
+    public enum U4Reagents
+    {
+        SulfurAsh = 0,
+        Ginseng = 1,
+        Garlic = 2,
+        SpiderSilk = 3,
+        BloodMoss = 4,
+        BlackPearl = 5,
+        Nightshade = 6,
+        Mandrake = 7
+    }
+
+    public enum U4Spells
+    {
+        Awaken = 0,
+        Blink = 1,
+        Cure = 2,
+        Dispell = 3,
+        Energy = 4,
+        Fireball = 5,
+        Gate = 6,
+        Heal = 7,
+        Iceball = 8,
+        Jinx = 9,
+        Kill = 10,
+        Light = 11,
+        MagicMissle = 12,
+        Negate = 13,
+        Open = 14,
+        Protect = 15,
+        Quickness = 16,
+        Ressurect = 17,
+        Sleep = 18,
+        Tremor = 19,
+        Undead = 20,
+        View = 21,
+        Winds = 22,
+        XIt = 23,
+        YUp = 24,
+        ZDown = 25
     }
 
     public enum U4Transportation
@@ -119,7 +202,6 @@ namespace UltimaData
         public Ultima4Data(IFile file = null)
         {
             Characters = new Ultima4CharacterData[8];
-            //for (int i = 0; i < 8; ++i)
             Characters[0] = new Ultima4CharacterData();
             m_numberOfCharactersInParty = 0;
 
@@ -421,8 +503,8 @@ namespace UltimaData
 
             int experience = ConvertBCDToInt(RawFile[offset + 0x1c]) * 100 + ConvertBCDToInt(RawFile[offset + 0x1d]);
 
-            U4EquipedWeapon weapon = (U4EquipedWeapon)RawFile[offset + 0x1e];
-            U4EquipedArmor armor = (U4EquipedArmor)RawFile[offset + 0x1f];
+            U4Weapons weapon = (U4Weapons)RawFile[offset + 0x1e];
+            U4Armor armor = (U4Armor)RawFile[offset + 0x1f];
 
             Characters[index] = new Ultima4CharacterData(name, sex, job, health, hitPoints, maxHitPoints, experience, strength, dexterity, intelligence, magicPoints, weapon, armor);
         }

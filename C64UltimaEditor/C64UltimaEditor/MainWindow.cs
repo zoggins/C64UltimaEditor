@@ -447,54 +447,54 @@ namespace C64UltimaEditor
         {
             var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
 
-            m_u4Data.Characters[characterIndex].Weapon = (U4EquipedWeapon)U4WeaponDropDown.SelectedIndex;
+            m_u4Data.Characters[characterIndex].Weapon = (U4Weapons)U4WeaponDropDown.SelectedIndex;
         }
 
         private void U4ArmorDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
             var characterIndex = U4NameDropDown.SelectedIndex == -1 ? 0 : U4NameDropDown.SelectedIndex;
 
-            m_u4Data.Characters[characterIndex].Armor = (U4EquipedArmor)U4ArmorDropDown.SelectedIndex;
+            m_u4Data.Characters[characterIndex].Armor = (U4Armor)U4ArmorDropDown.SelectedIndex;
         }
 
         private void U4BlueStoneCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            m_u4Data.Stones[0] = U4BlueStoneCheckBox.Checked;
+            m_u4Data.Stones[(int)U4Stones.Blue] = U4BlueStoneCheckBox.Checked;
         }
 
         private void U4YellowCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            m_u4Data.Stones[1] = U4YellowCheckBox.Checked;
+            m_u4Data.Stones[(int)U4Stones.Yellow] = U4YellowCheckBox.Checked;
         }
 
         private void U4RedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            m_u4Data.Stones[2] = U4RedCheckBox.Checked;
+            m_u4Data.Stones[(int)U4Stones.Red] = U4RedCheckBox.Checked;
         }
 
         private void U4GreenCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            m_u4Data.Stones[3] = U4GreenCheckBox.Checked;
+            m_u4Data.Stones[(int)U4Stones.Green] = U4GreenCheckBox.Checked;
         }
 
         private void U4OrangeCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            m_u4Data.Stones[4] = U4OrangeCheckBox.Checked;
+            m_u4Data.Stones[(int)U4Stones.Orange] = U4OrangeCheckBox.Checked;
         }
 
         private void U4PurpleCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            m_u4Data.Stones[5] = U4PurpleCheckBox.Checked;
+            m_u4Data.Stones[(int)U4Stones.Purple] = U4PurpleCheckBox.Checked;
         }
 
         private void U4WhiteCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            m_u4Data.Stones[6] = U4WhiteCheckBox.Checked;
+            m_u4Data.Stones[(int)U4Stones.White] = U4WhiteCheckBox.Checked;
         }
 
         private void U4BlackCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            m_u4Data.Stones[7] = U4BlackCheckBox.Checked;
+            m_u4Data.Stones[(int)U4Stones.Black] = U4BlackCheckBox.Checked;
         }
 
         private void U4RuneCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -783,22 +783,22 @@ namespace C64UltimaEditor
 
         private void U1RedGemsTextBox_Validating(object sender, CancelEventArgs e)
         {
-            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[0] = i, U1RedGemsTextBox, e);
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[(int)U1Gems.Red] = i, U1RedGemsTextBox, e);
         }
 
         private void U1GreenGemsTextBox_Validating(object sender, CancelEventArgs e)
         {
-            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[1] = i, U1GreenGemsTextBox, e);
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[(int)U1Gems.Green] = i, U1GreenGemsTextBox, e);
         }
 
         private void U1BlueGemsTextBox_Validating(object sender, CancelEventArgs e)
         {
-            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[2] = i, U1BlueGemsTextBox, e);
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[(int)U1Gems.Blue] = i, U1BlueGemsTextBox, e);
         }
 
         private void U1WhiteGemsTextBox_Validating(object sender, CancelEventArgs e)
         {
-            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[3] = i, U1WhiteGemsTextBox, e);
+            SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Gems[(int)U1Gems.White] = i, U1WhiteGemsTextBox, e);
         }
 
         private void U1EnemyShipsTextBox_Validating(object sender, CancelEventArgs e)
