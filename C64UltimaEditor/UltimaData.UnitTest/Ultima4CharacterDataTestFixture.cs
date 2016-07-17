@@ -23,8 +23,8 @@ namespace UltimaData.UnitTest
             Assert.AreEqual(0, character.Dexterity);
             Assert.AreEqual(0, character.Intelligence);
             Assert.AreEqual(0, character.MagicPoints);
-            Assert.AreEqual(U4EquipedWeapon.Hands, character.Weapon);
-            Assert.AreEqual(U4EquipedArmor.Skin, character.Armor);
+            Assert.AreEqual(U4Weapons.Hands, character.Weapon);
+            Assert.AreEqual(U4Armor.Skin, character.Armor);
         }
 
         [TestMethod]

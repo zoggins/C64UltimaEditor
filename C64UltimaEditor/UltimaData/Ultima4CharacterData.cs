@@ -32,38 +32,6 @@ namespace UltimaData
         Asleep = 0xd3
     }
 
-    public enum U4EquipedWeapon
-    {
-        Hands = 0x00,
-        Staff = 0x01,
-        Dagger = 0x2,
-        Sling = 0x03,
-        Mace = 0x04,
-        Axe = 0x05,
-        Sword = 0x06,
-        Bow = 0x07,
-        Crossbow = 0x08,
-        FlamingOil = 0x09,
-        Halberd = 0x10,
-        MagicAxe = 0x11,
-        MagicSword = 0x12,
-        MagicBow = 0x13,
-        MagicWand = 0x14,
-        MysticSword = 0x15
-    }
-
-    public enum U4EquipedArmor
-    {
-        Skin = 0x00,
-        Cloth = 0x01,
-        Leather = 0x02,
-        ChainMail = 0x03,
-        PlateMail = 0x04,
-        MagicChain = 0x05,
-        MagicPlate = 0x06,
-        MysticRobe = 0x07
-    }
-
     public class Ultima4CharacterData
     {
         public Ultima4CharacterData()
@@ -79,13 +47,13 @@ namespace UltimaData
             m_dexterity = new BoundedInt(0, 50);
             m_intelligence = new BoundedInt(0, 50);
             m_magicPoints = new BoundedInt(0, 99);
-            Weapon = U4EquipedWeapon.Hands;
-            Armor = U4EquipedArmor.Skin;
+            Weapon = U4Weapons.Hands;
+            Armor = U4Armor.Skin;
         }
 
         public Ultima4CharacterData(string name, U4Sex sex, U4Class job, U4Health health, int hitPoints, int maxHitPoints,
-                                        int experience, int strength, int dexterity, int intelligence, int magicPoints, U4EquipedWeapon weapon,
-                                        U4EquipedArmor armor)
+                                        int experience, int strength, int dexterity, int intelligence, int magicPoints, U4Weapons weapon,
+                                        U4Armor armor)
         {
             Name = name;
             Sex = sex;
@@ -186,7 +154,7 @@ namespace UltimaData
         }
         private BoundedInt m_magicPoints;
 
-        public U4EquipedWeapon Weapon;
-        public U4EquipedArmor Armor; 
+        public U4Weapons Weapon;
+        public U4Armor Armor; 
     }
 }

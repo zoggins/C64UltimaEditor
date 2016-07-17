@@ -29,6 +29,56 @@ namespace UltimaData
         Bobbit = 0x04
     }
 
+    public enum U1Weapons
+    {
+        Dagger,
+        Mace,
+        Axe,
+        RopeAndSpikes,
+        Sword,
+        GreatSword,
+        BowAndArrows,
+        Amulet,
+        Wand,
+        Staff,
+        Triangle,
+        Pistol,
+        LightSword,
+        Phazor,
+        Blaster
+    }   
+    
+    public enum U1Armor
+    {
+        LeatherArmor,
+        ChainMail,
+        PlateMail,
+        VacuumSuit,
+        ReflectSuit
+    } 
+
+    public enum U1Spells
+    {
+        Open,
+        Unlock,
+        MagicMissile,
+        Steal,
+        LadderDown,
+        LadderUp,
+        Blink,
+        Create,
+        Destory,
+        Kill
+    }
+
+    public enum U1Gems
+    {
+        Red,
+        Green,
+        Blue,
+        White
+    }
+
     public class U1Location
     {
         public U1Location()
