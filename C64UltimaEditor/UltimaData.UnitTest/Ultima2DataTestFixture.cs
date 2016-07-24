@@ -531,6 +531,124 @@ namespace UltimaData.UnitTest
             SaveFile.Load("blah");
         }
 
+        [TestMethod]
+        [ExcludeFromCodeCoverage]
+        [ExpectedException(typeof(FileNotFoundException))]
+        public void FailToLoadTooLargeDiskImage()
+        {
+            File.Files["u2Data.dat"] = new byte[200000];
+
+            SaveFile.Load("u2Data.dat");
+        }
+
+        [TestMethod]
+        [ExcludeFromCodeCoverage]
+        [ExpectedException(typeof(FileNotFoundException))]
+        public void FailToLoadTooSmallDiskImage()
+        {
+            File.Files["u2Data.dat"] = new byte[150000];
+
+            SaveFile.Load("u2Data.dat");
+        }
+
+        [TestMethod]
+        [ExcludeFromCodeCoverage]
+        [ExpectedException(typeof(FileNotFoundException))]
+        public void WrongDiskDescriptor()
+        {
+            File.Files["u2Data.dat"][0x16590] = (byte)'X';
+
+            SaveFile.Load("u2Data.dat");
+        }
+
+        [TestMethod]
+        public void LoadModifySave()
+        {
+            SaveFile.Load("u2Data.dat");
+
+            SaveFile.Name = "BBB";
+            SaveFile.Sex = U2Sex.Female;
+            SaveFile.Class = U2Class.Thief;
+            SaveFile.Agility = 23;
+
+            for (int i = 0; i < SaveFile.Armor.Length; ++i)
+                SaveFile.Armor[i] = i * 10; ;
+            for (int i = 0; i < SaveFile.Weapons.Length; ++i)
+                SaveFile.Weapons[i] = i * 5; ;
+
+            SaveFile.Charisma = 34;
+            SaveFile.Experience = 4567;
+            SaveFile.Food = 5678;
+            SaveFile.Gold = 6789;
+            SaveFile.HitPoints = 1234;
+            SaveFile.Intelligence = 45;
+
+            for (int i = 0; i < SaveFile.Items.Length; ++i)
+                SaveFile.Items[i] = i * 2;
+
+            SaveFile.Keys = 57;
+            SaveFile.Location.Map = U2Map.Modern;
+            SaveFile.Location.X = 12;
+            SaveFile.Location.Y = 16;
+
+            for (int i = 0; i < SaveFile.Spells.Length; ++i)
+                SaveFile.Spells[i] = i * 5; ;
+
+            SaveFile.Stamina = 78;
+            SaveFile.Strength = 12;
+            SaveFile.Tools = 78;
+            SaveFile.Torches = 67;
+            SaveFile.Wisdom = 23;
+
+            SaveFile.Save("u2New.dat");
+
+            Ultima2Data newFile = new Ultima2Data(File);
+
+            newFile.Load("u2New.dat");
+
+            Assert.AreEqual("BBB", newFile.Name);
+            Assert.AreEqual(U2Sex.Female, newFile.Sex);
+            Assert.AreEqual(U2Class.Thief, newFile.Class);
+            Assert.AreEqual(23, newFile.Agility);
+
+            for (int i = 0; i < SaveFile.Armor.Length; ++i)
+                Assert.AreEqual(i * 10, newFile.Armor[i]);
+            for (int i = 0; i < SaveFile.Weapons.Length; ++i)
+                Assert.AreEqual(i * 5, newFile.Weapons[i]);
+
+            Assert.AreEqual(34, newFile.Charisma);
+            Assert.AreEqual(4567, newFile.Experience);
+            Assert.AreEqual(5678, newFile.Food);
+            Assert.AreEqual(6789, newFile.Gold);
+            Assert.AreEqual(1234, newFile.HitPoints);
+            Assert.AreEqual(45, newFile.Intelligence);
+
+            for (int i = 0; i < SaveFile.Items.Length; ++i)
+                Assert.AreEqual(i * 2, newFile.Items[i]);
+
+            Assert.AreEqual(57, newFile.Keys);
+            Assert.AreEqual(U2Map.Modern, newFile.Location.Map);
+            Assert.AreEqual(12, newFile.Location.X);
+            Assert.AreEqual(16, newFile.Location.Y);
+
+            for (int i = 0; i < SaveFile.Spells.Length; ++i)
+                Assert.AreEqual(i * 5, newFile.Spells[i]);
+
+            Assert.AreEqual(78, newFile.Stamina);
+            Assert.AreEqual(12, newFile.Strength);
+            Assert.AreEqual(78, newFile.Tools);
+            Assert.AreEqual(67, newFile.Torches);
+            Assert.AreEqual(23, newFile.Wisdom);
+        }
+
+        [TestMethod]
+        [ExcludeFromCodeCoverage]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void NoSaveWithoutLoad()
+        {
+            SaveFile.Save("blah");
+        }
+
         private MockFile File;
         private Ultima2Data SaveFile;
     }

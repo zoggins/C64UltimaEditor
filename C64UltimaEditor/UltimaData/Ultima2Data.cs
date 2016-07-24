@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -177,9 +178,67 @@ namespace UltimaData
                 File = file;
         }
 
+        public void Save(string file)
+        {
+            if (RawFile == null)
+                throw new InvalidOperationException("Cannot save a file without loading one first.");
+
+            SaveName();
+
+            RawFile[SexOffset] = (byte)Sex;
+            RawFile[ClassOffset] = (byte)Class;
+            RawFile[RaceOffset] = (byte)Race;
+
+            RawFile[HitPointsOffset] = ConvertIntToBCD(HitPoints / 100);
+            RawFile[HitPointsOffset + 1] = ConvertIntToBCD(HitPoints % 100);
+
+            RawFile[ExperienceOffset] = ConvertIntToBCD(Experience / 100);
+            RawFile[ExperienceOffset + 1] = ConvertIntToBCD(Experience % 100);
+
+            RawFile[StrengthOffset] = ConvertIntToBCD(Strength);
+            RawFile[AgilityOffset] = ConvertIntToBCD(Agility);
+            RawFile[StaminaOffset] = ConvertIntToBCD(Stamina);
+            RawFile[CharismaOffset] = ConvertIntToBCD(Charisma);
+            RawFile[WisdomOffset] = ConvertIntToBCD(Wisdom);
+            RawFile[IntelligenceOffset] = ConvertIntToBCD(Intelligence);
+
+            for (int i = 0; i < Spells.Length; ++i)
+                RawFile[SpellsOffset + i] = ConvertIntToBCD(Spells[i]);
+
+            for (int i = 0; i < Armor.Length; ++i)
+                RawFile[ArmorOffset + i] = ConvertIntToBCD(Armor[i]);
+
+            for (int i = 0; i < Weapons.Length; ++i)
+                RawFile[WeaponsOffset + i] = ConvertIntToBCD(Weapons[i]);
+
+            RawFile[FoodOffset] = ConvertIntToBCD(Food / 100);
+            RawFile[FoodOffset + 1] = ConvertIntToBCD(Food % 100);
+
+            RawFile[GoldOffset] = ConvertIntToBCD(Gold / 100);
+            RawFile[GoldOffset + 1] = ConvertIntToBCD(Gold % 100);
+
+            RawFile[TorchesOffset] = ConvertIntToBCD(Torches);
+            RawFile[KeysOffset] = ConvertIntToBCD(Keys);
+            RawFile[ToolsOffset] = ConvertIntToBCD(Tools);
+
+            for (int i = 0; i < Items.Length; ++i)
+                RawFile[ItemsOffset + i] = ConvertIntToBCD(Items[i]);
+
+            RawFile[MapOffset] = (byte)Location.Map;
+            RawFile[LocationXOffset] = (byte)Location.X;
+            RawFile[LocationYOffset] = (byte)Location.Y;
+
+            File.WriteAllBytes(file, RawFile);
+        }
+
         public void Load(string file)
         {
             RawFile = File.ReadAllBytes(file);
+
+            if (!IsU2PlayerDisk())
+            {
+                throw new FileNotFoundException("This does not appear to be an Ultima 2 Player disk image.");
+            }
 
             m_name = ProcessName();
 
@@ -220,6 +279,20 @@ namespace UltimaData
             Location.X = RawFile[LocationXOffset];
             Location.Y = RawFile[LocationYOffset];
 
+        }
+
+        private bool IsU2PlayerDisk()
+        {
+            if (RawFile.Length != 174848)
+                return false;
+
+            for (int i = 0; i < DiskDescriptorText.Length; ++i)
+            {
+                if ((byte)RawFile[DiskDescriptorOffset + i] != DiskDescriptorText[i])
+                    return false;
+            }
+
+            return true;
         }
 
         public string Name
@@ -358,6 +431,14 @@ namespace UltimaData
             return name.ToString();
         }
 
+        private void SaveName()
+        {
+            for(int i = 0; i < m_name.Length; ++i)
+            {
+                RawFile[SaveFileStartOffset + i] = (byte)(m_name[i] - 'A' + 0xC1);
+            }
+        }
+
         private int ConvertBCDToInt(byte numberToConvert)
         {
             return (((numberToConvert & 0xf0) >> 0x04) * 10) + (numberToConvert & 0x0f);
@@ -370,6 +451,9 @@ namespace UltimaData
 
         private byte[] RawFile;
         private IFile File;
+
+        private const int DiskDescriptorOffset = 0x16590;
+        private const string DiskDescriptorText = "U II-PLAYER DISK";
 
         private int SaveFileStartOffset = 0x2AA00;
         private int SexOffset = 0x2AA10;
