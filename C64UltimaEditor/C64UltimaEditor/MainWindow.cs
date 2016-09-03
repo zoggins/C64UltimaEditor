@@ -845,6 +845,7 @@ namespace C64UltimaEditor
         {
             SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Weapons[U1WeaponsDropDown.SelectedIndex] = i, U1WeaponsTextBox, e);
         }
+
     }
 
     class U4GoToLocation
