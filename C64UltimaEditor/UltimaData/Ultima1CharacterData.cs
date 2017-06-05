@@ -357,7 +357,7 @@ namespace UltimaData
 
         public readonly BoundedIntArray Gems;
 
-        public IReadOnlyList<int> Transportation
+        public IList<int> Transportation
         {
             get
             {
