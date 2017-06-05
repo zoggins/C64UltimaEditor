@@ -71,7 +71,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <GenerateDebugInformation>Debug</GenerateDebugInformation>
       <AdditionalOptions>/OPT:NOLBR %(AdditionalOptions)</AdditionalOptions>
       <SubSystem>Windows</SubSystem>
     </Link>
