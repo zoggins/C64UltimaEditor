@@ -476,7 +476,7 @@ namespace UltimaData
         private int KeysOffset = 0x2AA2F;
         private int ToolsOffset = 0x2AA30;
         private int ItemsOffset = 0x2AAA0;
-        private int MapOffset = 0x1AA13;
+        private int MapOffset = 0x2AA13;
         private int LocationXOffset = 0x2AA24;
         private int LocationYOffset = 0x2AA25;
     }

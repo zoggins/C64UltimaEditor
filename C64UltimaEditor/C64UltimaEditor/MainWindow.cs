@@ -23,7 +23,9 @@ namespace C64UltimaEditor
             m_u1Data = new Ultima1Data();
             PopulateU1Data();
 
-
+            //Ultima 2
+            m_u2Data = new Ultima2Data();
+            PopulateU2Data();
 
             // Ultima 4
             PopulateU4GoToLocations();
@@ -47,6 +49,11 @@ namespace C64UltimaEditor
             PopulateU1Character(0);
 
             U1GoToDropDownBox.SelectedIndex = 0;
+        }
+
+        private void PopulateU2Data()
+        {
+            PopulateU2Character();
         }
 
         private void PopulateU1Character(int index)
@@ -94,6 +101,58 @@ namespace C64UltimaEditor
             U1LocY.Text = character.Location.Y.ToString();
 
 
+        }
+
+        private void PopulateU2Character()
+        {
+            U2NameTextBox.Text = m_u2Data.Name;
+            U2SexDropDown.SelectedItem = Enum.GetName(typeof(U2Sex), m_u2Data.Sex);
+            U2ClassDropDown.SelectedItem = Enum.GetName(typeof(U2Class), m_u2Data.Class);
+            U2RaceDropDown.SelectedItem = Enum.GetName(typeof(U2Race), m_u2Data.Race);
+            U2HitPointsTextBox.Text = m_u2Data.HitPoints.ToString();
+            U2ExperienceTextBox.Text = m_u2Data.Experience.ToString();
+            U2StrengthTextBox.Text = m_u2Data.Strength.ToString();
+            U2AgilityTextBox.Text = m_u2Data.Agility.ToString();
+            U2StaminaTextBox.Text = m_u2Data.Stamina.ToString();
+            U2CharismaTextBox.Text = m_u2Data.Charisma.ToString();
+            U2IntelligenceTextBox.Text = m_u2Data.Intelligence.ToString();
+            U2WisdomTextBox.Text = m_u2Data.Wisdom.ToString();
+
+            U2FoodTextBox.Text = m_u2Data.Food.ToString();
+            U2TorchesTextBox.Text = m_u2Data.Torches.ToString();
+            U2GemsTextBox.Text = m_u2Data.Items[(int)U2Items.Gems].ToString();
+            U2SkullKeysTextBox.Text = m_u2Data.Items[(int)U2Items.SkullKeys].ToString();
+            U2RedGemsTextBox.Text = m_u2Data.Items[(int)U2Items.RedGems].ToString();
+            U2CoinsTextBox.Text = m_u2Data.Gold.ToString();
+            U2StrangeCoinsTextBox.Text = m_u2Data.Items[(int)U2Items.StrangeCoins].ToString();
+            U2ToolsTextBox.Text = m_u2Data.Tools.ToString();
+            U2KeysTextBox.Text = m_u2Data.Keys.ToString();
+            U2GreenTextBox.Text = m_u2Data.Items[(int)U2Items.GreenGems].ToString();
+
+            U2BootsTextBox.Text = m_u2Data.Items[(int)U2Items.Boots].ToString();
+            U2CloaksTextBox.Text = m_u2Data.Items[(int)U2Items.Cloaks].ToString();
+            U2HelmsTextBox.Text = m_u2Data.Items[(int)U2Items.Helms].ToString();
+            U2RingsTextBox.Text = m_u2Data.Items[(int)U2Items.Rings].ToString();
+            U2WandsTextBox.Text = m_u2Data.Items[(int)U2Items.Wands].ToString();
+            U2StaffTextBox.Text = m_u2Data.Items[(int)U2Items.Staffs].ToString();
+            U2AnkhsTextBox.Text = m_u2Data.Items[(int)U2Items.Ankhs].ToString();
+            U2BrassTextBox.Text = m_u2Data.Items[(int)U2Items.BrassButtons].ToString();
+            U2BlueTasslesTextBox.Text = m_u2Data.Items[(int)U2Items.BlueTassles].ToString();
+            U2GreenIdolsTextBox.Text = m_u2Data.Items[(int)U2Items.GreenIdols].ToString();
+            U2TriLithiumsTextBox.Text = m_u2Data.Items[(int)U2Items.TryLithiums].ToString();
+
+            U2SpellsDropDown.SelectedIndex = 0;
+            U2SpellsTextBox.Text = m_u2Data.Spells[0].ToString();
+            U2ArmorDropDown.SelectedIndex = 0;
+            U2ArmorTextBox.Text = m_u2Data.Armor[0].ToString();
+            U2WeaponDropDown.SelectedIndex = 0;
+            U2WeaponTextBox.Text = m_u2Data.Weapons[0].ToString();
+
+            U2LocMapDropDownBox.SelectedIndex = (int)m_u2Data.Location.Map;
+            U2LocX.Text = m_u2Data.Location.X.ToString();
+            U2LocY.Text = m_u2Data.Location.Y.ToString();
+
+            U2GoToDropDownBox.SelectedIndex = 0;
         }
 
         private void PopulateU4Character(int index)
@@ -264,6 +323,9 @@ namespace C64UltimaEditor
 
         // Ultima 1
         private Ultima1Data m_u1Data;
+
+        // Ultima 2
+        private Ultima2Data m_u2Data;
 
         // Ultima 4
         private List<U4GoToLocation> m_u4GoToLocations;
@@ -844,6 +906,272 @@ namespace C64UltimaEditor
         private void U1WeaponsTextBox_Validating(object sender, CancelEventArgs e)
         {
             SetIntFromTextBox(i => m_u1Data.Characters[U1NameDropDown.SelectedIndex == -1 ? 0 : U1NameDropDown.SelectedIndex].Weapons[U1WeaponsDropDown.SelectedIndex] = i, U1WeaponsTextBox, e);
+        }
+
+        private void U2LoadButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = D64OpenDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                bool loaded = false;
+                m_u4Data = new Ultima4Data();
+                try
+                {
+                    m_u2Data.Load(D64OpenDialog.FileName);
+                    loaded = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ultima Savegame Editor for C64");
+                }
+
+                if (loaded)
+                {
+                    U2SaveButton.Enabled = true;
+                }
+                else
+                {
+                    U2SaveButton.Enabled = false;
+                    m_u2Data = new Ultima2Data();
+                }
+
+                PopulateU2Data();
+            }
+
+        }
+
+        private void U2SexDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            m_u2Data.Sex = (U2Sex)Enum.Parse(typeof(U2Sex), U2SexDropDown.SelectedItem.ToString());
+        }
+
+        private void U2ClassDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            m_u2Data.Class = (U2Class)Enum.Parse(typeof(U2Class), U2ClassDropDown.SelectedItem.ToString());
+        }
+
+        private void U2RaceDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            m_u2Data.Race = (U2Race)Enum.Parse(typeof(U2Race), U2RaceDropDown.SelectedIndex.ToString());
+        }
+
+        private void U2LocMapDropDownBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            m_u2Data.Location.Map = (U2Map)Enum.Parse(typeof(U2Map), U2LocMapDropDownBox.SelectedIndex.ToString());
+        }
+
+        private void U2HitPointsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.HitPoints = i, U2HitPointsTextBox, e);
+        }
+
+        private void U2ExperienceTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Experience = i, U2ExperienceTextBox, e);
+        }
+
+        private void U2StrengthTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Strength = i, U2StrengthTextBox, e);
+        }
+
+        private void U2StaminaTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Stamina = i, U2StaminaTextBox, e);
+        }
+
+        private void U2WisdomTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Wisdom = i, U2WisdomTextBox, e);
+        }
+
+        private void U2AgilityTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Agility = i, U2AgilityTextBox, e);
+        }
+
+        private void U2CharismaTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Charisma = i, U2CharismaTextBox, e);
+        }
+
+        private void U2IntelligenceTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Intelligence = i, U2IntelligenceTextBox, e);
+        }
+
+        private void U2BootsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.Boots] = i, U2BootsTextBox, e);
+        }
+
+        private void U2CloaksTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.Cloaks] = i, U2CloaksTextBox, e);
+        }
+
+        private void U2HelmsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.Helms] = i, U2HelmsTextBox, e);
+        }
+
+        private void U2RingsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.Rings] = i, U2RingsTextBox, e);
+        }
+
+        private void U2WandsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.Wands] = i, U2WandsTextBox, e);
+        }
+
+        private void U2StaffTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.Staffs] = i, U2StaffTextBox, e);
+        }
+
+        private void U2AnkhsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.Ankhs] = i, U2AnkhsTextBox, e);
+        }
+
+        private void U2BrassTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.BrassButtons] = i, U2BrassTextBox, e);
+        }
+
+        private void U2BlueTasslesTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.BlueTassles] = i, U2BlueTasslesTextBox, e);
+        }
+
+        private void U2GreenIdolsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.GreenIdols] = i, U2GreenIdolsTextBox, e);
+        }
+
+        private void U2TriLithiumsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.TryLithiums] = i, U2TriLithiumsTextBox, e);
+        }
+
+        private void U2FoodTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Food = i, U2FoodTextBox, e);
+        }
+
+        private void U2TorchesTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Torches = i, U2TorchesTextBox, e);
+        }
+
+        private void U2GemsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.Gems] = i, U2GemsTextBox, e);
+        }
+
+        private void U2RedGemsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.RedGems] = i, U2RedGemsTextBox, e);
+        }
+
+        private void U2SkullKeysTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.SkullKeys] = i, U2SkullKeysTextBox, e);
+        }
+
+        private void U2CoinsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Gold = i, U2CoinsTextBox, e);
+        }
+
+        private void U2StrangeCoinsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.StrangeCoins] = i, U2StrangeCoinsTextBox, e);
+        }
+
+        private void U2GreenTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Items[(int)U2Items.GreenGems] = i, U2GreenTextBox, e);
+        }
+
+        private void U2KeysTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Keys = i, U2KeysTextBox, e);
+        }
+
+        private void U2ToolsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Tools = i, U2ToolsTextBox, e);
+        }
+
+        private void U2LocX_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Location.X = i, U2LocX, e);
+        }
+
+        private void U2LocY_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Location.Y = i, U2LocY, e);
+        }
+
+        private void U2SpellsDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            U2SpellsTextBox.Text = m_u2Data.Spells[U2SpellsDropDown.SelectedIndex].ToString();
+        }
+
+        private void U2ArmorDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            U2ArmorTextBox.Text = m_u2Data.Armor[U2ArmorDropDown.SelectedIndex].ToString();
+        }
+
+        private void U2WeaponDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            U2WeaponTextBox.Text = m_u2Data.Weapons[U2WeaponDropDown.SelectedIndex].ToString();
+        }
+
+        private void U2SpellsTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Spells[U2SpellsDropDown.SelectedIndex] = i, U2SpellsTextBox, e);
+        }
+
+        private void U2ArmorTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Armor[U2ArmorDropDown.SelectedIndex] = i, U2ArmorTextBox, e);
+        }
+
+        private void U2WeaponTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            SetIntFromTextBox(i => m_u2Data.Weapons[U2WeaponDropDown.SelectedIndex] = i, U2WeaponTextBox, e);
+        }
+
+        private void U2NameTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                m_u2Data.Name = U2NameTextBox.Text;
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(fe.Message, "Ultima Savegame Editor for C64");
+                e.Cancel = true;
+            }
+        }
+
+        private void U2SaveButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = U4SaveDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    m_u2Data.Save(U4SaveDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ultima Savegame Editor for C64");
+                }
+            }
         }
     }
 

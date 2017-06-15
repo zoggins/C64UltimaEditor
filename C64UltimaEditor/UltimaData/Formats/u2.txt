@@ -1,10 +1,10 @@
 ﻿2AA00 - 2AA0A: Name (Letters start at 0xC1)
 
-1AA10 Male (CD) / Female (C6)
-1AA11 Class (00 Fighter, 01 Cleric, 02 Wizard, 03 Thief )
-1AA12 Race (00 Human, 01 Elf, 02 Dwarf, 03 Hobbit)
+2AA10 Male (CD) / Female (C6)
+2AA11 Class (00 Fighter, 01 Cleric, 02 Wizard, 03 Thief )
+2AA12 Race (00 Human, 01 Elf, 02 Dwarf, 03 Hobbit)
 
-1AA13 Current Map (00 is Time of Legends...04 is Aftermath)
+2AA13 Current Map (00 is Time of Legends...04 is Aftermath)
 
 2AA15 Strength      (Racial and Class Adjustments are baked into the values at character creation time and they are all in BCD)
 2AA16 Agility
