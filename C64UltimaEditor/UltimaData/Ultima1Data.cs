@@ -21,8 +21,8 @@ namespace UltimaData
 
             NumberOfCharacters = 0;
             Characters = new Ultima1CharacterData[4];
-            for (int i = 0; i < 4; ++i)
-                Characters[i] = new Ultima1CharacterData();
+            //for (int i = 0; i < 4; ++i)
+                Characters[0] = new Ultima1CharacterData();
         }
 
         ~Ultima1Data()
@@ -41,6 +41,7 @@ namespace UltimaData
                 bool incNumCharacter = true;
                 try
                 {
+                    Characters[NumberOfCharacters] = new Ultima1CharacterData();
                     Characters[NumberOfCharacters].Load(m_diskImage, i);
                 }
                 catch (Exception /*ex*/)

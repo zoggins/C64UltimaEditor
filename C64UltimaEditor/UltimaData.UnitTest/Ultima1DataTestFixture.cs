@@ -71,6 +71,8 @@ namespace UltimaData.UnitTest
             data.Characters[2].HitPoints = 3456;
 
             data.Save();
+
+            data.Dispose();  // Coverage
         }
 
         [TestMethod]
@@ -100,6 +102,33 @@ namespace UltimaData.UnitTest
             Ultima1Data data = new Ultima1Data(image);
 
             data.Load("blah");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(IOException))]
+        [ExcludeFromCodeCoverage]
+        public void UnableToLoadThrowsErrorForReal()
+        {
+            Ultima1Data data = new Ultima1Data();
+
+            data.Load("blah");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(IOException))]
+        [ExcludeFromCodeCoverage]
+        public void SaveFailsToWriteAllBytes()
+        {
+            MockDiskImage image = new MockDiskImage();
+
+            image.Files["P0"] = new MockImageFile(System.IO.File.ReadAllBytes("data\\p3.prg"));
+            image.Files["P0"].MaxBytesToWrite = 400;
+
+            Ultima1Data data = new Ultima1Data(image);
+
+            data.Load("blah");
+
+            data.Save();
         }
     }
 }

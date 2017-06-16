@@ -34,7 +34,7 @@
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <CodeAnalysisRuleSet>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\Rule Sets\MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
@@ -61,6 +61,7 @@
     <Compile Include="MockFile.cs" />
     <Compile Include="Ultima1CharacterDataFixture.cs" />
     <Compile Include="Ultima1DataTestFixture.cs" />
+    <Compile Include="Ultima2DataTestFixture.cs" />
     <Compile Include="Ultima4CharacterDataTestFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ultima4DataTestFixture.cs" />
@@ -79,6 +80,9 @@
   <ItemGroup>
     <None Include="Data\p3.prg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\u2data.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Data\u4data.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

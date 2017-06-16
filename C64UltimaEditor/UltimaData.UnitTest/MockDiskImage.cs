@@ -13,6 +13,7 @@ namespace UltimaData.UnitTest
         public MockImageFile(byte[] data)
         {
             Data = data;
+            MaxBytesToWrite = int.MaxValue;
         }
 
         public void Close()
@@ -42,6 +43,8 @@ namespace UltimaData.UnitTest
             if (WriteException != null)
                 throw WriteException;
 
+            len = MaxBytesToWrite < len ? MaxBytesToWrite: len;
+
             Data = new byte[len];
             Array.Copy(buffer, Data, len);
             return len;
@@ -61,6 +64,7 @@ namespace UltimaData.UnitTest
         public byte[] Data;
         public Exception WriteException;
         public Exception ReadException;
+        public int MaxBytesToWrite;
     }
 
     public class MockDiskImage : IDiskImage
