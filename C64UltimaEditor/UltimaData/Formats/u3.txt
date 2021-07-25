@@ -1,0 +1,34 @@
+﻿14700 Character 1's Name (letters start at C1)
+
+14710  ??
+14711   Status?  In letter form,
+
+14712 Strength in BCD
+14713 Agility
+14714 Intelligence
+14715 Wisdom
+
+14716 Race in letter form?
+14717 Class in letter form?
+14718 Sex in letter form?
+14719 Mana
+
+1471A High byte of HP 
+1471B Low byte of HP
+1471C High byte of MP 
+1471D Low byte of MP 
+
+
+14720  High byte of food
+14721  Low byte of food
+
+14722  ???
+14723  Low byte of  Gold
+14724  Low byte of  Gold
+
+14725  Gems
+14726  Keys
+14727  Powder
+14c28 Armor 1 byte per armor (8 bytes)
+
+14C30  Weapons 1 byte per weapon (16 bytes)

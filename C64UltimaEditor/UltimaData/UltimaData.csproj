@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Formats\u1.txt" />
+    <Content Include="Formats\u3.txt" />
     <Content Include="Formats\u4.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -68,7 +69,6 @@
   <ItemGroup>
     <Content Include="Formats\u1.txt" />
     <Content Include="Formats\u2.txt" />
-    <Content Include="Formats\u4.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
