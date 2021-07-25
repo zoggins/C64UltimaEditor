@@ -1,34 +1,42 @@
-﻿14700 Character 1's Name (letters start at C1)
+﻿147XX Seems to be the roster
+14CXX Seems to be the party
 
-14710  ??
-14711   Status?  In letter form,
+XXX00 Character 1's Name (letters start at C1)
 
-14712 Strength in BCD
-14713 Agility
-14714 Intelligence
-14715 Wisdom
+XXX10  ??
+XXX11  Status by letter (G=Good,A=Asleep,D=Dead)
 
-14716 Race in letter form?
-14717 Class in letter form?
-14718 Sex in letter form?
-14719 Mana
+XXX12 Strength in BCD
+XXX13 Agility in BCD
+XXX14 Intelligence in BCD
+XXX15 Wisdom in BCD
 
-1471A High byte of HP 
-1471B Low byte of HP
-1471C High byte of MP 
-1471D Low byte of MP 
+XXX16 Race by letter (H=Human,E=Elf,D=Dwarf,F=Fuzzy,??=Hobbit)
+XXX17 Class by letter (F=Fighter,R=Ranger,W=Wizard,B=Barbarian,C=Cleric,T=Thief,D=Druid,A=Alchemist,I=Illusionist,L=Lark,P=Paladin)
+XXX18 Sex by letter (M=Male,F=Female,O=Other)
+XXX19 Current Mana
 
+XXX1A High byte of HP in BCD
+XXX1B Low byte of HP in BCD
+XXX1C High byte of Max HP in BCD
+XXX1D Low byte of Max HP in BCD
 
-14720  High byte of food
-14721  Low byte of food
+XXX1E ???
+XXX1F ???
 
-14722  ???
-14723  Low byte of  Gold
-14724  Low byte of  Gold
+XXX20  High byte of food in BCD
+XXX21  Low byte of food in BCD
 
-14725  Gems
-14726  Keys
-14727  Powder
-14c28 Armor 1 byte per armor (8 bytes)
+XXX22  ???
+XXX23  Low byte of  Gold in BCD
+XXX24  Low byte of  Gold in BCD
 
-14C30  Weapons 1 byte per weapon (16 bytes)
+XXX25  Gems in BCD
+XXX26  Keys in BCD
+XXX27  Powder in BCD
+
+XXX28-2F Armor - 1 byte per armor type
+
+XXX30-3F Weapons - 1 byte per weapon type
+
+Missing: Cards, Marks, Torches, Equipped Armor and Weapon
