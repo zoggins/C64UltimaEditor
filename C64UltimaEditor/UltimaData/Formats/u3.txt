@@ -2,8 +2,11 @@
 14CXX Seems to be the party
 
 XXX00 Character 1's Name (letters start at C1)
+XXX1D Null terminator for 13 character name.
+XXX1E Cards/Marks in bitmap
+XXX1F Torches in BCD
 
-XXX10  ??
+XXX10  FF = means in Party?, 00 = means not in party?
 XXX11  Status by letter (G=Good,A=Asleep,D=Dead)
 
 XXX12 Strength in BCD
@@ -21,8 +24,8 @@ XXX1B Low byte of HP in BCD
 XXX1C High byte of Max HP in BCD
 XXX1D Low byte of Max HP in BCD
 
-XXX1E ???
-XXX1F ???
+XXX1E High byte of Exp in BCD
+XXX1F Low byte of Exp in BCD
 
 XXX20  High byte of food in BCD
 XXX21  Low byte of food in BCD
@@ -39,4 +42,4 @@ XXX28-2F Armor - 1 byte per armor type
 
 XXX30-3F Weapons - 1 byte per weapon type
 
-Missing: Cards, Marks, Torches, Equipped Armor and Weapon
+Missing: Equipped Armor, Weapon
