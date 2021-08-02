@@ -494,7 +494,7 @@ namespace UltimaData.UnitTest
         [TestMethod]
         public void LoadLocation()
         {
-            File.Files["u2Data.dat"][0x1AA13] = 0x02;
+            File.Files["u2Data.dat"][0x2AA13] = 0x02;
             File.Files["u2Data.dat"][0x2AA24] = 0x29;
             File.Files["u2Data.dat"][0x2AA25] = 0xc4;
 
