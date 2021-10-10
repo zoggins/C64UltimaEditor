@@ -9,29 +9,38 @@ namespace UltimaData
     {
         Good = 0xc7,
         Dead = 0xc4,
-        Asleep = 0xc1,
-        Poison = 0xd1
+        Ashes = 0xc1,
+        Poison = 0xd0
     }
     public enum U3Sex
     {
-        Male = 0xc7,
-        Female = 0xc4,
-        Other = 0xc1
+        Male = 0xcd,
+        Female = 0xc6,
+        Other = 0xcf
     }
 
     public enum U3Class
     {
-        Fighter = 0xc7,
-        Ranger = 0xc4,
-        Wizard = 0xc1,
-        Barbarian = 0xd1,
-        Cleric = 0xd2,
-        Thief = 0xd3,
-        Druid = 0xd4,
-        Alchemist = 0xd5,
-        Illusionist = 0xd6,
-        Lark = 0xd7,
-        Paladin = 0xd8
+        Fighter = 0xc6,
+        Ranger = 0xd2,
+        Wizard = 0xd7,
+        Barbarian = 0xc2,
+        Cleric = 0xc3,
+        Thief = 0xd4,
+        Druid = 0xc4,
+        Alchemist = 0xc1,
+        Illusionist = 0xc9,
+        Lark = 0xcc,
+        Paladin = 0xd0
+    }
+
+    public enum U3Race
+    {
+        Human = 0xc8,
+        Elf = 0xc5,
+        Dwarf = 0xc4,
+        Fuzzy = 0xc6,
+        Bobbit = 0xc2
     }
 
     public enum U3Weapons
@@ -79,6 +88,46 @@ namespace UltimaData
         public bool MarkOfSnake;
         public bool MarkOfForce;
         public bool MarkOfKings;
+
+        public Ultima3CharacterData(string name, int torches, U3Health health, int strength, int agility, int intelligence, int wisdom,
+                                    U3Race race, U3Class u3class)
+        {
+            Name = name;
+            m_torches = new BoundedInt(0, 99);
+            Sex = U3Sex.Male;
+            Class = u3class;
+            Race = race;
+            Health = health;
+            m_hitPoints = new BoundedInt(0, 9999);
+            HitPoints = 150;
+            m_maxHitPoints = new BoundedInt(0, 9999);
+            MaxHitPoints = 150;
+            m_magicPoints = new BoundedInt(0, 99);
+            m_experience = new BoundedInt(0, 9999);
+            m_strength = new BoundedInt(0, 99);
+            Strength = strength;
+            m_agility = new BoundedInt(0, 99);
+            Agility = agility;
+            m_intelligence = new BoundedInt(0, 99);
+            Intelligence = intelligence;
+            m_wisdom = new BoundedInt(0, 99);
+            Wisdom = wisdom;
+            m_food = new BoundedInt(0, 9999);
+            m_gems = new BoundedInt(0, 99);
+            m_powder = new BoundedInt(0, 99);
+            m_keys = new BoundedInt(0, 99);
+            m_torches = new BoundedInt(0, 99);
+            Torches = torches;
+
+            EquippedArmor = U3Armor.Skin;
+            EquippedWeapon = U3Weapons.Hands;
+
+            Weapons = new BoundedIntArray(15, 0, 99);
+            Armor = new BoundedIntArray(7, 0, 99);
+
+           
+            
+        }
 
         public int Keys
         {
@@ -175,8 +224,9 @@ namespace UltimaData
         private BoundedInt m_experience;
 
         public U3Health Health;
-        public U3Health Sex;
-        public U3Health Class;
+        public U3Sex Sex;
+        public U3Class Class;
+        public U3Race Race;
 
         public readonly BoundedIntArray Weapons;
         
@@ -185,5 +235,36 @@ namespace UltimaData
         public U3Weapons EquippedWeapon;
         public U3Armor EquippedArmor;
 
+        public Ultima3CharacterData()
+        {
+            Name = "";
+            m_torches = new BoundedInt(0, 99);
+            Sex = U3Sex.Male;
+            Class = U3Class.Fighter;
+            Health = U3Health.Good;
+            Race = U3Race.Human;
+            m_hitPoints = new BoundedInt(0, 9999);
+            HitPoints = 150;
+            m_maxHitPoints = new BoundedInt(0, 9999);
+            MaxHitPoints = 150;
+            m_magicPoints = new BoundedInt(0, 99);
+            m_experience = new BoundedInt(0, 9999);
+            m_strength = new BoundedInt(0, 99);
+            m_agility = new BoundedInt(0, 99);
+            m_intelligence = new BoundedInt(0, 99);
+            m_wisdom = new BoundedInt(0, 99);
+            m_food = new BoundedInt(0, 9999);
+            m_gems = new BoundedInt(0, 99);
+            m_powder = new BoundedInt(0, 99);
+            m_keys = new BoundedInt(0, 99);
+            m_torches = new BoundedInt(0, 99);
+
+            EquippedArmor = U3Armor.Skin;
+            EquippedWeapon = U3Weapons.Hands;
+
+            Weapons = new BoundedIntArray(15, 0, 99);
+            Armor = new BoundedIntArray(7, 0, 99);
+
+        }
     }
 }

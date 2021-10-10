@@ -53,6 +53,7 @@
     <Compile Include="Ultima1Data.cs" />
     <Compile Include="Ultima2Data.cs" />
     <Compile Include="Ultima3CharacterData.cs" />
+    <Compile Include="Ultima3Data.cs" />
     <Compile Include="Ultima4CharacterData.cs" />
     <Compile Include="Ultima4Data.cs" />
   </ItemGroup>
