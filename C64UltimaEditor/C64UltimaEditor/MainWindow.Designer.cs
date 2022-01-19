@@ -200,6 +200,85 @@
             this.label97 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
             this.U3Tab = new System.Windows.Forms.TabPage();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.U3HorseLocationsDropDown = new System.Windows.Forms.ComboBox();
+            this.U3NewHorseButton = new System.Windows.Forms.Button();
+            this.U3BoatLocationsDropDown = new System.Windows.Forms.ComboBox();
+            this.U3NewBoatButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.U3LocationsTextBox = new System.Windows.Forms.ComboBox();
+            this.label128 = new System.Windows.Forms.Label();
+            this.U3YLocationTextBox = new System.Windows.Forms.TextBox();
+            this.U3MovesTextBox = new System.Windows.Forms.TextBox();
+            this.U3XLocationTextBox = new System.Windows.Forms.TextBox();
+            this.label129 = new System.Windows.Forms.Label();
+            this.label130 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.U3PowderTextBox = new System.Windows.Forms.TextBox();
+            this.label132 = new System.Windows.Forms.Label();
+            this.U3KeysTextBox = new System.Windows.Forms.TextBox();
+            this.label133 = new System.Windows.Forms.Label();
+            this.U3GemsTextBox = new System.Windows.Forms.TextBox();
+            this.label134 = new System.Windows.Forms.Label();
+            this.U3TorchesTextBox = new System.Windows.Forms.TextBox();
+            this.label135 = new System.Windows.Forms.Label();
+            this.U3GoldTextBox = new System.Windows.Forms.TextBox();
+            this.label136 = new System.Windows.Forms.Label();
+            this.U3FoodTextBox = new System.Windows.Forms.TextBox();
+            this.label137 = new System.Windows.Forms.Label();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.U3DeathCheckBox = new System.Windows.Forms.CheckBox();
+            this.U3MoonCheckBox = new System.Windows.Forms.CheckBox();
+            this.U3SolCheckBox = new System.Windows.Forms.CheckBox();
+            this.U3LoveCheckBox = new System.Windows.Forms.CheckBox();
+            this.label127 = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.U3KingsCheckBox = new System.Windows.Forms.CheckBox();
+            this.U3SnakeCheckBox = new System.Windows.Forms.CheckBox();
+            this.U3FireCheckBox = new System.Windows.Forms.CheckBox();
+            this.U3ForceCheckBox = new System.Windows.Forms.CheckBox();
+            this.label126 = new System.Windows.Forms.Label();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.U3WeaponTextBox = new System.Windows.Forms.TextBox();
+            this.label122 = new System.Windows.Forms.Label();
+            this.U3ArmorTextBox = new System.Windows.Forms.TextBox();
+            this.label123 = new System.Windows.Forms.Label();
+            this.U3WeaponDropDown = new System.Windows.Forms.ComboBox();
+            this.label124 = new System.Windows.Forms.Label();
+            this.U3ArmorDropDown = new System.Windows.Forms.ComboBox();
+            this.label125 = new System.Windows.Forms.Label();
+            this.U3WisdomTextBox = new System.Windows.Forms.TextBox();
+            this.label121 = new System.Windows.Forms.Label();
+            this.U3MagicTextBox = new System.Windows.Forms.TextBox();
+            this.U3IntelligenceTextBox = new System.Windows.Forms.TextBox();
+            this.U3DexterityTextBox = new System.Windows.Forms.TextBox();
+            this.U3StrengthTextBox = new System.Windows.Forms.TextBox();
+            this.U3ExperienceTextBox = new System.Windows.Forms.TextBox();
+            this.U3MaxHitPointsTextBox = new System.Windows.Forms.TextBox();
+            this.U3HitPointsTextBox = new System.Windows.Forms.TextBox();
+            this.U3EquippedArmorDropDown = new System.Windows.Forms.ComboBox();
+            this.U3EquippedWeaponDropDown = new System.Windows.Forms.ComboBox();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.U3HealthDropDown = new System.Windows.Forms.ComboBox();
+            this.label120 = new System.Windows.Forms.Label();
+            this.U3NameTextBox = new System.Windows.Forms.TextBox();
+            this.U3RaceDropDown = new System.Windows.Forms.ComboBox();
+            this.U3ClassDropDown = new System.Windows.Forms.ComboBox();
+            this.U3SexDropDown = new System.Windows.Forms.ComboBox();
+            this.label110 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
             this.U4Tab = new System.Windows.Forms.TabPage();
             this.U4LoadButton = new System.Windows.Forms.Button();
             this.U4SaveButton = new System.Windows.Forms.Button();
@@ -297,85 +376,6 @@
             this.U5Tab = new System.Windows.Forms.TabPage();
             this.D64OpenDialog = new System.Windows.Forms.OpenFileDialog();
             this.U4SaveDialog = new System.Windows.Forms.SaveFileDialog();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.U3NameTextBox = new System.Windows.Forms.TextBox();
-            this.U3RaceDropDown = new System.Windows.Forms.ComboBox();
-            this.U3ClassDropDown = new System.Windows.Forms.ComboBox();
-            this.U3SexDropDown = new System.Windows.Forms.ComboBox();
-            this.label110 = new System.Windows.Forms.Label();
-            this.label117 = new System.Windows.Forms.Label();
-            this.label118 = new System.Windows.Forms.Label();
-            this.label119 = new System.Windows.Forms.Label();
-            this.U3HealthDropDown = new System.Windows.Forms.ComboBox();
-            this.label120 = new System.Windows.Forms.Label();
-            this.U3MagicTextBox = new System.Windows.Forms.TextBox();
-            this.U3IntelligenceTextBox = new System.Windows.Forms.TextBox();
-            this.U3DexterityTextBox = new System.Windows.Forms.TextBox();
-            this.U3StrengthTextBox = new System.Windows.Forms.TextBox();
-            this.U3ExperienceTextBox = new System.Windows.Forms.TextBox();
-            this.U3MaxHitPointsTextBox = new System.Windows.Forms.TextBox();
-            this.U3HitPointsTextBox = new System.Windows.Forms.TextBox();
-            this.U3EquippedArmorDropDown = new System.Windows.Forms.ComboBox();
-            this.U3EquippedWeaponDropDown = new System.Windows.Forms.ComboBox();
-            this.label108 = new System.Windows.Forms.Label();
-            this.label109 = new System.Windows.Forms.Label();
-            this.label111 = new System.Windows.Forms.Label();
-            this.label112 = new System.Windows.Forms.Label();
-            this.label113 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.label115 = new System.Windows.Forms.Label();
-            this.label116 = new System.Windows.Forms.Label();
-            this.U3WisdomTextBox = new System.Windows.Forms.TextBox();
-            this.label121 = new System.Windows.Forms.Label();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.U3WeaponTextBox = new System.Windows.Forms.TextBox();
-            this.label122 = new System.Windows.Forms.Label();
-            this.U3ArmorTextBox = new System.Windows.Forms.TextBox();
-            this.label123 = new System.Windows.Forms.Label();
-            this.U3WeaponDropDown = new System.Windows.Forms.ComboBox();
-            this.label124 = new System.Windows.Forms.Label();
-            this.U3ArmorDropDown = new System.Windows.Forms.ComboBox();
-            this.label125 = new System.Windows.Forms.Label();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.U3KingsCheckBox = new System.Windows.Forms.CheckBox();
-            this.U3SnakeCheckBox = new System.Windows.Forms.CheckBox();
-            this.U3FireCheckBox = new System.Windows.Forms.CheckBox();
-            this.U3ForceCheckBox = new System.Windows.Forms.CheckBox();
-            this.label126 = new System.Windows.Forms.Label();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.U3DeathCheckBox = new System.Windows.Forms.CheckBox();
-            this.U3MoonCheckBox = new System.Windows.Forms.CheckBox();
-            this.U3SolCheckBox = new System.Windows.Forms.CheckBox();
-            this.U3LoveCheckBox = new System.Windows.Forms.CheckBox();
-            this.label127 = new System.Windows.Forms.Label();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.U3PowderTextBox = new System.Windows.Forms.TextBox();
-            this.label132 = new System.Windows.Forms.Label();
-            this.U3KeysTextBox = new System.Windows.Forms.TextBox();
-            this.label133 = new System.Windows.Forms.Label();
-            this.U3GemsTextBox = new System.Windows.Forms.TextBox();
-            this.label134 = new System.Windows.Forms.Label();
-            this.U3TorchesTextBox = new System.Windows.Forms.TextBox();
-            this.label135 = new System.Windows.Forms.Label();
-            this.U3GoldTextBox = new System.Windows.Forms.TextBox();
-            this.label136 = new System.Windows.Forms.Label();
-            this.U3FoodTextBox = new System.Windows.Forms.TextBox();
-            this.label137 = new System.Windows.Forms.Label();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.U3LocationsTextBox = new System.Windows.Forms.ComboBox();
-            this.label128 = new System.Windows.Forms.Label();
-            this.U3YLocationTextBox = new System.Windows.Forms.TextBox();
-            this.U3MovesTextBox = new System.Windows.Forms.TextBox();
-            this.U3XLocationTextBox = new System.Windows.Forms.TextBox();
-            this.label129 = new System.Windows.Forms.Label();
-            this.label130 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.U3NewBoatButton = new System.Windows.Forms.Button();
-            this.U3BoatLocationsDropDown = new System.Windows.Forms.ComboBox();
-            this.U3HorseLocationsDropDown = new System.Windows.Forms.ComboBox();
-            this.U3NewHorseButton = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.U1Tab.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -390,19 +390,19 @@
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.U3Tab.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.U4Tab.SuspendLayout();
             this.U4General.SuspendLayout();
             this.U4PartyEquipment.SuspendLayout();
             this.U4QuestItems.SuspendLayout();
             this.U4Virtues.SuspendLayout();
             this.U4PlayerStats.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            this.groupBox16.SuspendLayout();
-            this.groupBox17.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -413,7 +413,7 @@
             this.MainTabControl.Controls.Add(this.U4Tab);
             this.MainTabControl.Controls.Add(this.U5Tab);
             this.MainTabControl.Location = new System.Drawing.Point(8, 8);
-            this.MainTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
             this.MainTabControl.Size = new System.Drawing.Size(729, 461);
@@ -427,9 +427,9 @@
             this.U1Tab.Controls.Add(this.U1SaveButton);
             this.U1Tab.Controls.Add(this.groupBox1);
             this.U1Tab.Location = new System.Drawing.Point(4, 22);
-            this.U1Tab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1Tab.Margin = new System.Windows.Forms.Padding(2);
             this.U1Tab.Name = "U1Tab";
-            this.U1Tab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1Tab.Padding = new System.Windows.Forms.Padding(2);
             this.U1Tab.Size = new System.Drawing.Size(721, 435);
             this.U1Tab.TabIndex = 0;
             this.U1Tab.Text = "Ultima I";
@@ -442,9 +442,9 @@
             this.groupBox2.Controls.Add(this.U1LocX);
             this.groupBox2.Controls.Add(this.label47);
             this.groupBox2.Location = new System.Drawing.Point(534, 245);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(166, 92);
             this.groupBox2.TabIndex = 42;
             this.groupBox2.TabStop = false;
@@ -459,7 +459,7 @@
             this.U1GoToDropDownBox.Items.AddRange(new object[] {
             "Not Specified"});
             this.U1GoToDropDownBox.Location = new System.Drawing.Point(55, 64);
-            this.U1GoToDropDownBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1GoToDropDownBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1GoToDropDownBox.Name = "U1GoToDropDownBox";
             this.U1GoToDropDownBox.Size = new System.Drawing.Size(99, 21);
             this.U1GoToDropDownBox.TabIndex = 26;
@@ -477,7 +477,7 @@
             // U1LocY
             // 
             this.U1LocY.Location = new System.Drawing.Point(112, 31);
-            this.U1LocY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1LocY.Margin = new System.Windows.Forms.Padding(2);
             this.U1LocY.Name = "U1LocY";
             this.U1LocY.Size = new System.Drawing.Size(29, 20);
             this.U1LocY.TabIndex = 54;
@@ -487,7 +487,7 @@
             // U1LocX
             // 
             this.U1LocX.Location = new System.Drawing.Point(68, 31);
-            this.U1LocX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1LocX.Margin = new System.Windows.Forms.Padding(2);
             this.U1LocX.Name = "U1LocX";
             this.U1LocX.Size = new System.Drawing.Size(29, 20);
             this.U1LocX.TabIndex = 27;
@@ -507,7 +507,7 @@
             // U1LoadButton
             // 
             this.U1LoadButton.Location = new System.Drawing.Point(534, 365);
-            this.U1LoadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1LoadButton.Margin = new System.Windows.Forms.Padding(2);
             this.U1LoadButton.Name = "U1LoadButton";
             this.U1LoadButton.Size = new System.Drawing.Size(73, 39);
             this.U1LoadButton.TabIndex = 41;
@@ -519,7 +519,7 @@
             // 
             this.U1SaveButton.Enabled = false;
             this.U1SaveButton.Location = new System.Drawing.Point(627, 365);
-            this.U1SaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1SaveButton.Margin = new System.Windows.Forms.Padding(2);
             this.U1SaveButton.Name = "U1SaveButton";
             this.U1SaveButton.Size = new System.Drawing.Size(73, 39);
             this.U1SaveButton.TabIndex = 40;
@@ -557,9 +557,9 @@
             this.groupBox1.Controls.Add(this.label43);
             this.groupBox1.Controls.Add(this.label44);
             this.groupBox1.Location = new System.Drawing.Point(19, 23);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(691, 331);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -584,9 +584,9 @@
             this.groupBox5.Controls.Add(this.U1HorsesTextBox);
             this.groupBox5.Controls.Add(this.label64);
             this.groupBox5.Location = new System.Drawing.Point(171, 207);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(328, 120);
             this.groupBox5.TabIndex = 52;
             this.groupBox5.TabStop = false;
@@ -595,7 +595,7 @@
             // U1EnemyShipsTextBox
             // 
             this.U1EnemyShipsTextBox.Location = new System.Drawing.Point(281, 97);
-            this.U1EnemyShipsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1EnemyShipsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1EnemyShipsTextBox.Name = "U1EnemyShipsTextBox";
             this.U1EnemyShipsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1EnemyShipsTextBox.TabIndex = 54;
@@ -616,7 +616,7 @@
             // 
             this.U1TimeMachinesTextBox.Enabled = false;
             this.U1TimeMachinesTextBox.Location = new System.Drawing.Point(101, 95);
-            this.U1TimeMachinesTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1TimeMachinesTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1TimeMachinesTextBox.Name = "U1TimeMachinesTextBox";
             this.U1TimeMachinesTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1TimeMachinesTextBox.TabIndex = 52;
@@ -636,7 +636,7 @@
             // 
             this.U1ShuttlesTextBox.Enabled = false;
             this.U1ShuttlesTextBox.Location = new System.Drawing.Point(281, 72);
-            this.U1ShuttlesTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1ShuttlesTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1ShuttlesTextBox.Name = "U1ShuttlesTextBox";
             this.U1ShuttlesTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1ShuttlesTextBox.TabIndex = 50;
@@ -656,7 +656,7 @@
             // 
             this.U1FrigatesTextBox.Enabled = false;
             this.U1FrigatesTextBox.Location = new System.Drawing.Point(281, 47);
-            this.U1FrigatesTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1FrigatesTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1FrigatesTextBox.Name = "U1FrigatesTextBox";
             this.U1FrigatesTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1FrigatesTextBox.TabIndex = 48;
@@ -676,7 +676,7 @@
             // 
             this.U1CartsTextBox.Enabled = false;
             this.U1CartsTextBox.Location = new System.Drawing.Point(281, 22);
-            this.U1CartsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1CartsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1CartsTextBox.Name = "U1CartsTextBox";
             this.U1CartsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1CartsTextBox.TabIndex = 46;
@@ -696,7 +696,7 @@
             // 
             this.U1AircarsTextBox.Enabled = false;
             this.U1AircarsTextBox.Location = new System.Drawing.Point(101, 70);
-            this.U1AircarsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1AircarsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1AircarsTextBox.Name = "U1AircarsTextBox";
             this.U1AircarsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1AircarsTextBox.TabIndex = 44;
@@ -716,7 +716,7 @@
             // 
             this.U1RaftsTextBox.Enabled = false;
             this.U1RaftsTextBox.Location = new System.Drawing.Point(101, 46);
-            this.U1RaftsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1RaftsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1RaftsTextBox.Name = "U1RaftsTextBox";
             this.U1RaftsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1RaftsTextBox.TabIndex = 42;
@@ -736,7 +736,7 @@
             // 
             this.U1HorsesTextBox.Enabled = false;
             this.U1HorsesTextBox.Location = new System.Drawing.Point(101, 20);
-            this.U1HorsesTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1HorsesTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1HorsesTextBox.Name = "U1HorsesTextBox";
             this.U1HorsesTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1HorsesTextBox.TabIndex = 40;
@@ -767,9 +767,9 @@
             this.groupBox4.Controls.Add(this.U1FoodTextBox);
             this.groupBox4.Controls.Add(this.label52);
             this.groupBox4.Location = new System.Drawing.Point(171, 107);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(328, 99);
             this.groupBox4.TabIndex = 38;
             this.groupBox4.TabStop = false;
@@ -778,7 +778,7 @@
             // U1WhiteGemsTextBox
             // 
             this.U1WhiteGemsTextBox.Location = new System.Drawing.Point(281, 72);
-            this.U1WhiteGemsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1WhiteGemsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1WhiteGemsTextBox.Name = "U1WhiteGemsTextBox";
             this.U1WhiteGemsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1WhiteGemsTextBox.TabIndex = 50;
@@ -798,7 +798,7 @@
             // U1GreenGemsTextBox
             // 
             this.U1GreenGemsTextBox.Location = new System.Drawing.Point(281, 47);
-            this.U1GreenGemsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1GreenGemsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1GreenGemsTextBox.Name = "U1GreenGemsTextBox";
             this.U1GreenGemsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1GreenGemsTextBox.TabIndex = 48;
@@ -818,7 +818,7 @@
             // U1CoinsTextBox
             // 
             this.U1CoinsTextBox.Location = new System.Drawing.Point(281, 22);
-            this.U1CoinsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1CoinsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1CoinsTextBox.Name = "U1CoinsTextBox";
             this.U1CoinsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1CoinsTextBox.TabIndex = 46;
@@ -838,7 +838,7 @@
             // U1BlueGemsTextBox
             // 
             this.U1BlueGemsTextBox.Location = new System.Drawing.Point(84, 70);
-            this.U1BlueGemsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1BlueGemsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1BlueGemsTextBox.Name = "U1BlueGemsTextBox";
             this.U1BlueGemsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1BlueGemsTextBox.TabIndex = 44;
@@ -858,7 +858,7 @@
             // U1RedGemsTextBox
             // 
             this.U1RedGemsTextBox.Location = new System.Drawing.Point(84, 46);
-            this.U1RedGemsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1RedGemsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1RedGemsTextBox.Name = "U1RedGemsTextBox";
             this.U1RedGemsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1RedGemsTextBox.TabIndex = 42;
@@ -878,7 +878,7 @@
             // U1FoodTextBox
             // 
             this.U1FoodTextBox.Location = new System.Drawing.Point(84, 20);
-            this.U1FoodTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1FoodTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1FoodTextBox.Name = "U1FoodTextBox";
             this.U1FoodTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1FoodTextBox.TabIndex = 40;
@@ -910,9 +910,9 @@
             this.groupBox3.Controls.Add(this.U1SpellsDropDown);
             this.groupBox3.Controls.Add(this.label60);
             this.groupBox3.Location = new System.Drawing.Point(171, 12);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(328, 94);
             this.groupBox3.TabIndex = 37;
             this.groupBox3.TabStop = false;
@@ -921,7 +921,7 @@
             // U1WeaponsTextBox
             // 
             this.U1WeaponsTextBox.Location = new System.Drawing.Point(281, 64);
-            this.U1WeaponsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1WeaponsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1WeaponsTextBox.Name = "U1WeaponsTextBox";
             this.U1WeaponsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1WeaponsTextBox.TabIndex = 38;
@@ -941,7 +941,7 @@
             // U1ArmorTextBox
             // 
             this.U1ArmorTextBox.Location = new System.Drawing.Point(281, 42);
-            this.U1ArmorTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1ArmorTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1ArmorTextBox.Name = "U1ArmorTextBox";
             this.U1ArmorTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1ArmorTextBox.TabIndex = 36;
@@ -981,7 +981,7 @@
             "Phazor",
             "Blaster"});
             this.U1WeaponsDropDown.Location = new System.Drawing.Point(71, 64);
-            this.U1WeaponsDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1WeaponsDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U1WeaponsDropDown.Name = "U1WeaponsDropDown";
             this.U1WeaponsDropDown.Size = new System.Drawing.Size(118, 21);
             this.U1WeaponsDropDown.TabIndex = 33;
@@ -1010,7 +1010,7 @@
             "Vacuum Suit",
             "Reflect Suit"});
             this.U1ArmorDropDown.Location = new System.Drawing.Point(71, 42);
-            this.U1ArmorDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1ArmorDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U1ArmorDropDown.Name = "U1ArmorDropDown";
             this.U1ArmorDropDown.Size = new System.Drawing.Size(118, 21);
             this.U1ArmorDropDown.TabIndex = 31;
@@ -1029,7 +1029,7 @@
             // U1SpellsTextBox
             // 
             this.U1SpellsTextBox.Location = new System.Drawing.Point(281, 20);
-            this.U1SpellsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1SpellsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1SpellsTextBox.Name = "U1SpellsTextBox";
             this.U1SpellsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1SpellsTextBox.TabIndex = 25;
@@ -1064,7 +1064,7 @@
             "Destory",
             "Kill"});
             this.U1SpellsDropDown.Location = new System.Drawing.Point(71, 20);
-            this.U1SpellsDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1SpellsDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U1SpellsDropDown.Name = "U1SpellsDropDown";
             this.U1SpellsDropDown.Size = new System.Drawing.Size(118, 21);
             this.U1SpellsDropDown.TabIndex = 26;
@@ -1083,7 +1083,7 @@
             // U1IntelligenceTextBox
             // 
             this.U1IntelligenceTextBox.Location = new System.Drawing.Point(85, 283);
-            this.U1IntelligenceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1IntelligenceTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1IntelligenceTextBox.Name = "U1IntelligenceTextBox";
             this.U1IntelligenceTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1IntelligenceTextBox.TabIndex = 28;
@@ -1103,7 +1103,7 @@
             // U1WisdomTextBox
             // 
             this.U1WisdomTextBox.Location = new System.Drawing.Point(85, 263);
-            this.U1WisdomTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1WisdomTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1WisdomTextBox.Name = "U1WisdomTextBox";
             this.U1WisdomTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1WisdomTextBox.TabIndex = 26;
@@ -1123,7 +1123,7 @@
             // U1CharismaTextBox
             // 
             this.U1CharismaTextBox.Location = new System.Drawing.Point(85, 242);
-            this.U1CharismaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1CharismaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1CharismaTextBox.Name = "U1CharismaTextBox";
             this.U1CharismaTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1CharismaTextBox.TabIndex = 24;
@@ -1133,7 +1133,7 @@
             // U1StaminaTextBox
             // 
             this.U1StaminaTextBox.Location = new System.Drawing.Point(85, 220);
-            this.U1StaminaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1StaminaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1StaminaTextBox.Name = "U1StaminaTextBox";
             this.U1StaminaTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1StaminaTextBox.TabIndex = 23;
@@ -1143,7 +1143,7 @@
             // U1AgilityTextBox
             // 
             this.U1AgilityTextBox.Location = new System.Drawing.Point(85, 200);
-            this.U1AgilityTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1AgilityTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1AgilityTextBox.Name = "U1AgilityTextBox";
             this.U1AgilityTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1AgilityTextBox.TabIndex = 22;
@@ -1153,7 +1153,7 @@
             // U1StrengthTextBox
             // 
             this.U1StrengthTextBox.Location = new System.Drawing.Point(85, 179);
-            this.U1StrengthTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1StrengthTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1StrengthTextBox.Name = "U1StrengthTextBox";
             this.U1StrengthTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1StrengthTextBox.TabIndex = 21;
@@ -1163,7 +1163,7 @@
             // U1ExperienceTextBox
             // 
             this.U1ExperienceTextBox.Location = new System.Drawing.Point(85, 145);
-            this.U1ExperienceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1ExperienceTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1ExperienceTextBox.Name = "U1ExperienceTextBox";
             this.U1ExperienceTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1ExperienceTextBox.TabIndex = 20;
@@ -1173,7 +1173,7 @@
             // U1HitPointsTextBox
             // 
             this.U1HitPointsTextBox.Location = new System.Drawing.Point(85, 124);
-            this.U1HitPointsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1HitPointsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U1HitPointsTextBox.Name = "U1HitPointsTextBox";
             this.U1HitPointsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U1HitPointsTextBox.TabIndex = 18;
@@ -1192,7 +1192,7 @@
             "Dwarf",
             "Bobbit"});
             this.U1RaceDropDown.Location = new System.Drawing.Point(65, 91);
-            this.U1RaceDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1RaceDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U1RaceDropDown.Name = "U1RaceDropDown";
             this.U1RaceDropDown.Size = new System.Drawing.Size(91, 21);
             this.U1RaceDropDown.TabIndex = 15;
@@ -1210,7 +1210,7 @@
             "Wizard",
             "Thief"});
             this.U1ClassDropDown.Location = new System.Drawing.Point(65, 69);
-            this.U1ClassDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1ClassDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U1ClassDropDown.Name = "U1ClassDropDown";
             this.U1ClassDropDown.Size = new System.Drawing.Size(91, 21);
             this.U1ClassDropDown.TabIndex = 14;
@@ -1226,7 +1226,7 @@
             "Female",
             "Male"});
             this.U1SexDropDown.Location = new System.Drawing.Point(65, 47);
-            this.U1SexDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1SexDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U1SexDropDown.Name = "U1SexDropDown";
             this.U1SexDropDown.Size = new System.Drawing.Size(91, 21);
             this.U1SexDropDown.TabIndex = 13;
@@ -1239,7 +1239,7 @@
             this.U1NameDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.U1NameDropDown.FormattingEnabled = true;
             this.U1NameDropDown.Location = new System.Drawing.Point(65, 25);
-            this.U1NameDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U1NameDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U1NameDropDown.Name = "U1NameDropDown";
             this.U1NameDropDown.Size = new System.Drawing.Size(91, 21);
             this.U1NameDropDown.TabIndex = 12;
@@ -1356,9 +1356,9 @@
             this.U2Tab.Controls.Add(this.groupBox7);
             this.U2Tab.Controls.Add(this.groupBox6);
             this.U2Tab.Location = new System.Drawing.Point(4, 22);
-            this.U2Tab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2Tab.Margin = new System.Windows.Forms.Padding(2);
             this.U2Tab.Name = "U2Tab";
-            this.U2Tab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2Tab.Padding = new System.Windows.Forms.Padding(2);
             this.U2Tab.Size = new System.Drawing.Size(721, 435);
             this.U2Tab.TabIndex = 1;
             this.U2Tab.Text = "Ultima II";
@@ -1388,9 +1388,9 @@
             this.groupBox10.Controls.Add(this.U2BootsTextBox);
             this.groupBox10.Controls.Add(this.label102);
             this.groupBox10.Location = new System.Drawing.Point(19, 313);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox10.Size = new System.Drawing.Size(495, 99);
             this.groupBox10.TabIndex = 43;
             this.groupBox10.TabStop = false;
@@ -1399,7 +1399,7 @@
             // U2TriLithiumsTextBox
             // 
             this.U2TriLithiumsTextBox.Location = new System.Drawing.Point(447, 60);
-            this.U2TriLithiumsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2TriLithiumsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2TriLithiumsTextBox.Name = "U2TriLithiumsTextBox";
             this.U2TriLithiumsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2TriLithiumsTextBox.TabIndex = 62;
@@ -1419,7 +1419,7 @@
             // U2GreenIdolsTextBox
             // 
             this.U2GreenIdolsTextBox.Location = new System.Drawing.Point(447, 36);
-            this.U2GreenIdolsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2GreenIdolsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2GreenIdolsTextBox.Name = "U2GreenIdolsTextBox";
             this.U2GreenIdolsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2GreenIdolsTextBox.TabIndex = 60;
@@ -1439,7 +1439,7 @@
             // U2BlueTasslesTextBox
             // 
             this.U2BlueTasslesTextBox.Location = new System.Drawing.Point(317, 72);
-            this.U2BlueTasslesTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2BlueTasslesTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2BlueTasslesTextBox.Name = "U2BlueTasslesTextBox";
             this.U2BlueTasslesTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2BlueTasslesTextBox.TabIndex = 56;
@@ -1459,7 +1459,7 @@
             // U2BrassTextBox
             // 
             this.U2BrassTextBox.Location = new System.Drawing.Point(317, 47);
-            this.U2BrassTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2BrassTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2BrassTextBox.Name = "U2BrassTextBox";
             this.U2BrassTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2BrassTextBox.TabIndex = 54;
@@ -1479,7 +1479,7 @@
             // U2AnkhsTextBox
             // 
             this.U2AnkhsTextBox.Location = new System.Drawing.Point(317, 22);
-            this.U2AnkhsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2AnkhsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2AnkhsTextBox.Name = "U2AnkhsTextBox";
             this.U2AnkhsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2AnkhsTextBox.TabIndex = 52;
@@ -1499,7 +1499,7 @@
             // U2StaffTextBox
             // 
             this.U2StaffTextBox.Location = new System.Drawing.Point(184, 72);
-            this.U2StaffTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2StaffTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2StaffTextBox.Name = "U2StaffTextBox";
             this.U2StaffTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2StaffTextBox.TabIndex = 50;
@@ -1519,7 +1519,7 @@
             // U2WandsTextBox
             // 
             this.U2WandsTextBox.Location = new System.Drawing.Point(184, 47);
-            this.U2WandsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2WandsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2WandsTextBox.Name = "U2WandsTextBox";
             this.U2WandsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2WandsTextBox.TabIndex = 48;
@@ -1539,7 +1539,7 @@
             // U2RingsTextBox
             // 
             this.U2RingsTextBox.Location = new System.Drawing.Point(184, 22);
-            this.U2RingsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2RingsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2RingsTextBox.Name = "U2RingsTextBox";
             this.U2RingsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2RingsTextBox.TabIndex = 46;
@@ -1559,7 +1559,7 @@
             // U2HelmsTextBox
             // 
             this.U2HelmsTextBox.Location = new System.Drawing.Point(69, 70);
-            this.U2HelmsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2HelmsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2HelmsTextBox.Name = "U2HelmsTextBox";
             this.U2HelmsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2HelmsTextBox.TabIndex = 44;
@@ -1579,7 +1579,7 @@
             // U2CloaksTextBox
             // 
             this.U2CloaksTextBox.Location = new System.Drawing.Point(69, 46);
-            this.U2CloaksTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2CloaksTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2CloaksTextBox.Name = "U2CloaksTextBox";
             this.U2CloaksTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2CloaksTextBox.TabIndex = 42;
@@ -1599,7 +1599,7 @@
             // U2BootsTextBox
             // 
             this.U2BootsTextBox.Location = new System.Drawing.Point(69, 20);
-            this.U2BootsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2BootsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2BootsTextBox.Name = "U2BootsTextBox";
             this.U2BootsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2BootsTextBox.TabIndex = 40;
@@ -1620,7 +1620,7 @@
             // 
             this.U2SaveButton.Enabled = false;
             this.U2SaveButton.Location = new System.Drawing.Point(627, 365);
-            this.U2SaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2SaveButton.Margin = new System.Windows.Forms.Padding(2);
             this.U2SaveButton.Name = "U2SaveButton";
             this.U2SaveButton.Size = new System.Drawing.Size(73, 39);
             this.U2SaveButton.TabIndex = 42;
@@ -1631,7 +1631,7 @@
             // U2LoadButton
             // 
             this.U2LoadButton.Location = new System.Drawing.Point(534, 365);
-            this.U2LoadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2LoadButton.Margin = new System.Windows.Forms.Padding(2);
             this.U2LoadButton.Name = "U2LoadButton";
             this.U2LoadButton.Size = new System.Drawing.Size(73, 39);
             this.U2LoadButton.TabIndex = 41;
@@ -1648,9 +1648,9 @@
             this.groupBox9.Controls.Add(this.U2LocX);
             this.groupBox9.Controls.Add(this.label85);
             this.groupBox9.Location = new System.Drawing.Point(534, 245);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox9.Size = new System.Drawing.Size(166, 92);
             this.groupBox9.TabIndex = 40;
             this.groupBox9.TabStop = false;
@@ -1669,7 +1669,7 @@
             "1990 A.D.",
             "Aftermath"});
             this.U2LocMapDropDownBox.Location = new System.Drawing.Point(55, 18);
-            this.U2LocMapDropDownBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2LocMapDropDownBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2LocMapDropDownBox.Name = "U2LocMapDropDownBox";
             this.U2LocMapDropDownBox.Size = new System.Drawing.Size(99, 21);
             this.U2LocMapDropDownBox.TabIndex = 56;
@@ -1684,7 +1684,7 @@
             this.U2GoToDropDownBox.Items.AddRange(new object[] {
             "Not Specified"});
             this.U2GoToDropDownBox.Location = new System.Drawing.Point(55, 64);
-            this.U2GoToDropDownBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2GoToDropDownBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2GoToDropDownBox.Name = "U2GoToDropDownBox";
             this.U2GoToDropDownBox.Size = new System.Drawing.Size(99, 21);
             this.U2GoToDropDownBox.TabIndex = 26;
@@ -1702,7 +1702,7 @@
             // U2LocY
             // 
             this.U2LocY.Location = new System.Drawing.Point(115, 42);
-            this.U2LocY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2LocY.Margin = new System.Windows.Forms.Padding(2);
             this.U2LocY.Name = "U2LocY";
             this.U2LocY.Size = new System.Drawing.Size(35, 20);
             this.U2LocY.TabIndex = 55;
@@ -1712,7 +1712,7 @@
             // U2LocX
             // 
             this.U2LocX.Location = new System.Drawing.Point(55, 42);
-            this.U2LocX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2LocX.Margin = new System.Windows.Forms.Padding(2);
             this.U2LocX.Name = "U2LocX";
             this.U2LocX.Size = new System.Drawing.Size(35, 20);
             this.U2LocX.TabIndex = 26;
@@ -1752,9 +1752,9 @@
             this.groupBox8.Controls.Add(this.U2FoodTextBox);
             this.groupBox8.Controls.Add(this.label78);
             this.groupBox8.Location = new System.Drawing.Point(185, 120);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox8.Size = new System.Drawing.Size(328, 148);
             this.groupBox8.TabIndex = 39;
             this.groupBox8.TabStop = false;
@@ -1763,7 +1763,7 @@
             // U2ToolsTextBox
             // 
             this.U2ToolsTextBox.Location = new System.Drawing.Point(281, 119);
-            this.U2ToolsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2ToolsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2ToolsTextBox.Name = "U2ToolsTextBox";
             this.U2ToolsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2ToolsTextBox.TabIndex = 58;
@@ -1783,7 +1783,7 @@
             // U2KeysTextBox
             // 
             this.U2KeysTextBox.Location = new System.Drawing.Point(281, 94);
-            this.U2KeysTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2KeysTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2KeysTextBox.Name = "U2KeysTextBox";
             this.U2KeysTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2KeysTextBox.TabIndex = 56;
@@ -1803,7 +1803,7 @@
             // U2SkullKeysTextBox
             // 
             this.U2SkullKeysTextBox.Location = new System.Drawing.Point(84, 119);
-            this.U2SkullKeysTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2SkullKeysTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2SkullKeysTextBox.Name = "U2SkullKeysTextBox";
             this.U2SkullKeysTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2SkullKeysTextBox.TabIndex = 54;
@@ -1823,7 +1823,7 @@
             // U2RedGemsTextBox
             // 
             this.U2RedGemsTextBox.Location = new System.Drawing.Point(84, 94);
-            this.U2RedGemsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2RedGemsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2RedGemsTextBox.Name = "U2RedGemsTextBox";
             this.U2RedGemsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2RedGemsTextBox.TabIndex = 52;
@@ -1843,7 +1843,7 @@
             // U2GreenTextBox
             // 
             this.U2GreenTextBox.Location = new System.Drawing.Point(281, 68);
-            this.U2GreenTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2GreenTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2GreenTextBox.Name = "U2GreenTextBox";
             this.U2GreenTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2GreenTextBox.TabIndex = 50;
@@ -1863,7 +1863,7 @@
             // U2StrangeCoinsTextBox
             // 
             this.U2StrangeCoinsTextBox.Location = new System.Drawing.Point(281, 44);
-            this.U2StrangeCoinsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2StrangeCoinsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2StrangeCoinsTextBox.Name = "U2StrangeCoinsTextBox";
             this.U2StrangeCoinsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2StrangeCoinsTextBox.TabIndex = 48;
@@ -1883,7 +1883,7 @@
             // U2CoinsTextBox
             // 
             this.U2CoinsTextBox.Location = new System.Drawing.Point(281, 18);
-            this.U2CoinsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2CoinsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2CoinsTextBox.Name = "U2CoinsTextBox";
             this.U2CoinsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2CoinsTextBox.TabIndex = 46;
@@ -1903,7 +1903,7 @@
             // U2GemsTextBox
             // 
             this.U2GemsTextBox.Location = new System.Drawing.Point(84, 70);
-            this.U2GemsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2GemsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2GemsTextBox.Name = "U2GemsTextBox";
             this.U2GemsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2GemsTextBox.TabIndex = 44;
@@ -1923,7 +1923,7 @@
             // U2TorchesTextBox
             // 
             this.U2TorchesTextBox.Location = new System.Drawing.Point(84, 46);
-            this.U2TorchesTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2TorchesTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2TorchesTextBox.Name = "U2TorchesTextBox";
             this.U2TorchesTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2TorchesTextBox.TabIndex = 42;
@@ -1943,7 +1943,7 @@
             // U2FoodTextBox
             // 
             this.U2FoodTextBox.Location = new System.Drawing.Point(84, 20);
-            this.U2FoodTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2FoodTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2FoodTextBox.Name = "U2FoodTextBox";
             this.U2FoodTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2FoodTextBox.TabIndex = 40;
@@ -1975,9 +1975,9 @@
             this.groupBox7.Controls.Add(this.U2SpellsDropDown);
             this.groupBox7.Controls.Add(this.label72);
             this.groupBox7.Location = new System.Drawing.Point(185, 23);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(328, 94);
             this.groupBox7.TabIndex = 38;
             this.groupBox7.TabStop = false;
@@ -1986,7 +1986,7 @@
             // U2WeaponTextBox
             // 
             this.U2WeaponTextBox.Location = new System.Drawing.Point(281, 64);
-            this.U2WeaponTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2WeaponTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2WeaponTextBox.Name = "U2WeaponTextBox";
             this.U2WeaponTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2WeaponTextBox.TabIndex = 38;
@@ -2006,7 +2006,7 @@
             // U2ArmorTextBox
             // 
             this.U2ArmorTextBox.Location = new System.Drawing.Point(281, 42);
-            this.U2ArmorTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2ArmorTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2ArmorTextBox.Name = "U2ArmorTextBox";
             this.U2ArmorTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2ArmorTextBox.TabIndex = 36;
@@ -2040,7 +2040,7 @@
             "Phaser",
             "Quick Sword"});
             this.U2WeaponDropDown.Location = new System.Drawing.Point(71, 64);
-            this.U2WeaponDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2WeaponDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U2WeaponDropDown.Name = "U2WeaponDropDown";
             this.U2WeaponDropDown.Size = new System.Drawing.Size(118, 21);
             this.U2WeaponDropDown.TabIndex = 33;
@@ -2070,7 +2070,7 @@
             "Vacuum Suit",
             "Reflect Suit"});
             this.U2ArmorDropDown.Location = new System.Drawing.Point(71, 42);
-            this.U2ArmorDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2ArmorDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U2ArmorDropDown.Name = "U2ArmorDropDown";
             this.U2ArmorDropDown.Size = new System.Drawing.Size(118, 21);
             this.U2ArmorDropDown.TabIndex = 31;
@@ -2089,7 +2089,7 @@
             // U2SpellsTextBox
             // 
             this.U2SpellsTextBox.Location = new System.Drawing.Point(281, 20);
-            this.U2SpellsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2SpellsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2SpellsTextBox.Name = "U2SpellsTextBox";
             this.U2SpellsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2SpellsTextBox.TabIndex = 25;
@@ -2124,7 +2124,7 @@
             "Destory",
             "Kill"});
             this.U2SpellsDropDown.Location = new System.Drawing.Point(71, 20);
-            this.U2SpellsDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2SpellsDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U2SpellsDropDown.Name = "U2SpellsDropDown";
             this.U2SpellsDropDown.Size = new System.Drawing.Size(118, 21);
             this.U2SpellsDropDown.TabIndex = 26;
@@ -2167,9 +2167,9 @@
             this.groupBox6.Controls.Add(this.label97);
             this.groupBox6.Controls.Add(this.label98);
             this.groupBox6.Location = new System.Drawing.Point(19, 23);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(163, 287);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
@@ -2179,7 +2179,7 @@
             // 
             this.U2NameTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.U2NameTextBox.Location = new System.Drawing.Point(65, 25);
-            this.U2NameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2NameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2NameTextBox.MaxLength = 11;
             this.U2NameTextBox.Name = "U2NameTextBox";
             this.U2NameTextBox.Size = new System.Drawing.Size(88, 20);
@@ -2189,7 +2189,7 @@
             // U2IntelligenceTextBox
             // 
             this.U2IntelligenceTextBox.Location = new System.Drawing.Point(85, 261);
-            this.U2IntelligenceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2IntelligenceTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2IntelligenceTextBox.Name = "U2IntelligenceTextBox";
             this.U2IntelligenceTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2IntelligenceTextBox.TabIndex = 28;
@@ -2209,7 +2209,7 @@
             // U2CharismaTextBox
             // 
             this.U2CharismaTextBox.Location = new System.Drawing.Point(85, 240);
-            this.U2CharismaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2CharismaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2CharismaTextBox.Name = "U2CharismaTextBox";
             this.U2CharismaTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2CharismaTextBox.TabIndex = 26;
@@ -2229,7 +2229,7 @@
             // U2AgilityTextBox
             // 
             this.U2AgilityTextBox.Location = new System.Drawing.Point(85, 220);
-            this.U2AgilityTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2AgilityTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2AgilityTextBox.Name = "U2AgilityTextBox";
             this.U2AgilityTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2AgilityTextBox.TabIndex = 24;
@@ -2239,7 +2239,7 @@
             // U2WisdomTextBox
             // 
             this.U2WisdomTextBox.Location = new System.Drawing.Point(85, 198);
-            this.U2WisdomTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2WisdomTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2WisdomTextBox.Name = "U2WisdomTextBox";
             this.U2WisdomTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2WisdomTextBox.TabIndex = 23;
@@ -2249,7 +2249,7 @@
             // U2StaminaTextBox
             // 
             this.U2StaminaTextBox.Location = new System.Drawing.Point(85, 177);
-            this.U2StaminaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2StaminaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2StaminaTextBox.Name = "U2StaminaTextBox";
             this.U2StaminaTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2StaminaTextBox.TabIndex = 22;
@@ -2259,7 +2259,7 @@
             // U2StrengthTextBox
             // 
             this.U2StrengthTextBox.Location = new System.Drawing.Point(85, 157);
-            this.U2StrengthTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2StrengthTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2StrengthTextBox.Name = "U2StrengthTextBox";
             this.U2StrengthTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2StrengthTextBox.TabIndex = 21;
@@ -2269,7 +2269,7 @@
             // U2ExperienceTextBox
             // 
             this.U2ExperienceTextBox.Location = new System.Drawing.Point(85, 135);
-            this.U2ExperienceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2ExperienceTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2ExperienceTextBox.Name = "U2ExperienceTextBox";
             this.U2ExperienceTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2ExperienceTextBox.TabIndex = 20;
@@ -2279,7 +2279,7 @@
             // U2HitPointsTextBox
             // 
             this.U2HitPointsTextBox.Location = new System.Drawing.Point(85, 114);
-            this.U2HitPointsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2HitPointsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U2HitPointsTextBox.Name = "U2HitPointsTextBox";
             this.U2HitPointsTextBox.Size = new System.Drawing.Size(34, 20);
             this.U2HitPointsTextBox.TabIndex = 18;
@@ -2298,7 +2298,7 @@
             "Dwarf",
             "Bobbit"});
             this.U2RaceDropDown.Location = new System.Drawing.Point(65, 91);
-            this.U2RaceDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2RaceDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U2RaceDropDown.Name = "U2RaceDropDown";
             this.U2RaceDropDown.Size = new System.Drawing.Size(91, 21);
             this.U2RaceDropDown.TabIndex = 15;
@@ -2316,7 +2316,7 @@
             "Wizard",
             "Thief"});
             this.U2ClassDropDown.Location = new System.Drawing.Point(65, 69);
-            this.U2ClassDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2ClassDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U2ClassDropDown.Name = "U2ClassDropDown";
             this.U2ClassDropDown.Size = new System.Drawing.Size(91, 21);
             this.U2ClassDropDown.TabIndex = 14;
@@ -2332,7 +2332,7 @@
             "Female",
             "Male"});
             this.U2SexDropDown.Location = new System.Drawing.Point(65, 47);
-            this.U2SexDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U2SexDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.U2SexDropDown.Name = "U2SexDropDown";
             this.U2SexDropDown.Size = new System.Drawing.Size(91, 21);
             this.U2SexDropDown.TabIndex = 13;
@@ -2447,1273 +2447,181 @@
             this.U3Tab.Controls.Add(this.groupBox16);
             this.U3Tab.Controls.Add(this.groupBox11);
             this.U3Tab.Location = new System.Drawing.Point(4, 22);
-            this.U3Tab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U3Tab.Margin = new System.Windows.Forms.Padding(2);
             this.U3Tab.Name = "U3Tab";
-            this.U3Tab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.U3Tab.Padding = new System.Windows.Forms.Padding(2);
             this.U3Tab.Size = new System.Drawing.Size(721, 435);
             this.U3Tab.TabIndex = 2;
             this.U3Tab.Text = "Ultima III";
             // 
-            // U4Tab
+            // groupBox17
             // 
-            this.U4Tab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.U4Tab.Controls.Add(this.U4LoadButton);
-            this.U4Tab.Controls.Add(this.U4SaveButton);
-            this.U4Tab.Controls.Add(this.U4General);
-            this.U4Tab.Controls.Add(this.U4PartyEquipment);
-            this.U4Tab.Controls.Add(this.U4QuestItems);
-            this.U4Tab.Controls.Add(this.U4Virtues);
-            this.U4Tab.Controls.Add(this.U4PlayerStats);
-            this.U4Tab.Location = new System.Drawing.Point(4, 22);
-            this.U4Tab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4Tab.Name = "U4Tab";
-            this.U4Tab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4Tab.Size = new System.Drawing.Size(721, 435);
-            this.U4Tab.TabIndex = 3;
-            this.U4Tab.Text = "Ultima IV";
+            this.groupBox17.Controls.Add(this.U3HorseLocationsDropDown);
+            this.groupBox17.Controls.Add(this.U3NewHorseButton);
+            this.groupBox17.Controls.Add(this.U3BoatLocationsDropDown);
+            this.groupBox17.Controls.Add(this.U3NewBoatButton);
+            this.groupBox17.Location = new System.Drawing.Point(19, 382);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(400, 43);
+            this.groupBox17.TabIndex = 42;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Object Creation";
             // 
-            // U4LoadButton
+            // U3HorseLocationsDropDown
             // 
-            this.U4LoadButton.Location = new System.Drawing.Point(534, 365);
-            this.U4LoadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4LoadButton.Name = "U4LoadButton";
-            this.U4LoadButton.Size = new System.Drawing.Size(73, 39);
-            this.U4LoadButton.TabIndex = 39;
-            this.U4LoadButton.Text = "Load";
-            this.U4LoadButton.UseVisualStyleBackColor = true;
-            this.U4LoadButton.Click += new System.EventHandler(this.U4LoadButton_Click);
-            // 
-            // U4SaveButton
-            // 
-            this.U4SaveButton.Enabled = false;
-            this.U4SaveButton.Location = new System.Drawing.Point(627, 365);
-            this.U4SaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4SaveButton.Name = "U4SaveButton";
-            this.U4SaveButton.Size = new System.Drawing.Size(73, 39);
-            this.U4SaveButton.TabIndex = 38;
-            this.U4SaveButton.Text = "Save";
-            this.U4SaveButton.UseVisualStyleBackColor = true;
-            this.U4SaveButton.Click += new System.EventHandler(this.U4SaveButton_Click);
-            // 
-            // U4General
-            // 
-            this.U4General.Controls.Add(this.U4GoToDropDownBox);
-            this.U4General.Controls.Add(this.label32);
-            this.U4General.Controls.Add(this.U4LocLong2);
-            this.U4General.Controls.Add(this.U4LocLong1);
-            this.U4General.Controls.Add(this.U4LocLat2);
-            this.U4General.Controls.Add(this.U4MovesTextBox);
-            this.U4General.Controls.Add(this.U4LocLat1);
-            this.U4General.Controls.Add(this.label30);
-            this.U4General.Controls.Add(this.label31);
-            this.U4General.Location = new System.Drawing.Point(534, 245);
-            this.U4General.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4General.Name = "U4General";
-            this.U4General.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4General.Size = new System.Drawing.Size(166, 92);
-            this.U4General.TabIndex = 37;
-            this.U4General.TabStop = false;
-            this.U4General.Text = "General";
-            // 
-            // U4GoToDropDownBox
-            // 
-            this.U4GoToDropDownBox.BackColor = System.Drawing.Color.White;
-            this.U4GoToDropDownBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4GoToDropDownBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4GoToDropDownBox.FormattingEnabled = true;
-            this.U4GoToDropDownBox.Items.AddRange(new object[] {
+            this.U3HorseLocationsDropDown.BackColor = System.Drawing.Color.White;
+            this.U3HorseLocationsDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U3HorseLocationsDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U3HorseLocationsDropDown.FormattingEnabled = true;
+            this.U3HorseLocationsDropDown.Items.AddRange(new object[] {
             "Not Specified"});
-            this.U4GoToDropDownBox.Location = new System.Drawing.Point(55, 64);
-            this.U4GoToDropDownBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4GoToDropDownBox.Name = "U4GoToDropDownBox";
-            this.U4GoToDropDownBox.Size = new System.Drawing.Size(99, 21);
-            this.U4GoToDropDownBox.TabIndex = 26;
-            this.U4GoToDropDownBox.SelectedIndexChanged += new System.EventHandler(this.U4GoToDropDownBox_SelectedIndexChanged);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(4, 64);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(33, 13);
-            this.label32.TabIndex = 25;
-            this.label32.Text = "Go to";
-            // 
-            // U4LocLong2
-            // 
-            this.U4LocLong2.Location = new System.Drawing.Point(135, 42);
-            this.U4LocLong2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4LocLong2.Name = "U4LocLong2";
-            this.U4LocLong2.Size = new System.Drawing.Size(19, 20);
-            this.U4LocLong2.TabIndex = 55;
-            this.U4LocLong2.Text = "A";
-            this.U4LocLong2.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLong2_Validating);
-            // 
-            // U4LocLong1
-            // 
-            this.U4LocLong1.Location = new System.Drawing.Point(112, 42);
-            this.U4LocLong1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4LocLong1.Name = "U4LocLong1";
-            this.U4LocLong1.Size = new System.Drawing.Size(20, 20);
-            this.U4LocLong1.TabIndex = 54;
-            this.U4LocLong1.Text = "A";
-            this.U4LocLong1.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLong1_Validating);
-            // 
-            // U4LocLat2
-            // 
-            this.U4LocLat2.Location = new System.Drawing.Point(77, 42);
-            this.U4LocLat2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4LocLat2.Name = "U4LocLat2";
-            this.U4LocLat2.Size = new System.Drawing.Size(19, 20);
-            this.U4LocLat2.TabIndex = 27;
-            this.U4LocLat2.Text = "A";
-            this.U4LocLat2.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLat2_Validating);
-            // 
-            // U4MovesTextBox
-            // 
-            this.U4MovesTextBox.Location = new System.Drawing.Point(61, 21);
-            this.U4MovesTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4MovesTextBox.Name = "U4MovesTextBox";
-            this.U4MovesTextBox.Size = new System.Drawing.Size(92, 20);
-            this.U4MovesTextBox.TabIndex = 52;
-            this.U4MovesTextBox.Text = "0";
-            this.U4MovesTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MovesTextBox_Validating);
-            // 
-            // U4LocLat1
-            // 
-            this.U4LocLat1.Location = new System.Drawing.Point(55, 42);
-            this.U4LocLat1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4LocLat1.Name = "U4LocLat1";
-            this.U4LocLat1.Size = new System.Drawing.Size(20, 20);
-            this.U4LocLat1.TabIndex = 26;
-            this.U4LocLat1.Text = "A";
-            this.U4LocLat1.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLat1_Validating);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(4, 23);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(39, 13);
-            this.label30.TabIndex = 53;
-            this.label30.Text = "Moves";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(4, 44);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(48, 13);
-            this.label31.TabIndex = 25;
-            this.label31.Text = "Location";
-            // 
-            // U4PartyEquipment
-            // 
-            this.U4PartyEquipment.Controls.Add(this.U4SextantsTextBox);
-            this.U4PartyEquipment.Controls.Add(this.label27);
-            this.U4PartyEquipment.Controls.Add(this.U4GemsTextBox);
-            this.U4PartyEquipment.Controls.Add(this.label28);
-            this.U4PartyEquipment.Controls.Add(this.U4GoldTextBox);
-            this.U4PartyEquipment.Controls.Add(this.label29);
-            this.U4PartyEquipment.Controls.Add(this.U4KeysTextBox);
-            this.U4PartyEquipment.Controls.Add(this.label26);
-            this.U4PartyEquipment.Controls.Add(this.U4TorchesTextBox);
-            this.U4PartyEquipment.Controls.Add(this.label25);
-            this.U4PartyEquipment.Controls.Add(this.U4FoodTextBox);
-            this.U4PartyEquipment.Controls.Add(this.label24);
-            this.U4PartyEquipment.Controls.Add(this.U4PartyWeaponsTextBox);
-            this.U4PartyEquipment.Controls.Add(this.label23);
-            this.U4PartyEquipment.Controls.Add(this.U4PartyArmorTextBox);
-            this.U4PartyEquipment.Controls.Add(this.label22);
-            this.U4PartyEquipment.Controls.Add(this.U4ReagentsTextBox);
-            this.U4PartyEquipment.Controls.Add(this.label21);
-            this.U4PartyEquipment.Controls.Add(this.U4PartyWeaponsDropDown);
-            this.U4PartyEquipment.Controls.Add(this.label20);
-            this.U4PartyEquipment.Controls.Add(this.U4PartyArmorDropDown);
-            this.U4PartyEquipment.Controls.Add(this.label19);
-            this.U4PartyEquipment.Controls.Add(this.U4ReagentsDropDown);
-            this.U4PartyEquipment.Controls.Add(this.label18);
-            this.U4PartyEquipment.Controls.Add(this.U4SpellsTextBox);
-            this.U4PartyEquipment.Controls.Add(this.label17);
-            this.U4PartyEquipment.Controls.Add(this.U4SpellsDropDown);
-            this.U4PartyEquipment.Controls.Add(this.label15);
-            this.U4PartyEquipment.Location = new System.Drawing.Point(193, 23);
-            this.U4PartyEquipment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4PartyEquipment.Name = "U4PartyEquipment";
-            this.U4PartyEquipment.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4PartyEquipment.Size = new System.Drawing.Size(328, 215);
-            this.U4PartyEquipment.TabIndex = 36;
-            this.U4PartyEquipment.TabStop = false;
-            this.U4PartyEquipment.Text = "Party Equipment";
-            // 
-            // U4SextantsTextBox
-            // 
-            this.U4SextantsTextBox.Location = new System.Drawing.Point(281, 184);
-            this.U4SextantsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4SextantsTextBox.Name = "U4SextantsTextBox";
-            this.U4SextantsTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4SextantsTextBox.TabIndex = 50;
-            this.U4SextantsTextBox.Text = "0";
-            this.U4SextantsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4SextantsTextBox_Validating);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(223, 186);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(48, 13);
-            this.label27.TabIndex = 51;
-            this.label27.Text = "Sextants";
-            // 
-            // U4GemsTextBox
-            // 
-            this.U4GemsTextBox.Location = new System.Drawing.Point(281, 159);
-            this.U4GemsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4GemsTextBox.Name = "U4GemsTextBox";
-            this.U4GemsTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4GemsTextBox.TabIndex = 48;
-            this.U4GemsTextBox.Text = "0";
-            this.U4GemsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4GemsTextBox_Validating);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(223, 161);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(34, 13);
-            this.label28.TabIndex = 49;
-            this.label28.Text = "Gems";
-            // 
-            // U4GoldTextBox
-            // 
-            this.U4GoldTextBox.Location = new System.Drawing.Point(281, 134);
-            this.U4GoldTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4GoldTextBox.Name = "U4GoldTextBox";
-            this.U4GoldTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4GoldTextBox.TabIndex = 46;
-            this.U4GoldTextBox.Text = "0";
-            this.U4GoldTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4GoldTextBox_Validating);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(223, 136);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(29, 13);
-            this.label29.TabIndex = 47;
-            this.label29.Text = "Gold";
-            // 
-            // U4KeysTextBox
-            // 
-            this.U4KeysTextBox.Location = new System.Drawing.Point(71, 182);
-            this.U4KeysTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4KeysTextBox.Name = "U4KeysTextBox";
-            this.U4KeysTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4KeysTextBox.TabIndex = 44;
-            this.U4KeysTextBox.Text = "0";
-            this.U4KeysTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4KeysTextBox_Validating);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(14, 184);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(30, 13);
-            this.label26.TabIndex = 45;
-            this.label26.Text = "Keys";
-            // 
-            // U4TorchesTextBox
-            // 
-            this.U4TorchesTextBox.Location = new System.Drawing.Point(71, 157);
-            this.U4TorchesTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4TorchesTextBox.Name = "U4TorchesTextBox";
-            this.U4TorchesTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4TorchesTextBox.TabIndex = 42;
-            this.U4TorchesTextBox.Text = "0";
-            this.U4TorchesTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4TorchesTextBox_Validating);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(14, 159);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(46, 13);
-            this.label25.TabIndex = 43;
-            this.label25.Text = "Torches";
-            // 
-            // U4FoodTextBox
-            // 
-            this.U4FoodTextBox.Location = new System.Drawing.Point(71, 132);
-            this.U4FoodTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4FoodTextBox.Name = "U4FoodTextBox";
-            this.U4FoodTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4FoodTextBox.TabIndex = 40;
-            this.U4FoodTextBox.Text = "0";
-            this.U4FoodTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4FoodTextBox_Validating);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(14, 134);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(31, 13);
-            this.label24.TabIndex = 41;
-            this.label24.Text = "Food";
-            // 
-            // U4PartyWeaponsTextBox
-            // 
-            this.U4PartyWeaponsTextBox.Location = new System.Drawing.Point(281, 94);
-            this.U4PartyWeaponsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4PartyWeaponsTextBox.Name = "U4PartyWeaponsTextBox";
-            this.U4PartyWeaponsTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4PartyWeaponsTextBox.TabIndex = 38;
-            this.U4PartyWeaponsTextBox.Text = "0";
-            this.U4PartyWeaponsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4PartyWeaponsTextBox_Validating);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(223, 96);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(46, 13);
-            this.label23.TabIndex = 39;
-            this.label23.Text = "Quantity";
-            // 
-            // U4PartyArmorTextBox
-            // 
-            this.U4PartyArmorTextBox.Location = new System.Drawing.Point(281, 72);
-            this.U4PartyArmorTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4PartyArmorTextBox.Name = "U4PartyArmorTextBox";
-            this.U4PartyArmorTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4PartyArmorTextBox.TabIndex = 36;
-            this.U4PartyArmorTextBox.Text = "0";
-            this.U4PartyArmorTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4PartyArmorTextBox_Validating);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(223, 74);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(46, 13);
-            this.label22.TabIndex = 37;
-            this.label22.Text = "Quantity";
-            // 
-            // U4ReagentsTextBox
-            // 
-            this.U4ReagentsTextBox.Location = new System.Drawing.Point(281, 42);
-            this.U4ReagentsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4ReagentsTextBox.Name = "U4ReagentsTextBox";
-            this.U4ReagentsTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4ReagentsTextBox.TabIndex = 34;
-            this.U4ReagentsTextBox.Text = "0";
-            this.U4ReagentsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4ReagentsTextBox_Validating);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(223, 44);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(46, 13);
-            this.label21.TabIndex = 35;
-            this.label21.Text = "Quantity";
-            // 
-            // U4PartyWeaponsDropDown
-            // 
-            this.U4PartyWeaponsDropDown.BackColor = System.Drawing.Color.White;
-            this.U4PartyWeaponsDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4PartyWeaponsDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4PartyWeaponsDropDown.FormattingEnabled = true;
-            this.U4PartyWeaponsDropDown.Items.AddRange(new object[] {
-            "Hands",
-            "Staff",
-            "Dagger",
-            "Sling",
-            "Mace",
-            "Axe",
-            "Sword",
-            "Bow",
-            "Crossbow",
-            "Flaming Oil",
-            "Halberd",
-            "Magic Axe",
-            "Magic Sword",
-            "Magic Bow",
-            "Magic Wand",
-            "Mystic Sword"});
-            this.U4PartyWeaponsDropDown.Location = new System.Drawing.Point(71, 94);
-            this.U4PartyWeaponsDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4PartyWeaponsDropDown.Name = "U4PartyWeaponsDropDown";
-            this.U4PartyWeaponsDropDown.Size = new System.Drawing.Size(118, 21);
-            this.U4PartyWeaponsDropDown.TabIndex = 33;
-            this.U4PartyWeaponsDropDown.SelectedIndexChanged += new System.EventHandler(this.U4PartyWeaponsDropDown_SelectedIndexChanged);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(11, 96);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 13);
-            this.label20.TabIndex = 32;
-            this.label20.Text = "Weapon";
-            // 
-            // U4PartyArmorDropDown
-            // 
-            this.U4PartyArmorDropDown.BackColor = System.Drawing.Color.White;
-            this.U4PartyArmorDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4PartyArmorDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4PartyArmorDropDown.FormattingEnabled = true;
-            this.U4PartyArmorDropDown.Items.AddRange(new object[] {
-            "Skin",
-            "Cloth",
-            "Leather",
-            "Chain Mail",
-            "Plate Mail",
-            "Magic Chain",
-            "Magic Plate",
-            "Mystic Robe"});
-            this.U4PartyArmorDropDown.Location = new System.Drawing.Point(71, 72);
-            this.U4PartyArmorDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4PartyArmorDropDown.Name = "U4PartyArmorDropDown";
-            this.U4PartyArmorDropDown.Size = new System.Drawing.Size(118, 21);
-            this.U4PartyArmorDropDown.TabIndex = 31;
-            this.U4PartyArmorDropDown.SelectedIndexChanged += new System.EventHandler(this.U4PartyArmorDropDown_SelectedIndexChanged);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(11, 74);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(34, 13);
-            this.label19.TabIndex = 30;
-            this.label19.Text = "Armor";
-            // 
-            // U4ReagentsDropDown
-            // 
-            this.U4ReagentsDropDown.BackColor = System.Drawing.Color.White;
-            this.U4ReagentsDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4ReagentsDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4ReagentsDropDown.FormattingEnabled = true;
-            this.U4ReagentsDropDown.Items.AddRange(new object[] {
-            "Sulfur Ash",
-            "Ginseng",
-            "Garlic",
-            "Spider Silk",
-            "Blood Moss",
-            "Black Pearl",
-            "Nightshade",
-            "Mandrake"});
-            this.U4ReagentsDropDown.Location = new System.Drawing.Point(71, 42);
-            this.U4ReagentsDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4ReagentsDropDown.Name = "U4ReagentsDropDown";
-            this.U4ReagentsDropDown.Size = new System.Drawing.Size(118, 21);
-            this.U4ReagentsDropDown.TabIndex = 29;
-            this.U4ReagentsDropDown.SelectedIndexChanged += new System.EventHandler(this.U4ReagentsDropDown_SelectedIndexChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(11, 44);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(53, 13);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "Reagents";
-            // 
-            // U4SpellsTextBox
-            // 
-            this.U4SpellsTextBox.Location = new System.Drawing.Point(281, 20);
-            this.U4SpellsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4SpellsTextBox.Name = "U4SpellsTextBox";
-            this.U4SpellsTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4SpellsTextBox.TabIndex = 25;
-            this.U4SpellsTextBox.Text = "0";
-            this.U4SpellsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4SpellsTextBox_Validating);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(223, 22);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 13);
-            this.label17.TabIndex = 27;
-            this.label17.Text = "Quantity";
-            // 
-            // U4SpellsDropDown
-            // 
-            this.U4SpellsDropDown.BackColor = System.Drawing.Color.White;
-            this.U4SpellsDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4SpellsDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4SpellsDropDown.FormattingEnabled = true;
-            this.U4SpellsDropDown.Items.AddRange(new object[] {
-            "Awaken",
-            "Blink",
-            "Cure",
-            "Dispell",
-            "Energy",
-            "Fireball",
-            "Gate",
-            "Heal",
-            "Iceball",
-            "Jinx",
-            "Kill",
-            "Light",
-            "Magic Missle",
-            "Negate",
-            "Open",
-            "Protect",
-            "Quickness",
-            "Ressurect",
-            "Sleep",
-            "Tremor",
-            "Undead",
-            "View",
-            "Winds",
-            "X-It",
-            "Y-Up",
-            "Z-Down"});
-            this.U4SpellsDropDown.Location = new System.Drawing.Point(71, 20);
-            this.U4SpellsDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4SpellsDropDown.Name = "U4SpellsDropDown";
-            this.U4SpellsDropDown.Size = new System.Drawing.Size(118, 21);
-            this.U4SpellsDropDown.TabIndex = 26;
-            this.U4SpellsDropDown.SelectedIndexChanged += new System.EventHandler(this.U4SpellsDropDown_SelectedIndexChanged);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(11, 22);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 13);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Spells";
-            // 
-            // U4QuestItems
-            // 
-            this.U4QuestItems.Controls.Add(this.U4CourageCheckBox);
-            this.U4QuestItems.Controls.Add(this.U4BellCheckBox);
-            this.U4QuestItems.Controls.Add(this.U4TruthCheckBox);
-            this.U4QuestItems.Controls.Add(this.U4BookCheckBox);
-            this.U4QuestItems.Controls.Add(this.U4CandleCheckBox);
-            this.U4QuestItems.Controls.Add(this.U4WheelCheckBox);
-            this.U4QuestItems.Controls.Add(this.U4HornCheckBox);
-            this.U4QuestItems.Controls.Add(this.U4LoveCheckBox);
-            this.U4QuestItems.Controls.Add(this.U4SkullCheckBox);
-            this.U4QuestItems.Controls.Add(this.label16);
-            this.U4QuestItems.Location = new System.Drawing.Point(193, 245);
-            this.U4QuestItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4QuestItems.Name = "U4QuestItems";
-            this.U4QuestItems.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4QuestItems.Size = new System.Drawing.Size(329, 84);
-            this.U4QuestItems.TabIndex = 35;
-            this.U4QuestItems.TabStop = false;
-            this.U4QuestItems.Text = "Quest Items";
-            // 
-            // U4CourageCheckBox
-            // 
-            this.U4CourageCheckBox.AutoSize = true;
-            this.U4CourageCheckBox.Location = new System.Drawing.Point(223, 63);
-            this.U4CourageCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4CourageCheckBox.Name = "U4CourageCheckBox";
-            this.U4CourageCheckBox.Size = new System.Drawing.Size(99, 17);
-            this.U4CourageCheckBox.TabIndex = 35;
-            this.U4CourageCheckBox.Text = "Key of Courage";
-            this.U4CourageCheckBox.UseVisualStyleBackColor = true;
-            this.U4CourageCheckBox.CheckedChanged += new System.EventHandler(this.U4CourageCheckBox_CheckedChanged);
-            // 
-            // U4BellCheckBox
-            // 
-            this.U4BellCheckBox.AutoSize = true;
-            this.U4BellCheckBox.Location = new System.Drawing.Point(223, 44);
-            this.U4BellCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4BellCheckBox.Name = "U4BellCheckBox";
-            this.U4BellCheckBox.Size = new System.Drawing.Size(98, 17);
-            this.U4BellCheckBox.TabIndex = 34;
-            this.U4BellCheckBox.Text = "Bell of Courage";
-            this.U4BellCheckBox.UseVisualStyleBackColor = true;
-            this.U4BellCheckBox.CheckedChanged += new System.EventHandler(this.U4BellCheckBox_CheckedChanged);
-            // 
-            // U4TruthCheckBox
-            // 
-            this.U4TruthCheckBox.AutoSize = true;
-            this.U4TruthCheckBox.Location = new System.Drawing.Point(123, 64);
-            this.U4TruthCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4TruthCheckBox.Name = "U4TruthCheckBox";
-            this.U4TruthCheckBox.Size = new System.Drawing.Size(84, 17);
-            this.U4TruthCheckBox.TabIndex = 33;
-            this.U4TruthCheckBox.Text = "Key of Truth";
-            this.U4TruthCheckBox.UseVisualStyleBackColor = true;
-            this.U4TruthCheckBox.CheckedChanged += new System.EventHandler(this.U4TruthCheckBox_CheckedChanged);
-            // 
-            // U4BookCheckBox
-            // 
-            this.U4BookCheckBox.AutoSize = true;
-            this.U4BookCheckBox.Location = new System.Drawing.Point(123, 44);
-            this.U4BookCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4BookCheckBox.Name = "U4BookCheckBox";
-            this.U4BookCheckBox.Size = new System.Drawing.Size(91, 17);
-            this.U4BookCheckBox.TabIndex = 32;
-            this.U4BookCheckBox.Text = "Book of Truth";
-            this.U4BookCheckBox.UseVisualStyleBackColor = true;
-            this.U4BookCheckBox.CheckedChanged += new System.EventHandler(this.U4BookCheckBox_CheckedChanged);
-            // 
-            // U4CandleCheckBox
-            // 
-            this.U4CandleCheckBox.AutoSize = true;
-            this.U4CandleCheckBox.Location = new System.Drawing.Point(12, 44);
-            this.U4CandleCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4CandleCheckBox.Name = "U4CandleCheckBox";
-            this.U4CandleCheckBox.Size = new System.Drawing.Size(98, 17);
-            this.U4CandleCheckBox.TabIndex = 31;
-            this.U4CandleCheckBox.Text = "Candle of Love";
-            this.U4CandleCheckBox.UseVisualStyleBackColor = true;
-            this.U4CandleCheckBox.CheckedChanged += new System.EventHandler(this.U4CandleCheckBox_CheckedChanged);
-            // 
-            // U4WheelCheckBox
-            // 
-            this.U4WheelCheckBox.AutoSize = true;
-            this.U4WheelCheckBox.Location = new System.Drawing.Point(223, 24);
-            this.U4WheelCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4WheelCheckBox.Name = "U4WheelCheckBox";
-            this.U4WheelCheckBox.Size = new System.Drawing.Size(57, 17);
-            this.U4WheelCheckBox.TabIndex = 30;
-            this.U4WheelCheckBox.Text = "Wheel";
-            this.U4WheelCheckBox.UseVisualStyleBackColor = true;
-            this.U4WheelCheckBox.CheckedChanged += new System.EventHandler(this.U4WheelCheckBox_CheckedChanged);
-            // 
-            // U4HornCheckBox
-            // 
-            this.U4HornCheckBox.AutoSize = true;
-            this.U4HornCheckBox.Location = new System.Drawing.Point(123, 24);
-            this.U4HornCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4HornCheckBox.Name = "U4HornCheckBox";
-            this.U4HornCheckBox.Size = new System.Drawing.Size(78, 17);
-            this.U4HornCheckBox.TabIndex = 29;
-            this.U4HornCheckBox.Text = "Silver Horn";
-            this.U4HornCheckBox.UseVisualStyleBackColor = true;
-            this.U4HornCheckBox.CheckedChanged += new System.EventHandler(this.U4HornCheckBox_CheckedChanged);
-            // 
-            // U4LoveCheckBox
-            // 
-            this.U4LoveCheckBox.AutoSize = true;
-            this.U4LoveCheckBox.Location = new System.Drawing.Point(12, 64);
-            this.U4LoveCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4LoveCheckBox.Name = "U4LoveCheckBox";
-            this.U4LoveCheckBox.Size = new System.Drawing.Size(83, 17);
-            this.U4LoveCheckBox.TabIndex = 28;
-            this.U4LoveCheckBox.Text = "Key of Love";
-            this.U4LoveCheckBox.UseVisualStyleBackColor = true;
-            this.U4LoveCheckBox.CheckedChanged += new System.EventHandler(this.U4LoveCheckBox_CheckedChanged);
-            // 
-            // U4SkullCheckBox
-            // 
-            this.U4SkullCheckBox.AutoSize = true;
-            this.U4SkullCheckBox.Location = new System.Drawing.Point(12, 24);
-            this.U4SkullCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4SkullCheckBox.Name = "U4SkullCheckBox";
-            this.U4SkullCheckBox.Size = new System.Drawing.Size(100, 17);
-            this.U4SkullCheckBox.TabIndex = 27;
-            this.U4SkullCheckBox.Text = "Mondain\'s Skull";
-            this.U4SkullCheckBox.UseVisualStyleBackColor = true;
-            this.U4SkullCheckBox.CheckedChanged += new System.EventHandler(this.U4SkullCheckBox_CheckedChanged);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(366, 52);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(27, 13);
-            this.label16.TabIndex = 16;
-            this.label16.Text = "% of";
-            // 
-            // U4Virtues
-            // 
-            this.U4Virtues.Controls.Add(this.U4BlackCheckBox);
-            this.U4Virtues.Controls.Add(this.U4WhiteCheckBox);
-            this.U4Virtues.Controls.Add(this.U4PurpleCheckBox);
-            this.U4Virtues.Controls.Add(this.U4OrangeCheckBox);
-            this.U4Virtues.Controls.Add(this.U4GreenCheckBox);
-            this.U4Virtues.Controls.Add(this.U4RedCheckBox);
-            this.U4Virtues.Controls.Add(this.U4YellowCheckBox);
-            this.U4Virtues.Controls.Add(this.U4BlueStoneCheckBox);
-            this.U4Virtues.Controls.Add(this.label14);
-            this.U4Virtues.Controls.Add(this.U4VirtueTextBox);
-            this.U4Virtues.Controls.Add(this.label13);
-            this.U4Virtues.Controls.Add(this.U4RuneCheckBox);
-            this.U4Virtues.Controls.Add(this.U4VirtueDropDown);
-            this.U4Virtues.Controls.Add(this.U4RuneDropDown);
-            this.U4Virtues.Location = new System.Drawing.Point(19, 334);
-            this.U4Virtues.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4Virtues.Name = "U4Virtues";
-            this.U4Virtues.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4Virtues.Size = new System.Drawing.Size(503, 85);
-            this.U4Virtues.TabIndex = 1;
-            this.U4Virtues.TabStop = false;
-            this.U4Virtues.Text = "Virtues";
-            // 
-            // U4BlackCheckBox
-            // 
-            this.U4BlackCheckBox.AutoSize = true;
-            this.U4BlackCheckBox.Location = new System.Drawing.Point(253, 44);
-            this.U4BlackCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4BlackCheckBox.Name = "U4BlackCheckBox";
-            this.U4BlackCheckBox.Size = new System.Drawing.Size(53, 17);
-            this.U4BlackCheckBox.TabIndex = 34;
-            this.U4BlackCheckBox.Text = "Black";
-            this.U4BlackCheckBox.UseVisualStyleBackColor = true;
-            this.U4BlackCheckBox.CheckedChanged += new System.EventHandler(this.U4BlackCheckBox_CheckedChanged);
-            // 
-            // U4WhiteCheckBox
-            // 
-            this.U4WhiteCheckBox.AutoSize = true;
-            this.U4WhiteCheckBox.Location = new System.Drawing.Point(187, 44);
-            this.U4WhiteCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4WhiteCheckBox.Name = "U4WhiteCheckBox";
-            this.U4WhiteCheckBox.Size = new System.Drawing.Size(54, 17);
-            this.U4WhiteCheckBox.TabIndex = 33;
-            this.U4WhiteCheckBox.Text = "White";
-            this.U4WhiteCheckBox.UseVisualStyleBackColor = true;
-            this.U4WhiteCheckBox.CheckedChanged += new System.EventHandler(this.U4WhiteCheckBox_CheckedChanged);
-            // 
-            // U4PurpleCheckBox
-            // 
-            this.U4PurpleCheckBox.AutoSize = true;
-            this.U4PurpleCheckBox.Location = new System.Drawing.Point(122, 43);
-            this.U4PurpleCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4PurpleCheckBox.Name = "U4PurpleCheckBox";
-            this.U4PurpleCheckBox.Size = new System.Drawing.Size(56, 17);
-            this.U4PurpleCheckBox.TabIndex = 32;
-            this.U4PurpleCheckBox.Text = "Purple";
-            this.U4PurpleCheckBox.UseVisualStyleBackColor = true;
-            this.U4PurpleCheckBox.CheckedChanged += new System.EventHandler(this.U4PurpleCheckBox_CheckedChanged);
-            // 
-            // U4OrangeCheckBox
-            // 
-            this.U4OrangeCheckBox.AutoSize = true;
-            this.U4OrangeCheckBox.Location = new System.Drawing.Point(57, 43);
-            this.U4OrangeCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4OrangeCheckBox.Name = "U4OrangeCheckBox";
-            this.U4OrangeCheckBox.Size = new System.Drawing.Size(61, 17);
-            this.U4OrangeCheckBox.TabIndex = 31;
-            this.U4OrangeCheckBox.Text = "Orange";
-            this.U4OrangeCheckBox.UseVisualStyleBackColor = true;
-            this.U4OrangeCheckBox.CheckedChanged += new System.EventHandler(this.U4OrangeCheckBox_CheckedChanged);
-            // 
-            // U4GreenCheckBox
-            // 
-            this.U4GreenCheckBox.AutoSize = true;
-            this.U4GreenCheckBox.Location = new System.Drawing.Point(253, 24);
-            this.U4GreenCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4GreenCheckBox.Name = "U4GreenCheckBox";
-            this.U4GreenCheckBox.Size = new System.Drawing.Size(55, 17);
-            this.U4GreenCheckBox.TabIndex = 30;
-            this.U4GreenCheckBox.Text = "Green";
-            this.U4GreenCheckBox.UseVisualStyleBackColor = true;
-            this.U4GreenCheckBox.CheckedChanged += new System.EventHandler(this.U4GreenCheckBox_CheckedChanged);
-            // 
-            // U4RedCheckBox
-            // 
-            this.U4RedCheckBox.AutoSize = true;
-            this.U4RedCheckBox.Location = new System.Drawing.Point(187, 24);
-            this.U4RedCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4RedCheckBox.Name = "U4RedCheckBox";
-            this.U4RedCheckBox.Size = new System.Drawing.Size(46, 17);
-            this.U4RedCheckBox.TabIndex = 29;
-            this.U4RedCheckBox.Text = "Red";
-            this.U4RedCheckBox.UseVisualStyleBackColor = true;
-            this.U4RedCheckBox.CheckedChanged += new System.EventHandler(this.U4RedCheckBox_CheckedChanged);
-            // 
-            // U4YellowCheckBox
-            // 
-            this.U4YellowCheckBox.AutoSize = true;
-            this.U4YellowCheckBox.Location = new System.Drawing.Point(122, 23);
-            this.U4YellowCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4YellowCheckBox.Name = "U4YellowCheckBox";
-            this.U4YellowCheckBox.Size = new System.Drawing.Size(57, 17);
-            this.U4YellowCheckBox.TabIndex = 28;
-            this.U4YellowCheckBox.Text = "Yellow";
-            this.U4YellowCheckBox.UseVisualStyleBackColor = true;
-            this.U4YellowCheckBox.CheckedChanged += new System.EventHandler(this.U4YellowCheckBox_CheckedChanged);
-            // 
-            // U4BlueStoneCheckBox
-            // 
-            this.U4BlueStoneCheckBox.AutoSize = true;
-            this.U4BlueStoneCheckBox.Location = new System.Drawing.Point(57, 23);
-            this.U4BlueStoneCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4BlueStoneCheckBox.Name = "U4BlueStoneCheckBox";
-            this.U4BlueStoneCheckBox.Size = new System.Drawing.Size(47, 17);
-            this.U4BlueStoneCheckBox.TabIndex = 27;
-            this.U4BlueStoneCheckBox.Text = "Blue";
-            this.U4BlueStoneCheckBox.UseVisualStyleBackColor = true;
-            this.U4BlueStoneCheckBox.CheckedChanged += new System.EventHandler(this.U4BlueStoneCheckBox_CheckedChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(9, 25);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(40, 13);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "Stones";
-            // 
-            // U4VirtueTextBox
-            // 
-            this.U4VirtueTextBox.Location = new System.Drawing.Point(329, 50);
-            this.U4VirtueTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4VirtueTextBox.Name = "U4VirtueTextBox";
-            this.U4VirtueTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4VirtueTextBox.TabIndex = 25;
-            this.U4VirtueTextBox.Text = "0";
-            this.U4VirtueTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4VirtueTextBox_Validating);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(366, 52);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(27, 13);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "% of";
-            // 
-            // U4RuneCheckBox
-            // 
-            this.U4RuneCheckBox.AutoSize = true;
-            this.U4RuneCheckBox.Location = new System.Drawing.Point(332, 25);
-            this.U4RuneCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4RuneCheckBox.Name = "U4RuneCheckBox";
-            this.U4RuneCheckBox.Size = new System.Drawing.Size(64, 17);
-            this.U4RuneCheckBox.TabIndex = 15;
-            this.U4RuneCheckBox.Text = "Rune of";
-            this.U4RuneCheckBox.UseVisualStyleBackColor = true;
-            this.U4RuneCheckBox.CheckedChanged += new System.EventHandler(this.U4RuneCheckBox_CheckedChanged);
-            // 
-            // U4VirtueDropDown
-            // 
-            this.U4VirtueDropDown.BackColor = System.Drawing.Color.White;
-            this.U4VirtueDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4VirtueDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4VirtueDropDown.FormattingEnabled = true;
-            this.U4VirtueDropDown.Items.AddRange(new object[] {
-            "Honesty",
-            "Compassion",
-            "Valor",
-            "Justice",
-            "Sacrifice",
-            "Honor",
-            "Spirituality",
-            "Humility"});
-            this.U4VirtueDropDown.Location = new System.Drawing.Point(397, 50);
-            this.U4VirtueDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4VirtueDropDown.Name = "U4VirtueDropDown";
-            this.U4VirtueDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U4VirtueDropDown.TabIndex = 14;
-            this.U4VirtueDropDown.SelectedIndexChanged += new System.EventHandler(this.U4VirtueDropDown_SelectedIndexChanged);
-            // 
-            // U4RuneDropDown
-            // 
-            this.U4RuneDropDown.BackColor = System.Drawing.Color.White;
-            this.U4RuneDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4RuneDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4RuneDropDown.FormattingEnabled = true;
-            this.U4RuneDropDown.Items.AddRange(new object[] {
-            "Honesty",
-            "Compassion",
-            "Valor",
-            "Justice",
-            "Sacrifice",
-            "Honor",
-            "Spirituality",
-            "Humility"});
-            this.U4RuneDropDown.Location = new System.Drawing.Point(397, 24);
-            this.U4RuneDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4RuneDropDown.Name = "U4RuneDropDown";
-            this.U4RuneDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U4RuneDropDown.TabIndex = 13;
-            this.U4RuneDropDown.SelectedIndexChanged += new System.EventHandler(this.U4RuneDropDown_SelectedIndexChanged);
-            // 
-            // U4PlayerStats
-            // 
-            this.U4PlayerStats.Controls.Add(this.U4MagicTextBox);
-            this.U4PlayerStats.Controls.Add(this.U4IntelligenceTextBox);
-            this.U4PlayerStats.Controls.Add(this.U4DexterityTextBox);
-            this.U4PlayerStats.Controls.Add(this.U4StrengthTextBox);
-            this.U4PlayerStats.Controls.Add(this.U4ExperienceTextBox);
-            this.U4PlayerStats.Controls.Add(this.U4MaxHitTextBox);
-            this.U4PlayerStats.Controls.Add(this.U4HitTextBox);
-            this.U4PlayerStats.Controls.Add(this.U4ArmorDropDown);
-            this.U4PlayerStats.Controls.Add(this.U4WeaponDropDown);
-            this.U4PlayerStats.Controls.Add(this.U4HealthDropDown);
-            this.U4PlayerStats.Controls.Add(this.U4ClassDropDown);
-            this.U4PlayerStats.Controls.Add(this.U4SexDropDown);
-            this.U4PlayerStats.Controls.Add(this.U4NameDropDown);
-            this.U4PlayerStats.Controls.Add(this.label12);
-            this.U4PlayerStats.Controls.Add(this.label11);
-            this.U4PlayerStats.Controls.Add(this.label10);
-            this.U4PlayerStats.Controls.Add(this.label9);
-            this.U4PlayerStats.Controls.Add(this.label8);
-            this.U4PlayerStats.Controls.Add(this.label7);
-            this.U4PlayerStats.Controls.Add(this.label6);
-            this.U4PlayerStats.Controls.Add(this.label5);
-            this.U4PlayerStats.Controls.Add(this.label4);
-            this.U4PlayerStats.Controls.Add(this.label3);
-            this.U4PlayerStats.Controls.Add(this.label2);
-            this.U4PlayerStats.Controls.Add(this.label1);
-            this.U4PlayerStats.Location = new System.Drawing.Point(19, 23);
-            this.U4PlayerStats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4PlayerStats.Name = "U4PlayerStats";
-            this.U4PlayerStats.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4PlayerStats.Size = new System.Drawing.Size(170, 307);
-            this.U4PlayerStats.TabIndex = 0;
-            this.U4PlayerStats.TabStop = false;
-            this.U4PlayerStats.Text = "Player Stats";
-            // 
-            // U4MagicTextBox
-            // 
-            this.U4MagicTextBox.Location = new System.Drawing.Point(85, 222);
-            this.U4MagicTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4MagicTextBox.Name = "U4MagicTextBox";
-            this.U4MagicTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4MagicTextBox.TabIndex = 24;
-            this.U4MagicTextBox.Text = "0";
-            this.U4MagicTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MagicTextBox_Validating);
-            // 
-            // U4IntelligenceTextBox
-            // 
-            this.U4IntelligenceTextBox.Location = new System.Drawing.Point(85, 201);
-            this.U4IntelligenceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4IntelligenceTextBox.Name = "U4IntelligenceTextBox";
-            this.U4IntelligenceTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4IntelligenceTextBox.TabIndex = 23;
-            this.U4IntelligenceTextBox.Text = "0";
-            this.U4IntelligenceTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4IntelligenceTextBox_Validating);
-            // 
-            // U4DexterityTextBox
-            // 
-            this.U4DexterityTextBox.Location = new System.Drawing.Point(85, 180);
-            this.U4DexterityTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4DexterityTextBox.Name = "U4DexterityTextBox";
-            this.U4DexterityTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4DexterityTextBox.TabIndex = 22;
-            this.U4DexterityTextBox.Text = "0";
-            this.U4DexterityTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4DexterityTextBox_Validating);
-            // 
-            // U4StrengthTextBox
-            // 
-            this.U4StrengthTextBox.Location = new System.Drawing.Point(85, 159);
-            this.U4StrengthTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4StrengthTextBox.Name = "U4StrengthTextBox";
-            this.U4StrengthTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4StrengthTextBox.TabIndex = 21;
-            this.U4StrengthTextBox.Text = "0";
-            this.U4StrengthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4StrengthTextBox_Validating);
-            // 
-            // U4ExperienceTextBox
-            // 
-            this.U4ExperienceTextBox.Location = new System.Drawing.Point(85, 138);
-            this.U4ExperienceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4ExperienceTextBox.Name = "U4ExperienceTextBox";
-            this.U4ExperienceTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4ExperienceTextBox.TabIndex = 20;
-            this.U4ExperienceTextBox.Text = "0";
-            this.U4ExperienceTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4ExperienceTextBox_Validating);
-            // 
-            // U4MaxHitTextBox
-            // 
-            this.U4MaxHitTextBox.Location = new System.Drawing.Point(122, 117);
-            this.U4MaxHitTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4MaxHitTextBox.Name = "U4MaxHitTextBox";
-            this.U4MaxHitTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4MaxHitTextBox.TabIndex = 19;
-            this.U4MaxHitTextBox.Text = "100";
-            this.U4MaxHitTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MaxHitTextBox_Validating);
-            // 
-            // U4HitTextBox
-            // 
-            this.U4HitTextBox.Location = new System.Drawing.Point(85, 117);
-            this.U4HitTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4HitTextBox.Name = "U4HitTextBox";
-            this.U4HitTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U4HitTextBox.TabIndex = 18;
-            this.U4HitTextBox.Text = "0";
-            this.U4HitTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4HitTextBox_Validating);
-            // 
-            // U4ArmorDropDown
-            // 
-            this.U4ArmorDropDown.BackColor = System.Drawing.Color.White;
-            this.U4ArmorDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4ArmorDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4ArmorDropDown.FormattingEnabled = true;
-            this.U4ArmorDropDown.Items.AddRange(new object[] {
-            "Skin",
-            "Cloth",
-            "Leather",
-            "Chain Mail",
-            "Plate Mail",
-            "Magic Chain",
-            "Magic Plate",
-            "Mystic Robe"});
-            this.U4ArmorDropDown.Location = new System.Drawing.Point(65, 272);
-            this.U4ArmorDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4ArmorDropDown.Name = "U4ArmorDropDown";
-            this.U4ArmorDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U4ArmorDropDown.TabIndex = 17;
-            this.U4ArmorDropDown.SelectedIndexChanged += new System.EventHandler(this.U4ArmorDropDown_SelectedIndexChanged);
-            // 
-            // U4WeaponDropDown
-            // 
-            this.U4WeaponDropDown.BackColor = System.Drawing.Color.White;
-            this.U4WeaponDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4WeaponDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4WeaponDropDown.FormattingEnabled = true;
-            this.U4WeaponDropDown.Items.AddRange(new object[] {
-            "Hands",
-            "Staff",
-            "Dagger",
-            "Sling",
-            "Mace",
-            "Axe",
-            "Sword",
-            "Bow",
-            "Crossbow",
-            "Flaming Oil",
-            "Halberd",
-            "Magic Axe",
-            "Magic Sword",
-            "Magic Bow",
-            "Magic Wand",
-            "Mystic Sword"});
-            this.U4WeaponDropDown.Location = new System.Drawing.Point(65, 250);
-            this.U4WeaponDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4WeaponDropDown.Name = "U4WeaponDropDown";
-            this.U4WeaponDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U4WeaponDropDown.TabIndex = 16;
-            this.U4WeaponDropDown.SelectedIndexChanged += new System.EventHandler(this.U4WeaponDropDown_SelectedIndexChanged);
-            // 
-            // U4HealthDropDown
-            // 
-            this.U4HealthDropDown.BackColor = System.Drawing.Color.White;
-            this.U4HealthDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4HealthDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4HealthDropDown.FormattingEnabled = true;
-            this.U4HealthDropDown.Items.AddRange(new object[] {
-            "Good",
-            "Dead",
-            "Poisoned",
-            "Asleep"});
-            this.U4HealthDropDown.Location = new System.Drawing.Point(65, 91);
-            this.U4HealthDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4HealthDropDown.Name = "U4HealthDropDown";
-            this.U4HealthDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U4HealthDropDown.TabIndex = 15;
-            this.U4HealthDropDown.SelectedIndexChanged += new System.EventHandler(this.U4HealthDropDown_SelectedIndexChanged);
-            // 
-            // U4ClassDropDown
-            // 
-            this.U4ClassDropDown.BackColor = System.Drawing.Color.White;
-            this.U4ClassDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4ClassDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4ClassDropDown.FormattingEnabled = true;
-            this.U4ClassDropDown.Items.AddRange(new object[] {
-            "Mage",
-            "Bard",
-            "Fighter",
-            "Druid",
-            "Tinker",
-            "Paladin",
-            "Ranger",
-            "Shepherd"});
-            this.U4ClassDropDown.Location = new System.Drawing.Point(65, 69);
-            this.U4ClassDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4ClassDropDown.Name = "U4ClassDropDown";
-            this.U4ClassDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U4ClassDropDown.TabIndex = 14;
-            this.U4ClassDropDown.SelectedIndexChanged += new System.EventHandler(this.U4ClassDropDown_SelectedIndexChanged);
-            // 
-            // U4SexDropDown
-            // 
-            this.U4SexDropDown.BackColor = System.Drawing.Color.White;
-            this.U4SexDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4SexDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4SexDropDown.FormattingEnabled = true;
-            this.U4SexDropDown.Items.AddRange(new object[] {
-            "Female",
-            "Male"});
-            this.U4SexDropDown.Location = new System.Drawing.Point(65, 47);
-            this.U4SexDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4SexDropDown.Name = "U4SexDropDown";
-            this.U4SexDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U4SexDropDown.TabIndex = 13;
-            this.U4SexDropDown.SelectedIndexChanged += new System.EventHandler(this.U4SexDropDown_SelectedIndexChanged);
-            // 
-            // U4NameDropDown
-            // 
-            this.U4NameDropDown.BackColor = System.Drawing.Color.White;
-            this.U4NameDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U4NameDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U4NameDropDown.FormattingEnabled = true;
-            this.U4NameDropDown.Location = new System.Drawing.Point(65, 25);
-            this.U4NameDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U4NameDropDown.Name = "U4NameDropDown";
-            this.U4NameDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U4NameDropDown.TabIndex = 12;
-            this.U4NameDropDown.SelectedIndexChanged += new System.EventHandler(this.U4NameDropDown_SelectedIndexChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 93);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 13);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Health";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 119);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 13);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Hit/Max Hit";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 140);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Experience";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 161);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Strength";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 182);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Dexterity";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 203);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Intelligence";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 224);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Magic";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 252);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Weapon";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 274);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Armor";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 71);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Class";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 49);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Sex";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
-            // 
-            // U5Tab
-            // 
-            this.U5Tab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.U5Tab.Location = new System.Drawing.Point(4, 22);
-            this.U5Tab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U5Tab.Name = "U5Tab";
-            this.U5Tab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.U5Tab.Size = new System.Drawing.Size(721, 435);
-            this.U5Tab.TabIndex = 4;
-            this.U5Tab.Text = "Ultima V";
-            // 
-            // D64OpenDialog
-            // 
-            this.D64OpenDialog.Filter = "C64 Disk Images|*.d64";
-            // 
-            // U4SaveDialog
-            // 
-            this.U4SaveDialog.Filter = "C64 Disk Images|*.d64";
+            this.U3HorseLocationsDropDown.Location = new System.Drawing.Point(289, 14);
+            this.U3HorseLocationsDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U3HorseLocationsDropDown.Name = "U3HorseLocationsDropDown";
+            this.U3HorseLocationsDropDown.Size = new System.Drawing.Size(99, 21);
+            this.U3HorseLocationsDropDown.TabIndex = 29;
+            // 
+            // U3NewHorseButton
+            // 
+            this.U3NewHorseButton.Location = new System.Drawing.Point(203, 14);
+            this.U3NewHorseButton.Name = "U3NewHorseButton";
+            this.U3NewHorseButton.Size = new System.Drawing.Size(81, 23);
+            this.U3NewHorseButton.TabIndex = 28;
+            this.U3NewHorseButton.Text = "New Horse at";
+            this.U3NewHorseButton.UseVisualStyleBackColor = true;
+            // 
+            // U3BoatLocationsDropDown
+            // 
+            this.U3BoatLocationsDropDown.BackColor = System.Drawing.Color.White;
+            this.U3BoatLocationsDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U3BoatLocationsDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U3BoatLocationsDropDown.FormattingEnabled = true;
+            this.U3BoatLocationsDropDown.Items.AddRange(new object[] {
+            "Not Specified"});
+            this.U3BoatLocationsDropDown.Location = new System.Drawing.Point(90, 14);
+            this.U3BoatLocationsDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U3BoatLocationsDropDown.Name = "U3BoatLocationsDropDown";
+            this.U3BoatLocationsDropDown.Size = new System.Drawing.Size(99, 21);
+            this.U3BoatLocationsDropDown.TabIndex = 27;
+            // 
+            // U3NewBoatButton
+            // 
+            this.U3NewBoatButton.Location = new System.Drawing.Point(10, 14);
+            this.U3NewBoatButton.Name = "U3NewBoatButton";
+            this.U3NewBoatButton.Size = new System.Drawing.Size(75, 23);
+            this.U3NewBoatButton.TabIndex = 0;
+            this.U3NewBoatButton.Text = "New Boat at";
+            this.U3NewBoatButton.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(534, 365);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(73, 39);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Load";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(627, 365);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(73, 39);
+            this.button2.TabIndex = 40;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.U3LocationsTextBox);
+            this.groupBox16.Controls.Add(this.label128);
+            this.groupBox16.Controls.Add(this.U3YLocationTextBox);
+            this.groupBox16.Controls.Add(this.U3MovesTextBox);
+            this.groupBox16.Controls.Add(this.U3XLocationTextBox);
+            this.groupBox16.Controls.Add(this.label129);
+            this.groupBox16.Controls.Add(this.label130);
+            this.groupBox16.Location = new System.Drawing.Point(534, 245);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox16.Size = new System.Drawing.Size(166, 92);
+            this.groupBox16.TabIndex = 38;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "General";
+            // 
+            // U3LocationsTextBox
+            // 
+            this.U3LocationsTextBox.BackColor = System.Drawing.Color.White;
+            this.U3LocationsTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U3LocationsTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U3LocationsTextBox.FormattingEnabled = true;
+            this.U3LocationsTextBox.Items.AddRange(new object[] {
+            "Not Specified"});
+            this.U3LocationsTextBox.Location = new System.Drawing.Point(55, 64);
+            this.U3LocationsTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3LocationsTextBox.Name = "U3LocationsTextBox";
+            this.U3LocationsTextBox.Size = new System.Drawing.Size(99, 21);
+            this.U3LocationsTextBox.TabIndex = 26;
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Location = new System.Drawing.Point(4, 64);
+            this.label128.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(33, 13);
+            this.label128.TabIndex = 25;
+            this.label128.Text = "Go to";
+            // 
+            // U3YLocationTextBox
+            // 
+            this.U3YLocationTextBox.Location = new System.Drawing.Point(112, 42);
+            this.U3YLocationTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3YLocationTextBox.Name = "U3YLocationTextBox";
+            this.U3YLocationTextBox.Size = new System.Drawing.Size(41, 20);
+            this.U3YLocationTextBox.TabIndex = 54;
+            this.U3YLocationTextBox.Text = "A";
+            // 
+            // U3MovesTextBox
+            // 
+            this.U3MovesTextBox.Location = new System.Drawing.Point(55, 21);
+            this.U3MovesTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3MovesTextBox.Name = "U3MovesTextBox";
+            this.U3MovesTextBox.Size = new System.Drawing.Size(98, 20);
+            this.U3MovesTextBox.TabIndex = 52;
+            this.U3MovesTextBox.Text = "0";
+            // 
+            // U3XLocationTextBox
+            // 
+            this.U3XLocationTextBox.Location = new System.Drawing.Point(55, 42);
+            this.U3XLocationTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3XLocationTextBox.Name = "U3XLocationTextBox";
+            this.U3XLocationTextBox.Size = new System.Drawing.Size(41, 20);
+            this.U3XLocationTextBox.TabIndex = 26;
+            this.U3XLocationTextBox.Text = "A";
+            // 
+            // label129
+            // 
+            this.label129.AutoSize = true;
+            this.label129.Location = new System.Drawing.Point(4, 23);
+            this.label129.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(39, 13);
+            this.label129.TabIndex = 53;
+            this.label129.Text = "Moves";
+            // 
+            // label130
+            // 
+            this.label130.AutoSize = true;
+            this.label130.Location = new System.Drawing.Point(4, 44);
+            this.label130.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(48, 13);
+            this.label130.TabIndex = 25;
+            this.label130.Text = "Location";
             // 
             // groupBox11
             // 
@@ -3759,131 +2667,426 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Player Stats";
             // 
-            // U3NameTextBox
+            // groupBox15
             // 
-            this.U3NameTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.U3NameTextBox.Location = new System.Drawing.Point(65, 25);
-            this.U3NameTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3NameTextBox.MaxLength = 11;
-            this.U3NameTextBox.Name = "U3NameTextBox";
-            this.U3NameTextBox.Size = new System.Drawing.Size(88, 20);
-            this.U3NameTextBox.TabIndex = 60;
+            this.groupBox15.Controls.Add(this.U3PowderTextBox);
+            this.groupBox15.Controls.Add(this.label132);
+            this.groupBox15.Controls.Add(this.U3KeysTextBox);
+            this.groupBox15.Controls.Add(this.label133);
+            this.groupBox15.Controls.Add(this.U3GemsTextBox);
+            this.groupBox15.Controls.Add(this.label134);
+            this.groupBox15.Controls.Add(this.U3TorchesTextBox);
+            this.groupBox15.Controls.Add(this.label135);
+            this.groupBox15.Controls.Add(this.U3GoldTextBox);
+            this.groupBox15.Controls.Add(this.label136);
+            this.groupBox15.Controls.Add(this.U3FoodTextBox);
+            this.groupBox15.Controls.Add(this.label137);
+            this.groupBox15.Location = new System.Drawing.Point(191, 240);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox15.Size = new System.Drawing.Size(308, 109);
+            this.groupBox15.TabIndex = 85;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Miscellaneous";
             // 
-            // U3RaceDropDown
+            // U3PowderTextBox
             // 
-            this.U3RaceDropDown.BackColor = System.Drawing.Color.White;
-            this.U3RaceDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U3RaceDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U3RaceDropDown.FormattingEnabled = true;
-            this.U3RaceDropDown.Items.AddRange(new object[] {
-            "Human",
-            "Elf",
-            "Dwarf",
-            "Bobbit"});
-            this.U3RaceDropDown.Location = new System.Drawing.Point(65, 91);
-            this.U3RaceDropDown.Margin = new System.Windows.Forms.Padding(2);
-            this.U3RaceDropDown.Name = "U3RaceDropDown";
-            this.U3RaceDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U3RaceDropDown.TabIndex = 15;
+            this.U3PowderTextBox.Location = new System.Drawing.Point(246, 68);
+            this.U3PowderTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3PowderTextBox.Name = "U3PowderTextBox";
+            this.U3PowderTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U3PowderTextBox.TabIndex = 50;
+            this.U3PowderTextBox.Text = "0";
             // 
-            // U3ClassDropDown
+            // label132
             // 
-            this.U3ClassDropDown.BackColor = System.Drawing.Color.White;
-            this.U3ClassDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U3ClassDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U3ClassDropDown.FormattingEnabled = true;
-            this.U3ClassDropDown.Items.AddRange(new object[] {
-            "Fighter",
-            "Cleric",
-            "Wizard",
-            "Thief"});
-            this.U3ClassDropDown.Location = new System.Drawing.Point(65, 69);
-            this.U3ClassDropDown.Margin = new System.Windows.Forms.Padding(2);
-            this.U3ClassDropDown.Name = "U3ClassDropDown";
-            this.U3ClassDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U3ClassDropDown.TabIndex = 14;
+            this.label132.AutoSize = true;
+            this.label132.Location = new System.Drawing.Point(143, 70);
+            this.label132.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(94, 13);
+            this.label132.TabIndex = 51;
+            this.label132.Text = "Time Stop Powder";
             // 
-            // U3SexDropDown
+            // U3KeysTextBox
             // 
-            this.U3SexDropDown.BackColor = System.Drawing.Color.White;
-            this.U3SexDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U3SexDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U3SexDropDown.FormattingEnabled = true;
-            this.U3SexDropDown.Items.AddRange(new object[] {
-            "Female",
-            "Male"});
-            this.U3SexDropDown.Location = new System.Drawing.Point(65, 47);
-            this.U3SexDropDown.Margin = new System.Windows.Forms.Padding(2);
-            this.U3SexDropDown.Name = "U3SexDropDown";
-            this.U3SexDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U3SexDropDown.TabIndex = 13;
+            this.U3KeysTextBox.Location = new System.Drawing.Point(246, 44);
+            this.U3KeysTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3KeysTextBox.Name = "U3KeysTextBox";
+            this.U3KeysTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U3KeysTextBox.TabIndex = 48;
+            this.U3KeysTextBox.Text = "0";
             // 
-            // label110
+            // label133
             // 
-            this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(15, 93);
-            this.label110.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(33, 13);
-            this.label110.TabIndex = 11;
-            this.label110.Text = "Race";
+            this.label133.AutoSize = true;
+            this.label133.Location = new System.Drawing.Point(143, 46);
+            this.label133.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(56, 13);
+            this.label133.TabIndex = 49;
+            this.label133.Text = "Skull Keys";
             // 
-            // label117
+            // U3GemsTextBox
             // 
-            this.label117.AutoSize = true;
-            this.label117.Location = new System.Drawing.Point(15, 71);
-            this.label117.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(32, 13);
-            this.label117.TabIndex = 2;
-            this.label117.Text = "Class";
+            this.U3GemsTextBox.Location = new System.Drawing.Point(246, 18);
+            this.U3GemsTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3GemsTextBox.Name = "U3GemsTextBox";
+            this.U3GemsTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U3GemsTextBox.TabIndex = 46;
+            this.U3GemsTextBox.Text = "0";
             // 
-            // label118
+            // label134
             // 
-            this.label118.AutoSize = true;
-            this.label118.Location = new System.Drawing.Point(15, 49);
-            this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(25, 13);
-            this.label118.TabIndex = 1;
-            this.label118.Text = "Sex";
+            this.label134.AutoSize = true;
+            this.label134.Location = new System.Drawing.Point(143, 20);
+            this.label134.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(66, 13);
+            this.label134.TabIndex = 47;
+            this.label134.Text = "Magic Gems";
             // 
-            // label119
+            // U3TorchesTextBox
             // 
-            this.label119.AutoSize = true;
-            this.label119.Location = new System.Drawing.Point(15, 25);
-            this.label119.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(35, 13);
-            this.label119.TabIndex = 0;
-            this.label119.Text = "Name";
+            this.U3TorchesTextBox.Location = new System.Drawing.Point(84, 70);
+            this.U3TorchesTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3TorchesTextBox.Name = "U3TorchesTextBox";
+            this.U3TorchesTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U3TorchesTextBox.TabIndex = 44;
+            this.U3TorchesTextBox.Text = "0";
             // 
-            // U3HealthDropDown
+            // label135
             // 
-            this.U3HealthDropDown.BackColor = System.Drawing.Color.White;
-            this.U3HealthDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U3HealthDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U3HealthDropDown.FormattingEnabled = true;
-            this.U3HealthDropDown.Items.AddRange(new object[] {
-            "Human",
-            "Elf",
-            "Dwarf",
-            "Bobbit"});
-            this.U3HealthDropDown.Location = new System.Drawing.Point(65, 113);
-            this.U3HealthDropDown.Margin = new System.Windows.Forms.Padding(2);
-            this.U3HealthDropDown.Name = "U3HealthDropDown";
-            this.U3HealthDropDown.Size = new System.Drawing.Size(91, 21);
-            this.U3HealthDropDown.TabIndex = 62;
+            this.label135.AutoSize = true;
+            this.label135.Location = new System.Drawing.Point(14, 72);
+            this.label135.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(46, 13);
+            this.label135.TabIndex = 45;
+            this.label135.Text = "Torches";
             // 
-            // label120
+            // U3GoldTextBox
             // 
-            this.label120.AutoSize = true;
-            this.label120.Location = new System.Drawing.Point(15, 115);
-            this.label120.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(38, 13);
-            this.label120.TabIndex = 61;
-            this.label120.Text = "Health";
+            this.U3GoldTextBox.Location = new System.Drawing.Point(84, 46);
+            this.U3GoldTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3GoldTextBox.Name = "U3GoldTextBox";
+            this.U3GoldTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U3GoldTextBox.TabIndex = 42;
+            this.U3GoldTextBox.Text = "0";
+            // 
+            // label136
+            // 
+            this.label136.AutoSize = true;
+            this.label136.Location = new System.Drawing.Point(14, 47);
+            this.label136.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(29, 13);
+            this.label136.TabIndex = 43;
+            this.label136.Text = "Gold";
+            // 
+            // U3FoodTextBox
+            // 
+            this.U3FoodTextBox.Location = new System.Drawing.Point(84, 20);
+            this.U3FoodTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3FoodTextBox.Name = "U3FoodTextBox";
+            this.U3FoodTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U3FoodTextBox.TabIndex = 40;
+            this.U3FoodTextBox.Text = "0";
+            // 
+            // label137
+            // 
+            this.label137.AutoSize = true;
+            this.label137.Location = new System.Drawing.Point(14, 22);
+            this.label137.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(31, 13);
+            this.label137.TabIndex = 41;
+            this.label137.Text = "Food";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.U3DeathCheckBox);
+            this.groupBox14.Controls.Add(this.U3MoonCheckBox);
+            this.groupBox14.Controls.Add(this.U3SolCheckBox);
+            this.groupBox14.Controls.Add(this.U3LoveCheckBox);
+            this.groupBox14.Controls.Add(this.label127);
+            this.groupBox14.Location = new System.Drawing.Point(190, 174);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox14.Size = new System.Drawing.Size(309, 62);
+            this.groupBox14.TabIndex = 84;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Cards";
+            // 
+            // U3DeathCheckBox
+            // 
+            this.U3DeathCheckBox.AutoSize = true;
+            this.U3DeathCheckBox.Location = new System.Drawing.Point(176, 37);
+            this.U3DeathCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3DeathCheckBox.Name = "U3DeathCheckBox";
+            this.U3DeathCheckBox.Size = new System.Drawing.Size(55, 17);
+            this.U3DeathCheckBox.TabIndex = 32;
+            this.U3DeathCheckBox.Text = "Death";
+            this.U3DeathCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // U3MoonCheckBox
+            // 
+            this.U3MoonCheckBox.AutoSize = true;
+            this.U3MoonCheckBox.Location = new System.Drawing.Point(34, 37);
+            this.U3MoonCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3MoonCheckBox.Name = "U3MoonCheckBox";
+            this.U3MoonCheckBox.Size = new System.Drawing.Size(53, 17);
+            this.U3MoonCheckBox.TabIndex = 31;
+            this.U3MoonCheckBox.Text = "Moon";
+            this.U3MoonCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // U3SolCheckBox
+            // 
+            this.U3SolCheckBox.AutoSize = true;
+            this.U3SolCheckBox.Location = new System.Drawing.Point(176, 17);
+            this.U3SolCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3SolCheckBox.Name = "U3SolCheckBox";
+            this.U3SolCheckBox.Size = new System.Drawing.Size(41, 17);
+            this.U3SolCheckBox.TabIndex = 29;
+            this.U3SolCheckBox.Text = "Sol";
+            this.U3SolCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // U3LoveCheckBox
+            // 
+            this.U3LoveCheckBox.AutoSize = true;
+            this.U3LoveCheckBox.Location = new System.Drawing.Point(34, 17);
+            this.U3LoveCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3LoveCheckBox.Name = "U3LoveCheckBox";
+            this.U3LoveCheckBox.Size = new System.Drawing.Size(50, 17);
+            this.U3LoveCheckBox.TabIndex = 27;
+            this.U3LoveCheckBox.Text = "Love";
+            this.U3LoveCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Location = new System.Drawing.Point(366, 52);
+            this.label127.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(27, 13);
+            this.label127.TabIndex = 16;
+            this.label127.Text = "% of";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.U3KingsCheckBox);
+            this.groupBox13.Controls.Add(this.U3SnakeCheckBox);
+            this.groupBox13.Controls.Add(this.U3FireCheckBox);
+            this.groupBox13.Controls.Add(this.U3ForceCheckBox);
+            this.groupBox13.Controls.Add(this.label126);
+            this.groupBox13.Location = new System.Drawing.Point(190, 106);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox13.Size = new System.Drawing.Size(309, 62);
+            this.groupBox13.TabIndex = 83;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Marks";
+            // 
+            // U3KingsCheckBox
+            // 
+            this.U3KingsCheckBox.AutoSize = true;
+            this.U3KingsCheckBox.Location = new System.Drawing.Point(176, 37);
+            this.U3KingsCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3KingsCheckBox.Name = "U3KingsCheckBox";
+            this.U3KingsCheckBox.Size = new System.Drawing.Size(52, 17);
+            this.U3KingsCheckBox.TabIndex = 32;
+            this.U3KingsCheckBox.Text = "Kings";
+            this.U3KingsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // U3SnakeCheckBox
+            // 
+            this.U3SnakeCheckBox.AutoSize = true;
+            this.U3SnakeCheckBox.Location = new System.Drawing.Point(34, 37);
+            this.U3SnakeCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3SnakeCheckBox.Name = "U3SnakeCheckBox";
+            this.U3SnakeCheckBox.Size = new System.Drawing.Size(57, 17);
+            this.U3SnakeCheckBox.TabIndex = 31;
+            this.U3SnakeCheckBox.Text = "Snake";
+            this.U3SnakeCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // U3FireCheckBox
+            // 
+            this.U3FireCheckBox.AutoSize = true;
+            this.U3FireCheckBox.Location = new System.Drawing.Point(176, 17);
+            this.U3FireCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3FireCheckBox.Name = "U3FireCheckBox";
+            this.U3FireCheckBox.Size = new System.Drawing.Size(43, 17);
+            this.U3FireCheckBox.TabIndex = 29;
+            this.U3FireCheckBox.Text = "Fire";
+            this.U3FireCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // U3ForceCheckBox
+            // 
+            this.U3ForceCheckBox.AutoSize = true;
+            this.U3ForceCheckBox.Location = new System.Drawing.Point(34, 17);
+            this.U3ForceCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3ForceCheckBox.Name = "U3ForceCheckBox";
+            this.U3ForceCheckBox.Size = new System.Drawing.Size(56, 17);
+            this.U3ForceCheckBox.TabIndex = 27;
+            this.U3ForceCheckBox.Text = "Force ";
+            this.U3ForceCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Location = new System.Drawing.Point(366, 52);
+            this.label126.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(27, 13);
+            this.label126.TabIndex = 16;
+            this.label126.Text = "% of";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.U3WeaponTextBox);
+            this.groupBox12.Controls.Add(this.label122);
+            this.groupBox12.Controls.Add(this.U3ArmorTextBox);
+            this.groupBox12.Controls.Add(this.label123);
+            this.groupBox12.Controls.Add(this.U3WeaponDropDown);
+            this.groupBox12.Controls.Add(this.label124);
+            this.groupBox12.Controls.Add(this.U3ArmorDropDown);
+            this.groupBox12.Controls.Add(this.label125);
+            this.groupBox12.Location = new System.Drawing.Point(188, 18);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(311, 81);
+            this.groupBox12.TabIndex = 82;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Equipment";
+            // 
+            // U3WeaponTextBox
+            // 
+            this.U3WeaponTextBox.Location = new System.Drawing.Point(268, 44);
+            this.U3WeaponTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3WeaponTextBox.Name = "U3WeaponTextBox";
+            this.U3WeaponTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U3WeaponTextBox.TabIndex = 46;
+            this.U3WeaponTextBox.Text = "0";
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Location = new System.Drawing.Point(210, 46);
+            this.label122.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(46, 13);
+            this.label122.TabIndex = 47;
+            this.label122.Text = "Quantity";
+            // 
+            // U3ArmorTextBox
+            // 
+            this.U3ArmorTextBox.Location = new System.Drawing.Point(268, 22);
+            this.U3ArmorTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3ArmorTextBox.Name = "U3ArmorTextBox";
+            this.U3ArmorTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U3ArmorTextBox.TabIndex = 44;
+            this.U3ArmorTextBox.Text = "0";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Location = new System.Drawing.Point(210, 24);
+            this.label123.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(46, 13);
+            this.label123.TabIndex = 45;
+            this.label123.Text = "Quantity";
+            // 
+            // U3WeaponDropDown
+            // 
+            this.U3WeaponDropDown.BackColor = System.Drawing.Color.White;
+            this.U3WeaponDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U3WeaponDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U3WeaponDropDown.FormattingEnabled = true;
+            this.U3WeaponDropDown.Items.AddRange(new object[] {
+            "Hands",
+            "Staff",
+            "Dagger",
+            "Sling",
+            "Mace",
+            "Axe",
+            "Sword",
+            "Bow",
+            "Crossbow",
+            "Flaming Oil",
+            "Halberd",
+            "Magic Axe",
+            "Magic Sword",
+            "Magic Bow",
+            "Magic Wand",
+            "Mystic Sword"});
+            this.U3WeaponDropDown.Location = new System.Drawing.Point(72, 44);
+            this.U3WeaponDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U3WeaponDropDown.Name = "U3WeaponDropDown";
+            this.U3WeaponDropDown.Size = new System.Drawing.Size(118, 21);
+            this.U3WeaponDropDown.TabIndex = 43;
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Location = new System.Drawing.Point(12, 46);
+            this.label124.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(48, 13);
+            this.label124.TabIndex = 42;
+            this.label124.Text = "Weapon";
+            // 
+            // U3ArmorDropDown
+            // 
+            this.U3ArmorDropDown.BackColor = System.Drawing.Color.White;
+            this.U3ArmorDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U3ArmorDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U3ArmorDropDown.FormattingEnabled = true;
+            this.U3ArmorDropDown.Items.AddRange(new object[] {
+            "Skin",
+            "Cloth",
+            "Leather",
+            "Chain Mail",
+            "Plate Mail",
+            "Magic Chain",
+            "Magic Plate",
+            "Mystic Robe"});
+            this.U3ArmorDropDown.Location = new System.Drawing.Point(72, 22);
+            this.U3ArmorDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U3ArmorDropDown.Name = "U3ArmorDropDown";
+            this.U3ArmorDropDown.Size = new System.Drawing.Size(118, 21);
+            this.U3ArmorDropDown.TabIndex = 41;
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(12, 24);
+            this.label125.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(34, 13);
+            this.label125.TabIndex = 40;
+            this.label125.Text = "Armor";
+            // 
+            // U3WisdomTextBox
+            // 
+            this.U3WisdomTextBox.Location = new System.Drawing.Point(85, 244);
+            this.U3WisdomTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3WisdomTextBox.Name = "U3WisdomTextBox";
+            this.U3WisdomTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U3WisdomTextBox.TabIndex = 81;
+            this.U3WisdomTextBox.Text = "0";
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Location = new System.Drawing.Point(15, 246);
+            this.label121.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(45, 13);
+            this.label121.TabIndex = 80;
+            this.label121.Text = "Wisdom";
             // 
             // U3MagicTextBox
             // 
@@ -4078,87 +3281,514 @@
             this.label116.TabIndex = 63;
             this.label116.Text = "Armor";
             // 
-            // U3WisdomTextBox
+            // U3HealthDropDown
             // 
-            this.U3WisdomTextBox.Location = new System.Drawing.Point(85, 244);
-            this.U3WisdomTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3WisdomTextBox.Name = "U3WisdomTextBox";
-            this.U3WisdomTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U3WisdomTextBox.TabIndex = 81;
-            this.U3WisdomTextBox.Text = "0";
+            this.U3HealthDropDown.BackColor = System.Drawing.Color.White;
+            this.U3HealthDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U3HealthDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U3HealthDropDown.FormattingEnabled = true;
+            this.U3HealthDropDown.Items.AddRange(new object[] {
+            "Human",
+            "Elf",
+            "Dwarf",
+            "Bobbit"});
+            this.U3HealthDropDown.Location = new System.Drawing.Point(65, 113);
+            this.U3HealthDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U3HealthDropDown.Name = "U3HealthDropDown";
+            this.U3HealthDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U3HealthDropDown.TabIndex = 62;
             // 
-            // label121
+            // label120
             // 
-            this.label121.AutoSize = true;
-            this.label121.Location = new System.Drawing.Point(15, 246);
-            this.label121.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(45, 13);
-            this.label121.TabIndex = 80;
-            this.label121.Text = "Wisdom";
+            this.label120.AutoSize = true;
+            this.label120.Location = new System.Drawing.Point(15, 115);
+            this.label120.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(38, 13);
+            this.label120.TabIndex = 61;
+            this.label120.Text = "Health";
             // 
-            // groupBox12
+            // U3NameTextBox
             // 
-            this.groupBox12.Controls.Add(this.U3WeaponTextBox);
-            this.groupBox12.Controls.Add(this.label122);
-            this.groupBox12.Controls.Add(this.U3ArmorTextBox);
-            this.groupBox12.Controls.Add(this.label123);
-            this.groupBox12.Controls.Add(this.U3WeaponDropDown);
-            this.groupBox12.Controls.Add(this.label124);
-            this.groupBox12.Controls.Add(this.U3ArmorDropDown);
-            this.groupBox12.Controls.Add(this.label125);
-            this.groupBox12.Location = new System.Drawing.Point(188, 18);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(311, 81);
-            this.groupBox12.TabIndex = 82;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Equipment";
+            this.U3NameTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.U3NameTextBox.Location = new System.Drawing.Point(65, 25);
+            this.U3NameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U3NameTextBox.MaxLength = 11;
+            this.U3NameTextBox.Name = "U3NameTextBox";
+            this.U3NameTextBox.Size = new System.Drawing.Size(88, 20);
+            this.U3NameTextBox.TabIndex = 60;
             // 
-            // U3WeaponTextBox
+            // U3RaceDropDown
             // 
-            this.U3WeaponTextBox.Location = new System.Drawing.Point(268, 44);
-            this.U3WeaponTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3WeaponTextBox.Name = "U3WeaponTextBox";
-            this.U3WeaponTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U3WeaponTextBox.TabIndex = 46;
-            this.U3WeaponTextBox.Text = "0";
+            this.U3RaceDropDown.BackColor = System.Drawing.Color.White;
+            this.U3RaceDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U3RaceDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U3RaceDropDown.FormattingEnabled = true;
+            this.U3RaceDropDown.Items.AddRange(new object[] {
+            "Human",
+            "Elf",
+            "Dwarf",
+            "Bobbit"});
+            this.U3RaceDropDown.Location = new System.Drawing.Point(65, 91);
+            this.U3RaceDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U3RaceDropDown.Name = "U3RaceDropDown";
+            this.U3RaceDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U3RaceDropDown.TabIndex = 15;
             // 
-            // label122
+            // U3ClassDropDown
             // 
-            this.label122.AutoSize = true;
-            this.label122.Location = new System.Drawing.Point(210, 46);
-            this.label122.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(46, 13);
-            this.label122.TabIndex = 47;
-            this.label122.Text = "Quantity";
+            this.U3ClassDropDown.BackColor = System.Drawing.Color.White;
+            this.U3ClassDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U3ClassDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U3ClassDropDown.FormattingEnabled = true;
+            this.U3ClassDropDown.Items.AddRange(new object[] {
+            "Fighter",
+            "Cleric",
+            "Wizard",
+            "Thief"});
+            this.U3ClassDropDown.Location = new System.Drawing.Point(65, 69);
+            this.U3ClassDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U3ClassDropDown.Name = "U3ClassDropDown";
+            this.U3ClassDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U3ClassDropDown.TabIndex = 14;
             // 
-            // U3ArmorTextBox
+            // U3SexDropDown
             // 
-            this.U3ArmorTextBox.Location = new System.Drawing.Point(268, 22);
-            this.U3ArmorTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3ArmorTextBox.Name = "U3ArmorTextBox";
-            this.U3ArmorTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U3ArmorTextBox.TabIndex = 44;
-            this.U3ArmorTextBox.Text = "0";
+            this.U3SexDropDown.BackColor = System.Drawing.Color.White;
+            this.U3SexDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U3SexDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U3SexDropDown.FormattingEnabled = true;
+            this.U3SexDropDown.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
+            this.U3SexDropDown.Location = new System.Drawing.Point(65, 47);
+            this.U3SexDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U3SexDropDown.Name = "U3SexDropDown";
+            this.U3SexDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U3SexDropDown.TabIndex = 13;
             // 
-            // label123
+            // label110
             // 
-            this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(210, 24);
-            this.label123.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(46, 13);
-            this.label123.TabIndex = 45;
-            this.label123.Text = "Quantity";
+            this.label110.AutoSize = true;
+            this.label110.Location = new System.Drawing.Point(15, 93);
+            this.label110.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(33, 13);
+            this.label110.TabIndex = 11;
+            this.label110.Text = "Race";
             // 
-            // U3WeaponDropDown
+            // label117
             // 
-            this.U3WeaponDropDown.BackColor = System.Drawing.Color.White;
-            this.U3WeaponDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U3WeaponDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U3WeaponDropDown.FormattingEnabled = true;
-            this.U3WeaponDropDown.Items.AddRange(new object[] {
+            this.label117.AutoSize = true;
+            this.label117.Location = new System.Drawing.Point(15, 71);
+            this.label117.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(32, 13);
+            this.label117.TabIndex = 2;
+            this.label117.Text = "Class";
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Location = new System.Drawing.Point(15, 49);
+            this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(25, 13);
+            this.label118.TabIndex = 1;
+            this.label118.Text = "Sex";
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Location = new System.Drawing.Point(15, 25);
+            this.label119.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(35, 13);
+            this.label119.TabIndex = 0;
+            this.label119.Text = "Name";
+            // 
+            // U4Tab
+            // 
+            this.U4Tab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.U4Tab.Controls.Add(this.U4LoadButton);
+            this.U4Tab.Controls.Add(this.U4SaveButton);
+            this.U4Tab.Controls.Add(this.U4General);
+            this.U4Tab.Controls.Add(this.U4PartyEquipment);
+            this.U4Tab.Controls.Add(this.U4QuestItems);
+            this.U4Tab.Controls.Add(this.U4Virtues);
+            this.U4Tab.Controls.Add(this.U4PlayerStats);
+            this.U4Tab.Location = new System.Drawing.Point(4, 22);
+            this.U4Tab.Margin = new System.Windows.Forms.Padding(2);
+            this.U4Tab.Name = "U4Tab";
+            this.U4Tab.Padding = new System.Windows.Forms.Padding(2);
+            this.U4Tab.Size = new System.Drawing.Size(721, 435);
+            this.U4Tab.TabIndex = 3;
+            this.U4Tab.Text = "Ultima IV";
+            // 
+            // U4LoadButton
+            // 
+            this.U4LoadButton.Location = new System.Drawing.Point(534, 365);
+            this.U4LoadButton.Margin = new System.Windows.Forms.Padding(2);
+            this.U4LoadButton.Name = "U4LoadButton";
+            this.U4LoadButton.Size = new System.Drawing.Size(73, 39);
+            this.U4LoadButton.TabIndex = 39;
+            this.U4LoadButton.Text = "Load";
+            this.U4LoadButton.UseVisualStyleBackColor = true;
+            this.U4LoadButton.Click += new System.EventHandler(this.U4LoadButton_Click);
+            // 
+            // U4SaveButton
+            // 
+            this.U4SaveButton.Enabled = false;
+            this.U4SaveButton.Location = new System.Drawing.Point(627, 365);
+            this.U4SaveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.U4SaveButton.Name = "U4SaveButton";
+            this.U4SaveButton.Size = new System.Drawing.Size(73, 39);
+            this.U4SaveButton.TabIndex = 38;
+            this.U4SaveButton.Text = "Save";
+            this.U4SaveButton.UseVisualStyleBackColor = true;
+            this.U4SaveButton.Click += new System.EventHandler(this.U4SaveButton_Click);
+            // 
+            // U4General
+            // 
+            this.U4General.Controls.Add(this.U4GoToDropDownBox);
+            this.U4General.Controls.Add(this.label32);
+            this.U4General.Controls.Add(this.U4LocLong2);
+            this.U4General.Controls.Add(this.U4LocLong1);
+            this.U4General.Controls.Add(this.U4LocLat2);
+            this.U4General.Controls.Add(this.U4MovesTextBox);
+            this.U4General.Controls.Add(this.U4LocLat1);
+            this.U4General.Controls.Add(this.label30);
+            this.U4General.Controls.Add(this.label31);
+            this.U4General.Location = new System.Drawing.Point(534, 245);
+            this.U4General.Margin = new System.Windows.Forms.Padding(2);
+            this.U4General.Name = "U4General";
+            this.U4General.Padding = new System.Windows.Forms.Padding(2);
+            this.U4General.Size = new System.Drawing.Size(166, 92);
+            this.U4General.TabIndex = 37;
+            this.U4General.TabStop = false;
+            this.U4General.Text = "General";
+            // 
+            // U4GoToDropDownBox
+            // 
+            this.U4GoToDropDownBox.BackColor = System.Drawing.Color.White;
+            this.U4GoToDropDownBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4GoToDropDownBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4GoToDropDownBox.FormattingEnabled = true;
+            this.U4GoToDropDownBox.Items.AddRange(new object[] {
+            "Not Specified"});
+            this.U4GoToDropDownBox.Location = new System.Drawing.Point(55, 64);
+            this.U4GoToDropDownBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4GoToDropDownBox.Name = "U4GoToDropDownBox";
+            this.U4GoToDropDownBox.Size = new System.Drawing.Size(99, 21);
+            this.U4GoToDropDownBox.TabIndex = 26;
+            this.U4GoToDropDownBox.SelectedIndexChanged += new System.EventHandler(this.U4GoToDropDownBox_SelectedIndexChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(4, 64);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(33, 13);
+            this.label32.TabIndex = 25;
+            this.label32.Text = "Go to";
+            // 
+            // U4LocLong2
+            // 
+            this.U4LocLong2.Location = new System.Drawing.Point(135, 42);
+            this.U4LocLong2.Margin = new System.Windows.Forms.Padding(2);
+            this.U4LocLong2.Name = "U4LocLong2";
+            this.U4LocLong2.Size = new System.Drawing.Size(19, 20);
+            this.U4LocLong2.TabIndex = 55;
+            this.U4LocLong2.Text = "A";
+            this.U4LocLong2.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLong2_Validating);
+            // 
+            // U4LocLong1
+            // 
+            this.U4LocLong1.Location = new System.Drawing.Point(112, 42);
+            this.U4LocLong1.Margin = new System.Windows.Forms.Padding(2);
+            this.U4LocLong1.Name = "U4LocLong1";
+            this.U4LocLong1.Size = new System.Drawing.Size(20, 20);
+            this.U4LocLong1.TabIndex = 54;
+            this.U4LocLong1.Text = "A";
+            this.U4LocLong1.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLong1_Validating);
+            // 
+            // U4LocLat2
+            // 
+            this.U4LocLat2.Location = new System.Drawing.Point(77, 42);
+            this.U4LocLat2.Margin = new System.Windows.Forms.Padding(2);
+            this.U4LocLat2.Name = "U4LocLat2";
+            this.U4LocLat2.Size = new System.Drawing.Size(19, 20);
+            this.U4LocLat2.TabIndex = 27;
+            this.U4LocLat2.Text = "A";
+            this.U4LocLat2.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLat2_Validating);
+            // 
+            // U4MovesTextBox
+            // 
+            this.U4MovesTextBox.Location = new System.Drawing.Point(61, 21);
+            this.U4MovesTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4MovesTextBox.Name = "U4MovesTextBox";
+            this.U4MovesTextBox.Size = new System.Drawing.Size(92, 20);
+            this.U4MovesTextBox.TabIndex = 52;
+            this.U4MovesTextBox.Text = "0";
+            this.U4MovesTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MovesTextBox_Validating);
+            // 
+            // U4LocLat1
+            // 
+            this.U4LocLat1.Location = new System.Drawing.Point(55, 42);
+            this.U4LocLat1.Margin = new System.Windows.Forms.Padding(2);
+            this.U4LocLat1.Name = "U4LocLat1";
+            this.U4LocLat1.Size = new System.Drawing.Size(20, 20);
+            this.U4LocLat1.TabIndex = 26;
+            this.U4LocLat1.Text = "A";
+            this.U4LocLat1.Validating += new System.ComponentModel.CancelEventHandler(this.U4LocLat1_Validating);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(4, 23);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(39, 13);
+            this.label30.TabIndex = 53;
+            this.label30.Text = "Moves";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(4, 44);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(48, 13);
+            this.label31.TabIndex = 25;
+            this.label31.Text = "Location";
+            // 
+            // U4PartyEquipment
+            // 
+            this.U4PartyEquipment.Controls.Add(this.U4SextantsTextBox);
+            this.U4PartyEquipment.Controls.Add(this.label27);
+            this.U4PartyEquipment.Controls.Add(this.U4GemsTextBox);
+            this.U4PartyEquipment.Controls.Add(this.label28);
+            this.U4PartyEquipment.Controls.Add(this.U4GoldTextBox);
+            this.U4PartyEquipment.Controls.Add(this.label29);
+            this.U4PartyEquipment.Controls.Add(this.U4KeysTextBox);
+            this.U4PartyEquipment.Controls.Add(this.label26);
+            this.U4PartyEquipment.Controls.Add(this.U4TorchesTextBox);
+            this.U4PartyEquipment.Controls.Add(this.label25);
+            this.U4PartyEquipment.Controls.Add(this.U4FoodTextBox);
+            this.U4PartyEquipment.Controls.Add(this.label24);
+            this.U4PartyEquipment.Controls.Add(this.U4PartyWeaponsTextBox);
+            this.U4PartyEquipment.Controls.Add(this.label23);
+            this.U4PartyEquipment.Controls.Add(this.U4PartyArmorTextBox);
+            this.U4PartyEquipment.Controls.Add(this.label22);
+            this.U4PartyEquipment.Controls.Add(this.U4ReagentsTextBox);
+            this.U4PartyEquipment.Controls.Add(this.label21);
+            this.U4PartyEquipment.Controls.Add(this.U4PartyWeaponsDropDown);
+            this.U4PartyEquipment.Controls.Add(this.label20);
+            this.U4PartyEquipment.Controls.Add(this.U4PartyArmorDropDown);
+            this.U4PartyEquipment.Controls.Add(this.label19);
+            this.U4PartyEquipment.Controls.Add(this.U4ReagentsDropDown);
+            this.U4PartyEquipment.Controls.Add(this.label18);
+            this.U4PartyEquipment.Controls.Add(this.U4SpellsTextBox);
+            this.U4PartyEquipment.Controls.Add(this.label17);
+            this.U4PartyEquipment.Controls.Add(this.U4SpellsDropDown);
+            this.U4PartyEquipment.Controls.Add(this.label15);
+            this.U4PartyEquipment.Location = new System.Drawing.Point(193, 23);
+            this.U4PartyEquipment.Margin = new System.Windows.Forms.Padding(2);
+            this.U4PartyEquipment.Name = "U4PartyEquipment";
+            this.U4PartyEquipment.Padding = new System.Windows.Forms.Padding(2);
+            this.U4PartyEquipment.Size = new System.Drawing.Size(328, 215);
+            this.U4PartyEquipment.TabIndex = 36;
+            this.U4PartyEquipment.TabStop = false;
+            this.U4PartyEquipment.Text = "Party Equipment";
+            // 
+            // U4SextantsTextBox
+            // 
+            this.U4SextantsTextBox.Location = new System.Drawing.Point(281, 184);
+            this.U4SextantsTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4SextantsTextBox.Name = "U4SextantsTextBox";
+            this.U4SextantsTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4SextantsTextBox.TabIndex = 50;
+            this.U4SextantsTextBox.Text = "0";
+            this.U4SextantsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4SextantsTextBox_Validating);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(223, 186);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(48, 13);
+            this.label27.TabIndex = 51;
+            this.label27.Text = "Sextants";
+            // 
+            // U4GemsTextBox
+            // 
+            this.U4GemsTextBox.Location = new System.Drawing.Point(281, 159);
+            this.U4GemsTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4GemsTextBox.Name = "U4GemsTextBox";
+            this.U4GemsTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4GemsTextBox.TabIndex = 48;
+            this.U4GemsTextBox.Text = "0";
+            this.U4GemsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4GemsTextBox_Validating);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(223, 161);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(34, 13);
+            this.label28.TabIndex = 49;
+            this.label28.Text = "Gems";
+            // 
+            // U4GoldTextBox
+            // 
+            this.U4GoldTextBox.Location = new System.Drawing.Point(281, 134);
+            this.U4GoldTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4GoldTextBox.Name = "U4GoldTextBox";
+            this.U4GoldTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4GoldTextBox.TabIndex = 46;
+            this.U4GoldTextBox.Text = "0";
+            this.U4GoldTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4GoldTextBox_Validating);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(223, 136);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(29, 13);
+            this.label29.TabIndex = 47;
+            this.label29.Text = "Gold";
+            // 
+            // U4KeysTextBox
+            // 
+            this.U4KeysTextBox.Location = new System.Drawing.Point(71, 182);
+            this.U4KeysTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4KeysTextBox.Name = "U4KeysTextBox";
+            this.U4KeysTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4KeysTextBox.TabIndex = 44;
+            this.U4KeysTextBox.Text = "0";
+            this.U4KeysTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4KeysTextBox_Validating);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(14, 184);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(30, 13);
+            this.label26.TabIndex = 45;
+            this.label26.Text = "Keys";
+            // 
+            // U4TorchesTextBox
+            // 
+            this.U4TorchesTextBox.Location = new System.Drawing.Point(71, 157);
+            this.U4TorchesTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4TorchesTextBox.Name = "U4TorchesTextBox";
+            this.U4TorchesTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4TorchesTextBox.TabIndex = 42;
+            this.U4TorchesTextBox.Text = "0";
+            this.U4TorchesTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4TorchesTextBox_Validating);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(14, 159);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(46, 13);
+            this.label25.TabIndex = 43;
+            this.label25.Text = "Torches";
+            // 
+            // U4FoodTextBox
+            // 
+            this.U4FoodTextBox.Location = new System.Drawing.Point(71, 132);
+            this.U4FoodTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4FoodTextBox.Name = "U4FoodTextBox";
+            this.U4FoodTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4FoodTextBox.TabIndex = 40;
+            this.U4FoodTextBox.Text = "0";
+            this.U4FoodTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4FoodTextBox_Validating);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(14, 134);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(31, 13);
+            this.label24.TabIndex = 41;
+            this.label24.Text = "Food";
+            // 
+            // U4PartyWeaponsTextBox
+            // 
+            this.U4PartyWeaponsTextBox.Location = new System.Drawing.Point(281, 94);
+            this.U4PartyWeaponsTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4PartyWeaponsTextBox.Name = "U4PartyWeaponsTextBox";
+            this.U4PartyWeaponsTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4PartyWeaponsTextBox.TabIndex = 38;
+            this.U4PartyWeaponsTextBox.Text = "0";
+            this.U4PartyWeaponsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4PartyWeaponsTextBox_Validating);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(223, 96);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(46, 13);
+            this.label23.TabIndex = 39;
+            this.label23.Text = "Quantity";
+            // 
+            // U4PartyArmorTextBox
+            // 
+            this.U4PartyArmorTextBox.Location = new System.Drawing.Point(281, 72);
+            this.U4PartyArmorTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4PartyArmorTextBox.Name = "U4PartyArmorTextBox";
+            this.U4PartyArmorTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4PartyArmorTextBox.TabIndex = 36;
+            this.U4PartyArmorTextBox.Text = "0";
+            this.U4PartyArmorTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4PartyArmorTextBox_Validating);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(223, 74);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(46, 13);
+            this.label22.TabIndex = 37;
+            this.label22.Text = "Quantity";
+            // 
+            // U4ReagentsTextBox
+            // 
+            this.U4ReagentsTextBox.Location = new System.Drawing.Point(281, 42);
+            this.U4ReagentsTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4ReagentsTextBox.Name = "U4ReagentsTextBox";
+            this.U4ReagentsTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4ReagentsTextBox.TabIndex = 34;
+            this.U4ReagentsTextBox.Text = "0";
+            this.U4ReagentsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4ReagentsTextBox_Validating);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(223, 44);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(46, 13);
+            this.label21.TabIndex = 35;
+            this.label21.Text = "Quantity";
+            // 
+            // U4PartyWeaponsDropDown
+            // 
+            this.U4PartyWeaponsDropDown.BackColor = System.Drawing.Color.White;
+            this.U4PartyWeaponsDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4PartyWeaponsDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4PartyWeaponsDropDown.FormattingEnabled = true;
+            this.U4PartyWeaponsDropDown.Items.AddRange(new object[] {
             "Hands",
             "Staff",
             "Dagger",
@@ -4175,29 +3805,30 @@
             "Magic Bow",
             "Magic Wand",
             "Mystic Sword"});
-            this.U3WeaponDropDown.Location = new System.Drawing.Point(72, 44);
-            this.U3WeaponDropDown.Margin = new System.Windows.Forms.Padding(2);
-            this.U3WeaponDropDown.Name = "U3WeaponDropDown";
-            this.U3WeaponDropDown.Size = new System.Drawing.Size(118, 21);
-            this.U3WeaponDropDown.TabIndex = 43;
+            this.U4PartyWeaponsDropDown.Location = new System.Drawing.Point(71, 94);
+            this.U4PartyWeaponsDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4PartyWeaponsDropDown.Name = "U4PartyWeaponsDropDown";
+            this.U4PartyWeaponsDropDown.Size = new System.Drawing.Size(118, 21);
+            this.U4PartyWeaponsDropDown.TabIndex = 33;
+            this.U4PartyWeaponsDropDown.SelectedIndexChanged += new System.EventHandler(this.U4PartyWeaponsDropDown_SelectedIndexChanged);
             // 
-            // label124
+            // label20
             // 
-            this.label124.AutoSize = true;
-            this.label124.Location = new System.Drawing.Point(12, 46);
-            this.label124.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(48, 13);
-            this.label124.TabIndex = 42;
-            this.label124.Text = "Weapon";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(11, 96);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(48, 13);
+            this.label20.TabIndex = 32;
+            this.label20.Text = "Weapon";
             // 
-            // U3ArmorDropDown
+            // U4PartyArmorDropDown
             // 
-            this.U3ArmorDropDown.BackColor = System.Drawing.Color.White;
-            this.U3ArmorDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U3ArmorDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U3ArmorDropDown.FormattingEnabled = true;
-            this.U3ArmorDropDown.Items.AddRange(new object[] {
+            this.U4PartyArmorDropDown.BackColor = System.Drawing.Color.White;
+            this.U4PartyArmorDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4PartyArmorDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4PartyArmorDropDown.FormattingEnabled = true;
+            this.U4PartyArmorDropDown.Items.AddRange(new object[] {
             "Skin",
             "Cloth",
             "Leather",
@@ -4206,467 +3837,836 @@
             "Magic Chain",
             "Magic Plate",
             "Mystic Robe"});
-            this.U3ArmorDropDown.Location = new System.Drawing.Point(72, 22);
-            this.U3ArmorDropDown.Margin = new System.Windows.Forms.Padding(2);
-            this.U3ArmorDropDown.Name = "U3ArmorDropDown";
-            this.U3ArmorDropDown.Size = new System.Drawing.Size(118, 21);
-            this.U3ArmorDropDown.TabIndex = 41;
-            // 
-            // label125
-            // 
-            this.label125.AutoSize = true;
-            this.label125.Location = new System.Drawing.Point(12, 24);
-            this.label125.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(34, 13);
-            this.label125.TabIndex = 40;
-            this.label125.Text = "Armor";
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.U3KingsCheckBox);
-            this.groupBox13.Controls.Add(this.U3SnakeCheckBox);
-            this.groupBox13.Controls.Add(this.U3FireCheckBox);
-            this.groupBox13.Controls.Add(this.U3ForceCheckBox);
-            this.groupBox13.Controls.Add(this.label126);
-            this.groupBox13.Location = new System.Drawing.Point(190, 106);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox13.Size = new System.Drawing.Size(309, 62);
-            this.groupBox13.TabIndex = 83;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Marks";
-            // 
-            // U3KingsCheckBox
-            // 
-            this.U3KingsCheckBox.AutoSize = true;
-            this.U3KingsCheckBox.Location = new System.Drawing.Point(176, 37);
-            this.U3KingsCheckBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3KingsCheckBox.Name = "U3KingsCheckBox";
-            this.U3KingsCheckBox.Size = new System.Drawing.Size(52, 17);
-            this.U3KingsCheckBox.TabIndex = 32;
-            this.U3KingsCheckBox.Text = "Kings";
-            this.U3KingsCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // U3SnakeCheckBox
-            // 
-            this.U3SnakeCheckBox.AutoSize = true;
-            this.U3SnakeCheckBox.Location = new System.Drawing.Point(34, 37);
-            this.U3SnakeCheckBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3SnakeCheckBox.Name = "U3SnakeCheckBox";
-            this.U3SnakeCheckBox.Size = new System.Drawing.Size(57, 17);
-            this.U3SnakeCheckBox.TabIndex = 31;
-            this.U3SnakeCheckBox.Text = "Snake";
-            this.U3SnakeCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // U3FireCheckBox
-            // 
-            this.U3FireCheckBox.AutoSize = true;
-            this.U3FireCheckBox.Location = new System.Drawing.Point(176, 17);
-            this.U3FireCheckBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3FireCheckBox.Name = "U3FireCheckBox";
-            this.U3FireCheckBox.Size = new System.Drawing.Size(43, 17);
-            this.U3FireCheckBox.TabIndex = 29;
-            this.U3FireCheckBox.Text = "Fire";
-            this.U3FireCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // U3ForceCheckBox
-            // 
-            this.U3ForceCheckBox.AutoSize = true;
-            this.U3ForceCheckBox.Location = new System.Drawing.Point(34, 17);
-            this.U3ForceCheckBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3ForceCheckBox.Name = "U3ForceCheckBox";
-            this.U3ForceCheckBox.Size = new System.Drawing.Size(56, 17);
-            this.U3ForceCheckBox.TabIndex = 27;
-            this.U3ForceCheckBox.Text = "Force ";
-            this.U3ForceCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // label126
-            // 
-            this.label126.AutoSize = true;
-            this.label126.Location = new System.Drawing.Point(366, 52);
-            this.label126.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(27, 13);
-            this.label126.TabIndex = 16;
-            this.label126.Text = "% of";
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.U3DeathCheckBox);
-            this.groupBox14.Controls.Add(this.U3MoonCheckBox);
-            this.groupBox14.Controls.Add(this.U3SolCheckBox);
-            this.groupBox14.Controls.Add(this.U3LoveCheckBox);
-            this.groupBox14.Controls.Add(this.label127);
-            this.groupBox14.Location = new System.Drawing.Point(190, 174);
-            this.groupBox14.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox14.Size = new System.Drawing.Size(309, 62);
-            this.groupBox14.TabIndex = 84;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Cards";
-            // 
-            // U3DeathCheckBox
-            // 
-            this.U3DeathCheckBox.AutoSize = true;
-            this.U3DeathCheckBox.Location = new System.Drawing.Point(176, 37);
-            this.U3DeathCheckBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3DeathCheckBox.Name = "U3DeathCheckBox";
-            this.U3DeathCheckBox.Size = new System.Drawing.Size(55, 17);
-            this.U3DeathCheckBox.TabIndex = 32;
-            this.U3DeathCheckBox.Text = "Death";
-            this.U3DeathCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // U3MoonCheckBox
-            // 
-            this.U3MoonCheckBox.AutoSize = true;
-            this.U3MoonCheckBox.Location = new System.Drawing.Point(34, 37);
-            this.U3MoonCheckBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3MoonCheckBox.Name = "U3MoonCheckBox";
-            this.U3MoonCheckBox.Size = new System.Drawing.Size(53, 17);
-            this.U3MoonCheckBox.TabIndex = 31;
-            this.U3MoonCheckBox.Text = "Moon";
-            this.U3MoonCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // U3SolCheckBox
-            // 
-            this.U3SolCheckBox.AutoSize = true;
-            this.U3SolCheckBox.Location = new System.Drawing.Point(176, 17);
-            this.U3SolCheckBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3SolCheckBox.Name = "U3SolCheckBox";
-            this.U3SolCheckBox.Size = new System.Drawing.Size(41, 17);
-            this.U3SolCheckBox.TabIndex = 29;
-            this.U3SolCheckBox.Text = "Sol";
-            this.U3SolCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // U3LoveCheckBox
-            // 
-            this.U3LoveCheckBox.AutoSize = true;
-            this.U3LoveCheckBox.Location = new System.Drawing.Point(34, 17);
-            this.U3LoveCheckBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3LoveCheckBox.Name = "U3LoveCheckBox";
-            this.U3LoveCheckBox.Size = new System.Drawing.Size(50, 17);
-            this.U3LoveCheckBox.TabIndex = 27;
-            this.U3LoveCheckBox.Text = "Love";
-            this.U3LoveCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // label127
-            // 
-            this.label127.AutoSize = true;
-            this.label127.Location = new System.Drawing.Point(366, 52);
-            this.label127.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(27, 13);
-            this.label127.TabIndex = 16;
-            this.label127.Text = "% of";
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.U3PowderTextBox);
-            this.groupBox15.Controls.Add(this.label132);
-            this.groupBox15.Controls.Add(this.U3KeysTextBox);
-            this.groupBox15.Controls.Add(this.label133);
-            this.groupBox15.Controls.Add(this.U3GemsTextBox);
-            this.groupBox15.Controls.Add(this.label134);
-            this.groupBox15.Controls.Add(this.U3TorchesTextBox);
-            this.groupBox15.Controls.Add(this.label135);
-            this.groupBox15.Controls.Add(this.U3GoldTextBox);
-            this.groupBox15.Controls.Add(this.label136);
-            this.groupBox15.Controls.Add(this.U3FoodTextBox);
-            this.groupBox15.Controls.Add(this.label137);
-            this.groupBox15.Location = new System.Drawing.Point(191, 240);
-            this.groupBox15.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox15.Size = new System.Drawing.Size(308, 109);
-            this.groupBox15.TabIndex = 85;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "Miscellaneous";
-            // 
-            // U3PowderTextBox
-            // 
-            this.U3PowderTextBox.Location = new System.Drawing.Point(246, 68);
-            this.U3PowderTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3PowderTextBox.Name = "U3PowderTextBox";
-            this.U3PowderTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U3PowderTextBox.TabIndex = 50;
-            this.U3PowderTextBox.Text = "0";
-            // 
-            // label132
-            // 
-            this.label132.AutoSize = true;
-            this.label132.Location = new System.Drawing.Point(143, 70);
-            this.label132.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label132.Name = "label132";
-            this.label132.Size = new System.Drawing.Size(94, 13);
-            this.label132.TabIndex = 51;
-            this.label132.Text = "Time Stop Powder";
-            // 
-            // U3KeysTextBox
-            // 
-            this.U3KeysTextBox.Location = new System.Drawing.Point(246, 44);
-            this.U3KeysTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3KeysTextBox.Name = "U3KeysTextBox";
-            this.U3KeysTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U3KeysTextBox.TabIndex = 48;
-            this.U3KeysTextBox.Text = "0";
-            // 
-            // label133
-            // 
-            this.label133.AutoSize = true;
-            this.label133.Location = new System.Drawing.Point(143, 46);
-            this.label133.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(56, 13);
-            this.label133.TabIndex = 49;
-            this.label133.Text = "Skull Keys";
-            // 
-            // U3GemsTextBox
-            // 
-            this.U3GemsTextBox.Location = new System.Drawing.Point(246, 18);
-            this.U3GemsTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3GemsTextBox.Name = "U3GemsTextBox";
-            this.U3GemsTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U3GemsTextBox.TabIndex = 46;
-            this.U3GemsTextBox.Text = "0";
-            // 
-            // label134
-            // 
-            this.label134.AutoSize = true;
-            this.label134.Location = new System.Drawing.Point(143, 20);
-            this.label134.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(66, 13);
-            this.label134.TabIndex = 47;
-            this.label134.Text = "Magic Gems";
-            // 
-            // U3TorchesTextBox
-            // 
-            this.U3TorchesTextBox.Location = new System.Drawing.Point(84, 70);
-            this.U3TorchesTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3TorchesTextBox.Name = "U3TorchesTextBox";
-            this.U3TorchesTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U3TorchesTextBox.TabIndex = 44;
-            this.U3TorchesTextBox.Text = "0";
-            // 
-            // label135
-            // 
-            this.label135.AutoSize = true;
-            this.label135.Location = new System.Drawing.Point(14, 72);
-            this.label135.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(46, 13);
-            this.label135.TabIndex = 45;
-            this.label135.Text = "Torches";
-            // 
-            // U3GoldTextBox
-            // 
-            this.U3GoldTextBox.Location = new System.Drawing.Point(84, 46);
-            this.U3GoldTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3GoldTextBox.Name = "U3GoldTextBox";
-            this.U3GoldTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U3GoldTextBox.TabIndex = 42;
-            this.U3GoldTextBox.Text = "0";
-            // 
-            // label136
-            // 
-            this.label136.AutoSize = true;
-            this.label136.Location = new System.Drawing.Point(14, 47);
-            this.label136.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(29, 13);
-            this.label136.TabIndex = 43;
-            this.label136.Text = "Gold";
-            // 
-            // U3FoodTextBox
-            // 
-            this.U3FoodTextBox.Location = new System.Drawing.Point(84, 20);
-            this.U3FoodTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3FoodTextBox.Name = "U3FoodTextBox";
-            this.U3FoodTextBox.Size = new System.Drawing.Size(34, 20);
-            this.U3FoodTextBox.TabIndex = 40;
-            this.U3FoodTextBox.Text = "0";
-            // 
-            // label137
-            // 
-            this.label137.AutoSize = true;
-            this.label137.Location = new System.Drawing.Point(14, 22);
-            this.label137.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(31, 13);
-            this.label137.TabIndex = 41;
-            this.label137.Text = "Food";
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.U3LocationsTextBox);
-            this.groupBox16.Controls.Add(this.label128);
-            this.groupBox16.Controls.Add(this.U3YLocationTextBox);
-            this.groupBox16.Controls.Add(this.U3MovesTextBox);
-            this.groupBox16.Controls.Add(this.U3XLocationTextBox);
-            this.groupBox16.Controls.Add(this.label129);
-            this.groupBox16.Controls.Add(this.label130);
-            this.groupBox16.Location = new System.Drawing.Point(534, 245);
-            this.groupBox16.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox16.Size = new System.Drawing.Size(166, 92);
-            this.groupBox16.TabIndex = 38;
-            this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "General";
-            // 
-            // U3LocationsTextBox
-            // 
-            this.U3LocationsTextBox.BackColor = System.Drawing.Color.White;
-            this.U3LocationsTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U3LocationsTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U3LocationsTextBox.FormattingEnabled = true;
-            this.U3LocationsTextBox.Items.AddRange(new object[] {
-            "Not Specified"});
-            this.U3LocationsTextBox.Location = new System.Drawing.Point(55, 64);
-            this.U3LocationsTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3LocationsTextBox.Name = "U3LocationsTextBox";
-            this.U3LocationsTextBox.Size = new System.Drawing.Size(99, 21);
-            this.U3LocationsTextBox.TabIndex = 26;
-            // 
-            // label128
-            // 
-            this.label128.AutoSize = true;
-            this.label128.Location = new System.Drawing.Point(4, 64);
-            this.label128.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(33, 13);
-            this.label128.TabIndex = 25;
-            this.label128.Text = "Go to";
-            // 
-            // U3YLocationTextBox
-            // 
-            this.U3YLocationTextBox.Location = new System.Drawing.Point(112, 42);
-            this.U3YLocationTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3YLocationTextBox.Name = "U3YLocationTextBox";
-            this.U3YLocationTextBox.Size = new System.Drawing.Size(41, 20);
-            this.U3YLocationTextBox.TabIndex = 54;
-            this.U3YLocationTextBox.Text = "A";
-            // 
-            // U3MovesTextBox
-            // 
-            this.U3MovesTextBox.Location = new System.Drawing.Point(55, 21);
-            this.U3MovesTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3MovesTextBox.Name = "U3MovesTextBox";
-            this.U3MovesTextBox.Size = new System.Drawing.Size(98, 20);
-            this.U3MovesTextBox.TabIndex = 52;
-            this.U3MovesTextBox.Text = "0";
-            // 
-            // U3XLocationTextBox
-            // 
-            this.U3XLocationTextBox.Location = new System.Drawing.Point(55, 42);
-            this.U3XLocationTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.U3XLocationTextBox.Name = "U3XLocationTextBox";
-            this.U3XLocationTextBox.Size = new System.Drawing.Size(41, 20);
-            this.U3XLocationTextBox.TabIndex = 26;
-            this.U3XLocationTextBox.Text = "A";
-            // 
-            // label129
-            // 
-            this.label129.AutoSize = true;
-            this.label129.Location = new System.Drawing.Point(4, 23);
-            this.label129.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(39, 13);
-            this.label129.TabIndex = 53;
-            this.label129.Text = "Moves";
-            // 
-            // label130
-            // 
-            this.label130.AutoSize = true;
-            this.label130.Location = new System.Drawing.Point(4, 44);
-            this.label130.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(48, 13);
-            this.label130.TabIndex = 25;
-            this.label130.Text = "Location";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(534, 365);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 39);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Load";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(627, 365);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 39);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.U3HorseLocationsDropDown);
-            this.groupBox17.Controls.Add(this.U3NewHorseButton);
-            this.groupBox17.Controls.Add(this.U3BoatLocationsDropDown);
-            this.groupBox17.Controls.Add(this.U3NewBoatButton);
-            this.groupBox17.Location = new System.Drawing.Point(19, 382);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(390, 43);
-            this.groupBox17.TabIndex = 42;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Object Creation";
-            // 
-            // U3NewBoatButton
-            // 
-            this.U3NewBoatButton.Location = new System.Drawing.Point(6, 14);
-            this.U3NewBoatButton.Name = "U3NewBoatButton";
-            this.U3NewBoatButton.Size = new System.Drawing.Size(75, 23);
-            this.U3NewBoatButton.TabIndex = 0;
-            this.U3NewBoatButton.Text = "New Boat at";
-            this.U3NewBoatButton.UseVisualStyleBackColor = true;
-            // 
-            // U3BoatLocationsDropDown
-            // 
-            this.U3BoatLocationsDropDown.BackColor = System.Drawing.Color.White;
-            this.U3BoatLocationsDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U3BoatLocationsDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U3BoatLocationsDropDown.FormattingEnabled = true;
-            this.U3BoatLocationsDropDown.Items.AddRange(new object[] {
-            "Not Specified"});
-            this.U3BoatLocationsDropDown.Location = new System.Drawing.Point(86, 14);
-            this.U3BoatLocationsDropDown.Margin = new System.Windows.Forms.Padding(2);
-            this.U3BoatLocationsDropDown.Name = "U3BoatLocationsDropDown";
-            this.U3BoatLocationsDropDown.Size = new System.Drawing.Size(99, 21);
-            this.U3BoatLocationsDropDown.TabIndex = 27;
-            // 
-            // U3HorseLocationsDropDown
-            // 
-            this.U3HorseLocationsDropDown.BackColor = System.Drawing.Color.White;
-            this.U3HorseLocationsDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.U3HorseLocationsDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.U3HorseLocationsDropDown.FormattingEnabled = true;
-            this.U3HorseLocationsDropDown.Items.AddRange(new object[] {
-            "Not Specified"});
-            this.U3HorseLocationsDropDown.Location = new System.Drawing.Point(279, 14);
-            this.U3HorseLocationsDropDown.Margin = new System.Windows.Forms.Padding(2);
-            this.U3HorseLocationsDropDown.Name = "U3HorseLocationsDropDown";
-            this.U3HorseLocationsDropDown.Size = new System.Drawing.Size(99, 21);
-            this.U3HorseLocationsDropDown.TabIndex = 29;
-            // 
-            // U3NewHorseButton
-            // 
-            this.U3NewHorseButton.Location = new System.Drawing.Point(199, 14);
-            this.U3NewHorseButton.Name = "U3NewHorseButton";
-            this.U3NewHorseButton.Size = new System.Drawing.Size(75, 23);
-            this.U3NewHorseButton.TabIndex = 28;
-            this.U3NewHorseButton.Text = "New Horse at";
-            this.U3NewHorseButton.UseVisualStyleBackColor = true;
+            this.U4PartyArmorDropDown.Location = new System.Drawing.Point(71, 72);
+            this.U4PartyArmorDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4PartyArmorDropDown.Name = "U4PartyArmorDropDown";
+            this.U4PartyArmorDropDown.Size = new System.Drawing.Size(118, 21);
+            this.U4PartyArmorDropDown.TabIndex = 31;
+            this.U4PartyArmorDropDown.SelectedIndexChanged += new System.EventHandler(this.U4PartyArmorDropDown_SelectedIndexChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(11, 74);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(34, 13);
+            this.label19.TabIndex = 30;
+            this.label19.Text = "Armor";
+            // 
+            // U4ReagentsDropDown
+            // 
+            this.U4ReagentsDropDown.BackColor = System.Drawing.Color.White;
+            this.U4ReagentsDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4ReagentsDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4ReagentsDropDown.FormattingEnabled = true;
+            this.U4ReagentsDropDown.Items.AddRange(new object[] {
+            "Sulfur Ash",
+            "Ginseng",
+            "Garlic",
+            "Spider Silk",
+            "Blood Moss",
+            "Black Pearl",
+            "Nightshade",
+            "Mandrake"});
+            this.U4ReagentsDropDown.Location = new System.Drawing.Point(71, 42);
+            this.U4ReagentsDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4ReagentsDropDown.Name = "U4ReagentsDropDown";
+            this.U4ReagentsDropDown.Size = new System.Drawing.Size(118, 21);
+            this.U4ReagentsDropDown.TabIndex = 29;
+            this.U4ReagentsDropDown.SelectedIndexChanged += new System.EventHandler(this.U4ReagentsDropDown_SelectedIndexChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(11, 44);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(53, 13);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "Reagents";
+            // 
+            // U4SpellsTextBox
+            // 
+            this.U4SpellsTextBox.Location = new System.Drawing.Point(281, 20);
+            this.U4SpellsTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4SpellsTextBox.Name = "U4SpellsTextBox";
+            this.U4SpellsTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4SpellsTextBox.TabIndex = 25;
+            this.U4SpellsTextBox.Text = "0";
+            this.U4SpellsTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4SpellsTextBox_Validating);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(223, 22);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(46, 13);
+            this.label17.TabIndex = 27;
+            this.label17.Text = "Quantity";
+            // 
+            // U4SpellsDropDown
+            // 
+            this.U4SpellsDropDown.BackColor = System.Drawing.Color.White;
+            this.U4SpellsDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4SpellsDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4SpellsDropDown.FormattingEnabled = true;
+            this.U4SpellsDropDown.Items.AddRange(new object[] {
+            "Awaken",
+            "Blink",
+            "Cure",
+            "Dispell",
+            "Energy",
+            "Fireball",
+            "Gate",
+            "Heal",
+            "Iceball",
+            "Jinx",
+            "Kill",
+            "Light",
+            "Magic Missle",
+            "Negate",
+            "Open",
+            "Protect",
+            "Quickness",
+            "Ressurect",
+            "Sleep",
+            "Tremor",
+            "Undead",
+            "View",
+            "Winds",
+            "X-It",
+            "Y-Up",
+            "Z-Down"});
+            this.U4SpellsDropDown.Location = new System.Drawing.Point(71, 20);
+            this.U4SpellsDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4SpellsDropDown.Name = "U4SpellsDropDown";
+            this.U4SpellsDropDown.Size = new System.Drawing.Size(118, 21);
+            this.U4SpellsDropDown.TabIndex = 26;
+            this.U4SpellsDropDown.SelectedIndexChanged += new System.EventHandler(this.U4SpellsDropDown_SelectedIndexChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(11, 22);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(35, 13);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "Spells";
+            // 
+            // U4QuestItems
+            // 
+            this.U4QuestItems.Controls.Add(this.U4CourageCheckBox);
+            this.U4QuestItems.Controls.Add(this.U4BellCheckBox);
+            this.U4QuestItems.Controls.Add(this.U4TruthCheckBox);
+            this.U4QuestItems.Controls.Add(this.U4BookCheckBox);
+            this.U4QuestItems.Controls.Add(this.U4CandleCheckBox);
+            this.U4QuestItems.Controls.Add(this.U4WheelCheckBox);
+            this.U4QuestItems.Controls.Add(this.U4HornCheckBox);
+            this.U4QuestItems.Controls.Add(this.U4LoveCheckBox);
+            this.U4QuestItems.Controls.Add(this.U4SkullCheckBox);
+            this.U4QuestItems.Controls.Add(this.label16);
+            this.U4QuestItems.Location = new System.Drawing.Point(193, 245);
+            this.U4QuestItems.Margin = new System.Windows.Forms.Padding(2);
+            this.U4QuestItems.Name = "U4QuestItems";
+            this.U4QuestItems.Padding = new System.Windows.Forms.Padding(2);
+            this.U4QuestItems.Size = new System.Drawing.Size(329, 84);
+            this.U4QuestItems.TabIndex = 35;
+            this.U4QuestItems.TabStop = false;
+            this.U4QuestItems.Text = "Quest Items";
+            // 
+            // U4CourageCheckBox
+            // 
+            this.U4CourageCheckBox.AutoSize = true;
+            this.U4CourageCheckBox.Location = new System.Drawing.Point(223, 63);
+            this.U4CourageCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4CourageCheckBox.Name = "U4CourageCheckBox";
+            this.U4CourageCheckBox.Size = new System.Drawing.Size(99, 17);
+            this.U4CourageCheckBox.TabIndex = 35;
+            this.U4CourageCheckBox.Text = "Key of Courage";
+            this.U4CourageCheckBox.UseVisualStyleBackColor = true;
+            this.U4CourageCheckBox.CheckedChanged += new System.EventHandler(this.U4CourageCheckBox_CheckedChanged);
+            // 
+            // U4BellCheckBox
+            // 
+            this.U4BellCheckBox.AutoSize = true;
+            this.U4BellCheckBox.Location = new System.Drawing.Point(223, 44);
+            this.U4BellCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4BellCheckBox.Name = "U4BellCheckBox";
+            this.U4BellCheckBox.Size = new System.Drawing.Size(98, 17);
+            this.U4BellCheckBox.TabIndex = 34;
+            this.U4BellCheckBox.Text = "Bell of Courage";
+            this.U4BellCheckBox.UseVisualStyleBackColor = true;
+            this.U4BellCheckBox.CheckedChanged += new System.EventHandler(this.U4BellCheckBox_CheckedChanged);
+            // 
+            // U4TruthCheckBox
+            // 
+            this.U4TruthCheckBox.AutoSize = true;
+            this.U4TruthCheckBox.Location = new System.Drawing.Point(123, 64);
+            this.U4TruthCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4TruthCheckBox.Name = "U4TruthCheckBox";
+            this.U4TruthCheckBox.Size = new System.Drawing.Size(84, 17);
+            this.U4TruthCheckBox.TabIndex = 33;
+            this.U4TruthCheckBox.Text = "Key of Truth";
+            this.U4TruthCheckBox.UseVisualStyleBackColor = true;
+            this.U4TruthCheckBox.CheckedChanged += new System.EventHandler(this.U4TruthCheckBox_CheckedChanged);
+            // 
+            // U4BookCheckBox
+            // 
+            this.U4BookCheckBox.AutoSize = true;
+            this.U4BookCheckBox.Location = new System.Drawing.Point(123, 44);
+            this.U4BookCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4BookCheckBox.Name = "U4BookCheckBox";
+            this.U4BookCheckBox.Size = new System.Drawing.Size(91, 17);
+            this.U4BookCheckBox.TabIndex = 32;
+            this.U4BookCheckBox.Text = "Book of Truth";
+            this.U4BookCheckBox.UseVisualStyleBackColor = true;
+            this.U4BookCheckBox.CheckedChanged += new System.EventHandler(this.U4BookCheckBox_CheckedChanged);
+            // 
+            // U4CandleCheckBox
+            // 
+            this.U4CandleCheckBox.AutoSize = true;
+            this.U4CandleCheckBox.Location = new System.Drawing.Point(12, 44);
+            this.U4CandleCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4CandleCheckBox.Name = "U4CandleCheckBox";
+            this.U4CandleCheckBox.Size = new System.Drawing.Size(98, 17);
+            this.U4CandleCheckBox.TabIndex = 31;
+            this.U4CandleCheckBox.Text = "Candle of Love";
+            this.U4CandleCheckBox.UseVisualStyleBackColor = true;
+            this.U4CandleCheckBox.CheckedChanged += new System.EventHandler(this.U4CandleCheckBox_CheckedChanged);
+            // 
+            // U4WheelCheckBox
+            // 
+            this.U4WheelCheckBox.AutoSize = true;
+            this.U4WheelCheckBox.Location = new System.Drawing.Point(223, 24);
+            this.U4WheelCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4WheelCheckBox.Name = "U4WheelCheckBox";
+            this.U4WheelCheckBox.Size = new System.Drawing.Size(57, 17);
+            this.U4WheelCheckBox.TabIndex = 30;
+            this.U4WheelCheckBox.Text = "Wheel";
+            this.U4WheelCheckBox.UseVisualStyleBackColor = true;
+            this.U4WheelCheckBox.CheckedChanged += new System.EventHandler(this.U4WheelCheckBox_CheckedChanged);
+            // 
+            // U4HornCheckBox
+            // 
+            this.U4HornCheckBox.AutoSize = true;
+            this.U4HornCheckBox.Location = new System.Drawing.Point(123, 24);
+            this.U4HornCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4HornCheckBox.Name = "U4HornCheckBox";
+            this.U4HornCheckBox.Size = new System.Drawing.Size(78, 17);
+            this.U4HornCheckBox.TabIndex = 29;
+            this.U4HornCheckBox.Text = "Silver Horn";
+            this.U4HornCheckBox.UseVisualStyleBackColor = true;
+            this.U4HornCheckBox.CheckedChanged += new System.EventHandler(this.U4HornCheckBox_CheckedChanged);
+            // 
+            // U4LoveCheckBox
+            // 
+            this.U4LoveCheckBox.AutoSize = true;
+            this.U4LoveCheckBox.Location = new System.Drawing.Point(12, 64);
+            this.U4LoveCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4LoveCheckBox.Name = "U4LoveCheckBox";
+            this.U4LoveCheckBox.Size = new System.Drawing.Size(83, 17);
+            this.U4LoveCheckBox.TabIndex = 28;
+            this.U4LoveCheckBox.Text = "Key of Love";
+            this.U4LoveCheckBox.UseVisualStyleBackColor = true;
+            this.U4LoveCheckBox.CheckedChanged += new System.EventHandler(this.U4LoveCheckBox_CheckedChanged);
+            // 
+            // U4SkullCheckBox
+            // 
+            this.U4SkullCheckBox.AutoSize = true;
+            this.U4SkullCheckBox.Location = new System.Drawing.Point(12, 24);
+            this.U4SkullCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4SkullCheckBox.Name = "U4SkullCheckBox";
+            this.U4SkullCheckBox.Size = new System.Drawing.Size(100, 17);
+            this.U4SkullCheckBox.TabIndex = 27;
+            this.U4SkullCheckBox.Text = "Mondain\'s Skull";
+            this.U4SkullCheckBox.UseVisualStyleBackColor = true;
+            this.U4SkullCheckBox.CheckedChanged += new System.EventHandler(this.U4SkullCheckBox_CheckedChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(366, 52);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(27, 13);
+            this.label16.TabIndex = 16;
+            this.label16.Text = "% of";
+            // 
+            // U4Virtues
+            // 
+            this.U4Virtues.Controls.Add(this.U4BlackCheckBox);
+            this.U4Virtues.Controls.Add(this.U4WhiteCheckBox);
+            this.U4Virtues.Controls.Add(this.U4PurpleCheckBox);
+            this.U4Virtues.Controls.Add(this.U4OrangeCheckBox);
+            this.U4Virtues.Controls.Add(this.U4GreenCheckBox);
+            this.U4Virtues.Controls.Add(this.U4RedCheckBox);
+            this.U4Virtues.Controls.Add(this.U4YellowCheckBox);
+            this.U4Virtues.Controls.Add(this.U4BlueStoneCheckBox);
+            this.U4Virtues.Controls.Add(this.label14);
+            this.U4Virtues.Controls.Add(this.U4VirtueTextBox);
+            this.U4Virtues.Controls.Add(this.label13);
+            this.U4Virtues.Controls.Add(this.U4RuneCheckBox);
+            this.U4Virtues.Controls.Add(this.U4VirtueDropDown);
+            this.U4Virtues.Controls.Add(this.U4RuneDropDown);
+            this.U4Virtues.Location = new System.Drawing.Point(19, 334);
+            this.U4Virtues.Margin = new System.Windows.Forms.Padding(2);
+            this.U4Virtues.Name = "U4Virtues";
+            this.U4Virtues.Padding = new System.Windows.Forms.Padding(2);
+            this.U4Virtues.Size = new System.Drawing.Size(503, 85);
+            this.U4Virtues.TabIndex = 1;
+            this.U4Virtues.TabStop = false;
+            this.U4Virtues.Text = "Virtues";
+            // 
+            // U4BlackCheckBox
+            // 
+            this.U4BlackCheckBox.AutoSize = true;
+            this.U4BlackCheckBox.Location = new System.Drawing.Point(253, 44);
+            this.U4BlackCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4BlackCheckBox.Name = "U4BlackCheckBox";
+            this.U4BlackCheckBox.Size = new System.Drawing.Size(53, 17);
+            this.U4BlackCheckBox.TabIndex = 34;
+            this.U4BlackCheckBox.Text = "Black";
+            this.U4BlackCheckBox.UseVisualStyleBackColor = true;
+            this.U4BlackCheckBox.CheckedChanged += new System.EventHandler(this.U4BlackCheckBox_CheckedChanged);
+            // 
+            // U4WhiteCheckBox
+            // 
+            this.U4WhiteCheckBox.AutoSize = true;
+            this.U4WhiteCheckBox.Location = new System.Drawing.Point(187, 44);
+            this.U4WhiteCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4WhiteCheckBox.Name = "U4WhiteCheckBox";
+            this.U4WhiteCheckBox.Size = new System.Drawing.Size(54, 17);
+            this.U4WhiteCheckBox.TabIndex = 33;
+            this.U4WhiteCheckBox.Text = "White";
+            this.U4WhiteCheckBox.UseVisualStyleBackColor = true;
+            this.U4WhiteCheckBox.CheckedChanged += new System.EventHandler(this.U4WhiteCheckBox_CheckedChanged);
+            // 
+            // U4PurpleCheckBox
+            // 
+            this.U4PurpleCheckBox.AutoSize = true;
+            this.U4PurpleCheckBox.Location = new System.Drawing.Point(122, 43);
+            this.U4PurpleCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4PurpleCheckBox.Name = "U4PurpleCheckBox";
+            this.U4PurpleCheckBox.Size = new System.Drawing.Size(56, 17);
+            this.U4PurpleCheckBox.TabIndex = 32;
+            this.U4PurpleCheckBox.Text = "Purple";
+            this.U4PurpleCheckBox.UseVisualStyleBackColor = true;
+            this.U4PurpleCheckBox.CheckedChanged += new System.EventHandler(this.U4PurpleCheckBox_CheckedChanged);
+            // 
+            // U4OrangeCheckBox
+            // 
+            this.U4OrangeCheckBox.AutoSize = true;
+            this.U4OrangeCheckBox.Location = new System.Drawing.Point(57, 43);
+            this.U4OrangeCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4OrangeCheckBox.Name = "U4OrangeCheckBox";
+            this.U4OrangeCheckBox.Size = new System.Drawing.Size(61, 17);
+            this.U4OrangeCheckBox.TabIndex = 31;
+            this.U4OrangeCheckBox.Text = "Orange";
+            this.U4OrangeCheckBox.UseVisualStyleBackColor = true;
+            this.U4OrangeCheckBox.CheckedChanged += new System.EventHandler(this.U4OrangeCheckBox_CheckedChanged);
+            // 
+            // U4GreenCheckBox
+            // 
+            this.U4GreenCheckBox.AutoSize = true;
+            this.U4GreenCheckBox.Location = new System.Drawing.Point(253, 24);
+            this.U4GreenCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4GreenCheckBox.Name = "U4GreenCheckBox";
+            this.U4GreenCheckBox.Size = new System.Drawing.Size(55, 17);
+            this.U4GreenCheckBox.TabIndex = 30;
+            this.U4GreenCheckBox.Text = "Green";
+            this.U4GreenCheckBox.UseVisualStyleBackColor = true;
+            this.U4GreenCheckBox.CheckedChanged += new System.EventHandler(this.U4GreenCheckBox_CheckedChanged);
+            // 
+            // U4RedCheckBox
+            // 
+            this.U4RedCheckBox.AutoSize = true;
+            this.U4RedCheckBox.Location = new System.Drawing.Point(187, 24);
+            this.U4RedCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4RedCheckBox.Name = "U4RedCheckBox";
+            this.U4RedCheckBox.Size = new System.Drawing.Size(46, 17);
+            this.U4RedCheckBox.TabIndex = 29;
+            this.U4RedCheckBox.Text = "Red";
+            this.U4RedCheckBox.UseVisualStyleBackColor = true;
+            this.U4RedCheckBox.CheckedChanged += new System.EventHandler(this.U4RedCheckBox_CheckedChanged);
+            // 
+            // U4YellowCheckBox
+            // 
+            this.U4YellowCheckBox.AutoSize = true;
+            this.U4YellowCheckBox.Location = new System.Drawing.Point(122, 23);
+            this.U4YellowCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4YellowCheckBox.Name = "U4YellowCheckBox";
+            this.U4YellowCheckBox.Size = new System.Drawing.Size(57, 17);
+            this.U4YellowCheckBox.TabIndex = 28;
+            this.U4YellowCheckBox.Text = "Yellow";
+            this.U4YellowCheckBox.UseVisualStyleBackColor = true;
+            this.U4YellowCheckBox.CheckedChanged += new System.EventHandler(this.U4YellowCheckBox_CheckedChanged);
+            // 
+            // U4BlueStoneCheckBox
+            // 
+            this.U4BlueStoneCheckBox.AutoSize = true;
+            this.U4BlueStoneCheckBox.Location = new System.Drawing.Point(57, 23);
+            this.U4BlueStoneCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4BlueStoneCheckBox.Name = "U4BlueStoneCheckBox";
+            this.U4BlueStoneCheckBox.Size = new System.Drawing.Size(47, 17);
+            this.U4BlueStoneCheckBox.TabIndex = 27;
+            this.U4BlueStoneCheckBox.Text = "Blue";
+            this.U4BlueStoneCheckBox.UseVisualStyleBackColor = true;
+            this.U4BlueStoneCheckBox.CheckedChanged += new System.EventHandler(this.U4BlueStoneCheckBox_CheckedChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(9, 25);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(40, 13);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Stones";
+            // 
+            // U4VirtueTextBox
+            // 
+            this.U4VirtueTextBox.Location = new System.Drawing.Point(329, 50);
+            this.U4VirtueTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4VirtueTextBox.Name = "U4VirtueTextBox";
+            this.U4VirtueTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4VirtueTextBox.TabIndex = 25;
+            this.U4VirtueTextBox.Text = "0";
+            this.U4VirtueTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4VirtueTextBox_Validating);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(366, 52);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(27, 13);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "% of";
+            // 
+            // U4RuneCheckBox
+            // 
+            this.U4RuneCheckBox.AutoSize = true;
+            this.U4RuneCheckBox.Location = new System.Drawing.Point(332, 25);
+            this.U4RuneCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4RuneCheckBox.Name = "U4RuneCheckBox";
+            this.U4RuneCheckBox.Size = new System.Drawing.Size(64, 17);
+            this.U4RuneCheckBox.TabIndex = 15;
+            this.U4RuneCheckBox.Text = "Rune of";
+            this.U4RuneCheckBox.UseVisualStyleBackColor = true;
+            this.U4RuneCheckBox.CheckedChanged += new System.EventHandler(this.U4RuneCheckBox_CheckedChanged);
+            // 
+            // U4VirtueDropDown
+            // 
+            this.U4VirtueDropDown.BackColor = System.Drawing.Color.White;
+            this.U4VirtueDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4VirtueDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4VirtueDropDown.FormattingEnabled = true;
+            this.U4VirtueDropDown.Items.AddRange(new object[] {
+            "Honesty",
+            "Compassion",
+            "Valor",
+            "Justice",
+            "Sacrifice",
+            "Honor",
+            "Spirituality",
+            "Humility"});
+            this.U4VirtueDropDown.Location = new System.Drawing.Point(397, 50);
+            this.U4VirtueDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4VirtueDropDown.Name = "U4VirtueDropDown";
+            this.U4VirtueDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U4VirtueDropDown.TabIndex = 14;
+            this.U4VirtueDropDown.SelectedIndexChanged += new System.EventHandler(this.U4VirtueDropDown_SelectedIndexChanged);
+            // 
+            // U4RuneDropDown
+            // 
+            this.U4RuneDropDown.BackColor = System.Drawing.Color.White;
+            this.U4RuneDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4RuneDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4RuneDropDown.FormattingEnabled = true;
+            this.U4RuneDropDown.Items.AddRange(new object[] {
+            "Honesty",
+            "Compassion",
+            "Valor",
+            "Justice",
+            "Sacrifice",
+            "Honor",
+            "Spirituality",
+            "Humility"});
+            this.U4RuneDropDown.Location = new System.Drawing.Point(397, 24);
+            this.U4RuneDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4RuneDropDown.Name = "U4RuneDropDown";
+            this.U4RuneDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U4RuneDropDown.TabIndex = 13;
+            this.U4RuneDropDown.SelectedIndexChanged += new System.EventHandler(this.U4RuneDropDown_SelectedIndexChanged);
+            // 
+            // U4PlayerStats
+            // 
+            this.U4PlayerStats.Controls.Add(this.U4MagicTextBox);
+            this.U4PlayerStats.Controls.Add(this.U4IntelligenceTextBox);
+            this.U4PlayerStats.Controls.Add(this.U4DexterityTextBox);
+            this.U4PlayerStats.Controls.Add(this.U4StrengthTextBox);
+            this.U4PlayerStats.Controls.Add(this.U4ExperienceTextBox);
+            this.U4PlayerStats.Controls.Add(this.U4MaxHitTextBox);
+            this.U4PlayerStats.Controls.Add(this.U4HitTextBox);
+            this.U4PlayerStats.Controls.Add(this.U4ArmorDropDown);
+            this.U4PlayerStats.Controls.Add(this.U4WeaponDropDown);
+            this.U4PlayerStats.Controls.Add(this.U4HealthDropDown);
+            this.U4PlayerStats.Controls.Add(this.U4ClassDropDown);
+            this.U4PlayerStats.Controls.Add(this.U4SexDropDown);
+            this.U4PlayerStats.Controls.Add(this.U4NameDropDown);
+            this.U4PlayerStats.Controls.Add(this.label12);
+            this.U4PlayerStats.Controls.Add(this.label11);
+            this.U4PlayerStats.Controls.Add(this.label10);
+            this.U4PlayerStats.Controls.Add(this.label9);
+            this.U4PlayerStats.Controls.Add(this.label8);
+            this.U4PlayerStats.Controls.Add(this.label7);
+            this.U4PlayerStats.Controls.Add(this.label6);
+            this.U4PlayerStats.Controls.Add(this.label5);
+            this.U4PlayerStats.Controls.Add(this.label4);
+            this.U4PlayerStats.Controls.Add(this.label3);
+            this.U4PlayerStats.Controls.Add(this.label2);
+            this.U4PlayerStats.Controls.Add(this.label1);
+            this.U4PlayerStats.Location = new System.Drawing.Point(19, 23);
+            this.U4PlayerStats.Margin = new System.Windows.Forms.Padding(2);
+            this.U4PlayerStats.Name = "U4PlayerStats";
+            this.U4PlayerStats.Padding = new System.Windows.Forms.Padding(2);
+            this.U4PlayerStats.Size = new System.Drawing.Size(170, 307);
+            this.U4PlayerStats.TabIndex = 0;
+            this.U4PlayerStats.TabStop = false;
+            this.U4PlayerStats.Text = "Player Stats";
+            // 
+            // U4MagicTextBox
+            // 
+            this.U4MagicTextBox.Location = new System.Drawing.Point(85, 222);
+            this.U4MagicTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4MagicTextBox.Name = "U4MagicTextBox";
+            this.U4MagicTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4MagicTextBox.TabIndex = 24;
+            this.U4MagicTextBox.Text = "0";
+            this.U4MagicTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MagicTextBox_Validating);
+            // 
+            // U4IntelligenceTextBox
+            // 
+            this.U4IntelligenceTextBox.Location = new System.Drawing.Point(85, 201);
+            this.U4IntelligenceTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4IntelligenceTextBox.Name = "U4IntelligenceTextBox";
+            this.U4IntelligenceTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4IntelligenceTextBox.TabIndex = 23;
+            this.U4IntelligenceTextBox.Text = "0";
+            this.U4IntelligenceTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4IntelligenceTextBox_Validating);
+            // 
+            // U4DexterityTextBox
+            // 
+            this.U4DexterityTextBox.Location = new System.Drawing.Point(85, 180);
+            this.U4DexterityTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4DexterityTextBox.Name = "U4DexterityTextBox";
+            this.U4DexterityTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4DexterityTextBox.TabIndex = 22;
+            this.U4DexterityTextBox.Text = "0";
+            this.U4DexterityTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4DexterityTextBox_Validating);
+            // 
+            // U4StrengthTextBox
+            // 
+            this.U4StrengthTextBox.Location = new System.Drawing.Point(85, 159);
+            this.U4StrengthTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4StrengthTextBox.Name = "U4StrengthTextBox";
+            this.U4StrengthTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4StrengthTextBox.TabIndex = 21;
+            this.U4StrengthTextBox.Text = "0";
+            this.U4StrengthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4StrengthTextBox_Validating);
+            // 
+            // U4ExperienceTextBox
+            // 
+            this.U4ExperienceTextBox.Location = new System.Drawing.Point(85, 138);
+            this.U4ExperienceTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4ExperienceTextBox.Name = "U4ExperienceTextBox";
+            this.U4ExperienceTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4ExperienceTextBox.TabIndex = 20;
+            this.U4ExperienceTextBox.Text = "0";
+            this.U4ExperienceTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4ExperienceTextBox_Validating);
+            // 
+            // U4MaxHitTextBox
+            // 
+            this.U4MaxHitTextBox.Location = new System.Drawing.Point(122, 117);
+            this.U4MaxHitTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4MaxHitTextBox.Name = "U4MaxHitTextBox";
+            this.U4MaxHitTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4MaxHitTextBox.TabIndex = 19;
+            this.U4MaxHitTextBox.Text = "100";
+            this.U4MaxHitTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MaxHitTextBox_Validating);
+            // 
+            // U4HitTextBox
+            // 
+            this.U4HitTextBox.Location = new System.Drawing.Point(85, 117);
+            this.U4HitTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.U4HitTextBox.Name = "U4HitTextBox";
+            this.U4HitTextBox.Size = new System.Drawing.Size(34, 20);
+            this.U4HitTextBox.TabIndex = 18;
+            this.U4HitTextBox.Text = "0";
+            this.U4HitTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4HitTextBox_Validating);
+            // 
+            // U4ArmorDropDown
+            // 
+            this.U4ArmorDropDown.BackColor = System.Drawing.Color.White;
+            this.U4ArmorDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4ArmorDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4ArmorDropDown.FormattingEnabled = true;
+            this.U4ArmorDropDown.Items.AddRange(new object[] {
+            "Skin",
+            "Cloth",
+            "Leather",
+            "Chain Mail",
+            "Plate Mail",
+            "Magic Chain",
+            "Magic Plate",
+            "Mystic Robe"});
+            this.U4ArmorDropDown.Location = new System.Drawing.Point(65, 272);
+            this.U4ArmorDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4ArmorDropDown.Name = "U4ArmorDropDown";
+            this.U4ArmorDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U4ArmorDropDown.TabIndex = 17;
+            this.U4ArmorDropDown.SelectedIndexChanged += new System.EventHandler(this.U4ArmorDropDown_SelectedIndexChanged);
+            // 
+            // U4WeaponDropDown
+            // 
+            this.U4WeaponDropDown.BackColor = System.Drawing.Color.White;
+            this.U4WeaponDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4WeaponDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4WeaponDropDown.FormattingEnabled = true;
+            this.U4WeaponDropDown.Items.AddRange(new object[] {
+            "Hands",
+            "Staff",
+            "Dagger",
+            "Sling",
+            "Mace",
+            "Axe",
+            "Sword",
+            "Bow",
+            "Crossbow",
+            "Flaming Oil",
+            "Halberd",
+            "Magic Axe",
+            "Magic Sword",
+            "Magic Bow",
+            "Magic Wand",
+            "Mystic Sword"});
+            this.U4WeaponDropDown.Location = new System.Drawing.Point(65, 250);
+            this.U4WeaponDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4WeaponDropDown.Name = "U4WeaponDropDown";
+            this.U4WeaponDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U4WeaponDropDown.TabIndex = 16;
+            this.U4WeaponDropDown.SelectedIndexChanged += new System.EventHandler(this.U4WeaponDropDown_SelectedIndexChanged);
+            // 
+            // U4HealthDropDown
+            // 
+            this.U4HealthDropDown.BackColor = System.Drawing.Color.White;
+            this.U4HealthDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4HealthDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4HealthDropDown.FormattingEnabled = true;
+            this.U4HealthDropDown.Items.AddRange(new object[] {
+            "Good",
+            "Dead",
+            "Poisoned",
+            "Asleep"});
+            this.U4HealthDropDown.Location = new System.Drawing.Point(65, 91);
+            this.U4HealthDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4HealthDropDown.Name = "U4HealthDropDown";
+            this.U4HealthDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U4HealthDropDown.TabIndex = 15;
+            this.U4HealthDropDown.SelectedIndexChanged += new System.EventHandler(this.U4HealthDropDown_SelectedIndexChanged);
+            // 
+            // U4ClassDropDown
+            // 
+            this.U4ClassDropDown.BackColor = System.Drawing.Color.White;
+            this.U4ClassDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4ClassDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4ClassDropDown.FormattingEnabled = true;
+            this.U4ClassDropDown.Items.AddRange(new object[] {
+            "Mage",
+            "Bard",
+            "Fighter",
+            "Druid",
+            "Tinker",
+            "Paladin",
+            "Ranger",
+            "Shepherd"});
+            this.U4ClassDropDown.Location = new System.Drawing.Point(65, 69);
+            this.U4ClassDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4ClassDropDown.Name = "U4ClassDropDown";
+            this.U4ClassDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U4ClassDropDown.TabIndex = 14;
+            this.U4ClassDropDown.SelectedIndexChanged += new System.EventHandler(this.U4ClassDropDown_SelectedIndexChanged);
+            // 
+            // U4SexDropDown
+            // 
+            this.U4SexDropDown.BackColor = System.Drawing.Color.White;
+            this.U4SexDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4SexDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4SexDropDown.FormattingEnabled = true;
+            this.U4SexDropDown.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
+            this.U4SexDropDown.Location = new System.Drawing.Point(65, 47);
+            this.U4SexDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4SexDropDown.Name = "U4SexDropDown";
+            this.U4SexDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U4SexDropDown.TabIndex = 13;
+            this.U4SexDropDown.SelectedIndexChanged += new System.EventHandler(this.U4SexDropDown_SelectedIndexChanged);
+            // 
+            // U4NameDropDown
+            // 
+            this.U4NameDropDown.BackColor = System.Drawing.Color.White;
+            this.U4NameDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.U4NameDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.U4NameDropDown.FormattingEnabled = true;
+            this.U4NameDropDown.Location = new System.Drawing.Point(65, 25);
+            this.U4NameDropDown.Margin = new System.Windows.Forms.Padding(2);
+            this.U4NameDropDown.Name = "U4NameDropDown";
+            this.U4NameDropDown.Size = new System.Drawing.Size(91, 21);
+            this.U4NameDropDown.TabIndex = 12;
+            this.U4NameDropDown.SelectedIndexChanged += new System.EventHandler(this.U4NameDropDown_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(15, 93);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Health";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(15, 119);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Hit/Max Hit";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(15, 140);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Experience";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(15, 161);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Strength";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 182);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Dexterity";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 203);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Intelligence";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 224);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Magic";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 252);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Weapon";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 274);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Armor";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 71);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Class";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 49);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(25, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Sex";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name";
+            // 
+            // U5Tab
+            // 
+            this.U5Tab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.U5Tab.Location = new System.Drawing.Point(4, 22);
+            this.U5Tab.Margin = new System.Windows.Forms.Padding(2);
+            this.U5Tab.Name = "U5Tab";
+            this.U5Tab.Padding = new System.Windows.Forms.Padding(2);
+            this.U5Tab.Size = new System.Drawing.Size(721, 435);
+            this.U5Tab.TabIndex = 4;
+            this.U5Tab.Text = "Ultima V";
+            // 
+            // D64OpenDialog
+            // 
+            this.D64OpenDialog.Filter = "C64 Disk Images|*.d64";
+            // 
+            // U4SaveDialog
+            // 
+            this.U4SaveDialog.Filter = "C64 Disk Images|*.d64";
             // 
             // MainWindow
             // 
@@ -4675,7 +4675,7 @@
             this.ClientSize = new System.Drawing.Size(745, 474);
             this.Controls.Add(this.MainTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainWindow";
@@ -4704,6 +4704,19 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.U3Tab.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.U4Tab.ResumeLayout(false);
             this.U4General.ResumeLayout(false);
             this.U4General.PerformLayout();
@@ -4715,19 +4728,6 @@
             this.U4Virtues.PerformLayout();
             this.U4PlayerStats.ResumeLayout(false);
             this.U4PlayerStats.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
-            this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
-            this.groupBox17.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
