@@ -3525,10 +3525,10 @@
             // 
             // U4MovesTextBox
             // 
-            this.U4MovesTextBox.Location = new System.Drawing.Point(61, 21);
+            this.U4MovesTextBox.Location = new System.Drawing.Point(55, 21);
             this.U4MovesTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.U4MovesTextBox.Name = "U4MovesTextBox";
-            this.U4MovesTextBox.Size = new System.Drawing.Size(92, 20);
+            this.U4MovesTextBox.Size = new System.Drawing.Size(98, 20);
             this.U4MovesTextBox.TabIndex = 52;
             this.U4MovesTextBox.Text = "0";
             this.U4MovesTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.U4MovesTextBox_Validating);
