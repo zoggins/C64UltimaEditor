@@ -50,4 +50,14 @@ XXX30-3F Weapons - 1 byte per weapon type
 14D08 - Roster location of 3rd party member
 14D09 - Roster location of 4th party member
 
-Missing: Equipped Armor, Weapon
+14D03 - X position in Hex
+14D04 - Y position in Hex
+
+14D0A-0D - Move count in BCD
+
+12800/75776 is the beginning of the map  
+X,Y == 12800/75776 + ((Y*40/64) + X) 
+value 28 is horse 
+value 2C is boat
+value 00 is water
+value 04 is grass
