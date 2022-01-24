@@ -76,7 +76,9 @@ namespace UltimaData
     }
 
     public class Ultima3CharacterData
-    { 
+    {
+        public readonly int Offset;
+
         public readonly string Name;
 
         public bool CardOfDeath;
@@ -89,21 +91,25 @@ namespace UltimaData
         public bool MarkOfForce;
         public bool MarkOfKings;
 
-        public Ultima3CharacterData(string name, int torches, U3Health health, int strength, int agility, int intelligence, int wisdom,
-                                    U3Race race, U3Class u3class)
+        public Ultima3CharacterData(int offset, string name, int torches, U3Health health, int strength, int agility, int intelligence, int wisdom,
+                                    U3Race race, U3Class u3class, int hitPoints, int maxHitPoints, int magicPoints, int experience,
+                                    int food, int gems, int powder, int keys, U3Armor equippedArmor, U3Weapons equippedWeapon, 
+                                    int[] armor, int[] weapons, int gold)
         {
+            Offset = offset;
             Name = name;
-            m_torches = new BoundedInt(0, 99);
             Sex = U3Sex.Male;
             Class = u3class;
             Race = race;
             Health = health;
             m_hitPoints = new BoundedInt(0, 9999);
-            HitPoints = 150;
+            HitPoints = hitPoints;
             m_maxHitPoints = new BoundedInt(0, 9999);
-            MaxHitPoints = 150;
+            MaxHitPoints = maxHitPoints;
             m_magicPoints = new BoundedInt(0, 99);
+            MagicPoints = magicPoints;
             m_experience = new BoundedInt(0, 9999);
+            Experience = experience;
             m_strength = new BoundedInt(0, 99);
             Strength = strength;
             m_agility = new BoundedInt(0, 99);
@@ -113,20 +119,28 @@ namespace UltimaData
             m_wisdom = new BoundedInt(0, 99);
             Wisdom = wisdom;
             m_food = new BoundedInt(0, 9999);
+            Food = food;
             m_gems = new BoundedInt(0, 99);
+            Gems = gems;
             m_powder = new BoundedInt(0, 99);
+            Powder = powder;
             m_keys = new BoundedInt(0, 99);
+            Keys = keys;
             m_torches = new BoundedInt(0, 99);
             Torches = torches;
+            m_gold = new BoundedInt(0, 9999);
+            Gold = gold;
 
-            EquippedArmor = U3Armor.Skin;
-            EquippedWeapon = U3Weapons.Hands;
+            EquippedArmor = equippedArmor;
+            EquippedWeapon = equippedWeapon;
 
             Weapons = new BoundedIntArray(15, 0, 99);
-            Armor = new BoundedIntArray(7, 0, 99);
+            for (int i = 0; i < weapons.Length; ++i)
+                Weapons[i] = weapons[i];
 
-           
-            
+            Armor = new BoundedIntArray(7, 0, 99);
+            for (int i = 0; i < armor.Length; ++i)
+                Armor[i] = armor[i];
         }
 
         public int Keys
@@ -163,6 +177,13 @@ namespace UltimaData
             set { m_food.Value = value; }
         }
         private BoundedInt m_food;
+
+        public int Gold
+        {
+            get { return m_gold; }
+            set { m_gold.Value = value; }
+        }
+        private BoundedInt m_gold;
 
         public int MagicPoints
         {
@@ -258,6 +279,7 @@ namespace UltimaData
             m_powder = new BoundedInt(0, 99);
             m_keys = new BoundedInt(0, 99);
             m_torches = new BoundedInt(0, 99);
+            m_gold = new BoundedInt(0, 9999);
 
             EquippedArmor = U3Armor.Skin;
             EquippedWeapon = U3Weapons.Hands;
