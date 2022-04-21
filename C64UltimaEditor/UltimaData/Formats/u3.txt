@@ -2,8 +2,11 @@
 14CXX Seems to be the party
 
 XXX00 Character 1's Name (letters start at C1)
+XXX0D Null terminator for 13 character name.
+XXX0E Cards/Marks in bitmap
+XXX0F Torches in BCD
 
-XXX10  ??
+XXX10  FF = means in Party?, 00 = means not in party?
 XXX11  Status by letter (G=Good,A=Asleep,D=Dead)
 
 XXX12 Strength in BCD
@@ -21,8 +24,8 @@ XXX1B Low byte of HP in BCD
 XXX1C High byte of Max HP in BCD
 XXX1D Low byte of Max HP in BCD
 
-XXX1E ???
-XXX1F ???
+XXX1E High byte of Exp in BCD
+XXX1F Low byte of Exp in BCD
 
 XXX20  High byte of food in BCD
 XXX21  Low byte of food in BCD
@@ -39,4 +42,22 @@ XXX28-2F Armor - 1 byte per armor type
 
 XXX30-3F Weapons - 1 byte per weapon type
 
-Missing: Cards, Marks, Torches, Equipped Armor and Weapon
+
+14D00 - ???
+
+14D06 - Roster location of 1st party member
+14D07 - Roster location of 2nd party member
+14D08 - Roster location of 3rd party member
+14D09 - Roster location of 4th party member
+
+14D03 - X position in Hex
+14D04 - Y position in Hex
+
+14D0A-0D - Move count in BCD
+
+12800/75776 is the beginning of the map  
+X,Y == 12800/75776 + ((Y*40/64) + X) 
+value 28 is horse 
+value 2C is boat
+value 00 is water
+value 04 is grass
