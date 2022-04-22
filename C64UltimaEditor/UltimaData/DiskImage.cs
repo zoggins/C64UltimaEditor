@@ -37,7 +37,7 @@ namespace UltimaData
             GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
             if (disposing)
             {
@@ -103,7 +103,7 @@ namespace UltimaData
             GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
             if (disposing && m_image != null)
             {
@@ -117,6 +117,8 @@ namespace UltimaData
             m_image.Sync();
         }
 
+#pragma warning disable CA2213 // Disposable fields should be disposed.  It is disposed in DiskImage.Dispose, but the analyzer is dumb.
         private C64DiskImage m_image;
+#pragma warning restore CA2213 // Disposable fields should be disposed
     }
 }

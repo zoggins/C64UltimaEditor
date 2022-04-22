@@ -56,7 +56,7 @@ namespace UltimaData.UnitTest
             GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
 
         }
@@ -97,7 +97,7 @@ namespace UltimaData.UnitTest
             GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
        
         }

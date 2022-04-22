@@ -409,7 +409,7 @@ namespace UltimaData.UnitTest
             data.Save(m_disk);
         }
 
-        private void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
             if (disposing && m_disk != null)
                 m_disk.Dispose();
