@@ -117,8 +117,8 @@ namespace UltimaData
             m_image.Sync();
         }
 
-#pragma warning disable CA2213 // Disposable fields should be disposed.  It is disposed in DiskImage.Dispose, but the analyzer is dumb.
-        private C64DiskImage m_image;
-#pragma warning restore CA2213 // Disposable fields should be disposed
+#pragma warning disable CA2213          // Disposable fields should be disposed.  
+        private C64DiskImage m_image;   // It is disposed in DiskImage.Dispose(), but the analyzer is dumb.
+#pragma warning restore CA2213          // Disposable fields should be disposed
     }
 }
