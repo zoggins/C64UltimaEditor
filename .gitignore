@@ -243,3 +243,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/C64UltimaEditor/.visualgdb/CodeExplorer

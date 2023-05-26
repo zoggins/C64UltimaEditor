@@ -296,10 +296,6 @@ namespace UltimaData.UnitTest
             Assert.IsNotNull(m_disk);
         }
 
-
-
-        [TestMethod]
-
         public void Dispose()
         {
             Dispose(true);
